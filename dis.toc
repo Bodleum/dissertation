@@ -1,0 +1,11 @@
+\contentsline {section}{\numberline {1}Theorems and Lemmas}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Sylow Theorems}{1}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Groups of order 6}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}\(C_3 \rtimes _\text {id} C_2\)}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}\(C_3 \rtimes _\varphi C_2\)}{2}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Groups of Order 6 (Attempt 2)}{2}{section.3}%
+\contentsline {section}{\numberline {4}Generalisation to Groups of Order \(2p\)}{3}{section.4}%
+\contentsline {section}{\numberline {5}Groups of order 4}{4}{section.5}%
+\contentsline {section}{\numberline {6}Groups of order 9 (Might skip)}{4}{section.6}%
+\contentsline {section}{\numberline {7}Generalisation to Groups of Order \(p^2\)}{4}{section.7}%
+\contentsline {section}{\numberline {8}Groups of order 12}{4}{section.8}%

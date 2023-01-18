@@ -1,0 +1,281 @@
+\documentclass[a4paper, oneside, 12pt, draft]{article}
+
+\title{Interim Report}
+\author{Daniel Laing}
+\date{\today}
+
+\usepackage[left=1.5cm, right=1.5cm, top=1.5cm, bottom=2cm]{geometry}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{bm} % Bold maths
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage[super]{nth}
+\usepackage{enumerate}
+\usepackage{lipsum}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+
+\DeclareMathOperator{\Aut}{Aut}
+
+% ====   Document   ====
+\begin{document}
+{\maketitle}
+{\tableofcontents}
+
+% \part{Introduction and aims}
+% \lipsum[2]
+
+% \section{Semi-Direct Product}
+% We already know about the direct product:
+%
+% \begin{definition}[Direct Product]
+%     For groups \(N\) and \(H\), the \emph{direct product}, \(G = N\times H\) is a
+%     group of ordered pairs of elements \((n, h)\) where \(n \in N\) and \(h \in
+%     H\) with the operation: \[(n_1, h_1)(n_2, h_2) = (n_1n_2, h_1h_2)\]
+% \end{definition}
+%
+% \begin{theorem}
+%     If \(G = N \times H\) then \(N \unlhd G\) and \(H \unlhd G\).
+% \end{theorem}
+%
+% % TODO: Prove this
+% \begin{proof}
+%     \lipsum[1]
+% \end{proof}
+%
+% But what if we allow \(n_2\) to change, depending on what \(h_1\) is?
+% Let's define a homomorphism \(\varphi:H \to \Aut{N}\) and ...
+
+% ====   Theorems and Lemmas   ====
+\section{Theorems and Lemmas}
+\subsection{Sylow Theorems}
+Let $G$ be a group of order $p^nm$ where $p$ is a prime and $p\nmid m$.
+\begin{theorem}[\nth{1} Sylow Theorem]
+\label{thm:sylow1}
+    $G$ has a Sylow p-subgroup, i.e. a subgroup of order \(p^n\).
+\end{theorem}
+\begin{theorem}[\nth{2} Sylow Theorem]
+\label{thm:sylow2}
+    All Sylow p-subgroups of $G$ are conjugate to each other.
+\end{theorem}
+\begin{corollary}
+    If $n_p = 1$ then the Sylow p-subgroup is normal in $G$.
+\end{corollary}
+\begin{theorem}[\nth{3} Sylow Theorem]
+\label{thm:sylow3}
+    Let $n_p$ denote the number of Sylow p-subgroups of $G$.
+    Then:
+    \begin{enumerate}[i)]
+        \item $n_p \mid m$
+        \item $n_p\equiv 1$ (mod p)
+    \end{enumerate}
+\end{theorem}
+
+\begin{lemma}
+\label{lem:setprodorder}
+    For a group \(G\) with \(N \leqslant G\) and \(H \leqslant G\), then
+    \[|NH| = |\{nh \mid n \in N, h \in H\}| = \frac{|N| \cdot |H|}{|N \cap H|}\]
+\end{lemma}
+
+% ====   Groups of order 6   ====
+\section{Groups of order 6}
+The prime factorisation of \(6 = 2 \cdot 3\), so we can construct groups with
+products of \(C_2\) and \(C_3\). The automorphism groups of \(C_2\),
+\(\Aut{C_2} = \{id\}\), containing just the identity map. So any meaningful
+products will look like \(C_3 \rtimes C_2\).
+
+\(\Aut{C_3} = \{\text{id}, \psi\}\) where \(x\psi = x^{-1}\).
+So we have two possible products: \(C_3 {\rtimes}_{\text{id}} C_2\) and \(C_3
+{\rtimes}_{\varphi} C_2\) where \(\varphi\) is the homomorphism \(\varphi:C_2
+\to \Aut{C_3}\) mapping \(1 \mapsto \text{id}\) and \(x \mapsto \psi\).
+
+\subsection{\(C_3 \rtimes_\text{id} C_2\)}
+By the Fundamental Theorem of Finite Abelian Groups, we know \( C_3
+\rtimes_\text{id} C_2 \cong C_3 \times C_2 \cong C_6\).
+
+\subsection{\(C_3 \rtimes_\varphi C_2\)}
+So the group operation is
+\[(a_1, b_1)(a_2, b_2) = (a_1\cdot a_2\varphi_{b_1}, b_1\cdot b_2)\]
+Investigating elements:
+\[(1,x)(1,x) = (1 \cdot 1\varphi_x, x \cdot x) = (1 \cdot 1^{-1}, x^2) = (1,
+1)\]
+So \((1, x)\) is of order 2.
+
+\[(x, 1)(x, 1) = (x \cdot x\varphi_1, 1 \cdot 1) = (x \cdot x, 1) = (x^2, 1)\]
+\[(x^2, 1)(x, 1) = (x^2 \cdot x\varphi_1, 1 \cdot 1) = (x^3, 1) = (1, 1)\]
+So \((x, 1)\) is of order 3.
+
+\[(x, 1)(x, x) = (x \cdot x\varphi_1, 1 \cdot x) = (x, x)\]
+\[(x, x)(x, 1) = (x \cdot x\varphi_x, x \cdot 1) = (xx^{-1}, x) = (1, x)\]
+Hence, \(C_3 \rtimes_\varphi C_2\) is non-abelian.
+
+\section{Groups of Order 6 (Attempt 2)}
+Let $G$ be a group of order 6, and $n_3$ denote the number of Sylow 3-subgroups
+of $G$.
+Then by Theorem \ref{thm:sylow3}:
+\[n_3 \equiv 1 \text{ (mod 3) and } n_3 \mid 2 \implies n_3 = 1\]
+So $G$ has one Sylow 3-subgroup, and because 3 is prime, it is isomorphic to
+$C_3$, i.e.
+\[C_3 \unlhd G\]
+
+Any Sylow 2-subgroup of $G$ will have order 2, and so \(C_2 \leqslant G\).
+
+Lagrange's Theorem tells us that $C_3$ has elements of orders 1 and 3, and
+$C_2$ has elements of order 1 and 2 hence:
+\[C_3 \cap C_2 = \bm{1}\]
+
+By Lemma \ref{lem:setprodorder}:
+\[|C_3 C_2| = \frac{|C_3| \cdot |C_2|}{|C_3 \cap C_2|} = \frac{3 \cdot 2}{1} =
+6\]
+
+So \(G = C_3 C_2\), \(C_3 \unlhd G\) and \(C_3 \cap C_2 = \bm{1} \implies G =
+C_3 \rtimes C_2\)
+
+Now we need to determine \(\Aut{C_3}\).
+\(C_3 = \{1, x, x^2 = x^{-1}\}\) and so \(\Aut{C_3} = \{\text{id}, \psi:x
+\mapsto x^{-1}\} \cong C_2\).
+So if \(C_3 = \langle x \rangle\) and \(C_2 = \langle y \rangle\), then we have
+two possibilities for \(G\):
+\begin{enumerate}[\bfseries{Case} 1:]
+    \item
+        \begin{displaymath}
+        \begin{aligned}
+            G &= \langle\, x, y \mid x^3 = y^2 = 1,\ y^{-1}xy = x \,\rangle \\
+            &=\langle\, x, y \mid x^3 = y^2 = 1,\ xy = yx \,\rangle \\
+            &= C_3 \times C_2 \cong C_6
+        \end{aligned}
+        \end{displaymath}
+    \item
+        \begin{displaymath}
+        \begin{aligned}
+            G &= \langle\, x, y \mid x^3 = y^2 = 1,\ y^{-1}xy = x^{-1}
+            \,\rangle \\
+            &\cong D_6
+        \end{aligned}
+        \end{displaymath}
+\end{enumerate}
+
+Hence \(G\) is isomorphic to either \(C_6\) or \(D_6\).
+
+% ====   Groups of order 2p   ====
+\section{Generalisation to Groups of Order \(2p\)}
+Let \(G\) be a group of order \(2p\) where \(p\) is a prime number, and \(n_p\)
+denote the number of Sylow p-subgroups of \(G\).
+Then by Theorem \ref{thm:sylow3}:
+\[n_p \equiv 1 \text{ (mod p) and } n_p \mid 2 \implies n_p = 1\]
+So $G$ has one Sylow p-subgroup, it is isomorphic to \(C_p = \langle x
+\rangle\) hence:
+\[C_p \unlhd G\]
+
+A Sylow 2-subgroup of \(G\) will have order 2 so \(C_2 = \langle y \rangle
+\leqslant G\).
+
+Lagrange's Theorem tells us that $C_p$ has elements of orders 1 and \(p\), and
+$C_2$ has elements of order 1 and 2 hence:
+\[C_p \cap C_2 = \bm{1}\]
+
+By Lemma \ref{lem:setprodorder}:
+\[|C_p C_2| = \frac{|C_p| \cdot |C_2|}{|C_p \cap C_2|} = \frac{p \cdot 2}{1} =
+2p\]
+
+So \(G = C_p C_2\), \(C_p \unlhd G\) and \(C_p \cap C_2 = \bm{1} \implies G =
+C_p \rtimes C_2\)
+
+For an automorphism \(\varphi\) of \(C_p\), \(x^i\varphi = (x\varphi)^i\) so
+\(\varphi\) is determined by it's effect on \(x\).
+\(\varphi\) is surjective, so it must send \(x\) to another generator of
+\(C_p\).
+Lagrange's Theorem tells us every element of \(C_p\) has order either 1 or
+\(p\) so there are \(p-1\) generators.
+So we have \(p-1\) choices for \(x\varphi\), hence:
+\[|\Aut{C_p}| = p-1\]
+
+% Trying to show AutC_p is C_{p-1}
+% Consider \(\beta:x \mapsto x^2\).
+% \[x\beta^2 = (x\beta)\beta = x^2\beta = (x\beta)^2 = x^4\]
+% \[x\beta^3 = (x\beta^2)\beta = x^4\beta = (x\beta)^4 = x^6\]
+% \[\vdots\]
+% \[x\beta^{\frac{p-1}{2}} = x^{p-1}\]
+% \[x\beta^{\frac{p+1}{2}} = x^{p+1} = x\]
+
+The automorphism \(\beta:x \mapsto x^{-1}\) has order two, so \(C_2\varphi\)
+could be \(\bm{1}\) or \(\langle \beta \rangle \cong C_2\). This gives us two
+possibilities:
+\[y\varphi = x \mapsto x\]
+\[y\varphi = x \mapsto x^2\]
+
+\begin{enumerate}[\bfseries{Case} 1:]
+    \item
+        \begin{displaymath}
+        \begin{aligned}
+            G &= \langle\, x, y \mid x^p = y^2 = 1,\ y^{-1}xy = x \,\rangle \\
+            &=\langle\, x, y \mid x^p = y^2 = 1,\ xy = yx \,\rangle \\
+            &= C_p \times C_2 \cong C_{2p}
+        \end{aligned}
+        \end{displaymath}
+    \item
+        \begin{displaymath}
+        \begin{aligned}
+            G &= \langle\, x, y \mid x^p = y^2 = 1,\ y^{-1}xy = x^{-1}
+            \,\rangle \\
+            &\cong D_{2p}
+        \end{aligned}
+        \end{displaymath}
+\end{enumerate}
+
+Hence a group of order \(2p\) is isomorphic to \(C_{2p}\) or \(D_{2p}\).
+
+I need to show \(\Aut{C_p} \cong C_{p-1}\) and that \(\beta:x \mapsto x^{-1}\)
+is the only element of order 2 to show that these are the only two possible
+groups of order \(2p\).
+
+% ====   Groups of order 4   ====
+\section{Groups of order 4}
+From the Fundamental Theorem of Finite Abelian Groups, we know that a group
+\(G\) of order 4 could be isomorphic to one of \(C_4\) and \(C_2 \times C_2\).
+Now to show that these are the only possibilities, i.e. a group of order 4 must
+be abelian.
+
+The Sylow theorems are not so helpful here, because \(4=2^2\) so any Sylow
+2-subgroup will be of order 4, which is just G.
+
+% ====   Groups of order 9   ====
+\section{Groups of order 9 (Might skip)}
+
+% ====   Groups of order p^2   ====
+\section{Generalisation to Groups of Order \(p^2\)}
+
+% ====   Groups of order 12   ====
+\section{Groups of order 12}
+Let \(G\) be a group of order 12, and \(n_3\) and \(n_2\) denote the number of
+Sylow 3-subgroups and Sylow 2-subgroups of G respectively.
+By Theorem \ref{thm:sylow3}:
+\[n_3 \equiv 1 \text{ (mod 3) and } n_3 \mid 4 \implies n_3 = 1\]
+\[n_2 \equiv 1 \text{ (mod 2) and } n_2 \mid 3 \implies n_2 = 1\]
+
+So \(G\) has a unique Sylow 3-subgroup, isomorphic to \(C_3 = \langle x
+\rangle\), and so \(C_3 \unlhd G\).
+
+A Sylow 2-subgroup of G, say \(H\), will have order 4, because \(12 = 2^2 \cdot
+3\).
+We know already a group of order 4 is isomorphic to either \(C_4\) or \(C_2
+\times C_2\) which gives us 2 cases.
+Lagrange's Theorem tells us \(H \cap C_3 = \bm{1}\), and Lemma \ref{lem:setprodorder}
+tells us:
+\[|H C_3| = \frac{|H| \cdot |C_3|}{|H \cap C_3|} = 12\]
+
+Hence \(G = H C_3\), \(C_3 \unlhd G\), \(H \leqslant G\), and \(H \cap C_3 =
+\bm{1} \implies G = C_3 \rtimes H\).
+
+We have seen already that \(\Aut{C_3} \cong C_2\).
+
+
+
+\end{document}
