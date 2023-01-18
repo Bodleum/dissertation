@@ -1,4 +1,4 @@
-\documentclass[a4paper, oneside, 12pt, draft]{article}
+\documentclass[a4paper, oneside, 12pt, final]{article}
 
 \title{Interim Report}
 \author{Daniel Laing}
@@ -254,37 +254,56 @@ The Sylow theorems are not so helpful here, because \(4=2^2\) so any Sylow
 
 % ====   Groups of order 12   ====
 \section{Groups of order 12}
-Let \(G\) be a group of order 12, and \(n_3\) and \(n_2\) denote the number of
+Let \(G\) be a group of order \(12 = 2^2 \cdot 3\), and \(n_3\) and \(n_2\) denote the number of
 Sylow 3-subgroups and Sylow 2-subgroups of G respectively.
 By Theorem \ref{thm:sylow3}:
-\[n_3 \equiv 1 \text{ (mod 3) and } n_3 \mid 4 \implies n_3 = 1\]
 \[n_2 \equiv 1 \text{ (mod 2) and } n_2 \mid 3 \implies n_2 = 1\]
+\[n_3 \equiv 1 \text{ (mod 3) and } n_3 \mid 4 \implies n_3 = 1 \ \text{or} \ 4\]
 
-So \(G\) has a unique Sylow 3-subgroup, isomorphic to \(C_3 = \langle x
-\rangle\), and so \(C_3 \unlhd G\). Likewise, \(G\) has a unique Sylow
-2-subgroup, say \(H \unlhd G\) and we know already a group of order 4 is
-isomorphic to either \(C_4\) or \(C_2 \times C_2 \cong V_4\) which gives us 2 cases.
-\(|H| = 4\) because \(12 = 2^2 \cdot 3\).
+\(G\) has a unique Sylow 2-subgroup of order \(2^2 = 4\), say \(H \unlhd G\),
+and we have already classified groups of order 4, so either \(C_4\) or \(V_4
+\unlhd G\).
+A Sylow 3-subgroup of \(G\) will have order 3, so  \(C_3 \leqslant G\).
 
-Lagrange's Theorem tells us \(H \cap C_3 = \bm{1}\), and Lemma
-\ref{lem:setprodorder} tells us:
+Lagrange's Theorem tells us \(H\) has elements of order 1, 2, and 4, and \(C_3\) has elements of order 1 and 3.
+Hence \(H \cap C_3 = \bm{1}\).
+
+Lemma \ref{lem:setprodorder} tells us:
 \[|H C_3| = \frac{|H| \cdot |C_3|}{|H \cap C_3|} = 12\]
 
-Hence \(G = H C_3\), \(C_3 \unlhd G\), \(H \leqslant G\), and \(H \cap C_3 =
-\bm{1} \implies G = C_3 \rtimes H\) and \(G = H \rtimes C_3\).
+Hence \(G = H C_3\), \(C_3 \leqslant G\), \(H \unlhd G\), and \(H \cap C_3 =
+\bm{1} \implies G = H \rtimes C_3\).
 
-We have seen already that \(\Aut{C_3} \cong C_2\).
-Similarly, any automorphism, \(\varphi\) of \(C_4\) must map generators to
-generators, so \(\Aut{C_4} \cong C_2\).
+Since an automorphism, \(\varphi\), must map generators to generators,
+\(\Aut{C_4} \cong C_2\) because the generators of \(C_4\) are \(x\) and
+\(x^{-1}\).
 An automorphism of \(V_4\) corresponds to a permutation of the three
 non-identity elements, hence \(\Aut{V_4} \cong S_3\).
 
 \begin{enumerate}[\bfseries{Case} 1:]
-    \item \(C_3 \rtimes C_4\)
+    \item \(H = C_4\).
 
-        An homomorphism \(\psi:C_4 \to \Aut{C_3} \cong C_2\) is determined by
-        \(y\psi\). Either:
-        \[y\psi = x \mapsto x \quad \text{or} \quad y\psi = x \mapsto x^{-1}\]
+        A homomorphism \(\psi:C_3 \to \Aut{C_4} \cong C_2\), preserves order
+        and together with Lagrange's Theorem means that the only possibility
+        for \(\psi\) is trivial, i.e. \(C_3\psi = \bm{1}\).
+
+        Hence \(G \cong C_4 \times C_3 \cong C_{12}\).
+
+    \item \(H = V_4\).
+
+        \(\Aut{V_4} \cong S_3\) has 2 elements of order 3, giving us 3
+        posibilities for a homomorphism \(\psi:C_3 \to \Aut{V_4}\):
+        \[C_3\psi = \bm{1}, \quad C_3\psi = (a, b, c) \quad \text{and} \quad
+        C_3\psi = (a, c, b)\]
+
+        If \(C_3\psi = \bm{1}\), then \(G \cong C_2 \times C_2 \times C_3 \cong
+        C_2 \times C_6\).
+
+        I don't how to do the other two cases. Something like:
+        \[G = \langle\, a, b, x \mid x^3 = a^2 = b^2 = (ab)^2 = 1,\ x^{-1}ax =
+        b,\ x^{-1}bx = c,\ x^{-1}cx = a\, \rangle\]
+        \[G = \langle\, a, b, x \mid x^3 = a^2 = b^2 = (ab)^2 = 1,\ x^{-1}ax =
+        c,\ x^{-1}bx = a,\ x^{-1}cx = b\, \rangle\]
 \end{enumerate}
 
 
