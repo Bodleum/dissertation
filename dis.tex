@@ -23,6 +23,8 @@
 \newtheorem{definition}[theorem]{Definition}
 
 \DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\order}{o}
+\DeclareMathOperator{\lcm}{lcm}
 
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Zn}[1]{\Z/#1\Z}
@@ -81,6 +83,19 @@ Let \(G\) be a group of order \(p^nm\) where \(p\) is a prime and \(p\nmid m\).
     \end{enumerate}
 \end{theorem}
 
+\subsection{Isomorphism Theorems}
+\begin{theorem}
+\label{thm:iso1}
+\end{theorem}
+
+\begin{theorem}
+\label{thm:iso2}
+\end{theorem}
+
+\begin{theorem}
+\label{thm:iso3}
+\end{theorem}
+
 \begin{lemma}
 \label{lem:setprodorder}
     For a group \(G\) with \(N \leqslant G\) and \(H \leqslant G\), then
@@ -131,38 +146,7 @@ Let \(G\) be a group of order \(p^nm\) where \(p\) is a prime and \(p\nmid m\).
 \end{proof}
 
 % ====   Groups of order 6   ====
-\section{Groups of order 6}
-The prime factorisation of \(6 = 2 \cdot 3\), so we can construct groups with
-products of \(C_2\) and \(C_3\). The automorphism groups of \(C_2\),
-\(\Aut{C_2} = \{id\}\), containing just the identity map. So any meaningful
-products will look like \(C_3 \rtimes C_2\).
-
-\(\Aut{C_3} = \{\text{id}, \psi\}\) where \(x\psi = x^{-1}\).
-So we have two possible products: \(C_3 {\rtimes}_{\text{id}} C_2\) and \(C_3
-{\rtimes}_{\varphi} C_2\) where \(\varphi\) is the homomorphism \(\varphi:C_2
-\to \Aut{C_3}\) mapping \(1 \mapsto \text{id}\) and \(x \mapsto \psi\).
-
-\subsection{\(C_3 \rtimes_\text{id} C_2\)}
-By the Fundamental Theorem of Finite Abelian Groups, we know \( C_3
-\rtimes_\text{id} C_2 \cong C_3 \times C_2 \cong C_6\).
-
-\subsection{\(C_3 \rtimes_\varphi C_2\)}
-So the group operation is
-\[(a_1, b_1)(a_2, b_2) = (a_1\cdot a_2\varphi_{b_1}, b_1\cdot b_2)\]
-Investigating elements:
-\[(1,x)(1,x) = (1 \cdot 1\varphi_x, x \cdot x) = (1 \cdot 1^{-1}, x^2) = (1,
-1)\]
-So \((1, x)\) is of order 2.
-
-\[(x, 1)(x, 1) = (x \cdot x\varphi_1, 1 \cdot 1) = (x \cdot x, 1) = (x^2, 1)\]
-\[(x^2, 1)(x, 1) = (x^2 \cdot x\varphi_1, 1 \cdot 1) = (x^3, 1) = (1, 1)\]
-So \((x, 1)\) is of order 3.
-
-\[(x, 1)(x, x) = (x \cdot x\varphi_1, 1 \cdot x) = (x, x)\]
-\[(x, x)(x, 1) = (x \cdot x\varphi_x, x \cdot 1) = (xx^{-1}, x) = (1, x)\]
-Hence, \(C_3 \rtimes_\varphi C_2\) is non-abelian.
-
-\section{Groups of Order 6 (Attempt 2)}
+\section{Groups of Order 6}
 Let \(G\) be a group of order 6, and \(n_3\) denote the number of Sylow
 3-subgroups of \(G\).
 Then by Theorem \ref{thm:sylow3}:
@@ -294,7 +278,7 @@ By Theorem \ref{thm:sylow3}:
 \(G\) has a unique Sylow 2-subgroup of order \(2^2 = 4\), say \(H \unlhd G\),
 and we have already classified groups of order 4, so either \(C_4\) or \(V_4
 \unlhd G\).
-A Sylow 3-subgroup of \(G\) will have order 3, so  \(C_3 \leqslant G\).
+A Sylow 3-subgroup of \(G\) will have order 3, so  \(C_3 \leqslant G\), and for some groups, \(C_3 \unlhd G\).
 
 Lagrange's Theorem tells us \(H\) has elements of order 1, 2, and 4, and \(C_3\) has elements of order 1 and 3.
 Hence \(H \cap C_3 = \bm{1}\).
@@ -312,7 +296,7 @@ An automorphism of \(V_4\) corresponds to a permutation of the three
 non-identity elements, hence \(\Aut{V_4} \cong S_3\).
 
 \begin{enumerate}[\bfseries{Case} 1:]
-    \item \(H = C_4\).
+    \item \(H = C_4\) i.e. \(G = C_4 \rtimes C_3\).
 
         A homomorphism \(\psi:C_3 \to \Aut{C_4} \cong C_2\), preserves order
         and together with Lagrange's Theorem means that the only possibility
@@ -320,24 +304,67 @@ non-identity elements, hence \(\Aut{V_4} \cong S_3\).
 
         Hence \(G \cong C_4 \times C_3 \cong C_{12}\).
 
-    \item \(H = V_4\).
+    \item \(H = V_4\) i.e. \(G = (C_2 \times C_2) \rtimes C_3\).
 
-        \(\Aut{V_4} \cong S_3\) has 2 elements of order 3, giving us 3
-        posibilities for a homomorphism \(\psi:C_3 \to \Aut{V_4}\):
-        \[C_3\psi = \bm{1}, \quad C_3\psi = (a, b, c) \quad \text{and} \quad
-        C_3\psi = (a, c, b)\]
+        A trivial homomorphism \(C_3\psi = \bm{1}\) yields the direct product
+        \(G \cong C_2 \times C_2 \timse C_3 \cong C_2 \times C_6\).
 
-        If \(C_3\psi = \bm{1}\), then \(G \cong C_2 \times C_2 \times C_3 \cong
-        C_2 \times C_6\).
+        \(S_3\) has one subgroup of order 3, hence there is essentially only
+        one homomorphism \(\psi:C_3 \to \Aut{V_4}\).
 
-        I don't how to do the other two cases. Something like:
-        \[G = \langle\, a, b, x \mid x^3 = a^2 = b^2 = (ab)^2 = 1,\ x^{-1}ax =
-        b,\ x^{-1}bx = c,\ x^{-1}cx = a\, \rangle\]
-        \[G = \langle\, a, b, x \mid x^3 = a^2 = b^2 = (ab)^2 = 1,\ x^{-1}ax =
-        c,\ x^{-1}bx = a,\ x^{-1}cx = b\, \rangle\]
+        Still need to show this is \(A_4\).
 \end{enumerate}
 
+If we instead consider \(G\) where \(C_3 \unlhd G\), i.e. \(G = C_3 \rtimes H\), then we again have two cases:
 
+\begin{enumerate}[\bfseries{Case} 1:]
+    \item \(H = C_4\) i.e. \(G = C_3 \rtimes C_4\).
+
+        Say \(C_3 = \langle x \rangle\) and \(C_4 = \langle y \rangle\).
+        We know \(\Aut{C_3} \cong C_2\) so a homomorphism \(\psi\) maps \(C_4\)
+        to the trivial group, \(\bm{1}\) or to \(\langle \beta:x \mapsto x^{-1}
+        \rangle\).
+
+        If \(C_4\psi = \bm{1}\) then \(G = C_3 \times C_4 \cong C_4 \times
+        C_3\), which we have already seen.
+
+        If \(C_4\psi = \langle \beta \rangle\) then we have:
+        \[G = \langle\, x, y \mid x^3 = y^4 = 1,\ y^{-1}xy = x^{-1}\,\rangle\]
+
+    \item \(H = V_4\) i.e. \(G = C_3 \rtimes (C_2 \times C_2)\).
+
+        If \(\psi:(C_2 \times C_2) \to \Aut{C_3}\) is trivial then we obtain
+        \(G = C_3 \times C_2 \times C_2 \cong C_2 \times C_3\) which we have
+        seen before.
+
+        The image of a non-trivial homomorphism \(\psi:(C_2 \times C_2) \to
+        \Aut{C_3}\) is \(C_2\), so by Theorem \ref{thm:iso1}: \(\ker{\theta} =
+        C_2\)
+
+        Choose \(a, b \in C_2 \times C_2\) with \(a, b \neq 1\) such that
+        \(a\theta = \beta:x \mapsto x^{-1}\) and \(b\theta = \text{id}:x
+        \mapsto x\).
+        Then:
+        \[G = \langle\, x, a, b \mid x^3 = a^2 = b^2 = 1,\ ab = ba,\ a^{-1}xa =
+        x^{-1},\ b^{-1}xb = x\,\rangle\]
+        Let \(y = xb\).
+        The order of \(y = \lcm{(\order{(x)}, \order{(b)})} = \lcm{(2, 3)} =
+        6\) because \(x\) and \(b\) commute.
+        \(y^3 = x^3b^3 = b\) so:
+        \[ a^{-1}ya = a^{-1}xba = a^{-1}xab = x^{-1}b = x^2b = y^2y^3 = y^{-1}\]
+        Hence:
+        \[G = \langle\, a, y \mid y^6 = a^2 = 1,\ a^{-1}ya = y^{-1}\,\rangle
+        \cong D_{12}\]
+\end{enumerate}
+
+So a group \(G\) of order 12 is isomorphic to one of:
+\[
+    C_{12}, \quad%
+    C_2 \times C_6 \quad%
+    A_4 \quad%
+    D_{12} \quad \text{or} \quad%
+    \langle\, x, y \mid x^3 = y^4 = 1,\ y^{-1}xy = x^{-1}\,\rangle
+\]
 
 
 \end{document}
