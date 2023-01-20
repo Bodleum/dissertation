@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Arch Linux)  (format=lualatex 2023.1.10)  20 JAN 2023 16:36
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Arch Linux)  (format=lualatex 2023.1.10)  20 JAN 2023 16:49
  restricted system commands enabled.
 **"/home/bodleum/archive/Uni/Courses/Year 4/MT4599/dis/dis.tex"
 ("/home/bodleum/archive/Uni/Courses/Year 4/MT4599/dis/dis.tex"
@@ -548,7 +548,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 198.
+(hyperref)                removing `math shift' on input line 199.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -558,17 +558,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `superscript' on input line 268.
 
-[3]
-! Undefined control sequence.
-l.310         \(G \cong C_2 \times C_2 \timse
-                                            C_3 \cong C_2 \times C_6\).
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[4] [5] (./dis.aux)
+[3] [4] [5] (./dis.aux)
 Package rerunfilecheck Info: File `dis.out' has not changed.
 (rerunfilecheck)             Checksum: C5115F9144FCB5E6F024AF56A2D6D4E4;1540.
 )
@@ -579,7 +569,7 @@ Here is how much of LuaTeX's memory you used:
  614 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 31 attribute, 58 glue_spec
 , 31 attribute_list, 1 write nodes
-   avail lists: 2:582,3:415,4:8,5:311,6:89,7:5146,8:75,9:595,10:5,11:250
+   avail lists: 2:582,3:415,4:8,5:311,6:89,7:5153,8:75,9:595,10:5,11:250
  31219 multiletter control sequences out of 65536+600000
  88 fonts using 5460223 bytes
  72i,13n,73p,317b,448s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -596,7 +586,7 @@ m/lmr17.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/te
 xmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf-dist/fonts/type1/pub
 lic/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb>
-Output written on dis.pdf (5 pages, 224193 bytes).
+Output written on dis.pdf (5 pages, 223974 bytes).
 
 PDF statistics: 172 PDF objects out of 1000 (max. 8388607)
  148 compressed objects within 2 object streams

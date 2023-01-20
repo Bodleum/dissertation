@@ -112,7 +112,7 @@ Let \(G\) be a group of order \(p^nm\) where \(p\) is a prime and \(p\nmid m\).
 \begin{proof}
     Any automorphism, \(\varphi\) of \(C_n\) has the property:
     \[(x^i)\varphi = (x\varphi)^i\]
-    Hence \(\varphi\) is determined by it's effect on the generator, \(x\), and
+    Hence \(\varphi\) is determined by it's effect on a generator, \(x\), and
     preserves element order.
     In particular, \(\varphi\) sends generators to generators.
 
@@ -124,12 +124,13 @@ Let \(G\) be a group of order \(p^nm\) where \(p\) is a prime and \(p\nmid m\).
     Denote \(\varphi_k:x \mapsto x^k\).
 
     Consider:
-    \[x\varphi_k\varphi_l = (x^k)\varphi_l = (x^k)^l = x^{kl} = x^{lk} = (x^l)^k = x\varphi_l\varphi_k\]
+    \[x\varphi_k\varphi_l = (x^k)\varphi_l = (x^k)^l = x^{kl} = x^{lk} =
+    (x^l)^k = x\varphi_l\varphi_k\]
     So we see that \(\Aut{C_n}\) is abelian.
     Moreover, \(x\varphi_k\varphi_l = x\varphi_{kl}\).
 
     Now consider \(\theta:\Aut{C_n} \to \Zn{n}^*\) defined by \(\varphi_k\theta
-    \mapsto k\).
+    = k\).
     We will show \(\theta\) is an isomorphism.
 
     \(\theta\) is surjective because every \(k \in \Zn{n}^*\) is coprime to
@@ -139,7 +140,7 @@ Let \(G\) be a group of order \(p^nm\) where \(p\) is a prime and \(p\nmid m\).
     \(\theta\) is also injective because if \(\varphi_k, \varphi_l \in
     \Aut{C_n}\) such that \(\varphi_k\theta = \varphi_l\theta\) then \(k = l\).
 
-    Finally, \(\theta\) is a homomorphism because \((\varphi_k\varphi_l\theta =
+    Finally, \(\theta\) is a homomorphism because \((\varphi_k\varphi_l)\theta =
     \varphi_{kl}\theta = kl = (\varphi_k\theta)(\varphi_l\theta)\).
     So \(\theta:\Aut{C_n} \to \Zn{n}^*\) is an isomorphism.
 
@@ -219,14 +220,14 @@ So \(G = C_p C_2\), \(C_p \unlhd G\) and \(C_p \cap C_2 = \bm{1} \implies G =
 C_p \rtimes C_2\)
 
 We want a homomorphism \(\varphi:\Aut{C_p} \to C_2\).
-By Lemma \ref{lem:aut}, \(\Aut{C_p} \cong \Zn{p}^*\), so now we need to find elements of order 2 in \(Zn{p}^*\).
+By Lemma \ref{lem:aut}, \(\Aut{C_p} \cong \Zn{p}^*\), so now we need to find elements of order 2 in \(\Zn{p}^*\).
 
 An element \(x \in \Zn{p}^*\) of order 2 satisfies:
 \[x^2 = 1 \implies x^2 - 1 = 0 \implies (x-1)(x+1) = 0\]
 Hence \(x = 1\) or \(-1\).
 But 1 has order 1 so \(x\) can only be \(-1\).
 
-So \(C_2\varphi\) could be \(\bm{1}\) or \(\langle \beta:x \mapsto x{-1}
+So \(C_2\varphi\) could be \(\bm{1}\) or \(\langle \beta:x \mapsto x^{-1}
 \rangle\). This gives us two possibilities:
 \[y\varphi = x \mapsto x \quad \text{or} \quad y\varphi = x \mapsto x^{-1}\]
 
@@ -235,7 +236,6 @@ So \(C_2\varphi\) could be \(\bm{1}\) or \(\langle \beta:x \mapsto x{-1}
         \begin{equation*}
         \begin{aligned}
             G &= \langle\, x, y \mid x^p = y^2 = 1,\ y^{-1}xy = x \,\rangle \\
-            &=\langle\, x, y \mid x^p = y^2 = 1,\ xy = yx \,\rangle \\
             &= C_p \times C_2 \cong C_{2p}
         \end{aligned}
         \end{equation*}
@@ -307,7 +307,7 @@ non-identity elements, hence \(\Aut{V_4} \cong S_3\).
     \item \(H = V_4\) i.e. \(G = (C_2 \times C_2) \rtimes C_3\).
 
         A trivial homomorphism \(C_3\psi = \bm{1}\) yields the direct product
-        \(G \cong C_2 \times C_2 \timse C_3 \cong C_2 \times C_6\).
+        \(G \cong C_2 \times C_2 \times C_3 \cong C_2 \times C_6\).
 
         \(S_3\) has one subgroup of order 3, hence there is essentially only
         one homomorphism \(\psi:C_3 \to \Aut{V_4}\).
@@ -334,12 +334,12 @@ If we instead consider \(G\) where \(C_3 \unlhd G\), i.e. \(G = C_3 \rtimes H\),
     \item \(H = V_4\) i.e. \(G = C_3 \rtimes (C_2 \times C_2)\).
 
         If \(\psi:(C_2 \times C_2) \to \Aut{C_3}\) is trivial then we obtain
-        \(G = C_3 \times C_2 \times C_2 \cong C_2 \times C_3\) which we have
+        \(G = C_3 \times C_2 \times C_2 \cong C_2 \times C_6\) which we have
         seen before.
 
         The image of a non-trivial homomorphism \(\psi:(C_2 \times C_2) \to
         \Aut{C_3}\) is \(C_2\), so by Theorem \ref{thm:iso1}: \(\ker{\theta} =
-        C_2\)
+        C_2\).
 
         Choose \(a, b \in C_2 \times C_2\) with \(a, b \neq 1\) such that
         \(a\theta = \beta:x \mapsto x^{-1}\) and \(b\theta = \text{id}:x
