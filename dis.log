@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Arch Linux)  (format=lualatex 2023.1.10)  20 JAN 2023 16:49
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Arch Linux)  (format=lualatex 2023.1.10)  24 JAN 2023 17:00
  restricted system commands enabled.
 **"/home/bodleum/archive/Uni/Courses/Year 4/MT4599/dis/dis.tex"
 ("/home/bodleum/archive/Uni/Courses/Year 4/MT4599/dis/dis.tex"
@@ -190,15 +190,7 @@ LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
 (/usr/share/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
-(/usr/share/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks29
-\inpenc@posthook=\toks30
-
-
-Package inputenc Warning: inputenc package ignored with utf8 based engines.
-
-) (/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2022-02-21 v7.00n Hypertext links for LaTeX
 
 (/usr/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
@@ -214,7 +206,7 @@ Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-\pdftexcmds@toks=\toks31
+\pdftexcmds@toks=\toks29
 )
 (/usr/share/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
@@ -405,7 +397,7 @@ Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
 \col@sep=\dimen168
 \ar@mcellbox=\box97
 \extrarowheight=\dimen169
-\NC@list=\toks32
+\NC@list=\toks30
 \extratabsurround=\skip58
 \backup@length=\skip59
 \ar@cellbox=\box98
@@ -416,14 +408,14 @@ Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
 \TX@target=\dimen173
 \TX@delta=\dimen174
 \TX@cols=\count292
-\TX@ftn=\toks33
+\TX@ftn=\toks31
 )
 (/usr/share/texmf-dist/tex/generic/nth/nth.sty
 Package: nth 2002/02/27
 )
 (/usr/share/texmf-dist/tex/latex/tools/enumerate.sty
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
-\@enLab=\toks34
+\@enLab=\toks32
 )
 (/usr/share/texmf-dist/tex/latex/lipsum/lipsum.sty
 (/usr/share/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
@@ -564,15 +556,15 @@ Package rerunfilecheck Info: File `dis.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 10957 strings out of 477762
+ 10920 strings out of 477762
  100000,662416 words of node,token memory allocated
  614 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 31 attribute, 58 glue_spec
 , 31 attribute_list, 1 write nodes
-   avail lists: 2:582,3:415,4:8,5:311,6:89,7:5153,8:75,9:595,10:5,11:250
- 31219 multiletter control sequences out of 65536+600000
+   avail lists: 2:582,3:415,4:8,5:311,6:89,7:5231,8:75,9:595,10:5,11:250
+ 31191 multiletter control sequences out of 65536+600000
  88 fonts using 5460223 bytes
- 72i,13n,73p,317b,448s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 72i,13n,73p,317b,444s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
@@ -586,7 +578,7 @@ m/lmr17.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/te
 xmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf-dist/fonts/type1/pub
 lic/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb>
-Output written on dis.pdf (5 pages, 223974 bytes).
+Output written on dis.pdf (5 pages, 224294 bytes).
 
 PDF statistics: 172 PDF objects out of 1000 (max. 8388607)
  148 compressed objects within 2 object streams

@@ -8,7 +8,6 @@
 \usepackage{amsmath, amssymb, amsthm}
 \usepackage{bm} % Bold maths
 \usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
 \usepackage{hyperref}
 \usepackage{multicol}
 \usepackage{tabularx}
@@ -25,6 +24,7 @@
 \DeclareMathOperator{\Aut}{Aut}
 \DeclareMathOperator{\order}{o}
 \DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\z}{Z}
 
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Zn}[1]{\Z/#1\Z}
@@ -56,7 +56,7 @@
 % \end{proof}
 %
 % But what if we allow \(n_2\) to change, depending on what \(h_1\) is?
-% Let's define a homomorphism \(\varphi:H \to \Aut{N}\) and ...
+% Let's define a homomorphism \(\varphi:H \to \Aut{N}\) and
 
 % ====   Theorems and Lemmas   ====
 \section{Theorems and Lemmas}
@@ -266,6 +266,8 @@ The Sylow theorems are not so helpful here, because \(4=2^2\) so any Sylow
 
 % ====   Groups of order p^2   ====
 \section{Generalisation to Groups of Order \(p^2\)}
+Let \(G\) be a group of order \(p^2\) and consider \(\z{(G)} \unlhd G\).
+By Lagrange's Theorem, \(\z{(G)}\) has order 1, \(p\) or \(p^2\).
 
 % ====   Groups of order 12   ====
 \section{Groups of order 12}

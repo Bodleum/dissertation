@@ -108,9 +108,6 @@ INPUT /usr/share/texmf-dist/tex/latex/base/fontenc.sty
 INPUT /usr/share/texmf-dist/tex/latex/lm/t1lmr.fd
 INPUT /usr/share/texmf-dist/tex/latex/lm/t1lmr.fd
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmr12.tfm
-INPUT /usr/share/texmf-dist/tex/latex/base/inputenc.sty
-INPUT /usr/share/texmf-dist/tex/latex/base/inputenc.sty
-INPUT /usr/share/texmf-dist/tex/latex/base/inputenc.sty
 INPUT /usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
 INPUT /usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
 INPUT /usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
