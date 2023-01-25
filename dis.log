@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Arch Linux)  (format=lualatex 2023.1.10)  24 JAN 2023 21:08
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Arch Linux)  (format=lualatex 2023.1.10)  25 JAN 2023 15:58
  restricted system commands enabled.
 **"/home/bodleum/archive/Uni/Courses/Year 4/MT4599/dis/dis.tex"
 ("/home/bodleum/archive/Uni/Courses/Year 4/MT4599/dis/dis.tex"
@@ -556,18 +556,18 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 371.
 
-[5] (./dis.aux)
+[5] [6] (./dis.aux)
 Package rerunfilecheck Info: File `dis.out' has not changed.
 (rerunfilecheck)             Checksum: 9E4EF581C0241877EF77A7009CAE130C;1922.
 )
 
 Here is how much of LuaTeX's memory you used:
- 10924 strings out of 477762
+ 10929 strings out of 477762
  100000,662416 words of node,token memory allocated
- 622 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 33 attribute, 58 glue_spec
-, 33 attribute_list, 1 write nodes
-   avail lists: 2:586,3:388,4:9,5:302,6:89,7:5307,8:72,9:624,10:5,11:245
+ 630 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 35 attribute, 58 glue_spec
+, 35 attribute_list, 1 write nodes
+   avail lists: 2:582,3:388,4:8,5:303,6:89,7:5307,8:72,9:624,10:5,11:245
  31193 multiletter control sequences out of 65536+600000
  88 fonts using 5460223 bytes
  72i,13n,73p,318b,444s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -584,10 +584,10 @@ m/lmr17.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/te
 xmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf-dist/fonts/type1/pub
 lic/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb>
-Output written on dis.pdf (5 pages, 228073 bytes).
+Output written on dis.pdf (6 pages, 230260 bytes).
 
-PDF statistics: 184 PDF objects out of 1000 (max. 8388607)
- 160 compressed objects within 2 object streams
- 37 named destinations out of 1000 (max. 131072)
+PDF statistics: 194 PDF objects out of 1000 (max. 8388607)
+ 169 compressed objects within 2 object streams
+ 42 named destinations out of 1000 (max. 131072)
  89 words of extra memory for PDF output out of 10000 (max. 100000000)
 

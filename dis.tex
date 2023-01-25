@@ -384,10 +384,26 @@ Hence either \(C_3 \unlhd G\) or \(C_5 \unlhd G\).
 Let \(H = C_3C_5\) and by Lagrange's Theorem, \(C_3 \cap C_5 = \bm{1}\), hence \(|H| = 15\) by Lemma \ref{lem:setprodorder}.
 % TODO: Classify groups of order pq
 We know from our classification of groups of order \(pq\) that \(H \cong C_{15}\).
-Notice that \(C_2\) is a Sylow 2-subgroup of \(G\), and again by the same argument, \(C_2 \cap C_{15} = \bm{1}\) and \(|C_2C_{15}| = 30\).
+Notice that \(C_2\) is a Sylow 2-subgroup of \(G\), and by the same argument, \(C_2 \cap C_{15} = \bm{1}\) and \(|C_2C_{15}| = 30\).
 Hence \(G = C_2C_{15}\).
 
 Because \(|C_{15}| = 15 = \frac{30}{2}\), the index of \(C_{15}\) in \(G\) is 2, and we know a subgroup of index 2 is normal, so \(C_{15} \unlhd G\).
 Moreover, \(G = C_{15} \rtimes C_2\).
+
+By Lemma \ref{lem:aut}:
+\[\Aut{C_{15}} = \Zn{15}^* \cong (\Zn{3} \times \Zn{5})^* \cong \Zn{3}^* \times \Zn{5}^* \cong C_2 \times C_4\]
+
+A homomorphism, \(\psi:C_2 \to C_2 \times C_4\) preserves element order, and there are 3 elements of order 2 in \(C_2 \times C_4\): \((x, 1)\), \((1, y^2)\) and \((x, y^2)\) where \(\langle x, y \rangle = C_2 \times C_4\).
+We know that \(\psi\) is determined by it's effect on a generator, so if \(\langle z \rangle = C_2\) then \(z\psi\) has four possibilities:
+\begin{enumerate}[\bfseries{Case} 1:]
+    \item \(z\psi = (1, 1)\).
+
+        When \(z\psi = (1, 1)\), then \(\psi\) is the trivial homomorphism, and so we obtain:
+        \[G \cong C_2 \times C_{15} \cong C_{30}\]
+
+    \item \(z\psi = (x, 1)\).
+    \item \(z\psi = (1, y^2)\).
+    \item \(z\psi = (x, y^2)\).
+\end{enumerate}
 
 \end{document}

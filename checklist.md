@@ -1,6 +1,6 @@
 # Checklist
 
-| Number | Factorisation | Classification | Done? |
+| Order  | Factorisation | Classification | Done? |
 | ------ | ------------- | -------------- | ----- |
 | 1      | 1             | Prime          | Y     |
 | 2      | 2             | Prime          | Y     |
