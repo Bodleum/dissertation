@@ -114,7 +114,8 @@ So \(G = C_p C_2\), \(C_p \unlhd G\) and \(C_p \cap C_2 = \bm{1} \implies G =
 C_p \rtimes C_2\)
 
 We want a homomorphism \(\varphi:\Aut{C_p} \to C_2\).
-By Lemma \ref{lem:aut}, \(\Aut{C_p} \cong \Zn{p}^*\), so now we need to find elements of order 2 in \(\Zn{p}^*\).
+By Lemma \ref{lem:aut}, \(\Aut{C_p} \cong \Zn{p}^*\), so now we need to find
+elements of order 2 in \(\Zn{p}^*\).
 
 An element \(x \in \Zn{p}^*\) of order 2 satisfies:
 \[x^2 = 1 \implies x^2 - 1 = 0 \implies (x-1)(x+1) = 0\]
@@ -172,6 +173,54 @@ It is easy to see that \(G \cong C_2 \times C_2\).
 So any group of order 4 is isomorphic to one of:
 \[C_4 \quad \text{or} \quad C_2 \times C_2\]
 
+% ====   Groups of order pq   ====
+\section{Groups of Order \(pq\)}
+Let \(G\) be a group of order \(pq\) where \(p\), \(q\) are prime numbers with
+\(p > q\), and let \(n_p\) and \(n_q\) denote the number of Sylow p-subgroups
+and Sylow q-subgroups of \(G\) respectively.
+Then by Theorem \ref{thm:sylow3}:
+\[n_p \equiv 1 \ \text{(mod p)} \quad \text{and} \quad n_p \mid q \implies n_p
+= 1\]
+\[n_q \equiv 1 \ \text{(mod q)} \implies n_q = 1,\ q+1,\ 2q+1,\ ... \quad
+\text{and} \quad n_q \mid p\]
+
+So \(C_p \unlhd G\) and we have 2 possibilities for \(C_q\): \(p-1\) is a
+multiple of \(q\) or 1.
+
+\begin{enumerate}[\bfseries{Case} 1:]
+    \item \(q \nmid p - 1\).
+
+        If \(p-1\) \emph{is not} a multiple of \(q\) then \(n_q = 1\) and \(C_q
+        \unlhd G\), hence: \[G = C_p \times C_q \cong C_{pq}\]
+
+    \item \( q \mid p - 1\).
+
+        If \(p-1\) \emph{is}  a multiple of \(q\) then \(n_q = p\) and so \(C_q
+        \leqslant G\).
+        By Lagrange's Theorem, \(C_p \cap C_q = \bm{1}\) and by Lemma
+        \ref{lem:setprodorder}, \(|C_pC_q| = pq\), hence, as well as the direct
+        product, we have \(G = C_p \rtimes C_q\).
+
+        By Lemma \ref{lem:aut}, \(\Aut{C_p} \cong C_2\) and so a non-trivial
+        homomorphism \(\varphi:C_q \mapsto \langle \beta:x \mapsto x^{-1}
+        \rangle\).
+        So if \(\langle x \rangle = C_p\) and \(\langle y \rangle = C_q\), we
+        obtain:
+        \[G = \langle \, x, y \mid x^p = y^q = 1,\ y^{-1}xy = x^{-1} \, \rangle\]
+        % TODO: Classify presentation
+\end{enumerate}
+
+So any group of order \(pq\) is isomorphic to either:
+\begin{equation*}
+\begin{aligned}
+    C_{pq} \quad \text{or} \quad \langle \, x, y \mid x^p = y^q = 1,\ y^{-1}xy
+    = x^{-1} \, \rangle \qquad &\text{if} \ q \mid p-1 \\
+    C_{pq} \qquad &\text{if} \ q \nmid p-1
+\end{aligned}
+\end{equation*}
+
+
+
 \part{In Progress}
 
 % ====   Theorems and Lemmas   ====
@@ -222,7 +271,8 @@ Let \(G\) be a group of order \(p^nm\) where \(p\) is a prime and \(p\nmid m\).
 
 \begin{lemma}
 \label{lem:aut}
-    The automorphism group of \(C_n\) is isomorphic to the multiplicative group of integers mod n.
+    The automorphism group of \(C_n\) is isomorphic to the multiplicative group
+    of integers mod n.
 
     i.e. \(\Aut{C_n} \cong \Zn{n}^*\)
 \end{lemma}
@@ -258,11 +308,13 @@ Let \(G\) be a group of order \(p^nm\) where \(p\) is a prime and \(p\nmid m\).
     \(\theta\) is also injective because if \(\varphi_k, \varphi_l \in
     \Aut{C_n}\) such that \(\varphi_k\theta = \varphi_l\theta\) then \(k = l\).
 
-    Finally, \(\theta\) is a homomorphism because \((\varphi_k\varphi_l)\theta =
-    \varphi_{kl}\theta = kl = (\varphi_k\theta)(\varphi_l\theta)\).
+    Finally, \(\theta\) is a homomorphism because \((\varphi_k\varphi_l)\theta
+    = \varphi_{kl}\theta = kl = (\varphi_k\theta)(\varphi_l\theta)\).
     So \(\theta:\Aut{C_n} \to \Zn{n}^*\) is an isomorphism.
 
 \end{proof}
+
+
 
 % ====   Groups of order p^2   ====
 \section{Generalisation to Groups of Order \(p^2\)}
@@ -271,12 +323,16 @@ By Lagrange's Theorem, \(\z{(G)}\) has order 1, \(p\) or \(p^2\).
 
 If \(|\z{(G)}| = p^2\) then \(G\) is abelian.
 
-Assume \(|\z{(G)}| \neq p^2\) and consider an element \(x \in G\) but \(x \notin \z{(G)}\), and it's centraliser, \(\C_G{(x)}\).
-We know \(\C_G{(x)} \leqslant G\) and that \(x \in \C_G{(x)}\), so \(|\C_G{(x)| \neq 1}\), and so by Lagrange's Theorem, it must be that \(|\C_G{(x)}| = p\).
+Assume \(|\z{(G)}| \neq p^2\) and consider an element \(x \in G\) but \(x
+\notin \z{(G)}\), and it's centraliser, \(\C_G{(x)}\).
+We know \(\C_G{(x)} \leqslant G\) and that \(x \in \C_G{(x)}\), so \(|\C_G{(x)|
+\neq 1}\), and so by Lagrange's Theorem, it must be that \(|\C_G{(x)}| = p\).
 So:
 \[|x^G| = |G:\C_G{(x)}| = \frac{p^2}{p} = p\]
 
-The Class Equation, \(|G| = |\z{(G)}| + \sum^k_{i=1}|x_i^G|\), tells us \(|\z{(G)}|\) must be a multiple of \(p\) because both  \(|G|\) and \(|x^G|\) are multiples of \(p\). Hence \(|\z{(G)}| = p\).
+The Class Equation, \(|G| = |\z{(G)}| + \sum^k_{i=1}|x_i^G|\), tells us
+\(|\z{(G)}|\) must be a multiple of \(p\) because both  \(|G|\) and \(|x^G|\)
+are multiples of \(p\). Hence \(|\z{(G)}| = p\).
 
 So then \(|G:\z{(G)}| = p\), which means \(G/\z{(G)} \cong C_p\).
 
@@ -297,8 +353,8 @@ So then \(|G:\z{(G)}| = p\), which means \(G/\z{(G)} \cong C_p\).
 
 % ====   Groups of order 12   ====
 \section{Groups of order 12}
-Let \(G\) be a group of order \(12 = 2^2 \cdot 3\), and \(n_3\) and \(n_2\) denote the number of
-Sylow 3-subgroups and Sylow 2-subgroups of G respectively.
+Let \(G\) be a group of order \(12 = 2^2 \cdot 3\), and \(n_3\) and \(n_2\)
+denote the number of Sylow 3-subgroups and Sylow 2-subgroups of G respectively.
 By Theorem \ref{thm:sylow3}:
 \[n_2 \equiv 1 \text{ (mod 2) and } n_2 \mid 3 \implies n_2 = 1\]
 \[n_3 \equiv 1 \text{ (mod 3) and } n_3 \mid 4 \implies n_3 = 1 \ \text{or} \ 4\]
@@ -306,9 +362,11 @@ By Theorem \ref{thm:sylow3}:
 \(G\) has a unique Sylow 2-subgroup of order \(2^2 = 4\), say \(H \unlhd G\),
 and we have already classified groups of order 4, so either \(C_4\) or \(V_4
 \unlhd G\).
-A Sylow 3-subgroup of \(G\) will have order 3, so  \(C_3 \leqslant G\), and for some groups, \(C_3 \unlhd G\).
+A Sylow 3-subgroup of \(G\) will have order 3, so  \(C_3 \leqslant G\), and for
+some groups, \(C_3 \unlhd G\).
 
-Lagrange's Theorem tells us \(H\) has elements of order 1, 2, and 4, and \(C_3\) has elements of order 1 and 3.
+Lagrange's Theorem tells us \(H\) has elements of order 1, 2, and 4, and
+\(C_3\) has elements of order 1 and 3.
 Hence \(H \cap C_3 = \bm{1}\).
 
 Lemma \ref{lem:setprodorder} tells us:
@@ -344,7 +402,8 @@ non-identity elements, hence \(\Aut{V_4} \cong S_3\).
         Still need to show this is \(A_4\).
 \end{enumerate}
 
-If we instead consider \(G\) where \(C_3 \unlhd G\), i.e. \(G = C_3 \rtimes H\), then we again have two cases:
+If we instead consider \(G\) where \(C_3 \unlhd G\), i.e. \(G = C_3 \rtimes
+H\), then we again have two cases:
 
 \begin{enumerate}[\bfseries{Case} 1:]
     \item \(H = C_4\) i.e. \(G = C_3 \rtimes C_4\).
@@ -403,33 +462,42 @@ Let \(n_2\) denote the number of Sylow 2-subgroups.
 % TODO: Sketch
 
 \section{Groups of Order 30}
-Let \(G\) be a group of order \(30 = 2 \cdot 3 \cdot 5\), and let \(n_3\) and \(n_5\) denote the number of Sylow 3-subgroups and Sylow 5-subgroups of \(G\) respectively.
+Let \(G\) be a group of order \(30 = 2 \cdot 3 \cdot 5\), and let \(n_3\) and
+\(n_5\) denote the number of Sylow 3-subgroups and Sylow 5-subgroups of \(G\)
+respectively.
 Then by Theorem \ref{thm:sylow3}:
 \[n_3 = 1 \ \text{or} \ 10 \quad \text{and} \quad n_5 = 1 \ \text{or} \ 6\]
-If \(n_3 = 10\), then there are 20 elements of order 3, and if \(n_5 = 6\) then there are 24 elements of order 5 in \(G\).
+If \(n_3 = 10\), then there are 20 elements of order 3, and if \(n_5 = 6\) then
+there are 24 elements of order 5 in \(G\).
 \(G\) only has 30 elements, so then either:
 \[n_3 = 1 \ \text{and} \ n_5 = 6, \quad n_3 = 10 \ \text{and} \ n_5 = 1 \quad \text{or} \quad n_3 = n_5 = 1\]
 Hence either \(C_3 \unlhd G\) or \(C_5 \unlhd G\).
 
-Let \(H = C_3C_5\) and by Lagrange's Theorem, \(C_3 \cap C_5 = \bm{1}\), hence \(|H| = 15\) by Lemma \ref{lem:setprodorder}.
-% TODO: Classify groups of order pq
+Let \(H = C_3C_5\) and by Lagrange's Theorem, \(C_3 \cap C_5 = \bm{1}\), hence
+\(|H| = 15\) by Lemma \ref{lem:setprodorder}.
 We know from our classification of groups of order \(pq\) that \(H \cong C_{15}\).
-Notice that \(C_2\) is a Sylow 2-subgroup of \(G\), and by the same argument, \(C_2 \cap C_{15} = \bm{1}\) and \(|C_2C_{15}| = 30\).
+Notice that \(C_2\) is a Sylow 2-subgroup of \(G\), and by the same argument,
+\(C_2 \cap C_{15} = \bm{1}\) and \(|C_2C_{15}| = 30\).
 Hence \(G = C_2C_{15}\).
 
-Because \(|C_{15}| = 15 = \frac{30}{2}\), the index of \(C_{15}\) in \(G\) is 2, and we know a subgroup of index 2 is normal, so \(C_{15} \unlhd G\).
+Because \(|C_{15}| = 15 = \frac{30}{2}\), the index of \(C_{15}\) in \(G\) is
+2, and we know a subgroup of index 2 is normal, so \(C_{15} \unlhd G\).
 Moreover, \(G = C_{15} \rtimes C_2\).
 
 By Lemma \ref{lem:aut}:
 \[\Aut{C_{15}} = \Zn{15}^* \cong (\Zn{3} \times \Zn{5})^* \cong \Zn{3}^* \times \Zn{5}^* \cong C_2 \times C_4\]
 
-A homomorphism, \(\psi:C_2 \to C_2 \times C_4\) preserves element order, and there are 3 elements of order 2 in \(C_2 \times C_4\): \((x, 1)\), \((1, y^2)\) and \((x, y^2)\) where \(\langle x, y \rangle = C_2 \times C_4\).
-We know \(\psi\) is determined by it's effect on a generator, so if \(\langle z \rangle = C_2\) then \(z\psi\) has four possibilities:
+A homomorphism, \(\psi:C_2 \to C_2 \times C_4\) preserves element order, and
+there are 3 elements of order 2 in \(C_2 \times C_4\): \((x, 1)\), \((1, y^2)\)
+and \((x, y^2)\) where \(\langle x, y \rangle = C_2 \times C_4\).
+We know \(\psi\) is determined by it's effect on a generator, so if \(\langle z
+\rangle = C_2\) then \(z\psi\) has four possibilities:
 
 \begin{enumerate}[\bfseries{Case} 1:]
     \item \(z\psi = (1, 1)\).
 
-        When \(z\psi = (1, 1)\), then \(\psi\) is the trivial homomorphism, and so we obtain:
+        When \(z\psi = (1, 1)\), then \(\psi\) is the trivial homomorphism, and
+        so we obtain:
         \[G \cong C_2 \times C_{15} \cong C_{30}\]
 
     \item \(z\psi = (x, 1)\).
@@ -469,7 +537,6 @@ We know \(\psi\) is determined by it's effect on a generator, so if \(\langle z 
 \section{Groups of order 9 (Might skip)}
 
 
-\section{Groups of Order \(pq\)}
 
 \section{Groups of Order 18}
 \subsection{Groups of Order \(p^2q\)}

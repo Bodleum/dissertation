@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Arch Linux)  (format=lualatex 2023.1.10)  27 JAN 2023 12:31
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Arch Linux)  (format=lualatex 2023.1.10)  27 JAN 2023 14:38
  restricted system commands enabled.
 **"/home/bodleum/archive/Uni/Courses/Year 4/MT4599/dis/dis.tex"
 ("/home/bodleum/archive/Uni/Courses/Year 4/MT4599/dis/dis.tex"
@@ -552,56 +552,57 @@ LaTeX Font Info:    Trying to load font information for U+stmry on input line 3
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 93.
 
-[2] [3]
+[2]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 268.
+(hyperref)                removing `math shift' on input line 177.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 268.
-
-[4] [5]
+[3] [4]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 399.
-
-[6]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 472.
+(hyperref)                removing `math shift' on input line 320.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 475.
+(hyperref)                removing `superscript' on input line 320.
+
+[5] [6]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 458.
+
+[7]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 542.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 475.
+(hyperref)                removing `superscript' on input line 542.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 477.
+(hyperref)                removing `math shift' on input line 544.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 477.
+(hyperref)                removing `superscript' on input line 544.
 
-[7] [8] (./dis.aux)
+[8] (./dis.aux)
 Package rerunfilecheck Info: File `dis.out' has not changed.
-(rerunfilecheck)             Checksum: FF59984C1B03906DD394768CE7C5FC48;3763.
+(rerunfilecheck)             Checksum: B62A09A07F27EC5ABC10C867009887D5;3763.
 )
 
 Here is how much of LuaTeX's memory you used:
- 11245 strings out of 477762
+ 11247 strings out of 477762
  100000,662416 words of node,token memory allocated
- 655 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 40 attribute, 59 glue_spec
-, 40 attribute_list, 1 write nodes
-   avail lists: 2:650,3:366,4:14,5:282,6:102,7:4949,8:77,9:520,10:10,11:242
+ 675 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 45 attribute, 59 glue_spec
+, 45 attribute_list, 1 write nodes
+   avail lists: 2:626,3:366,4:14,5:309,6:102,7:5143,8:77,9:503,10:10,11:211
  31475 multiletter control sequences out of 65536+600000
  97 fonts using 6041103 bytes
- 72i,13n,73p,324b,434s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 72i,13n,73p,324b,442s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf-dist/font
 s/enc/dvips/lm/lm-ec.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr
@@ -617,10 +618,10 @@ t/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf-dist/fonts/type1/public/lm/l
 mr8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/share/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on dis.pdf (8 pages, 255597 bytes).
+Output written on dis.pdf (8 pages, 259130 bytes).
 
-PDF statistics: 280 PDF objects out of 1000 (max. 8388607)
- 250 compressed objects within 3 object streams
- 58 named destinations out of 1000 (max. 131072)
+PDF statistics: 286 PDF objects out of 1000 (max. 8388607)
+ 256 compressed objects within 3 object streams
+ 60 named destinations out of 1000 (max. 131072)
  193 words of extra memory for PDF output out of 10000 (max. 100000000)
 
