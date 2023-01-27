@@ -1,6 +1,6 @@
 \documentclass[a4paper, oneside, 12pt, final]{article}
 
-\title{Interim Report}
+\title{Classification of Finite Groups}
 \author{Daniel Laing}
 \date{\today}
 
@@ -14,6 +14,7 @@
 \usepackage[super]{nth}
 \usepackage{enumerate}
 \usepackage{lipsum}
+\usepackage{stmaryrd}   % for \lightning
 
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{corollary}{Corollary}[theorem]
@@ -25,6 +26,7 @@
 \DeclareMathOperator{\order}{o}
 \DeclareMathOperator{\lcm}{lcm}
 \DeclareMathOperator{\z}{Z}
+\DeclareMathOperator{\C}{C}
 
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Zn}[1]{\Z/#1\Z}
@@ -34,117 +36,8 @@
 {\maketitle}
 {\tableofcontents}
 
-% \part{Introduction and aims}
-% \lipsum[2]
+\part{Done}
 
-% \section{Semi-Direct Product}
-% We already know about the direct product:
-%
-% \begin{definition}[Direct Product]
-%     For groups \(N\) and \(H\), the \emph{direct product}, \(G = N\times H\) is a
-%     group of ordered pairs of elements \((n, h)\) where \(n \in N\) and \(h \in
-%     H\) with the operation: \[(n_1, h_1)(n_2, h_2) = (n_1n_2, h_1h_2)\]
-% \end{definition}
-%
-% \begin{theorem}
-%     If \(G = N \times H\) then \(N \unlhd G\) and \(H \unlhd G\).
-% \end{theorem}
-%
-% % TODO: Prove this
-% \begin{proof}
-%     \lipsum[1]
-% \end{proof}
-%
-% But what if we allow \(n_2\) to change, depending on what \(h_1\) is?
-% Let's define a homomorphism \(\varphi:H \to \Aut{N}\) and
-
-% ====   Theorems and Lemmas   ====
-\section{Theorems and Lemmas}
-\subsection{Sylow Theorems}
-Let \(G\) be a group of order \(p^nm\) where \(p\) is a prime and \(p\nmid m\).
-\begin{theorem}[\nth{1} Sylow Theorem]
-\label{thm:sylow1}
-    \(G\) has a Sylow p-subgroup, i.e. a subgroup of order \(p^n\).
-\end{theorem}
-\begin{theorem}[\nth{2} Sylow Theorem]
-\label{thm:sylow2}
-    All Sylow p-subgroups of \(G\) are conjugate to each other.
-\end{theorem}
-\begin{corollary}
-    If \(n_p = 1\) then the Sylow p-subgroup is normal in \(G\).
-\end{corollary}
-\begin{theorem}[\nth{3} Sylow Theorem]
-\label{thm:sylow3}
-    Let \(n_p\) denote the number of Sylow p-subgroups of \(G\).
-    Then:
-    \begin{enumerate}[i)]
-        \item \(n_p \mid m\)
-        \item \(n_p\equiv 1\) (mod p)
-    \end{enumerate}
-\end{theorem}
-
-\subsection{Isomorphism Theorems}
-\begin{theorem}
-\label{thm:iso1}
-\end{theorem}
-
-\begin{theorem}
-\label{thm:iso2}
-\end{theorem}
-
-\begin{theorem}
-\label{thm:iso3}
-\end{theorem}
-
-\begin{lemma}
-\label{lem:setprodorder}
-    For a group \(G\) with \(N \leqslant G\) and \(H \leqslant G\), then
-    \[|NH| = |\{nh \mid n \in N, h \in H\}| = \frac{|N| \cdot |H|}{|N \cap H|}\]
-\end{lemma}
-
-\begin{lemma}
-\label{lem:aut}
-    The automorphism group of \(C_n\) is isomorphic to the multiplicative group of integers mod n.
-
-    i.e. \(\Aut{C_n} \cong \Zn{n}^*\)
-\end{lemma}
-
-\begin{proof}
-    Any automorphism, \(\varphi\) of \(C_n\) has the property:
-    \[(x^i)\varphi = (x\varphi)^i\]
-    Hence \(\varphi\) is determined by it's effect on a generator, \(x\), and
-    preserves element order.
-    In particular, \(\varphi\) sends generators to generators.
-
-    So for a generator, \(x\), \(x\varphi = x^k\) is surjective if \(x^k\)
-    generates \(C_n\).
-    \(x^k\) generates \(C_n\) if \(o(x^k) = n\) which is when \(\gcd{(n, k)} =
-    1\).
-
-    Denote \(\varphi_k:x \mapsto x^k\).
-
-    Consider:
-    \[x\varphi_k\varphi_l = (x^k)\varphi_l = (x^k)^l = x^{kl} = x^{lk} =
-    (x^l)^k = x\varphi_l\varphi_k\]
-    So we see that \(\Aut{C_n}\) is abelian.
-    Moreover, \(x\varphi_k\varphi_l = x\varphi_{kl}\).
-
-    Now consider \(\theta:\Aut{C_n} \to \Zn{n}^*\) defined by \(\varphi_k\theta
-    = k\).
-    We will show \(\theta\) is an isomorphism.
-
-    \(\theta\) is surjective because every \(k \in \Zn{n}^*\) is coprime to
-    \(n\) and so \(x^k\) is a generator of \(C_n\), hence \(\exists\,\varphi_k
-    \in \Aut{C_n}\) such that \(\varphi_k\theta = k\).
-
-    \(\theta\) is also injective because if \(\varphi_k, \varphi_l \in
-    \Aut{C_n}\) such that \(\varphi_k\theta = \varphi_l\theta\) then \(k = l\).
-
-    Finally, \(\theta\) is a homomorphism because \((\varphi_k\varphi_l)\theta =
-    \varphi_{kl}\theta = kl = (\varphi_k\theta)(\varphi_l\theta)\).
-    So \(\theta:\Aut{C_n} \to \Zn{n}^*\) is an isomorphism.
-
-\end{proof}
 
 % ====   Groups of order 6   ====
 \section{Groups of Order 6}
@@ -193,7 +86,8 @@ two possibilities for \(G\):
         \end{equation*}
 \end{enumerate}
 
-Hence \(G\) is isomorphic to either \(C_6\) or \(D_6\).
+Hence \(G\) is isomorphic one of:
+\[C_6 \quad \text{or} \quad D_6\]
 
 % ====   Groups of order 2p   ====
 \section{Generalisation to Groups of Order \(2p\)}
@@ -249,25 +143,157 @@ So \(C_2\varphi\) could be \(\bm{1}\) or \(\langle \beta:x \mapsto x^{-1}
         \end{equation*}
 \end{enumerate}
 
-Hence a group of order \(2p\) is isomorphic to \(C_{2p}\) or \(D_{2p}\).
+Hence a group of order \(2p\) is isomorphic to one of:
+\[C_{2p} \quad \text{or} \quad D_{2p}\]
 
 % ====   Groups of order 4   ====
 \section{Groups of order 4}
 From the Fundamental Theorem of Finite Abelian Groups, we know that a group
 \(G\) of order 4 could be isomorphic to one of \(C_4\) and \(C_2 \times C_2\).
-Now to show that these are the only possibilities, i.e. a group of order 4 must
-be abelian.
+Now to show that these are the only possibilities.
 
 The Sylow theorems are not so helpful here, because \(4=2^2\) so any Sylow
 2-subgroup will be of order 4, which is just G.
 
-% ====   Groups of order 9   ====
-\section{Groups of order 9 (Might skip)}
+Lagrange's Theorem tells us every element of \(G\) has order 1, 2 or 4.
+
+If \(x \in G\) has order 4, then \(\langle x \rangle = G\) and so G is cyclic,
+i.e. \(G \cong C_4\).
+
+If \(\nexists x \in G\) with order 4, then every \(x \in G\), \(x \neq 1\) is
+of order 2.
+Consider \(a, b \in G\) with \(a \neq b\), and the product \(ab\).
+\(ab \neq 1\) because then \(b = a^{-1} = a\), a contradiction.
+\(ab \neq a\) or \(b\) because then \(a = 1\) or \(b = 1\) respectively.
+Hence it must be that \(ab\) is the third element of order 2.
+
+It is easy to see that \(G \cong C_2 \times C_2\).
+
+So any group of order 4 is isomorphic to one of:
+\[C_4 \quad \text{or} \quad C_2 \times C_2\]
+
+\part{In Progress}
+
+% ====   Theorems and Lemmas   ====
+\section{Theorems and Lemmas}
+\subsection{Sylow Theorems}
+Let \(G\) be a group of order \(p^nm\) where \(p\) is a prime and \(p\nmid m\).
+\begin{theorem}[\nth{1} Sylow Theorem]
+\label{thm:sylow1}
+    \(G\) has a Sylow p-subgroup, i.e. a subgroup of order \(p^n\).
+\end{theorem}
+\begin{theorem}[\nth{2} Sylow Theorem]
+\label{thm:sylow2}
+    All Sylow p-subgroups of \(G\) are conjugate to each other.
+\end{theorem}
+\begin{corollary}
+    If \(n_p = 1\) then the Sylow p-subgroup is normal in \(G\).
+\end{corollary}
+\begin{theorem}[\nth{3} Sylow Theorem]
+\label{thm:sylow3}
+    Let \(n_p\) denote the number of Sylow p-subgroups of \(G\).
+    Then:
+    \begin{enumerate}[i)]
+        \item \(n_p \mid m\)
+        \item \(n_p\equiv 1\) (mod p)
+    \end{enumerate}
+\end{theorem}
+
+% TODO: Write out isom theorems
+\subsection{Isomorphism Theorems}
+\begin{theorem}
+\label{thm:iso1}
+\end{theorem}
+
+\begin{theorem}
+\label{thm:iso2}
+\end{theorem}
+
+\begin{theorem}
+\label{thm:iso3}
+\end{theorem}
+
+\begin{lemma}
+\label{lem:setprodorder}
+    For a group \(G\) with \(N \leqslant G\) and \(H \leqslant G\), then
+    \[|NH| = |\{nh \mid n \in N, h \in H\}| = \frac{|N| \cdot |H|}{|N \cap H|}\]
+\end{lemma}
+% TODO: maybe prove?
+
+\begin{lemma}
+\label{lem:aut}
+    The automorphism group of \(C_n\) is isomorphic to the multiplicative group of integers mod n.
+
+    i.e. \(\Aut{C_n} \cong \Zn{n}^*\)
+\end{lemma}
+
+\begin{proof}
+    Any automorphism, \(\varphi\) of \(C_n\) has the property:
+    \[(x^i)\varphi = (x\varphi)^i\]
+    Hence \(\varphi\) is determined by it's effect on a generator, \(x\), and
+    preserves element order.
+    In particular, \(\varphi\) sends generators to generators.
+
+    So for a generator, \(x\), \(x\varphi = x^k\) is surjective if \(x^k\)
+    generates \(C_n\).
+    \(x^k\) generates \(C_n\) if \(o(x^k) = n\) which is when \(\gcd{(n, k)} =
+    1\).
+
+    Denote \(\varphi_k:x \mapsto x^k\).
+
+    Consider:
+    \[x\varphi_k\varphi_l = (x^k)\varphi_l = (x^k)^l = x^{kl} = x^{lk} =
+    (x^l)^k = x\varphi_l\varphi_k\]
+    So we see that \(\Aut{C_n}\) is abelian.
+    Moreover, \(x\varphi_k\varphi_l = x\varphi_{kl}\).
+
+    Now consider \(\theta:\Aut{C_n} \to \Zn{n}^*\) defined by \(\varphi_k\theta
+    = k\).
+    We will show \(\theta\) is an isomorphism.
+
+    \(\theta\) is surjective because every \(k \in \Zn{n}^*\) is coprime to
+    \(n\) and so \(x^k\) is a generator of \(C_n\), hence \(\exists\,\varphi_k
+    \in \Aut{C_n}\) such that \(\varphi_k\theta = k\).
+
+    \(\theta\) is also injective because if \(\varphi_k, \varphi_l \in
+    \Aut{C_n}\) such that \(\varphi_k\theta = \varphi_l\theta\) then \(k = l\).
+
+    Finally, \(\theta\) is a homomorphism because \((\varphi_k\varphi_l)\theta =
+    \varphi_{kl}\theta = kl = (\varphi_k\theta)(\varphi_l\theta)\).
+    So \(\theta:\Aut{C_n} \to \Zn{n}^*\) is an isomorphism.
+
+\end{proof}
 
 % ====   Groups of order p^2   ====
 \section{Generalisation to Groups of Order \(p^2\)}
 Let \(G\) be a group of order \(p^2\) and consider \(\z{(G)} \unlhd G\).
 By Lagrange's Theorem, \(\z{(G)}\) has order 1, \(p\) or \(p^2\).
+
+If \(|\z{(G)}| = p^2\) then \(G\) is abelian.
+
+Assume \(|\z{(G)}| \neq p^2\) and consider an element \(x \in G\) but \(x \notin \z{(G)}\), and it's centraliser, \(\C_G{(x)}\).
+We know \(\C_G{(x)} \leqslant G\) and that \(x \in \C_G{(x)}\), so \(|\C_G{(x)| \neq 1}\), and so by Lagrange's Theorem, it must be that \(|\C_G{(x)}| = p\).
+So:
+\[|x^G| = |G:\C_G{(x)}| = \frac{p^2}{p} = p\]
+
+The Class Equation, \(|G| = |\z{(G)}| + \sum^k_{i=1}|x_i^G|\), tells us \(|\z{(G)}|\) must be a multiple of \(p\) because both  \(|G|\) and \(|x^G|\) are multiples of \(p\). Hence \(|\z{(G)}| = p\).
+
+So then \(|G:\z{(G)}| = p\), which means \(G/\z{(G)} \cong C_p\).
+
+% TODO: Finish proof
+% TODO: Tidy it up
+
+\vskip 3em
+\paragraph{Sketch}
+\begin{itemize}
+    \item Show \(G\) must be abelian. Result follows from FTFAB.
+    \item \(\z{(G)}\) has order 1, \(p\), or \(p^2\) by Lagrange.
+    \item If \(p^2\) then done.
+    \item Size of congruencty classies is multiple of p.
+    \item Class eqn => order of centre is multiple of p. (and so is not 1)
+    \item Quotient with G is cyclic.
+    \item MT4003 showed then G must be abelian.
+\end{itemize}
 
 % ====   Groups of order 12   ====
 \section{Groups of order 12}
@@ -314,6 +340,7 @@ non-identity elements, hence \(\Aut{V_4} \cong S_3\).
         \(S_3\) has one subgroup of order 3, hence there is essentially only
         one homomorphism \(\psi:C_3 \to \Aut{V_4}\).
 
+        % TODO: Show this is A4
         Still need to show this is \(A_4\).
 \end{enumerate}
 
@@ -332,6 +359,7 @@ If we instead consider \(G\) where \(C_3 \unlhd G\), i.e. \(G = C_3 \rtimes H\),
 
         If \(C_4\psi = \langle \beta \rangle\) then we have:
         \[G = \langle\, x, y \mid x^3 = y^4 = 1,\ y^{-1}xy = x^{-1}\,\rangle\]
+        % TODO: Classify this
 
     \item \(H = V_4\) i.e. \(G = C_3 \rtimes (C_2 \times C_2)\).
 
@@ -362,15 +390,17 @@ If we instead consider \(G\) where \(C_3 \unlhd G\), i.e. \(G = C_3 \rtimes H\),
 So a group \(G\) of order 12 is isomorphic to one of:
 \[
     C_{12}, \quad%
-    C_2 \times C_6 \quad%
-    A_4 \quad%
-    D_{12} \quad \text{or} \quad%
+    C_2 \times C_6, \quad%
+    A_4, \quad%
+    D_{12}, \quad \text{or} \quad%
     \langle\, x, y \mid x^3 = y^4 = 1,\ y^{-1}xy = x^{-1}\,\rangle
 \]
 
 \section{Generalisation to Groups of order \(4p\)}
 Suppose \(G\) is a group of order \(4p\) where \(p\) is a prime number.
 Let \(n_2\) denote the number of Sylow 2-subgroups.
+
+% TODO: Sketch
 
 \section{Groups of Order 30}
 Let \(G\) be a group of order \(30 = 2 \cdot 3 \cdot 5\), and let \(n_3\) and \(n_5\) denote the number of Sylow 3-subgroups and Sylow 5-subgroups of \(G\) respectively.
@@ -394,7 +424,8 @@ By Lemma \ref{lem:aut}:
 \[\Aut{C_{15}} = \Zn{15}^* \cong (\Zn{3} \times \Zn{5})^* \cong \Zn{3}^* \times \Zn{5}^* \cong C_2 \times C_4\]
 
 A homomorphism, \(\psi:C_2 \to C_2 \times C_4\) preserves element order, and there are 3 elements of order 2 in \(C_2 \times C_4\): \((x, 1)\), \((1, y^2)\) and \((x, y^2)\) where \(\langle x, y \rangle = C_2 \times C_4\).
-We know that \(\psi\) is determined by it's effect on a generator, so if \(\langle z \rangle = C_2\) then \(z\psi\) has four possibilities:
+We know \(\psi\) is determined by it's effect on a generator, so if \(\langle z \rangle = C_2\) then \(z\psi\) has four possibilities:
+
 \begin{enumerate}[\bfseries{Case} 1:]
     \item \(z\psi = (1, 1)\).
 
@@ -405,5 +436,51 @@ We know that \(\psi\) is determined by it's effect on a generator, so if \(\lang
     \item \(z\psi = (1, y^2)\).
     \item \(z\psi = (x, y^2)\).
 \end{enumerate}
+
+% TODO: Either classify these as given, or provide the groups and prove they
+% are pairwise non-isom.
+
+\part{To Do}
+
+\section{Semi-Direct Product}
+% TODO: Semi-direct product
+% \section{Semi-Direct Product}
+% We already know about the direct product:
+%
+% \begin{definition}[Direct Product]
+%     For groups \(N\) and \(H\), the \emph{direct product}, \(G = N\times H\) is a
+%     group of ordered pairs of elements \((n, h)\) where \(n \in N\) and \(h \in
+%     H\) with the operation: \[(n_1, h_1)(n_2, h_2) = (n_1n_2, h_1h_2)\]
+% \end{definition}
+%
+% \begin{theorem}
+%     If \(G = N \times H\) then \(N \unlhd G\) and \(H \unlhd G\).
+% \end{theorem}
+%
+% TODO: Prove this
+% \begin{proof}
+%     \lipsum[1]
+% \end{proof}
+%
+% But what if we allow \(n_2\) to change, depending on what \(h_1\) is?
+% Let's define a homomorphism \(\varphi:H \to \Aut{N}\) and
+
+% ====   Groups of order 9   ====
+\section{Groups of order 9 (Might skip)}
+
+
+\section{Groups of Order \(pq\)}
+
+\section{Groups of Order 18}
+\subsection{Groups of Order \(p^2q\)}
+
+\section{Groups of Order \(p^3\)}
+\subsection{Groups of Order 8}
+\subsection{Groups of Order 27}
+\subsection{General Case?}
+
+\section{Groups of Order 24}
+
+\section{Groups of Order 16}
 
 \end{document}
