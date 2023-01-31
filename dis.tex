@@ -30,6 +30,8 @@
 
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Zn}[1]{\Z/#1\Z}
+\newcommand{\F}{\mathbb{F}}
+
 
 % ====   Document   ====
 \begin{document}
@@ -187,6 +189,8 @@ Then by Theorem \ref{thm:sylow3}:
 So \(C_p \unlhd G\) and we have 2 possibilities for \(C_q\): \(p-1\) is a
 multiple of \(q\) or 1.
 
+Let \(\langle x \rangle = C_p\) and \(\langle y \rangle = C_q\).
+
 \begin{enumerate}[\bfseries{Case} 1:]
     \item \(q \nmid p - 1\).
 
@@ -201,20 +205,25 @@ multiple of \(q\) or 1.
         \ref{lem:setprodorder}, \(|C_pC_q| = pq\), hence, as well as the direct
         product, we have \(G = C_p \rtimes C_q\).
 
-        By Lemma \ref{lem:aut}, \(\Aut{C_p} \cong C_2\) and so a non-trivial
-        homomorphism \(\varphi:C_q \mapsto \langle \beta:x \mapsto x^{-1}
-        \rangle\).
-        So if \(\langle x \rangle = C_p\) and \(\langle y \rangle = C_q\), we
-        obtain:
-        \[G = \langle \, x, y \mid x^p = y^q = 1,\ y^{-1}xy = x^{-1} \, \rangle\]
-        % TODO: Classify presentation
+        By Lemma \ref{lem:aut}, \(\Aut{C_p} \cong \Zn{p}^* \cong C_{p-1}\), so
+        if \(\nu \in \Zn{p}^*\), then \(x \mapsto x^\nu\) is an automorphism.
+        We know also that \(C_{p-1}\) has a unique subgroup of order \(q\),
+        hence \(G\) has the presentation:
+
+        \[G = \langle \, x, y, \mid x^p = y^q = 1,\ y^{-1}xy = x^\alpha \, \rangle\]
+        where \(\alpha\) is a generator for the subgroup of order \(q\) in
+        \(\Zn{p}^*\).
+
+        Notice that picking different generators are equivalent up to
+        isomorphism.
+
 \end{enumerate}
 
 So any group of order \(pq\) is isomorphic to either:
 \begin{equation*}
 \begin{aligned}
     C_{pq} \quad \text{or} \quad \langle \, x, y \mid x^p = y^q = 1,\ y^{-1}xy
-    = x^{-1} \, \rangle \qquad &\text{if} \ q \mid p-1 \\
+    = x^\alpha \, \rangle \qquad &\text{if} \ q \mid p-1 \\
     C_{pq} \qquad &\text{if} \ q \nmid p-1
 \end{aligned}
 \end{equation*}
