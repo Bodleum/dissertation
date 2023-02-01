@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Arch Linux)  (format=lualatex 2023.1.10)  31 JAN 2023 17:07
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Arch Linux)  (format=lualatex 2023.1.10)  1 FEB 2023 16:01
  restricted system commands enabled.
 **"/home/bodleum/archive/Uni/Courses/Year 4/MT4599/dis/dis.tex"
 ("/home/bodleum/archive/Uni/Courses/Year 4/MT4599/dis/dis.tex"
@@ -550,43 +550,43 @@ LaTeX Font Info:    Trying to load font information for U+stmry on input line 3
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 95.
+(hyperref)                removing `math shift' on input line 105.
 
 [2]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 179.
+(hyperref)                removing `math shift' on input line 189.
 
 [3] [4]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 329.
+(hyperref)                removing `math shift' on input line 339.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 329.
+(hyperref)                removing `superscript' on input line 339.
 
 [5] [6]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 467.
+(hyperref)                removing `math shift' on input line 477.
 
 [7]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 551.
+(hyperref)                removing `math shift' on input line 561.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 551.
+(hyperref)                removing `superscript' on input line 561.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 553.
+(hyperref)                removing `math shift' on input line 563.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 553.
+(hyperref)                removing `superscript' on input line 563.
 
 [8] (./dis.aux)
 Package rerunfilecheck Info: File `dis.out' has not changed.
@@ -596,9 +596,9 @@ Package rerunfilecheck Info: File `dis.out' has not changed.
 Here is how much of LuaTeX's memory you used:
  11248 strings out of 477762
  100000,662416 words of node,token memory allocated
- 675 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 45 attribute, 59 glue_spec
-, 45 attribute_list, 1 write nodes
+ 671 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 44 attribute, 59 glue_spec
+, 44 attribute_list, 1 write nodes
    avail lists: 2:635,3:366,4:14,5:309,6:102,7:5143,8:77,9:502,10:10,11:211
  31476 multiletter control sequences out of 65536+600000
  97 fonts using 6041103 bytes
@@ -618,7 +618,7 @@ t/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf-dist/fonts/type1/public/lm/l
 mr8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/share/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on dis.pdf (8 pages, 260200 bytes).
+Output written on dis.pdf (8 pages, 260477 bytes).
 
 PDF statistics: 286 PDF objects out of 1000 (max. 8388607)
  256 compressed objects within 3 object streams

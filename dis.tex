@@ -43,32 +43,39 @@
 
 % ====   Groups of order 6   ====
 \section{Groups of Order 6}
-Let \(G\) be a group of order 6, and \(n_3\) denote the number of Sylow
-3-subgroups of \(G\).
+Let \(G\) be a group of order 6, and \(n_3\) denote the number of Sylow 3-subgroups of \(G\).
 Then by Theorem \ref{thm:sylow3}:
-\[n_3 \equiv 1 \text{ (mod 3) and } n_3 \mid 2 \implies n_3 = 1\]
-So \(G\) has one Sylow 3-subgroup, and because 3 is prime, it is isomorphic to
-\(C_3\), i.e.
-\[C_3 \unlhd G\]
+\[n_3 \equiv 1 \ \text{(mod 3)} \quad \text{and} \quad n_3 \mid 2 \implies n_3 = 1\]
+So \(G\) has one Sylow 3-subgroup, \(N\), and because 3 is prime, it is isomorphic to \(C_3\).
+Let \(N = \langle x \rangle\).
 
-Any Sylow 2-subgroup of \(G\) will have order 2, and so \(C_2 \leqslant G\).
+Any Sylow 2-subgroup, \(H \leqslant G\), will have order 2, and so \(H \cong C_2\).
+Let \(H = \langle y \rangle\).
 
-Lagrange's Theorem tells us that \(C_3\) has elements of orders 1 and 3, and
-\(C_2\) has elements of order 1 and 2 hence:
-\[C_3 \cap C_2 = \bm{1}\]
+Lagrange's Theorem tells us that \(N\) has elements of orders 1 and 3, and \(H\) has elements of
+order 1 and 2 hence:
+\[N \cap H = \bm{1}\]
 
 By Lemma \ref{lem:setprodorder}:
-\[|C_3 C_2| = \frac{|C_3| \cdot |C_2|}{|C_3 \cap C_2|} = \frac{3 \cdot 2}{1} =
-6\]
+\[|NH| = \frac{|N| \cdot |H|}{|N \cap H|} = \frac{3 \cdot 2}{1} = 6\]
 
-So \(G = C_3 C_2\), \(C_3 \unlhd G\) and \(C_3 \cap C_2 = \bm{1} \implies G =
-C_3 \rtimes C_2\)
+So \(G = N H\), \(N \unlhd G\) and \(N \cap H = \bm{1}\), which means \(G = N \rtimes H\), the
+semidirect product of \(N\) by \(H\).
 
-Now we need to determine \(\Aut{C_3}\).
-\(C_3 = \{1, x, x^2 = x^{-1}\}\) and so \(\Aut{C_3} = \{\text{id}, \psi:x
-\mapsto x^{-1}\} \cong C_2\).
-So if \(C_3 = \langle x \rangle\) and \(C_2 = \langle y \rangle\), then we have
-two possibilities for \(G\):
+Now we need to determine \(\Aut{N}\).
+An automorphism, \(\varphi\) of \(N\) preserves element order.
+In particular, \(\varphi\) maps generators to generators.
+Hence, \(x\varphi = x\) or \(x^2\) because they are the generators of \(N\).
+So \(\Aut{N} \cong C_2\).
+
+Now we want a homomorphism \(\psi:H \to \Aut{N}\).
+If \(\psi\) is trivial, then it maps \(H\) to the trivial group, so every element of \(H\) gets sent
+to the trivial automorphism.
+If \(\psi\) is not trivial, then at least one element of \(H\) is not sent to the trivial
+automorphism.
+It cannot be 1 because then element order is not preserved, so it must be the generator, \(y\).
+Hence we obtain 2 possibilities for \(G\):
+
 \begin{enumerate}[\bfseries{Case} 1:]
     \item
         \begin{equation*}
@@ -78,6 +85,7 @@ two possibilities for \(G\):
             &= C_3 \times C_2 \cong C_6
         \end{aligned}
         \end{equation*}
+
     \item
         \begin{equation*}
         \begin{aligned}
@@ -87,6 +95,8 @@ two possibilities for \(G\):
         \end{aligned}
         \end{equation*}
 \end{enumerate}
+
+These are clearly not isomorphic, because \(C_6\) is abelian, and \(D_6\) is not.
 
 Hence \(G\) is isomorphic one of:
 \[C_6 \quad \text{or} \quad D_6\]
