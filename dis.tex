@@ -1,3 +1,5 @@
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{naturalnames}{hyperref}
 \documentclass[a4paper, oneside, 12pt, final]{article}
 
 \title{Classification of Finite Groups}
@@ -48,18 +50,15 @@ Then by Theorem \ref{thm:sylow3}:
 \[n_3 \equiv 1 \ \text{(mod 3)} \quad \text{and} \quad n_3 \mid 2 \implies n_3 = 1\]
 So \(G\) has one Sylow 3-subgroup, \(N\), and because 3 is prime, it is isomorphic to \(C_3\).
 Let \(N = \langle x \rangle\).
-
 Any Sylow 2-subgroup, \(H \leqslant G\), will have order 2, and so \(H \cong C_2\).
 Let \(H = \langle y \rangle\).
-
 Lagrange's Theorem tells us that \(N\) has elements of orders 1 and 3, and \(H\) has elements of
 order 1 and 2 hence:
 \[N \cap H = \bm{1}\]
 
 By Lemma \ref{lem:setprodorder}:
 \[|NH| = \frac{|N| \cdot |H|}{|N \cap H|} = \frac{3 \cdot 2}{1} = 6\]
-
-So \(G = N H\), \(N \unlhd G\) and \(N \cap H = \bm{1}\), which means \(G = N \rtimes H\), the
+So \(G = NH\), \(N \unlhd G\) and \(N \cap H = \bm{1}\), which means \(G = N \rtimes H\), the
 semidirect product of \(N\) by \(H\).
 
 Now we need to determine \(\Aut{N}\).
@@ -103,40 +102,33 @@ Hence \(G\) is isomorphic one of:
 
 % ====   Groups of order 2p   ====
 \section{Generalisation to Groups of Order \(2p\)}
-Let \(G\) be a group of order \(2p\) where \(p\) is a prime number, and \(n_p\)
-denote the number of Sylow p-subgroups of \(G\).
+Now that we have seen groups of order 6, let's try and work towards a more general case: groups of
+order 2 times a prime number.
+So let \(G\) be a group of order \(2p\) where \(p\) is a prime number, and \(n_p\) denote the number
+of Sylow p-subgroups of \(G\).
 Then by Theorem \ref{thm:sylow3}:
-\[n_p \equiv 1 \text{ (mod p) and } n_p \mid 2 \implies n_p = 1\]
-So \(G\) has one Sylow p-subgroup, it is isomorphic to \(C_p = \langle x
-\rangle\) hence:
-\[C_p \unlhd G\]
-
-A Sylow 2-subgroup of \(G\) will have order 2 so \(C_2 = \langle y \rangle
-\leqslant G\).
-
-Lagrange's Theorem tells us that \(C_p\) has elements of orders 1 and \(p\),
-and \(C_2\) has elements of order 1 and 2 hence:
-\[C_p \cap C_2 = \bm{1}\]
+\[n_p \equiv 1 \ \text{(mod p)} \quad \text{and} \quad n_p \mid 2 \implies n_p = 1\]
+So \(G\) has one Sylow \(p\)-subgroup, say \(N\), and it is isomorphic to \(C_p\).
+Let \(N = \langle x \rangle\).
+A Sylow 2-subgroup, \(H \leqslant G\) will have order 2 so \(H \cong C_2\).
+Let \(H = \langle y \rangle\).
+Lagrange's Theorem tells us that \(N\) has elements of orders 1 and \(p\), and \(H\) has elements of
+order 1 and 2 hence:
+\[N \cap H = \bm{1}\]
 
 By Lemma \ref{lem:setprodorder}:
-\[|C_p C_2| = \frac{|C_p| \cdot |C_2|}{|C_p \cap C_2|} = \frac{p \cdot 2}{1} =
-2p\]
+\[|NH| = \frac{|N| \cdot |H|}{|N \cap H|} = \frac{p \cdot 2}{1} = 2p\]
+So \(G = N \rtimes H\) as before.
 
-So \(G = C_p C_2\), \(C_p \unlhd G\) and \(C_p \cap C_2 = \bm{1} \implies G =
-C_p \rtimes C_2\)
-
-We want a homomorphism \(\varphi:\Aut{C_p} \to C_2\).
-By Lemma \ref{lem:aut}, \(\Aut{C_p} \cong \Zn{p}^*\), so now we need to find
-elements of order 2 in \(\Zn{p}^*\).
-
-An element \(x \in \Zn{p}^*\) of order 2 satisfies:
-\[x^2 = 1 \implies x^2 - 1 = 0 \implies (x-1)(x+1) = 0\]
-Hence \(x = 1\) or \(-1\).
+We know by Lemma \ref{lem:aut} that \(\Aut{N} \cong \Zn{p}^*\), so let's look for the elements of
+order 2.
+An element \(x \in \Zn{p}^*\) of order 2 satisfies \(x^2 = 1\), hence \(x = 1\) or \(-1\).
 But 1 has order 1 so \(x\) can only be \(-1\).
+From the proof of Lemma \ref{lem:aut}, this corresponds to the inverse map \(\beta:x \mapsto
+x^{-1}\).
 
-So \(C_2\varphi\) could be \(\bm{1}\) or \(\langle \beta:x \mapsto x^{-1}
-\rangle\). This gives us two possibilities:
-\[y\varphi = x \mapsto x \quad \text{or} \quad y\varphi = x \mapsto x^{-1}\]
+Now we want a homomorphism \(\psi: H \to \Aut{N}\).
+By the same argument as for groups of order 6, we have two possibilities for \(G\):
 
 \begin{enumerate}[\bfseries{Case} 1:]
     \item
@@ -155,6 +147,8 @@ So \(C_2\varphi\) could be \(\bm{1}\) or \(\langle \beta:x \mapsto x^{-1}
         \end{aligned}
         \end{equation*}
 \end{enumerate}
+
+Again, these are clearly not isomorphic, because \(C_{2p}\) is abelian, and \(D_{2p}\) is not.
 
 Hence a group of order \(2p\) is isomorphic to one of:
 \[C_{2p} \quad \text{or} \quad D_{2p}\]
