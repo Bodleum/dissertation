@@ -179,6 +179,67 @@ So it is easy to see that \(G \cong C_2 \times C_2\).
 So any group of order 4 is isomorphic to one of:
 \[C_4 \quad \text{or} \quad C_2 \times C_2\]
 
+% ====   Groups of order p^2   ====
+\section{Generalisation to Groups of Order \(p^2\)}
+Let \(G\) be a group of order \(p^2\).
+By Lagrange's Theorem, the elements of \(G\) have order 1, \(p\) or \(p^2\).
+
+If \(x \in G\) has order \(p^2\), then \(x\) generates \(G\) so \(G \cong C_{p^2}\).
+
+If \(G\) does not have an element of order \(p^2\) then all elements, except the identity, have order \(p\).
+We know that \(G\) must have a subgroup of order \(p\), \(P\), and because \(p\) is prime, \(P \cong C_p\).
+Pick a generator for \(P\), say \(x\) and an element \(y \in G\) such that \(y \notin P\).
+Then \(y \neq x^i\) for any \(i\).
+
+If \(y^j = x^i\) for some \(i\) and \(j\), then:
+\[{(y^j)}^{1-j} = {(x^i)}^{1-j} = y^{j-j+1} = y = x^{i(1-j)} = x^k \quad \text{for some} \ k\text{,} \ \text{a
+contradiction.}\]
+So no power of \(y\) is equal to any power of \(x\).
+Because \(y\) has order \(p\), it generates a subgroup of order \(p\), \(\bar{P}\) with \(P \cap \bar{P} = \bm{1}\).
+By Lemma~\ref{lem:setprodorder}, \(|P\bar{P}| = p^2 = |G|\) so:
+\[G = P \times \bar{P} \cong C_p \times C_p\]
+
+If \(G\) has no elements of order \(p\) or \(p^2\), then it only has elements of order 1, which is the trivial group.
+
+Hence any group of order \(p^2\) is isomorphic to one of:
+\[C_{p^2} \quad \text{or} \quad C_p \times C_p\]
+
+
+% TODO: Check the above proof is actually legit
+
+% Let \(G\) be a group of order \(p^2\) and consider \(\z{(G)} \unlhd G\).
+% By Lagrange's Theorem, \(\z{(G)}\) has order 1, \(p\) or \(p^2\).
+%
+% If \(|\z{(G)}| = p^2\) then \(G\) is abelian.
+%
+% Assume \(|\z{(G)}| \neq p^2\) and consider an element \(x \in G\) but \(x
+% \notin \z{(G)}\), and it's centraliser, \(\C_G{(x)}\).
+% We know \(\C_G{(x)} \leqslant G\) and that \(x \in \C_G{(x)}\), so \(|\C_G{(x)|
+% \neq 1}\), and so by Lagrange's Theorem, it must be that \(|\C_G{(x)}| = p\).
+% So:
+% \[|x^G| = |G:\C_G{(x)}| = \frac{p^2}{p} = p\]
+%
+% The Class Equation, \(|G| = |\z{(G)}| + \sum^k_{i=1}|x_i^G|\), tells us
+% \(|\z{(G)}|\) must be a multiple of \(p\) because both  \(|G|\) and \(|x^G|\)
+% are multiples of \(p\). Hence \(|\z{(G)}| = p\).
+%
+% So then \(|G:\z{(G)}| = p\), which means \(G/\z{(G)} \cong C_p\).
+%
+% % TODO: Finish proof
+% % TODO: Tidy it up
+%
+% \vskip 3em
+% \paragraph{Sketch}
+% \begin{itemize}
+%     \item Show \(G\) must be abelian. Result follows from FTFAB\@.
+%     \item \(\z{(G)}\) has order 1, \(p\), or \(p^2\) by Lagrange.
+%     \item If \(p^2\) then done.
+%     \item Size of congruencty classies is multiple of p.
+%     \item Class eqn => order of centre is multiple of p. (and so is not 1)
+%     \item Quotient with G is cyclic.
+%     \item MT4003 showed then G must be abelian.
+% \end{itemize}
+
 % ====   Groups of order pq   ====
 \section{Groups of Order \(pq\)}
 Let \(G\) be a group of order \(pq\) where \(p\), \(q\) are prime numbers with
@@ -305,45 +366,9 @@ Let \(G\) be a group of order \(p^n m\) where \(p\) is a prime and \(p\nmid m\).
     Finally, \(\theta\) is a homomorphism because
     \[(\varphi_k\varphi_l)\theta = \varphi_{kl}\theta = kl = (\varphi_k\theta)(\varphi_l\theta)\]
     So \(\theta:\Aut{C_n} \to \Zn{n}^*\) is an isomorphism.
-
 \end{proof}
 
 
-
-% ====   Groups of order p^2   ====
-\section{Generalisation to Groups of Order \(p^2\)}
-Let \(G\) be a group of order \(p^2\) and consider \(\z{(G)} \unlhd G\).
-By Lagrange's Theorem, \(\z{(G)}\) has order 1, \(p\) or \(p^2\).
-
-If \(|\z{(G)}| = p^2\) then \(G\) is abelian.
-
-Assume \(|\z{(G)}| \neq p^2\) and consider an element \(x \in G\) but \(x
-\notin \z{(G)}\), and it's centraliser, \(\C_G{(x)}\).
-We know \(\C_G{(x)} \leqslant G\) and that \(x \in \C_G{(x)}\), so \(|\C_G{(x)|
-\neq 1}\), and so by Lagrange's Theorem, it must be that \(|\C_G{(x)}| = p\).
-So:
-\[|x^G| = |G:\C_G{(x)}| = \frac{p^2}{p} = p\]
-
-The Class Equation, \(|G| = |\z{(G)}| + \sum^k_{i=1}|x_i^G|\), tells us
-\(|\z{(G)}|\) must be a multiple of \(p\) because both  \(|G|\) and \(|x^G|\)
-are multiples of \(p\). Hence \(|\z{(G)}| = p\).
-
-So then \(|G:\z{(G)}| = p\), which means \(G/\z{(G)} \cong C_p\).
-
-% TODO: Finish proof
-% TODO: Tidy it up
-
-\vskip 3em
-\paragraph{Sketch}
-\begin{itemize}
-    \item Show \(G\) must be abelian. Result follows from FTFAB\@.
-    \item \(\z{(G)}\) has order 1, \(p\), or \(p^2\) by Lagrange.
-    \item If \(p^2\) then done.
-    \item Size of congruencty classies is multiple of p.
-    \item Class eqn => order of centre is multiple of p. (and so is not 1)
-    \item Quotient with G is cyclic.
-    \item MT4003 showed then G must be abelian.
-\end{itemize}
 
 % ====   Groups of order 12   ====
 \section{Groups of order 12}
