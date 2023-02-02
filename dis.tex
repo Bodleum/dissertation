@@ -459,36 +459,34 @@ Let \(n_2\) denote the number of Sylow 2-subgroups.
 % TODO: Sketch
 
 \section{Groups of Order 30}
-Let \(G\) be a group of order \(30 = 2 \cdot 3 \cdot 5\), and let \(n_3\) and
-\(n_5\) denote the number of Sylow 3-subgroups and Sylow 5-subgroups of \(G\)
-respectively.
+Let \(G\) be a group of order \(30 = 2 \cdot 3 \cdot 5\), and let \(n_3\) and \(n_5\) denote the number of Sylow
+3-subgroups and Sylow 5-subgroups of \(G\) respectively.
 Then by Theorem~\ref{thm:sylow3}:
 \[n_3 = 1 \ \text{or} \ 10 \quad \text{and} \quad n_5 = 1 \ \text{or} \ 6\]
 If \(n_3 = 10\), then there are 20 elements of order 3, and if \(n_5 = 6\) then
 there are 24 elements of order 5 in \(G\).
 \(G\) only has 30 elements, so then either:
 \[n_3 = 1 \ \text{and} \ n_5 = 6, \quad n_3 = 10 \ \text{and} \ n_5 = 1 \quad \text{or} \quad n_3 = n_5 = 1\]
-Hence either \(C_3 \unlhd G\) or \(C_5 \unlhd G\).
+So if \(T\) is a Sylow 3-subgroup of \(G\) and \(F\) is a Sylow 5-subgroup, then at least one must be normal in \(G\).
+So \(T \unlhd G\) or \(F \unlhd G\) or both.
 
-Let \(H = C_3C_5\) and by Lagrange's Theorem, \(C_3 \cap C_5 = \bm{1}\), hence
-\(|H| = 15\) by Lemma~\ref{lem:setprodorder}.
+Let \(H = TF\) and by Lagrange's Theorem, \(T \cap F = \bm{1}\), hence \(|H| = 15\) by Lemma~\ref{lem:setprodorder}.
 We know from our classification of groups of order \(pq\) that \(H \cong C_{15}\).
-Notice that \(C_2\) is a Sylow 2-subgroup of \(G\), and by the same argument,
-\(C_2 \cap C_{15} = \bm{1}\) and \(|C_2C_{15}| = 30\).
-Hence \(G = C_2C_{15}\).
+Notice that a Sylow 2-subgroup \(K \leqslant G\) has order 2, so \(K \cong C_2\).
+By the same argument as above, \(H \cap K = \bm{1}\) and \(|HK| = 30\).
+Hence \(G = HK\).
 
-Because \(|C_{15}| = 15 = \frac{30}{2}\), the index of \(C_{15}\) in \(G\) is
-2, and we know a subgroup of index 2 is normal, so \(C_{15} \unlhd G\).
-Moreover, \(G = C_{15} \rtimes C_2\).
+Because \(|H| = 15 = \frac{30}{2}\), the index of \(H\) in \(G\) is 2, and we know a subgroup of index 2 is normal, so \(H \unlhd G\).
+Moreover, \(G = H \rtimes K\).
 
 By Lemma~\ref{lem:aut}:
 \[\Aut{C_{15}} = \Zn{15}^* \cong {(\Zn{3} \times \Zn{5})}^* \cong \Zn{3}^* \times \Zn{5}^* \cong C_2 \times C_4\]
 
-A homomorphism, \(\psi:C_2 \to C_2 \times C_4\) preserves element order, and
-there are 3 elements of order 2 in \(C_2 \times C_4\): \((x, 1)\), \((1, y^2)\)
-and \((x, y^2)\) where \(\langle x, y \rangle = C_2 \times C_4\).
-We know \(\psi\) is determined by it's effect on a generator, so if \(\langle z
-\rangle = C_2\) then \(z\psi\) has four possibilities:
+Let \(\langle x, y \rangle = C_2 \times C_4\).
+A homomorphism, \(\psi:C_2 \to C_2 \times C_4\) preserves element order, and there are 3 elements of order 2 in \(C_2
+\times C_4\): \((x, 1)\), \((1, y^2)\) and \((x, y^2)\).
+We know \(\psi\) is determined by it's effect on a generator, so if \(\langle z \rangle = K\) then \(z\psi\) has four
+possibilities:
 
 \begin{enumerate}[\bfseries{Case} 1:]
     \item \(z\psi = (1, 1)\).
