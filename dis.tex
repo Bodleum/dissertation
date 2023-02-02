@@ -347,7 +347,7 @@ Let \(G\) be a group of order \(p^n m\) where \(p\) is a prime and \(p\nmid m\).
     Denote the automorphism sending \(x\) to \(x^k\) by \(\varphi_k\).
 
     Let's now investigate how these automorphisms behave.
-    Consider:
+    Let \(\varphi_k, \varphi_l \in \Aut{C_n}\), and consider:
     \[x\varphi_k\varphi_l = (x^k)\varphi_l = {(x^k)}^l = x^{(kl)} = x\varphi_{kl} \quad \text{(mod \(n\))}\]
     Because multiplication modulo \(n\) is commutative, \(x^{kl} = x^{lk}\), so \(\Aut{C_n}\) is abelian.
 
@@ -356,9 +356,8 @@ Let \(G\) be a group of order \(p^n m\) where \(p\) is a prime and \(p\nmid m\).
     Every \(k \in \Zn{n}^*\) is co-prime to \(n\) and so \(x^k\) is a generator of \(C_n\), hence there is some \(\varphi_k
     \in \Aut{C_n}\) such that \(\varphi_k\theta = k\).
     So \(\theta\) is surjective.
-    If \(\varphi_k, \varphi_l \in \Aut{C_n}\) such that \(\varphi_k\theta = \varphi_l\theta\) then \(k = l\), so
-    \(\theta\) is also injective.
-    Finally, \(\theta\) is a homomorphism because
+    If \(\varphi_k\theta = \varphi_l\theta\) then \(k = l\), so \(\theta\) is also injective.
+    Finally, \(\theta\) is a homomorphism because:
     \[(\varphi_k\varphi_l)\theta = \varphi_{kl}\theta = kl = (\varphi_k\theta)(\varphi_l\theta)\]
     So \(\theta:\Aut{C_n} \to \Zn{n}^*\) is an isomorphism.
 \end{proof}
