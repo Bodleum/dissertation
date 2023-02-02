@@ -367,93 +367,76 @@ Let \(G\) be a group of order \(p^n m\) where \(p\) is a prime and \(p\nmid m\).
 
 % ====   Groups of order 12   ====
 \section{Groups of order 12}
-Let \(G\) be a group of order \(12 = 2^2 \cdot 3\), and \(n_3\) and \(n_2\)
-denote the number of Sylow 3-subgroups and Sylow 2-subgroups of G respectively.
+Let \(G\) be a group of order \(12 = 2^2 \cdot 3\), and \(n_3\) and \(n_2\) denote the number of Sylow 3-subgroups and
+Sylow 2-subgroups of G respectively.
 By Theorem~\ref{thm:sylow3}:
 \[n_2 \equiv 1 \text{ (mod 2) and } n_2 \mid 3 \implies n_2 = 1\]
 \[n_3 \equiv 1 \text{ (mod 3) and } n_3 \mid 4 \implies n_3 = 1 \ \text{or} \ 4\]
 
-\(G\) has a unique Sylow 2-subgroup of order \(2^2 = 4\), say \(H \unlhd G\),
-and we have already classified groups of order 4, so either \(C_4\) or \(V_4
-\unlhd G\).
-A Sylow 3-subgroup of \(G\) will have order 3, so  \(C_3 \leqslant G\), and for
-some groups, \(C_3 \unlhd G\).
+So \(G\) has a unique Sylow 2-subgroup of order 4, say \(H \unlhd G\), and we have already classified groups of order 4,
+so \(H\) is isomorphic to either \(V_4\) (the Klein 4 group) or \(C_4\).
+A Sylow 3-subgroup, \(K \leqslant G\) will have order 3, so \(K \cong C_3\).
 
-Lagrange's Theorem tells us \(H\) has elements of order 1, 2, and 4, and
-\(C_3\) has elements of order 1 and 3.
-Hence \(H \cap C_3 = \bm{1}\).
-
+Lagrange's Theorem tells us \(H\) has elements of order 1, 2, and 4, and \(K\) has elements of order 1 and 3.
+Hence \(H \cap K = \bm{1}\).
 Lemma~\ref{lem:setprodorder} tells us:
-\[|H C_3| = \frac{|H| \cdot |C_3|}{|H \cap C_3|} = 12\]
+\[|HK| = \frac{|H| \cdot |K|}{|H \cap K|} = 12\]
+Hence \(G = HK\), \(H \unlhd G\), and \(H \cap K = \bm{1}\).
+If we consider groups with 4 Sylow 3-subgroups then we can conclude that they are some semidirect product, \(G = H
+\rtimes K\).
 
-Hence \(G = H C_3\), \(C_3 \leqslant G\), \(H \unlhd G\), and \(H \cap C_3 =
-\bm{1} \implies G = H \rtimes C_3\).
-
-Since an automorphism, \(\varphi\), must map generators to generators,
-\(\Aut{C_4} \cong C_2\) because the generators of \(C_4\) are \(x\) and
-\(x^{-1}\).
+Since an automorphism, \(\varphi\), must map generators to generators, \(\Aut{C_4} \cong C_2\) because \(C_4\) has two
+generators.
 An automorphism of \(V_4\) corresponds to a permutation of the three
 non-identity elements, hence \(\Aut{V_4} \cong S_3\).
 
 \begin{enumerate}[\bfseries{Case} 1:]
-    \item \(H = C_4\) i.e. \(G = C_4 \rtimes C_3\).
+    \item \(H \cong C_4\) i.e. \(G \cong C_4 \rtimes C_3\).
 
-        A homomorphism \(\psi:C_3 \to \Aut{C_4} \cong C_2\), preserves order
-        and together with Lagrange's Theorem means that the only possibility
-        for \(\psi\) is trivial, i.e. \(C_3\psi = \bm{1}\).
+        A homomorphism \(\psi:K \to \Aut{H} \cong C_2\), preserves order and together with Lagrange's Theorem means that
+        the only possibility for \(\psi\) is trivial, i.e. \(K\psi = \bm{1}\).
 
         Hence \(G \cong C_4 \times C_3 \cong C_{12}\).
 
-    \item \(H = V_4\) i.e. \(G = (C_2 \times C_2) \rtimes C_3\).
+    \item \(H \cong V_4\) i.e. \(G \cong (C_2 \times C_2) \rtimes C_3\).
 
-        A trivial homomorphism \(C_3\psi = \bm{1}\) yields the direct product
-        \(G \cong C_2 \times C_2 \times C_3 \cong C_2 \times C_6\).
-
-        \(S_3\) has one subgroup of order 3, hence there is essentially only
-        one homomorphism \(\psi:C_3 \to \Aut{V_4}\).
+        A trivial homomorphism \(K\psi = \bm{1}\) yields the direct product.
 
         % TODO: Show this is A4
         Still need to show this is \(A_4\).
 \end{enumerate}
 
-If we instead consider \(G\) where \(C_3 \unlhd G\), i.e. \(G = C_3 \rtimes
-H\), then we again have two cases:
+If we instead consider \(G\) where \(K \unlhd G\), i.e. \(G = K \rtimes H\), then we again have two cases:
 
 \begin{enumerate}[\bfseries{Case} 1:]
-    \item \(H = C_4\) i.e. \(G = C_3 \rtimes C_4\).
+    \item \(H \cong C_4\) i.e. \(G \cong C_3 \rtimes C_4\).
 
-        Say \(C_3 = \langle x \rangle\) and \(C_4 = \langle y \rangle\).
-        We know \(\Aut{C_3} \cong C_2\) so a homomorphism \(\psi\) maps \(C_4\)
-        to the trivial group, \(\bm{1}\) or to \(\langle \beta:x \mapsto x^{-1}
-        \rangle\).
+        Say \(K = \langle x \rangle\) and \(H = \langle y \rangle\).
+        We know \(\Aut{C_3} \cong C_2\) so a homomorphism \(\psi\) maps \(H\) to the trivial group or to \(\langle
+        \beta:x \mapsto x^{-1} \rangle\).
 
-        If \(C_4\psi = \bm{1}\) then \(G = C_3 \times C_4 \cong C_4 \times
-        C_3\), which we have already seen.
+        If \(H\psi = \bm{1}\) then \(G = K \times H \cong C_4 \times C_3\), which we have already seen.
 
-        If \(C_4\psi = \langle \beta \rangle\) then we have:
+        If \(H\psi = \langle \beta \rangle\) then we have:
         \[G = \langle\, x, y \mid x^3 = y^4 = 1,\ y^{-1}xy = x^{-1}\,\rangle\]
         % TODO: Classify this
 
-    \item \(H = V_4\) i.e. \(G = C_3 \rtimes (C_2 \times C_2)\).
+    \item \(H \cong V_4\) i.e. \(G \cong C_3 \rtimes (C_2 \times C_2)\).
 
-        If \(\psi:(C_2 \times C_2) \to \Aut{C_3}\) is trivial then we obtain
-        \(G = C_3 \times C_2 \times C_2 \cong C_2 \times C_6\) which we have
-        seen before.
+        If \(\psi:H \to \Aut{K}\) is trivial then we obtain the direct product again.
 
-        The image of a non-trivial homomorphism \(\psi:(C_2 \times C_2) \to
-        \Aut{C_3}\) is \(C_2\), so by Theorem~\ref{thm:iso1}: \(\ker{\theta} =
-        C_2\).
+        The image of a non-trivial homomorphism \(\psi:H \to \Aut{K}\) is isomorphic to \(C_2\), so by
+        Theorem~\ref{thm:iso1}: \(\ker{\theta} \cong C_2\).
 
-        Choose \(a, b \in C_2 \times C_2\) with \(a, b \neq 1\) such that
-        \(a\theta = \beta:x \mapsto x^{-1}\) and \(b\theta = \text{id}:x
-        \mapsto x\).
+        Choose \(a, b \in H\) with \(a, b \neq 1\) such that \(a\theta = \beta:x \mapsto x^{-1}\) and \(b\theta =
+        \text{id}:x \mapsto x\).
         Then:
-        \[G = \langle\, x, a, b \mid x^3 = a^2 = b^2 = 1,\ ab = ba,\ a^{-1}xa =
-        x^{-1},\ b^{-1}xb = x\,\rangle\]
+        \[G = \langle\, x, a, b \mid x^3 = a^2 = b^2 = 1,\ ab = ba,\ a^{-1}xa = x^{-1},\ b^{-1}xb = x\,\rangle\]
         Let \(y = xb\).
-        The order of \(y = \lcm{(\order{(x)}, \order{(b)})} = \lcm{(2, 3)} =
-        6\) because \(x\) and \(b\) commute.
-        \(y^3 = x^3b^3 = b\) so:
+        The order of \(y = \lcm{(\order{(x)}, \order{(b)})} = \lcm{(2, 3)} = 6\) because \(x\) and \(b\) commute.
+        So:
+        \[y^3 = x^3b^3 = b\]
+        and
         \[ a^{-1}ya = a^{-1}xba = a^{-1}xab = x^{-1}b = x^2b = y^2y^3 = y^{-1}\]
         Hence:
         \[G = \langle\, a, y \mid y^6 = a^2 = 1,\ a^{-1}ya = y^{-1}\,\rangle
