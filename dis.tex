@@ -1,5 +1,3 @@
-\PassOptionsToPackage{unicode}{hyperref}
-\PassOptionsToPackage{naturalnames}{hyperref}
 \documentclass[a4paper, oneside, 12pt, final]{article}
 
 \title{Classification of Finite Groups}
@@ -17,6 +15,13 @@
 \usepackage{enumerate}
 \usepackage{lipsum}
 \usepackage{stmaryrd}   % for \lightning
+
+% Maths in section headings
+\makeatletter
+\pdfstringdefDisableCommands{\let\(\fake@math}
+\newcommand\fake@math{}% just for safety
+\def\fake@math#1\){\detokenize{#1}}
+\makeatother
 
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{corollary}{Corollary}[theorem]
@@ -46,7 +51,7 @@
 % ====   Groups of order 6   ====
 \section{Groups of Order 6}
 Let \(G\) be a group of order 6, and \(n_3\) denote the number of Sylow 3-subgroups of \(G\).
-Then by Theorem \ref{thm:sylow3}:
+Then by Theorem~\ref{thm:sylow3}:
 \[n_3 \equiv 1 \ \text{(mod 3)} \quad \text{and} \quad n_3 \mid 2 \implies n_3 = 1\]
 So \(G\) has one Sylow 3-subgroup, \(N\), and because 3 is prime, it is isomorphic to \(C_3\).
 Let \(N = \langle x \rangle\).
@@ -56,7 +61,7 @@ Lagrange's Theorem tells us that \(N\) has elements of orders 1 and 3, and \(H\)
 order 1 and 2 hence:
 \[N \cap H = \bm{1}\]
 
-By Lemma \ref{lem:setprodorder}:
+By Lemma~\ref{lem:setprodorder}:
 \[|NH| = \frac{|N| \cdot |H|}{|N \cap H|} = \frac{3 \cdot 2}{1} = 6\]
 So \(G = NH\), \(N \unlhd G\) and \(N \cap H = \bm{1}\), which means \(G = N \rtimes H\), the
 semidirect product of \(N\) by \(H\).
@@ -106,7 +111,7 @@ Now that we have seen groups of order 6, let's try and work towards a more gener
 order 2 times a prime number.
 So let \(G\) be a group of order \(2p\) where \(p\) is a prime number, and \(n_p\) denote the number
 of Sylow p-subgroups of \(G\).
-Then by Theorem \ref{thm:sylow3}:
+Then by Theorem~\ref{thm:sylow3}:
 \[n_p \equiv 1 \ \text{(mod p)} \quad \text{and} \quad n_p \mid 2 \implies n_p = 1\]
 So \(G\) has one Sylow \(p\)-subgroup, say \(N\), and it is isomorphic to \(C_p\).
 Let \(N = \langle x \rangle\).
@@ -116,15 +121,15 @@ Lagrange's Theorem tells us that \(N\) has elements of orders 1 and \(p\), and \
 order 1 and 2 hence:
 \[N \cap H = \bm{1}\]
 
-By Lemma \ref{lem:setprodorder}:
+By Lemma~\ref{lem:setprodorder}:
 \[|NH| = \frac{|N| \cdot |H|}{|N \cap H|} = \frac{p \cdot 2}{1} = 2p\]
 So \(G = N \rtimes H\) as before.
 
-We know by Lemma \ref{lem:aut} that \(\Aut{N} \cong \Zn{p}^*\), so let's look for the elements of
+We know by Lemma~\ref{lem:aut} that \(\Aut{N} \cong \Zn{p}^*\), so let's look for the elements of
 order 2.
 An element \(x \in \Zn{p}^*\) of order 2 satisfies \(x^2 = 1\), hence \(x = 1\) or \(-1\).
 But 1 has order 1 so \(x\) can only be \(-1\).
-From the proof of Lemma \ref{lem:aut}, this corresponds to the inverse map \(\beta:x \mapsto
+From the proof of Lemma~\ref{lem:aut}, this corresponds to the inverse map \(\beta:x \mapsto
 x^{-1}\).
 
 Now we want a homomorphism \(\psi: H \to \Aut{N}\).
@@ -155,26 +160,20 @@ Hence a group of order \(2p\) is isomorphic to one of:
 
 % ====   Groups of order 4   ====
 \section{Groups of order 4}
-From the Fundamental Theorem of Finite Abelian Groups, we know that a group
-\(G\) of order 4 could be isomorphic to one of \(C_4\) and \(C_2 \times C_2\).
+From the Fundamental Theorem of Finite Abelian Groups, we know that a group \(G\) of order 4 could
+be isomorphic to one of \(C_4\) and \(C_2 \times C_2\).
 Now to show that these are the only possibilities.
-
-The Sylow theorems are not so helpful here, because \(4=2^2\) so any Sylow
-2-subgroup will be of order 4, which is just G.
-
+The Sylow theorems are not so helpful here, because any Sylow 2-subgroup will be of order 4, which
+is just G.
 Lagrange's Theorem tells us every element of \(G\) has order 1, 2 or 4.
 
-If \(x \in G\) has order 4, then \(\langle x \rangle = G\) and so G is cyclic,
-i.e. \(G \cong C_4\).
+If \(x \in G\) has order 4, then \(x\) generates G so \(G \cong C_4\).
 
-If \(\nexists x \in G\) with order 4, then every \(x \in G\), \(x \neq 1\) is
-of order 2.
-Consider \(a, b \in G\) with \(a \neq b\), and the product \(ab\).
-\(ab \neq 1\) because then \(b = a^{-1} = a\), a contradiction.
-\(ab \neq a\) or \(b\) because then \(a = 1\) or \(b = 1\) respectively.
-Hence it must be that \(ab\) is the third element of order 2.
-
-It is easy to see that \(G \cong C_2 \times C_2\).
+If instead there is no element of order 4 in \(G\), then every \(x \in G\) except the identity is of
+order 2.
+Consider \(a, b \in G\) with \(a \neq b\), and their product, \(ab\).
+It must be that \(ab\) is the third element of order 2, otherwise we reach a contradiction.
+So it is easy to see that \(G \cong C_2 \times C_2\).
 
 So any group of order 4 is isomorphic to one of:
 \[C_4 \quad \text{or} \quad C_2 \times C_2\]
@@ -184,10 +183,10 @@ So any group of order 4 is isomorphic to one of:
 Let \(G\) be a group of order \(pq\) where \(p\), \(q\) are prime numbers with
 \(p > q\), and let \(n_p\) and \(n_q\) denote the number of Sylow p-subgroups
 and Sylow q-subgroups of \(G\) respectively.
-Then by Theorem \ref{thm:sylow3}:
+Then by Theorem~\ref{thm:sylow3}:
 \[n_p \equiv 1 \ \text{(mod p)} \quad \text{and} \quad n_p \mid q \implies n_p
 = 1\]
-\[n_q \equiv 1 \ \text{(mod q)} \implies n_q = 1,\ q+1,\ 2q+1,\ ... \quad
+\[n_q \equiv 1 \ \text{(mod q)} \implies n_q = 1,\ q+1,\ 2q+1,\ \dots \quad
 \text{and} \quad n_q \mid p\]
 
 So \(C_p \unlhd G\) and we have 2 possibilities for \(C_q\): \(p-1\) is a
@@ -205,11 +204,10 @@ Let \(\langle x \rangle = C_p\) and \(\langle y \rangle = C_q\).
 
         If \(p-1\) \emph{is}  a multiple of \(q\) then \(n_q = p\) and so \(C_q
         \leqslant G\).
-        By Lagrange's Theorem, \(C_p \cap C_q = \bm{1}\) and by Lemma
-        \ref{lem:setprodorder}, \(|C_pC_q| = pq\), hence, as well as the direct
-        product, we have \(G = C_p \rtimes C_q\).
+        By Lagrange's Theorem, \(C_p \cap C_q = \bm{1}\) and by Lemma~\ref{lem:setprodorder},
+        \(|C_p C_q| = pq\), hence, as well as the direct product, we have \(G = C_p \rtimes C_q\).
 
-        By Lemma \ref{lem:aut}, \(\Aut{C_p} \cong \Zn{p}^* \cong C_{p-1}\), so
+        By Lemma~\ref{lem:aut}, \(\Aut{C_p} \cong \Zn{p}^* \cong C_{p-1}\), so
         if \(\nu \in \Zn{p}^*\), then \(x \mapsto x^\nu\) is an automorphism.
         We know also that \(C_{p-1}\) has a unique subgroup of order \(q\),
         hence \(G\) has the presentation:
@@ -239,23 +237,20 @@ So any group of order \(pq\) is isomorphic to either:
 % ====   Theorems and Lemmas   ====
 \section{Theorems and Lemmas}
 \subsection{Sylow Theorems}
-Let \(G\) be a group of order \(p^nm\) where \(p\) is a prime and \(p\nmid m\).
-\begin{theorem}[\nth{1} Sylow Theorem]
-\label{thm:sylow1}
-    \(G\) has a Sylow p-subgroup, i.e. a subgroup of order \(p^n\).
+Let \(G\) be a group of order \(p^n m\) where \(p\) is a prime and \(p\nmid m\).
+\begin{theorem}[\nth{1} Sylow Theorem]\label{thm:sylow1}
+    \(G\) has a Sylow p-subgroup, i.e.\ a subgroup of order \(p^n\).
 \end{theorem}
-\begin{theorem}[\nth{2} Sylow Theorem]
-\label{thm:sylow2}
+\begin{theorem}[\nth{2} Sylow Theorem]\label{thm:sylow2}
     All Sylow p-subgroups of \(G\) are conjugate to each other.
 \end{theorem}
 \begin{corollary}
     If \(n_p = 1\) then the Sylow p-subgroup is normal in \(G\).
 \end{corollary}
-\begin{theorem}[\nth{3} Sylow Theorem]
-\label{thm:sylow3}
+\begin{theorem}[\nth{3} Sylow Theorem]\label{thm:sylow3}
     Let \(n_p\) denote the number of Sylow p-subgroups of \(G\).
     Then:
-    \begin{enumerate}[i)]
+    \begin{enumerate}[(i)]
         \item \(n_p \mid m\)
         \item \(n_p\equiv 1\) (mod p)
     \end{enumerate}
@@ -263,27 +258,22 @@ Let \(G\) be a group of order \(p^nm\) where \(p\) is a prime and \(p\nmid m\).
 
 % TODO: Write out isom theorems
 \subsection{Isomorphism Theorems}
-\begin{theorem}
-\label{thm:iso1}
+\begin{theorem}\label{thm:iso1}
 \end{theorem}
 
-\begin{theorem}
-\label{thm:iso2}
+\begin{theorem}\label{thm:iso2}
 \end{theorem}
 
-\begin{theorem}
-\label{thm:iso3}
+\begin{theorem}\label{thm:iso3}
 \end{theorem}
 
-\begin{lemma}
-\label{lem:setprodorder}
+\begin{lemma}\label{lem:setprodorder}
     For a group \(G\) with \(N \leqslant G\) and \(H \leqslant G\), then
     \[|NH| = |\{nh \mid n \in N, h \in H\}| = \frac{|N| \cdot |H|}{|N \cap H|}\]
 \end{lemma}
 % TODO: maybe prove?
 
-\begin{lemma}
-\label{lem:aut}
+\begin{lemma}\label{lem:aut}
     The automorphism group of \(C_n\) is isomorphic to the multiplicative group
     of integers mod n.
 
@@ -291,24 +281,23 @@ Let \(G\) be a group of order \(p^nm\) where \(p\) is a prime and \(p\nmid m\).
 \end{lemma}
 
 \begin{proof}
+    Let \(C_n = \langle x \rangle\).
     Any automorphism, \(\varphi\) of \(C_n\) has the property:
-    \[(x^i)\varphi = (x\varphi)^i\]
-    Hence \(\varphi\) is determined by it's effect on a generator, \(x\), and
-    preserves element order.
+    \[(x^i)\varphi = {(x\varphi)}^i\]
+    Hence \(\varphi\) is determined by it's effect on a generator, \(x\), and preserves element
+    order.
     In particular, \(\varphi\) sends generators to generators.
+    So for \(\varphi\) to be an automorphism, it must send \(x\) to another generator, say \(x^k\).
+    An element \(x^k\) generates \(C_n\) if \(x^k\) has order \(n\), i.e.\ when \(k\) and \(n\) are co-prime.
+    Denote the automorphism sending \(x\) to \(x^k\) by \(\varphi_k\).
 
-    So for a generator, \(x\), \(x\varphi = x^k\) is surjective if \(x^k\)
-    generates \(C_n\).
-    \(x^k\) generates \(C_n\) if \(o(x^k) = n\) which is when \(\gcd{(n, k)} =
-    1\).
-
-    Denote \(\varphi_k:x \mapsto x^k\).
-
+    Let's now investigate how these automorphisms behave.
     Consider:
-    \[x\varphi_k\varphi_l = (x^k)\varphi_l = (x^k)^l = x^{kl} = x^{lk} =
-    (x^l)^k = x\varphi_l\varphi_k\]
-    So we see that \(\Aut{C_n}\) is abelian.
-    Moreover, \(x\varphi_k\varphi_l = x\varphi_{kl}\).
+    \[x\varphi_k\varphi_l = (x^k)\varphi_l = {(x^k)}^l = x^{(kl)} = x\varphi_{kl}\]
+    Because multiplication in the reals is commutative, \(\Aut{C_n}\) is abelian.
+
+
+
 
     Now consider \(\theta:\Aut{C_n} \to \Zn{n}^*\) defined by \(\varphi_k\theta
     = k\).
@@ -355,7 +344,7 @@ So then \(|G:\z{(G)}| = p\), which means \(G/\z{(G)} \cong C_p\).
 \vskip 3em
 \paragraph{Sketch}
 \begin{itemize}
-    \item Show \(G\) must be abelian. Result follows from FTFAB.
+    \item Show \(G\) must be abelian. Result follows from FTFAB\@.
     \item \(\z{(G)}\) has order 1, \(p\), or \(p^2\) by Lagrange.
     \item If \(p^2\) then done.
     \item Size of congruencty classies is multiple of p.
@@ -368,7 +357,7 @@ So then \(|G:\z{(G)}| = p\), which means \(G/\z{(G)} \cong C_p\).
 \section{Groups of order 12}
 Let \(G\) be a group of order \(12 = 2^2 \cdot 3\), and \(n_3\) and \(n_2\)
 denote the number of Sylow 3-subgroups and Sylow 2-subgroups of G respectively.
-By Theorem \ref{thm:sylow3}:
+By Theorem~\ref{thm:sylow3}:
 \[n_2 \equiv 1 \text{ (mod 2) and } n_2 \mid 3 \implies n_2 = 1\]
 \[n_3 \equiv 1 \text{ (mod 3) and } n_3 \mid 4 \implies n_3 = 1 \ \text{or} \ 4\]
 
@@ -382,7 +371,7 @@ Lagrange's Theorem tells us \(H\) has elements of order 1, 2, and 4, and
 \(C_3\) has elements of order 1 and 3.
 Hence \(H \cap C_3 = \bm{1}\).
 
-Lemma \ref{lem:setprodorder} tells us:
+Lemma~\ref{lem:setprodorder} tells us:
 \[|H C_3| = \frac{|H| \cdot |C_3|}{|H \cap C_3|} = 12\]
 
 Hence \(G = H C_3\), \(C_3 \leqslant G\), \(H \unlhd G\), and \(H \cap C_3 =
@@ -440,7 +429,7 @@ H\), then we again have two cases:
         seen before.
 
         The image of a non-trivial homomorphism \(\psi:(C_2 \times C_2) \to
-        \Aut{C_3}\) is \(C_2\), so by Theorem \ref{thm:iso1}: \(\ker{\theta} =
+        \Aut{C_3}\) is \(C_2\), so by Theorem~\ref{thm:iso1}: \(\ker{\theta} =
         C_2\).
 
         Choose \(a, b \in C_2 \times C_2\) with \(a, b \neq 1\) such that
@@ -478,7 +467,7 @@ Let \(n_2\) denote the number of Sylow 2-subgroups.
 Let \(G\) be a group of order \(30 = 2 \cdot 3 \cdot 5\), and let \(n_3\) and
 \(n_5\) denote the number of Sylow 3-subgroups and Sylow 5-subgroups of \(G\)
 respectively.
-Then by Theorem \ref{thm:sylow3}:
+Then by Theorem~\ref{thm:sylow3}:
 \[n_3 = 1 \ \text{or} \ 10 \quad \text{and} \quad n_5 = 1 \ \text{or} \ 6\]
 If \(n_3 = 10\), then there are 20 elements of order 3, and if \(n_5 = 6\) then
 there are 24 elements of order 5 in \(G\).
@@ -487,7 +476,7 @@ there are 24 elements of order 5 in \(G\).
 Hence either \(C_3 \unlhd G\) or \(C_5 \unlhd G\).
 
 Let \(H = C_3C_5\) and by Lagrange's Theorem, \(C_3 \cap C_5 = \bm{1}\), hence
-\(|H| = 15\) by Lemma \ref{lem:setprodorder}.
+\(|H| = 15\) by Lemma~\ref{lem:setprodorder}.
 We know from our classification of groups of order \(pq\) that \(H \cong C_{15}\).
 Notice that \(C_2\) is a Sylow 2-subgroup of \(G\), and by the same argument,
 \(C_2 \cap C_{15} = \bm{1}\) and \(|C_2C_{15}| = 30\).
@@ -497,8 +486,8 @@ Because \(|C_{15}| = 15 = \frac{30}{2}\), the index of \(C_{15}\) in \(G\) is
 2, and we know a subgroup of index 2 is normal, so \(C_{15} \unlhd G\).
 Moreover, \(G = C_{15} \rtimes C_2\).
 
-By Lemma \ref{lem:aut}:
-\[\Aut{C_{15}} = \Zn{15}^* \cong (\Zn{3} \times \Zn{5})^* \cong \Zn{3}^* \times \Zn{5}^* \cong C_2 \times C_4\]
+By Lemma~\ref{lem:aut}:
+\[\Aut{C_{15}} = \Zn{15}^* \cong {(\Zn{3} \times \Zn{5})}^* \cong \Zn{3}^* \times \Zn{5}^* \cong C_2 \times C_4\]
 
 A homomorphism, \(\psi:C_2 \to C_2 \times C_4\) preserves element order, and
 there are 3 elements of order 2 in \(C_2 \times C_4\): \((x, 1)\), \((1, y^2)\)
