@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Arch Linux)  (format=lualatex 2023.1.10)  2 FEB 2023 13:26
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Arch Linux)  (format=lualatex 2023.1.10)  2 FEB 2023 16:05
  restricted system commands enabled.
  file:line:error style messages enabled.
 **"/home/bodleum/archive/Uni/Courses/Year 4/MT4599/dis/dis.tex"
@@ -554,12 +554,12 @@ Package rerunfilecheck Info: File `dis.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 11254 strings out of 477762
+ 11253 strings out of 477762
  100000,662416 words of node,token memory allocated
  666 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 44 attribute, 58 glue_spec
 , 44 attribute_list, 1 write nodes
-   avail lists: 2:685,3:366,4:12,5:339,6:102,7:6076,8:77,9:583,10:9,11:284
+   avail lists: 2:685,3:366,4:12,5:339,6:102,7:6076,8:77,9:583,10:9,11:290
  31483 multiletter control sequences out of 65536+600000
  106 fonts using 6599183 bytes
  72i,13n,73p,328b,450s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -577,10 +577,10 @@ pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf-dis
 t/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lm
 ri12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><
 /usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on dis.pdf (8 pages, 258564 bytes).
+Output written on dis.pdf (8 pages, 259332 bytes).
 
-PDF statistics: 283 PDF objects out of 1000 (max. 8388607)
- 253 compressed objects within 3 object streams
- 59 named destinations out of 1000 (max. 131072)
+PDF statistics: 282 PDF objects out of 1000 (max. 8388607)
+ 252 compressed objects within 3 object streams
+ 58 named destinations out of 1000 (max. 131072)
  193 words of extra memory for PDF output out of 10000 (max. 100000000)
 
