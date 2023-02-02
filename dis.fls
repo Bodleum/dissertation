@@ -319,6 +319,16 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/stmaryrd/stmary10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr5.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmmi5.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmsy5.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib5.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/stmaryrd/stmary5.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmri12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ts1-lmr12.tfm
 INPUT ./dis.aux
