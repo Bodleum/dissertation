@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Arch Linux)  (format=lualatex 2023.1.10)  3 FEB 2023 14:28
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Arch Linux)  (format=lualatex 2023.1.10)  3 FEB 2023 14:29
  restricted system commands enabled.
  file:line:error style messages enabled.
 **"/home/bodleum/archive/Uni/Courses/Year 4/MT4599/dis/dis.tex"
@@ -566,14 +566,8 @@ l.439 ...ment of \(A_4\) as \(\alpha^i\beta^j\gamme^
 I treat `x^1^2' essentially like `x^1{}^2'.
 
 [7] [8] [9] [10] (./dis.aux)
-
-Package rerunfilecheck Warning: File `dis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `dis.out':
-(rerunfilecheck)             Before: D287474C5CF15226D1CCD72666615D3D;3527
-(rerunfilecheck)             After:  D32D54C06341370125B5B82A70EF1A30;3527.
+Package rerunfilecheck Info: File `dis.out' has not changed.
+(rerunfilecheck)             Checksum: D32D54C06341370125B5B82A70EF1A30;3527.
 )
 
 Here is how much of LuaTeX's memory you used:
@@ -600,7 +594,7 @@ pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf-dis
 t/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lm
 ri12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><
 /usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on dis.pdf (10 pages, 270715 bytes).
+Output written on dis.pdf (10 pages, 270724 bytes).
 
 PDF statistics: 295 PDF objects out of 1000 (max. 8388607)
  263 compressed objects within 3 object streams
