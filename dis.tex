@@ -235,6 +235,54 @@ Again, these are clearly not isomorphic, because \(C_{2p}\) is abelian, and \(D_
 Hence a group of order \(2p\) is isomorphic to one of:
 \[C_{2p} \quad \text{or} \quad D_{2p}\]
 
+% ====   Groups of order pq   ====
+\section{Groups of Order \(pq\)}
+Let \(G\) be a group of order \(pq\) where \(p\), \(q\) are prime numbers with \(p > q\), and let \(n_p\) and \(n_q\)
+denote the number of Sylow p-subgroups and Sylow q-subgroups of \(G\) respectively.
+Then by Theorem~\ref{thm:sylow3}:
+\[n_p \equiv 1 \ \text{(mod \(p\))} \quad \text{and} \quad n_p \mid q \implies n_p = 1\]
+\[n_q \equiv 1 \ \text{(mod \(q\))} \implies n_q = 1,\ q+1,\ 2q+1,\ \dots \quad \text{and} \quad n_q \mid p\]
+
+So \(G\) has a unique Sylow \(p\)-subgroup, say \(P \nrmsgp G\), and a Sylow \(q\)-subgroup, \(Q \leqslant G\).
+Because \(p\) and \(q\) are prime numbers, \(P \cong C_p\) and \(Q \cong C_q\).
+Pick generators for each, say \(\rangle x \langle  = P\) and \(\rangle y \langle = Q\).
+We have 2 possibilities for \(n_q\): \(p-1\) is a multiple of \(q\) or 1.
+
+\begin{enumerate}[\bfseries{Case} 1:]
+    \item \(q \nmid p - 1\).
+
+        If \(p-1\) \emph{is not} a multiple of \(q\) then \(n_q = 1\) and \(Q \nrmsgp G\), hence:
+        \[G = P \times Q \cong C_{pq}\]
+
+    \item \( q \mid p - 1\).
+
+        If \(p-1\) \emph{is} a multiple of \(q\) then \(n_q = p\) and so \(Q\) is \emph{not} normal in \(G\).
+        By Lagrange's Theorem, \(P \cap Q = \bm{1}\) and by Lemma~\ref{lem:setprodorder}, \(|PQ| = pq\).
+        Hence, as well as the direct product, we have \(G = P \rtimes Q\), some non-trivial semidirect product.
+
+        By Lemma~\ref{lem:aut}, \(\Aut{C_p} \cong \Zn{p}^* \cong C_{p-1}\).
+        So if \(\nu \in \Zn{p}^*\), then \(x \mapsto x^\nu\) is an automorphism.
+        We know also that \(C_{p-1}\) has a unique subgroup of order \(q\),
+        hence \(G\) has the presentation:
+
+        \[G = \langle \, x, y, \mid x^p = y^q = 1,\ y^{-1}xy = x^\alpha \, \rangle\]
+        where \(\alpha\) is a generator for the subgroup of order \(q\) in
+        \(\Zn{p}^*\).
+
+        Notice that picking different generators are equivalent up to isomorphism because the composition of two
+        isomorphisms is an isomorphism.
+\end{enumerate}
+
+So any group of order \(pq\) is isomorphic to either:
+\begin{equation*}
+\begin{aligned}
+    C_{pq} \quad \text{or} \quad \langle \, x, y \mid x^p = y^q = 1,\ y^{-1}xy
+    = x^\alpha \, \rangle \qquad &\text{if} \ q \mid p-1 \\
+    C_{pq} \qquad &\text{if} \ q \nmid p-1
+\end{aligned}
+\end{equation*}
+
+
 % ====   Groups of order 4   ====
 \section{Groups of order 4}
 From the Fundamental Theorem of Finite Abelian Groups, we know that a group \(G\) of order 4 could
@@ -315,53 +363,6 @@ Hence any group of order \(p^2\) is isomorphic to one of:
 %     \item Quotient with G is cyclic.
 %     \item MT4003 showed then G must be abelian.
 % \end{itemize}
-
-% ====   Groups of order pq   ====
-\section{Groups of Order \(pq\)}
-Let \(G\) be a group of order \(pq\) where \(p\), \(q\) are prime numbers with \(p > q\), and let \(n_p\) and \(n_q\)
-denote the number of Sylow p-subgroups and Sylow q-subgroups of \(G\) respectively.
-Then by Theorem~\ref{thm:sylow3}:
-\[n_p \equiv 1 \ \text{(mod \(p\))} \quad \text{and} \quad n_p \mid q \implies n_p = 1\]
-\[n_q \equiv 1 \ \text{(mod \(q\))} \implies n_q = 1,\ q+1,\ 2q+1,\ \dots \quad \text{and} \quad n_q \mid p\]
-
-So \(G\) has a unique Sylow \(p\)-subgroup, say \(P \nrmsgp G\), and a Sylow \(q\)-subgroup, \(Q \leqslant G\).
-Because \(p\) and \(q\) are prime numbers, \(P \cong C_p\) and \(Q \cong C_q\).
-Pick generators for each, say \(\rangle x \langle  = P\) and \(\rangle y \langle = Q\).
-We have 2 possibilities for \(n_q\): \(p-1\) is a multiple of \(q\) or 1.
-
-\begin{enumerate}[\bfseries{Case} 1:]
-    \item \(q \nmid p - 1\).
-
-        If \(p-1\) \emph{is not} a multiple of \(q\) then \(n_q = 1\) and \(Q \nrmsgp G\), hence:
-        \[G = P \times Q \cong C_{pq}\]
-
-    \item \( q \mid p - 1\).
-
-        If \(p-1\) \emph{is} a multiple of \(q\) then \(n_q = p\) and so \(Q\) is \emph{not} normal in \(G\).
-        By Lagrange's Theorem, \(P \cap Q = \bm{1}\) and by Lemma~\ref{lem:setprodorder}, \(|PQ| = pq\).
-        Hence, as well as the direct product, we have \(G = P \rtimes Q\), some non-trivial semidirect product.
-
-        By Lemma~\ref{lem:aut}, \(\Aut{C_p} \cong \Zn{p}^* \cong C_{p-1}\).
-        So if \(\nu \in \Zn{p}^*\), then \(x \mapsto x^\nu\) is an automorphism.
-        We know also that \(C_{p-1}\) has a unique subgroup of order \(q\),
-        hence \(G\) has the presentation:
-
-        \[G = \langle \, x, y, \mid x^p = y^q = 1,\ y^{-1}xy = x^\alpha \, \rangle\]
-        where \(\alpha\) is a generator for the subgroup of order \(q\) in
-        \(\Zn{p}^*\).
-
-        Notice that picking different generators are equivalent up to isomorphism because the composition of two
-        isomorphisms is an isomorphism.
-\end{enumerate}
-
-So any group of order \(pq\) is isomorphic to either:
-\begin{equation*}
-\begin{aligned}
-    C_{pq} \quad \text{or} \quad \langle \, x, y \mid x^p = y^q = 1,\ y^{-1}xy
-    = x^\alpha \, \rangle \qquad &\text{if} \ q \mid p-1 \\
-    C_{pq} \qquad &\text{if} \ q \nmid p-1
-\end{aligned}
-\end{equation*}
 
 
 % ====   Groups of order 12   ====
@@ -494,9 +495,6 @@ So a group \(G\) of order 12 is isomorphic to one of:
 
 \part{In Progress}
 
-
-
-
 % ====   Theorems and Lemmas   ====
 \section{Theorems and Lemmas}
 \subsection{Sylow Theorems}
@@ -567,7 +565,6 @@ Let \(G\) be a group of order \(p^n m\) where \(p\) is a prime and \(p\nmid m\).
     \[(\varphi_k\varphi_l)\theta = \varphi_{kl}\theta = kl = (\varphi_k\theta)(\varphi_l\theta)\]
     So \(\theta:\Aut{C_n} \to \Zn{n}^*\) is an isomorphism.
 \end{proof}
-
 
 
 \section{Groups of Order 30}
