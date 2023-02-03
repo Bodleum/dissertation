@@ -1,23 +1,23 @@
 \contentsline {part}{I\hspace {1em}Done}{2}{part.1}%
-\contentsline {section}{\numberline {1}Groups of Order 6}{2}{section.1}%
-\contentsline {section}{\numberline {2}Generalisation to Groups of Order \(2p\)}{2}{section.2}%
-\contentsline {section}{\numberline {3}Groups of order 4}{3}{section.3}%
-\contentsline {section}{\numberline {4}Generalisation to Groups of Order \(p^2\)}{3}{section.4}%
-\contentsline {section}{\numberline {5}Groups of Order \(pq\)}{4}{section.5}%
-\contentsline {section}{\numberline {6}Groups of order 12}{5}{section.6}%
-\contentsline {part}{II\hspace {1em}In Progress}{6}{part.2}%
-\contentsline {section}{\numberline {7}Theorems and Lemmas}{7}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Sylow Theorems}{7}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Isomorphism Theorems}{7}{subsection.7.2}%
-\contentsline {section}{\numberline {8}Groups of Order 30}{8}{section.8}%
-\contentsline {part}{III\hspace {1em}To Do}{8}{part.3}%
-\contentsline {section}{\numberline {9}Semi-Direct Product}{8}{section.9}%
-\contentsline {section}{\numberline {10}Groups of order 9 (Might skip)}{9}{section.10}%
-\contentsline {section}{\numberline {11}Groups of Order 18}{9}{section.11}%
-\contentsline {subsection}{\numberline {11.1}Groups of Order \(p^2q\)}{9}{subsection.11.1}%
-\contentsline {section}{\numberline {12}Groups of Order \(p^3\)}{9}{section.12}%
-\contentsline {subsection}{\numberline {12.1}Groups of Order 8}{9}{subsection.12.1}%
-\contentsline {subsection}{\numberline {12.2}Groups of Order 27}{9}{subsection.12.2}%
-\contentsline {subsection}{\numberline {12.3}General Case?}{9}{subsection.12.3}%
-\contentsline {section}{\numberline {13}Groups of Order 24}{9}{section.13}%
-\contentsline {section}{\numberline {14}Groups of Order 16}{9}{section.14}%
+\contentsline {section}{\numberline {1}Semidirect Product}{2}{section.1}%
+\contentsline {section}{\numberline {2}Groups of Order 6}{3}{section.2}%
+\contentsline {section}{\numberline {3}Generalisation to Groups of Order \(2p\)}{4}{section.3}%
+\contentsline {section}{\numberline {4}Groups of order 4}{4}{section.4}%
+\contentsline {section}{\numberline {5}Generalisation to Groups of Order \(p^2\)}{5}{section.5}%
+\contentsline {section}{\numberline {6}Groups of Order \(pq\)}{5}{section.6}%
+\contentsline {section}{\numberline {7}Groups of order 12}{6}{section.7}%
+\contentsline {part}{II\hspace {1em}In Progress}{8}{part.2}%
+\contentsline {section}{\numberline {8}Theorems and Lemmas}{8}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Sylow Theorems}{8}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Isomorphism Theorems}{8}{subsection.8.2}%
+\contentsline {section}{\numberline {9}Groups of Order 30}{9}{section.9}%
+\contentsline {part}{III\hspace {1em}To Do}{10}{part.3}%
+\contentsline {section}{\numberline {10}Groups of order 9 (Might skip)}{10}{section.10}%
+\contentsline {section}{\numberline {11}Groups of Order 18}{10}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Groups of Order \(p^2q\)}{10}{subsection.11.1}%
+\contentsline {section}{\numberline {12}Groups of Order \(p^3\)}{10}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Groups of Order 8}{10}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}Groups of Order 27}{10}{subsection.12.2}%
+\contentsline {subsection}{\numberline {12.3}General Case?}{10}{subsection.12.3}%
+\contentsline {section}{\numberline {13}Groups of Order 24}{10}{section.13}%
+\contentsline {section}{\numberline {14}Groups of Order 16}{10}{section.14}%
