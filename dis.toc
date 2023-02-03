@@ -10,15 +10,15 @@
 \contentsline {subsection}{\numberline {6.2}Isomorphism Theorems}{5}{subsection.6.2}%
 \contentsline {section}{\numberline {7}Groups of order 12}{6}{section.7}%
 \contentsline {section}{\numberline {8}Generalisation to Groups of order \(4p\)}{7}{section.8}%
-\contentsline {section}{\numberline {9}Groups of Order 30}{7}{section.9}%
+\contentsline {section}{\numberline {9}Groups of Order 30}{8}{section.9}%
 \contentsline {part}{III\hspace {1em}To Do}{8}{part.3}%
-\contentsline {section}{\numberline {10}Semi-Direct Product}{8}{section.10}%
-\contentsline {section}{\numberline {11}Groups of order 9 (Might skip)}{8}{section.11}%
-\contentsline {section}{\numberline {12}Groups of Order 18}{8}{section.12}%
-\contentsline {subsection}{\numberline {12.1}Groups of Order \(p^2q\)}{8}{subsection.12.1}%
-\contentsline {section}{\numberline {13}Groups of Order \(p^3\)}{8}{section.13}%
-\contentsline {subsection}{\numberline {13.1}Groups of Order 8}{8}{subsection.13.1}%
-\contentsline {subsection}{\numberline {13.2}Groups of Order 27}{8}{subsection.13.2}%
-\contentsline {subsection}{\numberline {13.3}General Case?}{8}{subsection.13.3}%
-\contentsline {section}{\numberline {14}Groups of Order 24}{8}{section.14}%
-\contentsline {section}{\numberline {15}Groups of Order 16}{8}{section.15}%
+\contentsline {section}{\numberline {10}Semi-Direct Product}{9}{section.10}%
+\contentsline {section}{\numberline {11}Groups of order 9 (Might skip)}{9}{section.11}%
+\contentsline {section}{\numberline {12}Groups of Order 18}{9}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Groups of Order \(p^2q\)}{9}{subsection.12.1}%
+\contentsline {section}{\numberline {13}Groups of Order \(p^3\)}{9}{section.13}%
+\contentsline {subsection}{\numberline {13.1}Groups of Order 8}{9}{subsection.13.1}%
+\contentsline {subsection}{\numberline {13.2}Groups of Order 27}{9}{subsection.13.2}%
+\contentsline {subsection}{\numberline {13.3}General Case?}{9}{subsection.13.3}%
+\contentsline {section}{\numberline {14}Groups of Order 24}{9}{section.14}%
+\contentsline {section}{\numberline {15}Groups of Order 16}{9}{section.15}%
