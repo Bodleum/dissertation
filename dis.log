@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Arch Linux)  (format=lualatex 2023.1.10)  3 FEB 2023 12:17
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Arch Linux)  (format=lualatex 2023.1.10)  3 FEB 2023 12:56
  restricted system commands enabled.
  file:line:error style messages enabled.
 **"/home/bodleum/archive/Uni/Courses/Year 4/MT4599/dis/dis.tex"
@@ -542,16 +542,16 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 LaTeX Font Info:    Trying to load font information for U+stmry on input line 4
 6.
 
-(/usr/share/texmf-dist/tex/latex/stmaryrd/Ustmry.fd) (./dis.toc [1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
+(/usr/share/texmf-dist/tex/latex/stmaryrd/Ustmry.fd) (./dis.toc)
 \tf@toc=\write4
 
 \openout4 = dis.toc
- [2] [3] [4] [5] [6]
-/home/bodleum/archive/Uni/Courses/Year 4/MT4599/dis/dis.tex:438: Undefined contr
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5]
+/home/bodleum/archive/Uni/Courses/Year 4/MT4599/dis/dis.tex:362: Undefined contr
 ol sequence.
-l.438 ...ement of \(A_4\) as \(\alpha^i\beta^j\gamme
+l.362 ...ement of \(A_4\) as \(\alpha^i\beta^j\gamme
                                                   ^k\) for some \(i\), \(j\)...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -559,25 +559,25 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/bodleum/archive/Uni/Courses/Year 4/MT4599/dis/dis.tex:438: Double superscr
+/home/bodleum/archive/Uni/Courses/Year 4/MT4599/dis/dis.tex:362: Double superscr
 ipt.
-l.438 ...ment of \(A_4\) as \(\alpha^i\beta^j\gamme^
+l.362 ...ment of \(A_4\) as \(\alpha^i\beta^j\gamme^
                                                   k\) for some \(i\), \(j\) ...
 I treat `x^1^2' essentially like `x^1{}^2'.
 
-[7] [8] [9] (./dis.aux)
+[6] [7] [8] [9] (./dis.aux)
 Package rerunfilecheck Info: File `dis.out' has not changed.
-(rerunfilecheck)             Checksum: B326355763AA9D3EC5D542F366FBB417;3778.
+(rerunfilecheck)             Checksum: B82008E8884E6E39C8B97A7887E95199;3532.
 )
 
 Here is how much of LuaTeX's memory you used:
- 11254 strings out of 477762
+ 11253 strings out of 477762
  100000,662416 words of node,token memory allocated
- 686 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 49 attribute, 58 glue_spec
-, 49 attribute_list, 1 write nodes
-   avail lists: 2:602,3:366,4:12,5:340,6:102,7:6327,8:77,9:518,10:9,11:309
- 31483 multiletter control sequences out of 65536+600000
+ 690 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 50 attribute, 58 glue_spec
+, 50 attribute_list, 1 write nodes
+   avail lists: 2:645,3:366,4:12,5:339,6:102,7:6327,8:78,9:518,10:9,11:309
+ 31482 multiletter control sequences out of 65536+600000
  106 fonts using 6599183 bytes
  72i,13n,73p,328b,442s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf-dist/fonts
@@ -594,10 +594,10 @@ pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf-dis
 t/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lm
 ri12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><
 /usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on dis.pdf (9 pages, 264287 bytes).
+Output written on dis.pdf (9 pages, 264588 bytes).
 
-PDF statistics: 288 PDF objects out of 1000 (max. 8388607)
- 257 compressed objects within 3 object streams
+PDF statistics: 284 PDF objects out of 1000 (max. 8388607)
+ 253 compressed objects within 3 object streams
  59 named destinations out of 1000 (max. 131072)
- 193 words of extra memory for PDF output out of 10000 (max. 100000000)
+ 185 words of extra memory for PDF output out of 10000 (max. 100000000)
 

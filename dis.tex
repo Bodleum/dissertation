@@ -288,82 +288,6 @@ So any group of order \(pq\) is isomorphic to either:
 \end{equation*}
 
 
-
-\part{In Progress}
-
-% ====   Theorems and Lemmas   ====
-\section{Theorems and Lemmas}
-\subsection{Sylow Theorems}
-Let \(G\) be a group of order \(p^n m\) where \(p\) is a prime and \(p\nmid m\).
-\begin{theorem}[\nth{1} Sylow Theorem]\label{thm:sylow1}
-    \(G\) has a Sylow \(p\)-subgroup, i.e.\ a subgroup of order \(p^n\).
-\end{theorem}
-\begin{theorem}[\nth{2} Sylow Theorem]\label{thm:sylow2}
-    All Sylow \(p\)-subgroups of \(G\) are conjugate to each other.
-    In particular, if \(G\) has a unique Sylow \(p\)-subgroup, then it is a normal subgroup.
-\end{theorem}
-\begin{theorem}[\nth{3} Sylow Theorem]\label{thm:sylow3}
-    Let \(n_p\) denote the number of Sylow \(p\)-subgroups of \(G\).
-    Then:
-    \begin{enumerate}[(i)]
-        \item \(n_p \mid m\)
-        \item \(n_p\equiv 1\) (mod \(p\))
-    \end{enumerate}
-\end{theorem}
-
-% TODO: Write out isom theorems
-\subsection{Isomorphism Theorems}
-\begin{theorem}\label{thm:iso1}
-\end{theorem}
-
-\begin{theorem}\label{thm:iso2}
-\end{theorem}
-
-\begin{theorem}\label{thm:iso3}
-\end{theorem}
-
-\begin{lemma}\label{lem:setprodorder}
-    For a group \(G\) with \(N \leqslant G\) and \(H \leqslant G\), then
-    \[|NH| = |\{nh \mid n \in N, h \in H\}| = \frac{|N| \cdot |H|}{|N \cap H|}\]
-\end{lemma}
-% TODO: maybe prove?
-
-\begin{lemma}\label{lem:aut}
-    The automorphism group of \(C_n\) is isomorphic to the multiplicative group
-    of integers mod \(n\).
-
-    i.e. \(\Aut{C_n} \cong \Zn{n}^*\)
-\end{lemma}
-
-\begin{proof}
-    Let \(C_n = \langle x \rangle\).
-    Any automorphism, \(\varphi\) of \(C_n\) has the property:
-    \[(x^i)\varphi = {(x\varphi)}^i\]
-    Hence \(\varphi\) is determined by it's effect on a generator, \(x\), and preserves element
-    order.
-    In particular, \(\varphi\) sends generators to generators.
-    So for \(\varphi\) to be an automorphism, it must send \(x\) to another generator, say \(x^k\).
-    An element \(x^k\) generates \(C_n\) if \(x^k\) has order \(n\), i.e.\ when \(k\) and \(n\) are co-prime.
-    Denote the automorphism sending \(x\) to \(x^k\) by \(\varphi_k\).
-
-    Let's now investigate how these automorphisms behave.
-    Let \(\varphi_k, \varphi_l \in \Aut{C_n}\), and consider:
-    \[x\varphi_k\varphi_l = (x^k)\varphi_l = {(x^k)}^l = x^{(kl)} = x\varphi_{kl} \quad \text{(mod \(n\))}\]
-    Because multiplication modulo \(n\) is commutative, \(x^{kl} = x^{lk}\), so \(\Aut{C_n}\) is abelian.
-
-    Now consider \(\theta:\Aut{C_n} \to \Zn{n}^*\) defined by \(\varphi_k\theta = k\).
-    We will show \(\theta\) is an isomorphism.
-    Every \(k \in \Zn{n}^*\) is co-prime to \(n\) and so \(x^k\) is a generator of \(C_n\), hence there is some \(\varphi_k
-    \in \Aut{C_n}\) such that \(\varphi_k\theta = k\).
-    So \(\theta\) is surjective.
-    If \(\varphi_k\theta = \varphi_l\theta\) then \(k = l\), so \(\theta\) is also injective.
-    Finally, \(\theta\) is a homomorphism because:
-    \[(\varphi_k\varphi_l)\theta = \varphi_{kl}\theta = kl = (\varphi_k\theta)(\varphi_l\theta)\]
-    So \(\theta:\Aut{C_n} \to \Zn{n}^*\) is an isomorphism.
-\end{proof}
-
-
-
 % ====   Groups of order 12   ====
 \section{Groups of order 12}
 Let \(G\) be a group of order \(12 = 2^2 \cdot 3\), and \(n_3\) and \(n_2\) denote the number of Sylow 3-subgroups and
@@ -491,11 +415,81 @@ So a group \(G\) of order 12 is isomorphic to one of:
     \langle\, x, y \mid x^3 = y^4 = 1,\ y^{-1}xy = x^{-1}\,\rangle
 \]
 
-\section{Generalisation to Groups of order \(4p\)}
-Suppose \(G\) is a group of order \(4p\) where \(p\) is a prime number.
-Let \(n_2\) denote the number of Sylow 2-subgroups.
 
-% TODO: Sketch
+\part{In Progress}
+
+% ====   Theorems and Lemmas   ====
+\section{Theorems and Lemmas}
+\subsection{Sylow Theorems}
+Let \(G\) be a group of order \(p^n m\) where \(p\) is a prime and \(p\nmid m\).
+\begin{theorem}[\nth{1} Sylow Theorem]\label{thm:sylow1}
+    \(G\) has a Sylow \(p\)-subgroup, i.e.\ a subgroup of order \(p^n\).
+\end{theorem}
+\begin{theorem}[\nth{2} Sylow Theorem]\label{thm:sylow2}
+    All Sylow \(p\)-subgroups of \(G\) are conjugate to each other.
+    In particular, if \(G\) has a unique Sylow \(p\)-subgroup, then it is a normal subgroup.
+\end{theorem}
+\begin{theorem}[\nth{3} Sylow Theorem]\label{thm:sylow3}
+    Let \(n_p\) denote the number of Sylow \(p\)-subgroups of \(G\).
+    Then:
+    \begin{enumerate}[(i)]
+        \item \(n_p \mid m\)
+        \item \(n_p\equiv 1\) (mod \(p\))
+    \end{enumerate}
+\end{theorem}
+
+% TODO: Write out isom theorems
+\subsection{Isomorphism Theorems}
+\begin{theorem}\label{thm:iso1}
+\end{theorem}
+
+\begin{theorem}\label{thm:iso2}
+\end{theorem}
+
+\begin{theorem}\label{thm:iso3}
+\end{theorem}
+
+\begin{lemma}\label{lem:setprodorder}
+    For a group \(G\) with \(N \leqslant G\) and \(H \leqslant G\), then
+    \[|NH| = |\{nh \mid n \in N, h \in H\}| = \frac{|N| \cdot |H|}{|N \cap H|}\]
+\end{lemma}
+% TODO: maybe prove?
+
+\begin{lemma}\label{lem:aut}
+    The automorphism group of \(C_n\) is isomorphic to the multiplicative group
+    of integers mod \(n\).
+
+    i.e. \(\Aut{C_n} \cong \Zn{n}^*\)
+\end{lemma}
+
+\begin{proof}
+    Let \(C_n = \langle x \rangle\).
+    Any automorphism, \(\varphi\) of \(C_n\) has the property:
+    \[(x^i)\varphi = {(x\varphi)}^i\]
+    Hence \(\varphi\) is determined by it's effect on a generator, \(x\), and preserves element
+    order.
+    In particular, \(\varphi\) sends generators to generators.
+    So for \(\varphi\) to be an automorphism, it must send \(x\) to another generator, say \(x^k\).
+    An element \(x^k\) generates \(C_n\) if \(x^k\) has order \(n\), i.e.\ when \(k\) and \(n\) are co-prime.
+    Denote the automorphism sending \(x\) to \(x^k\) by \(\varphi_k\).
+
+    Let's now investigate how these automorphisms behave.
+    Let \(\varphi_k, \varphi_l \in \Aut{C_n}\), and consider:
+    \[x\varphi_k\varphi_l = (x^k)\varphi_l = {(x^k)}^l = x^{(kl)} = x\varphi_{kl} \quad \text{(mod \(n\))}\]
+    Because multiplication modulo \(n\) is commutative, \(x^{kl} = x^{lk}\), so \(\Aut{C_n}\) is abelian.
+
+    Now consider \(\theta:\Aut{C_n} \to \Zn{n}^*\) defined by \(\varphi_k\theta = k\).
+    We will show \(\theta\) is an isomorphism.
+    Every \(k \in \Zn{n}^*\) is co-prime to \(n\) and so \(x^k\) is a generator of \(C_n\), hence there is some \(\varphi_k
+    \in \Aut{C_n}\) such that \(\varphi_k\theta = k\).
+    So \(\theta\) is surjective.
+    If \(\varphi_k\theta = \varphi_l\theta\) then \(k = l\), so \(\theta\) is also injective.
+    Finally, \(\theta\) is a homomorphism because:
+    \[(\varphi_k\varphi_l)\theta = \varphi_{kl}\theta = kl = (\varphi_k\theta)(\varphi_l\theta)\]
+    So \(\theta:\Aut{C_n} \to \Zn{n}^*\) is an isomorphism.
+\end{proof}
+
+
 
 \section{Groups of Order 30}
 Let \(G\) be a group of order \(30 = 2 \cdot 3 \cdot 5\), and let \(n_3\) and \(n_5\) denote the number of Sylow
@@ -546,14 +540,13 @@ possibilities:
 
 \section{Semi-Direct Product}
 % TODO: Semi-direct product
-% \section{Semi-Direct Product}
-% We already know about the direct product:
-%
-% \begin{definition}[Direct Product]
-%     For groups \(N\) and \(H\), the \emph{direct product}, \(G = N\times H\) is a
-%     group of ordered pairs of elements \((n, h)\) where \(n \in N\) and \(h \in
-%     H\) with the operation: \[(n_1, h_1)(n_2, h_2) = (n_1n_2, h_1h_2)\]
-% \end{definition}
+We already know about the direct product:
+
+\begin{definition}[Direct Product]
+    For groups \(N\) and \(H\), the \emph{direct product}, \(G = N\times H\) is a
+    group of ordered pairs of elements \((n, h)\) where \(n \in N\) and \(h \in
+    H\) with the operation: \[(n_1, h_1)(n_2, h_2) = (n_1n_2, h_1h_2)\]
+\end{definition}
 %
 % \begin{theorem}
 %     If \(G = N \times H\) then \(N \unlhd G\) and \(H \unlhd G\).
