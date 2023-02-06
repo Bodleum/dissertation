@@ -4,7 +4,7 @@
 \contentsline {subsection}{\numberline {2.1}Sylow Theorems}{3}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Isomorphism Theorems}{3}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Semidirect Product}{3}{subsection.2.3}%
-\contentsline {section}{\numberline {3}First Classifications!}{5}{section.3}%
+\contentsline {section}{\numberline {3}First Classifications}{5}{section.3}%
 \contentsline {section}{\numberline {4}Groups of Order 6}{5}{section.4}%
 \contentsline {section}{\numberline {5}Generalisation to Groups of Order \(2p\)}{6}{section.5}%
 \contentsline {section}{\numberline {6}Groups of Order \(pq\)}{7}{section.6}%

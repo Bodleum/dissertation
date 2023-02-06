@@ -66,7 +66,8 @@ letters, like \(g\), \(h\).
 Greek letters shall denote mappings, generally \(\phi\), \(\psi\), etc.\ with \(\iota\) reserved for the identity map,
 and we will write mappings on the right.
 
-We will use \(\N\) to denote the natural numbers (not including 0), \(\Z\) to denote the integers, and \(\R\) to denote the real numbers.
+We will use \(\N\) to denote the natural numbers (not including 0), \(\Z\) to denote the integers, and \(\R\) to denote
+the real numbers.
 
 To denote the cyclic group of order \(n\) we will use \(C_n\), \(D_{2n}\) to denote the cyclic group of order \(2n\),
 \(A_n\) to denote the alternating group over \(n\) elements, \(S_n\) to denote the symmetric group over \(n\)
@@ -181,7 +182,7 @@ We already know about the direct product:
     \end{enumerate}
 \end{definition}
 
-But now let's seek a slightly more general way to combine groups, by relaxing that \(H\) must be normal.
+Now let's seek a slightly more general way to combine groups, by relaxing that \(H\) must be normal.
 So we have:
 \[N \nrmsgp G,\ H \leqslant G,\ NH = G, \quad \text{and} \quad N \cap H = \bm{1}\]
 Consider the \emph{set}, (not the direct product):
@@ -223,6 +224,7 @@ is an automorphism of \(N\).
 This gives rise to the definition:
 
 \begin{definition}[Semidirect Product]
+\mbox{}
 \begin{enumerate}[(i)]
     \item
 
@@ -290,7 +292,7 @@ This gives rise to the definition:
 \end{proof}
 
 % ====   Trivial and Prime   ====
-\section{First Classifications!}
+\section{First Classifications}
 Let's start with the easiest case: groups of order 1.
 Any group \(G\) must have an identity element, and so that's all our possible elements used up!
 All groups of order 1 are isomorphic to the trivial group, \(\bm{1}\).
@@ -315,7 +317,7 @@ order 1 and 2 hence:
 \[N \cap H = \bm{1}\]
 
 By Lemma~\ref{lem:setprodorder}:
-\[|NH| = \frac{|N| \cdot |H|}{|N \cap H|} = \frac{3 \cdot 2}{1} = 6\]
+\[|NH| = |N| \cdot |H| = 6\]
 So \(G = NH\), \(N \nrmsgp G\) and \(N \cap H = \bm{1}\), which means \(G = N \rtimes H\), the
 semidirect product of \(N\) by \(H\).
 
@@ -375,7 +377,7 @@ order 1 and 2 hence:
 \[N \cap H = \bm{1}\]
 
 By Lemma~\ref{lem:setprodorder}:
-\[|NH| = \frac{|N| \cdot |H|}{|N \cap H|} = \frac{p \cdot 2}{1} = 2p\]
+\[|NH| = |N| \cdot |H| = 2p\]
 So \(G = N \rtimes H\) as before.
 
 We know by Lemma~\ref{lem:aut} that \(\Aut{N} \cong \units{p}\), so let's look for the elements of
@@ -531,7 +533,7 @@ Hence any group of order \(p^2\) is isomorphic to one of:
 %     \item Show \(G\) must be abelian. Result follows from FTFAB\@.
 %     \item \(\z{(G)}\) has order 1, \(p\), or \(p^2\) by Lagrange.
 %     \item If \(p^2\) then done.
-%     \item Size of congruency classes is multiple of p.
+%     \item Size of congruence classes is multiple of p.
 %     \item Class eqn => order of centre is multiple of p. (and so is not 1)
 %     \item Quotient with G is cyclic.
 %     \item MT4003 showed then G must be abelian.
@@ -554,7 +556,7 @@ Say \(K = \langle x \rangle\).
 Lagrange's Theorem tells us \(H\) has elements of order 1, 2, and 4, and \(K\) has elements of order 1 and 3.
 Hence \(H \cap K = \bm{1}\).
 Lemma~\ref{lem:setprodorder} tells us:
-\[|HK| = \frac{|H| \cdot |K|}{|H \cap K|} = 12\]
+\[|HK| = |H| \cdot |K| = 12\]
 Hence \(G = HK\), \(H \nrmsgp G\), and \(H \cap K = \bm{1}\).
 If we consider groups with 4 Sylow 3-subgroups then we can conclude that they are some semidirect product, \(G = H
 \rtimes K\).

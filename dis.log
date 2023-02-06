@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Arch Linux)  (format=lualatex 2023.1.10)  4 FEB 2023 21:44
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Arch Linux)  (format=lualatex 2023.1.10)  6 FEB 2023 19:51
  restricted system commands enabled.
  file:line:error style messages enabled.
 **"/home/bodleum/archive/Uni/Courses/Year 4/MT4599/dis/dis.tex"
@@ -550,9 +550,9 @@ LaTeX Font Info:    Trying to load font information for U+stmry on input line 5
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5] [6] [7] [8
 ]
-/home/bodleum/archive/Uni/Courses/Year 4/MT4599/dis/dis.tex:612: Undefined contr
+/home/bodleum/archive/Uni/Courses/Year 4/MT4599/dis/dis.tex:614: Undefined contr
 ol sequence.
-l.612 ...ement of \(A_4\) as \(\alpha^i\beta^j\gamme
+l.614 ...ement of \(A_4\) as \(\alpha^i\beta^j\gamme
                                                   ^k\) for some \(i\), \(j\)...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -560,24 +560,24 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/bodleum/archive/Uni/Courses/Year 4/MT4599/dis/dis.tex:612: Double superscr
+/home/bodleum/archive/Uni/Courses/Year 4/MT4599/dis/dis.tex:614: Double superscr
 ipt.
-l.612 ...ment of \(A_4\) as \(\alpha^i\beta^j\gamme^
+l.614 ...ment of \(A_4\) as \(\alpha^i\beta^j\gamme^
                                                   k\) for some \(i\), \(j\) ...
 I treat `x^1^2' essentially like `x^1{}^2'.
 
 [9] [10] [11] (./dis.aux)
 Package rerunfilecheck Info: File `dis.out' has not changed.
-(rerunfilecheck)             Checksum: 652E29D8467A6A6E85B1A054CA351648;3656.
+(rerunfilecheck)             Checksum: 646E207339BF4D72D87A36CE7B09C155;3651.
 )
 
 Here is how much of LuaTeX's memory you used:
- 11273 strings out of 477762
+ 11274 strings out of 477762
  100000,662416 words of node,token memory allocated
  754 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 66 attribute, 58 glue_spec
 , 66 attribute_list, 1 write nodes
-   avail lists: 2:683,3:386,4:11,5:392,6:107,7:6220,8:81,9:633,10:9,11:357
+   avail lists: 2:683,3:386,4:11,5:380,6:107,7:6286,8:81,9:601,10:9,11:361
  31488 multiletter control sequences out of 65536+600000
  106 fonts using 6599183 bytes
  72i,13n,73p,329b,461s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -595,10 +595,10 @@ pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf-dis
 t/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lm
 ri12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><
 /usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on dis.pdf (11 pages, 279537 bytes).
+Output written on dis.pdf (11 pages, 279022 bytes).
 
-PDF statistics: 312 PDF objects out of 1000 (max. 8388607)
- 279 compressed objects within 3 object streams
- 73 named destinations out of 1000 (max. 131072)
+PDF statistics: 313 PDF objects out of 1000 (max. 8388607)
+ 280 compressed objects within 3 object streams
+ 74 named destinations out of 1000 (max. 131072)
  193 words of extra memory for PDF output out of 10000 (max. 100000000)
 
