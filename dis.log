@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Arch Linux)  (format=lualatex 2023.1.10)  6 FEB 2023 19:56
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Arch Linux)  (format=lualatex 2023.1.10)  6 FEB 2023 20:56
  restricted system commands enabled.
  file:line:error style messages enabled.
 **"/home/bodleum/archive/Uni/Courses/Year 4/MT4599/dis/dis.tex"
@@ -447,32 +447,32 @@ LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
  (./dis.aux)
 \openout1 = dis.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 52.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 53.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 5
-2.
+3.
 
 (/usr/share/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -508,7 +508,7 @@ LaTeX Font Info:    ... okay on input line 52.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 52.
+Package hyperref Info: Link coloring OFF on input line 53.
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -520,27 +520,27 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count299
 )
-LaTeX Info: Redefining \ref on input line 52.
-LaTeX Info: Redefining \pageref on input line 52.
-LaTeX Info: Redefining \nameref on input line 52.
+LaTeX Info: Redefining \ref on input line 53.
+LaTeX Info: Redefining \pageref on input line 53.
+LaTeX Info: Redefining \nameref on input line 53.
 
 (./dis.out) (./dis.out)
 \@outlinefile=\write3
 
 \openout3 = dis.out
-LaTeX Font Info:    Trying to load font information for U+msa on input line 53.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 54.
 
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 53.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 54.
 
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+stmry on input line 5
-3.
+4.
 
 (/usr/share/texmf-dist/tex/latex/stmaryrd/Ustmry.fd) (./dis.toc)
 \tf@toc=\write4
@@ -549,10 +549,10 @@ LaTeX Font Info:    Trying to load font information for U+stmry on input line 5
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5] [6] [7] [8
-]
-/home/bodleum/archive/Uni/Courses/Year 4/MT4599/dis/dis.tex:614: Undefined contr
+] [9]
+/home/bodleum/archive/Uni/Courses/Year 4/MT4599/dis/dis.tex:689: Undefined contr
 ol sequence.
-l.614 ...ement of \(A_4\) as \(\alpha^i\beta^j\gamme
+l.689 ...ement of \(A_4\) as \(\alpha^i\beta^j\gamme
                                                   ^k\) for some \(i\), \(j\)...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -560,27 +560,27 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/bodleum/archive/Uni/Courses/Year 4/MT4599/dis/dis.tex:614: Double superscr
+/home/bodleum/archive/Uni/Courses/Year 4/MT4599/dis/dis.tex:689: Double superscr
 ipt.
-l.614 ...ment of \(A_4\) as \(\alpha^i\beta^j\gamme^
+l.689 ...ment of \(A_4\) as \(\alpha^i\beta^j\gamme^
                                                   k\) for some \(i\), \(j\) ...
 I treat `x^1^2' essentially like `x^1{}^2'.
 
-[9] [10] [11] (./dis.aux)
+[10] [11] [12] (./dis.aux)
 Package rerunfilecheck Info: File `dis.out' has not changed.
-(rerunfilecheck)             Checksum: 646E207339BF4D72D87A36CE7B09C155;3651.
+(rerunfilecheck)             Checksum: EC986C038FBC9B867D4891D85A2B5D56;3777.
 )
 
 Here is how much of LuaTeX's memory you used:
- 11274 strings out of 477762
+ 11289 strings out of 477762
  100000,662416 words of node,token memory allocated
- 754 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 66 attribute, 58 glue_spec
-, 66 attribute_list, 1 write nodes
-   avail lists: 2:683,3:386,4:11,5:390,6:107,7:6220,8:81,9:588,10:9,11:357
- 31488 multiletter control sequences out of 65536+600000
- 106 fonts using 6599183 bytes
- 72i,13n,73p,329b,536s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 782 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 73 attribute, 58 glue_spec
+, 73 attribute_list, 1 write nodes
+   avail lists: 2:683,3:399,4:11,5:380,6:110,7:6390,8:84,9:601,10:9,11:371
+ 31493 multiletter control sequences out of 65536+600000
+ 108 fonts using 6764543 bytes
+ 72i,13n,73p,329b,461s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
@@ -589,16 +589,17 @@ e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.
 pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/font
-s/type1/public/lm/lmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr12.
-pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf-dis
-t/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lm
-ri12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><
-/usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on dis.pdf (11 pages, 278940 bytes).
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/l
+m/lmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/
+texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf-dist/fonts/type1/pu
+blic/lm/lmr8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/s
+hare/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf
+-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on dis.pdf (12 pages, 292540 bytes).
 
-PDF statistics: 313 PDF objects out of 1000 (max. 8388607)
- 280 compressed objects within 3 object streams
- 74 named destinations out of 1000 (max. 131072)
- 193 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 334 PDF objects out of 1000 (max. 8388607)
+ 299 compressed objects within 3 object streams
+ 84 named destinations out of 1000 (max. 131072)
+ 201 words of extra memory for PDF output out of 10000 (max. 100000000)
 

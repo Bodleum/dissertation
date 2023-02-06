@@ -33,6 +33,7 @@
 \newtheorem{definition}[theorem]{Definition}
 
 \DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Sym}{Sym}
 \DeclareMathOperator{\order}{o}
 \DeclareMathOperator{\lcm}{lcm}
 \DeclareMathOperator{\im}{im}
@@ -78,6 +79,15 @@ Let's move on to review some facts and theorems which will be valuable later on,
 and prove some new results!
 
 \begin{definition}
+    A \emph{permutation} of a set \(X\) is a bijection from \(X\) to \(X\).
+    The \emph{symmetric group} \(X\) is the set of all permutations of \(X\) under composition.
+    We write \(\Sym{X}\) to denote this.
+    It is easy to show \(\Sym{X}\) is a group.
+\end{definition}
+
+
+
+\begin{definition}
     If \(G\) is a group, and \(H \subseteq G\), then \(H\) is a \emph{subgroup} of \(G\) if it is a group in its own right with
     the multiplication from \(G\).
     We write \(H \leqslant G\) to mean \(H\) is a subgroup of \(G\).
@@ -96,10 +106,16 @@ and prove some new results!
 \end{definition}
 
 \begin{definition}
+    If \(G\) is a group with subgroup \(H\) then the \emph{right coset} of \(H\) in \(G\) with representative \(g \in
+    G\) is:
+    \[Hg = \{\,hg \mid h \in H\,\}\]
+\end{definition}
+
+
+\begin{definition}
     The \emph{order} of a group, \(G\), is the number of elements in \(G\), denoted \(|G|\).
     The \emph{order} of an element \(g \in G\) is the smallest \(i \in \N\) such that \(g^i = 1\).
 \end{definition}
-
 
 \begin{definition}
     If \(G\) and \(H\) are groups with elements \(g_1,\, g_2 \in G\), then a map:
@@ -289,6 +305,65 @@ This gives rise to the definition:
     is a bijection.
     The result follows immediately from this.
 \end{proof}
+
+\subsection{Group Actions}
+Some snazzy introduction.
+
+\begin{definition}
+    Let \(G\) be a group, and \(\Omega\) be a set, with elements \(g \in G\) and \(\omega \in \Omega\).
+    Consider a map \(\mu:\Omega \times G \to \Omega\), and write \(\omega^g\) for the image of \((\omega,\,g)\) under
+    \(\mu\).
+    So we have:
+    \[\mu:\Omega \times G \to \Omega \quad \text{defined by} \quad (\omega,\,g) \mapsto \omega^g\]
+    We say \(G\) \emph{acts on} \(\Omega\) if for all \(g_1,\,g_2 \in G\) and all \(\omega \in \Omega\):
+    \begin{enumerate}[(i)]
+        \item \({(\omega^{g_1})}^{g_2} = \omega^{(g_1 g_2)}\)
+        \item \(\omega^1 = \omega\)
+    \end{enumerate}
+    We call \(\mu\) the \emph{group action} of \(G\) on \(\Omega\).
+\end{definition}
+
+This might remind you of a homomorphism.
+Indeed we have a result:
+
+\begin{lemma}
+    A group action induces a homomorphism.
+    Specifically, let \(G\) be a group which acts on a set \(\Omega\), with \(g \in G\) and \(\omega \in \Omega\), and
+    define:
+    \[\rho_g:\Omega \to \Omega \quad \text{by} \quad \omega \mapsto \omega^g\]
+    Then:
+    \[\rho:G \to \Sym{\Omega} \quad \text{defined by} \quad g \mapsto \rho_g\]
+    is a homomorphism.
+\end{lemma}
+
+\begin{proof}
+    Firstly, \(\rho_g\) is indeed a permutation of \(\Omega\) because it is invertible (and therefore a bijection),
+    with:
+    \[{(\rho_g)}^{-1} = \rho_{g^{-1}}\]
+    Consider \(g,\,h \in G\) and their corresponding maps, \(\rho_{g},\,\rho_{h} \in \Sym{\Omega}\).
+    Then:
+    \[\omega(g\rho)(h\rho) = \omega\rho_g\rho_h = {(\omega^g)}^h = \omega^{(gh)} = \omega\rho_{gh} = \omega(gh)\rho\]
+    Thus \(\rho\) is a homomorphism.
+\end{proof}
+
+A group acting on the set its cosets will be very useful:
+
+\begin{definition}
+    For a group \(G\) with \(H \leqslant G\), let \(\Omega = \{\,Hg \mid g \in G\,\}\), i.e.\ the set of cosets of \(H\)
+    in \(G\).
+    If \(x \in G\), define a group action:
+    \[\Omega \times G \to \Omega \quad \text{by} \quad (Hg, x) \mapsto Hgx\]
+\end{definition}
+
+\begin{lemma}
+    The action above is \emph{well defined}, meaning the action is independent of our choice of representative \(g\).
+\end{lemma}
+
+\begin{proof}
+    % TODO
+\end{proof}
+
+
 
 
 % ====   Trivial and Prime   ====
