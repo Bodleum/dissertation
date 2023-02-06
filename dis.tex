@@ -131,6 +131,40 @@ and prove some new results!
     Hence \(A = \Aut{G}\) is a group.
 \end{proof}
 
+\begin{lemma}\label{lem:aut}
+    The automorphism group of \(C_n\) is isomorphic to the multiplicative group
+    of integers mod \(n\).
+
+    i.e. \(\Aut{C_n} \cong \units{n}\)
+\end{lemma}
+
+\begin{proof}
+    Let \(C_n = \langle x \rangle\).
+    Any automorphism, \(\varphi\) of \(C_n\) has the property:
+    \[(x^i)\varphi = {(x\varphi)}^i\]
+    Hence \(\varphi\) is determined by it's effect on a generator, \(x\), and preserves element
+    order.
+    In particular, \(\varphi\) sends generators to generators.
+    So for \(\varphi\) to be an automorphism, it must send \(x\) to another generator, say \(x^k\).
+    An element \(x^k\) generates \(C_n\) if \(x^k\) has order \(n\), i.e.\ when \(k\) and \(n\) are co-prime.
+    Denote the automorphism sending \(x\) to \(x^k\) by \(\varphi_k\).
+
+    Let's now investigate how these automorphisms behave.
+    Let \(\varphi_k, \varphi_l \in \Aut{C_n}\), and consider:
+    \[x\varphi_k\varphi_l = (x^k)\varphi_l = {(x^k)}^l = x^{(kl)} = x\varphi_{kl} \quad \text{(mod \(n\))}\]
+    Because multiplication modulo \(n\) is commutative, \(x^{kl} = x^{lk}\), so \(\Aut{C_n}\) is abelian.
+
+    Now consider \(\theta:\Aut{C_n} \to \units{n}\) defined by \(\varphi_k\theta = k\).
+    We will show \(\theta\) is an isomorphism.
+    Every \(k \in \units{n}\) is co-prime to \(n\) and so \(x^k\) is a generator of \(C_n\), hence there is some \(\varphi_k
+    \in \Aut{C_n}\) such that \(\varphi_k\theta = k\).
+    So \(\theta\) is surjective.
+    If \(\varphi_k\theta = \varphi_l\theta\) then \(k = l\), so \(\theta\) is also injective.
+    Finally, \(\theta\) is a homomorphism because:
+    \[(\varphi_k\varphi_l)\theta = \varphi_{kl}\theta = kl = (\varphi_k\theta)(\varphi_l\theta)\]
+    So \(\theta:\Aut{C_n} \to \units{n}\) is an isomorphism.
+\end{proof}
+
 \begin{theorem}[Lagrange's Theorem]
 
 \end{theorem}
@@ -256,40 +290,6 @@ This gives rise to the definition:
     The result follows immediately from this.
 \end{proof}
 
-
-\begin{lemma}\label{lem:aut}
-    The automorphism group of \(C_n\) is isomorphic to the multiplicative group
-    of integers mod \(n\).
-
-    i.e. \(\Aut{C_n} \cong \units{n}\)
-\end{lemma}
-
-\begin{proof}
-    Let \(C_n = \langle x \rangle\).
-    Any automorphism, \(\varphi\) of \(C_n\) has the property:
-    \[(x^i)\varphi = {(x\varphi)}^i\]
-    Hence \(\varphi\) is determined by it's effect on a generator, \(x\), and preserves element
-    order.
-    In particular, \(\varphi\) sends generators to generators.
-    So for \(\varphi\) to be an automorphism, it must send \(x\) to another generator, say \(x^k\).
-    An element \(x^k\) generates \(C_n\) if \(x^k\) has order \(n\), i.e.\ when \(k\) and \(n\) are co-prime.
-    Denote the automorphism sending \(x\) to \(x^k\) by \(\varphi_k\).
-
-    Let's now investigate how these automorphisms behave.
-    Let \(\varphi_k, \varphi_l \in \Aut{C_n}\), and consider:
-    \[x\varphi_k\varphi_l = (x^k)\varphi_l = {(x^k)}^l = x^{(kl)} = x\varphi_{kl} \quad \text{(mod \(n\))}\]
-    Because multiplication modulo \(n\) is commutative, \(x^{kl} = x^{lk}\), so \(\Aut{C_n}\) is abelian.
-
-    Now consider \(\theta:\Aut{C_n} \to \units{n}\) defined by \(\varphi_k\theta = k\).
-    We will show \(\theta\) is an isomorphism.
-    Every \(k \in \units{n}\) is co-prime to \(n\) and so \(x^k\) is a generator of \(C_n\), hence there is some \(\varphi_k
-    \in \Aut{C_n}\) such that \(\varphi_k\theta = k\).
-    So \(\theta\) is surjective.
-    If \(\varphi_k\theta = \varphi_l\theta\) then \(k = l\), so \(\theta\) is also injective.
-    Finally, \(\theta\) is a homomorphism because:
-    \[(\varphi_k\varphi_l)\theta = \varphi_{kl}\theta = kl = (\varphi_k\theta)(\varphi_l\theta)\]
-    So \(\theta:\Aut{C_n} \to \units{n}\) is an isomorphism.
-\end{proof}
 
 % ====   Trivial and Prime   ====
 \section{First Classifications}
