@@ -1,0 +1,38 @@
+% ==== Order p^2q   ====
+\section{Groups of Order \(p^2q\)}
+Let \(p\) and \(q\) be distinct prime numbers, and \(G\) be a group of order \(p^2q\).
+We shall consider the cases \(p < q\) and \(p > q\) separately.
+
+\subsection{\(p < q\)}
+Let \(p < q\), and let \(n_q\) denote the number of Sylow \(q\)-subgroups.
+Then by Theorem~\ref{thm:sylow3}:
+\[n_q \mid p^2\]
+so \(n_q\) could be \(1\), \(p\) or \(p^2\).
+Also:
+\[n_q \equiv 1 \ \text{mod \(q\)}\]
+If \(n_q  = p\) then \(p\) must be congruent to 1 mod \(q\), which is a contradiction since \(p < q\).
+If \(n_q = p^2\) then we must have:
+\[q \mid (p^2 - 1)\]
+Factorising gives:
+\[q \mid (p+1)(p-1)\]
+So either:
+\[q \mid (p+1) \quad \text{or} \quad q \mid (p-1) \quad \text{or both}\]
+However, \(q\) cannot divide \(p-1\) because \(p < q\) so \(q\) must divide \(p+1\).
+This is only the case when \(p = 2\) and \(q = 3\), so \(|G| = 12\) which we have already classified.
+
+Hence if \(|G| = p^2 q \neq 12\) with \(p < q\), then \(G\) possesses a unique Sylow \(q\)-subgroup, \(Q \cong C_q\), which is
+normal in \(G\).
+A Sylow \(p\)-subgroup, \(P \leqslant G\), will have order \(p^2\) and by Lagrange's Theorem, intersects trivially with
+\(Q\).
+And by applying Lemma~\ref{lem:setprodorder}:
+\[|PQ| = |P| \cdot |Q| = p^2 q\]
+So we can conclude that \(G  = Q \rtimes P\).
+
+We know, by Lemma~\ref{lem:aut}, that \(\Aut{Q} \cong \units{q}\), so we want a homomorphism, \(\psi:P \to \Aut{Q}\).
+We have two possibilities for a group of order \(p^2\):
+
+\begin{enumerate}[\bfseries{Case} 1:]
+    \item \(P \cong C_{p^2}\) i.e. \(G \cong C_q \rtimes C_{p^2}\).
+    \item \(P \cong C_p \times C_p\) i.e. \(G \cong C_q \rtimes (C_p \times C_p)\).
+\end{enumerate}
+

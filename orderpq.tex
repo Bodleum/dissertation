@@ -1,0 +1,46 @@
+% ====   Order pq   ====
+\section{Groups of Order \(pq\)}
+Let \(G\) be a group of order \(pq\) where \(p\), \(q\) are prime numbers with \(p > q\), and let \(n_p\) and \(n_q\)
+denote the number of Sylow p-subgroups and Sylow q-subgroups of \(G\) respectively.
+Then by Theorem~\ref{thm:sylow3}:
+\[n_p \equiv 1 \ \text{(mod \(p\))} \quad \text{and} \quad n_p \mid q \implies n_p = 1\]
+\[n_q \equiv 1 \ \text{(mod \(q\))} \implies n_q = 1,\ q+1,\ 2q+1,\ \dots \quad \text{and} \quad n_q \mid p\]
+
+So \(G\) has a unique Sylow \(p\)-subgroup, say \(P \nrmsgp G\), and a Sylow \(q\)-subgroup, \(Q \leqslant G\).
+Because \(p\) and \(q\) are prime numbers, \(P \cong C_p\) and \(Q \cong C_q\).
+Pick generators for each, say \(\rangle x \langle  = P\) and \(\rangle y \langle = Q\).
+We have 2 possibilities for \(n_q\): \(p-1\) is a multiple of \(q\) or 1.
+
+\begin{enumerate}[\bfseries{Case} 1:]
+    \item \(q \nmid p - 1\).
+
+        If \(p-1\) \emph{is not} a multiple of \(q\) then \(n_q = 1\) and \(Q \nrmsgp G\), hence:
+        \[G = P \times Q \cong C_{pq}\]
+
+    \item \( q \mid p - 1\).
+
+        If \(p-1\) \emph{is} a multiple of \(q\) then \(n_q = p\) and so \(Q\) is \emph{not} normal in \(G\).
+        By Lagrange's Theorem, \(P \cap Q = \bm{1}\) and by Lemma~\ref{lem:setprodorder}, \(|PQ| = pq\).
+        Hence, as well as the direct product, we have \(G = P \rtimes Q\), some non-trivial semidirect product.
+
+        By Lemma~\ref{lem:aut}, \(\Aut{C_p} \cong \units{p} \cong C_{p-1}\).
+        So if \(\nu \in \units{p}\), then \(x \mapsto x^\nu\) is an automorphism.
+        We know also that \(C_{p-1}\) has a unique subgroup of order \(q\),
+        hence \(G\) has the presentation:
+
+        \[G = \langle \, x, y, \mid x^p = y^q = 1,\ y^{-1}xy = x^a \, \rangle\]
+        where \(a\) is a generator for the subgroup of order \(q\) in
+        \(\units{p}\).
+
+        Notice that picking different generators are equivalent up to isomorphism because the composition of two
+        isomorphisms is an isomorphism.
+\end{enumerate}
+
+So any group of order \(pq\) is isomorphic to either:
+\begin{equation*}
+\begin{aligned}
+    C_{pq} \quad \text{or} \quad \langle \, x, y \mid x^p = y^q = 1,\ y^{-1}xy
+    = x^a \, \rangle \qquad &\text{if} \ q \mid p-1 \\
+    C_{pq} \qquad &\text{if} \ q \nmid p-1
+\end{aligned}
+\end{equation*}

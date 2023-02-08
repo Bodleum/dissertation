@@ -1,0 +1,56 @@
+% ====   Order 6   ====
+\section{Groups of Order 6}
+Let \(G\) be a group of order 6, and \(n_3\) denote the number of Sylow 3-subgroups of \(G\).
+Then by Theorem~\ref{thm:sylow3}:
+\[n_3 \equiv 1 \ \text{(mod 3)} \quad \text{and} \quad n_3 \mid 2 \implies n_3 = 1\]
+So \(G\) has one Sylow 3-subgroup, \(N\), and because 3 is prime, it is isomorphic to \(C_3\).
+Let \(N = \langle x \rangle\).
+Any Sylow 2-subgroup, \(H \leqslant G\), will have order 2, and so \(H \cong C_2\).
+Let \(H = \langle y \rangle\).
+Lagrange's Theorem tells us that \(N\) has elements of orders 1 and 3, and \(H\) has elements of
+order 1 and 2 hence:
+\[N \cap H = \bm{1}\]
+
+By Lemma~\ref{lem:setprodorder}:
+\[|NH| = |N| \cdot |H| = 6\]
+So \(G = NH\), \(N \nrmsgp G\) and \(N \cap H = \bm{1}\), which means \(G = N \rtimes H\), the
+semidirect product of \(N\) by \(H\).
+
+Now we need to determine \(\Aut{N}\).
+An automorphism, \(\varphi\) of \(N\) preserves element order.
+In particular, \(\varphi\) maps generators to generators.
+Hence, \(x\varphi = x\) or \(x^2\) because they are the generators of \(N\).
+So \(\Aut{N} \cong C_2\).
+
+Now we want a homomorphism \(\psi:H \to \Aut{N}\).
+If \(\psi\) is trivial, then it maps \(H\) to the trivial group, so every element of \(H\) gets sent
+to the trivial automorphism.
+If \(\psi\) is not trivial, then at least one element of \(H\) is not sent to the trivial
+automorphism.
+It cannot be 1 because then element order is not preserved, so it must be the generator, \(y\).
+Hence we obtain 2 possibilities for \(G\):
+
+\begin{enumerate}[\bfseries{Case} 1:]
+    \item
+        \begin{equation*}
+        \begin{aligned}
+            G &= \langle\, x, y \mid x^3 = y^2 = 1,\ y^{-1}xy = x \,\rangle \\
+            &=\langle\, x, y \mid x^3 = y^2 = 1,\ xy = yx \,\rangle \\
+            &= C_3 \times C_2 \cong C_6
+        \end{aligned}
+        \end{equation*}
+
+    \item
+        \begin{equation*}
+        \begin{aligned}
+            G &= \langle\, x, y \mid x^3 = y^2 = 1,\ y^{-1}xy = x^{-1}
+            \,\rangle \\
+            &\cong D_6
+        \end{aligned}
+        \end{equation*}
+\end{enumerate}
+
+These are clearly not isomorphic, because \(C_6\) is abelian, and \(D_6\) is not.
+
+Hence \(G\) is isomorphic one of:
+\[C_6 \quad \text{or} \quad D_6\]

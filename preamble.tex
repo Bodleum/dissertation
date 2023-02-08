@@ -1,0 +1,45 @@
+% ====   Preamble   ====
+\usepackage[left=1.5cm, right=1.5cm, top=1.5cm, bottom=2cm]{geometry}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{bm} % Bold maths
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage[super]{nth}
+\usepackage{enumerate}
+\usepackage{lipsum}
+\usepackage{stmaryrd}   % for \lightning
+
+\renewcommand{\emph}{\underline}
+
+% Maths in section headings
+\makeatletter
+\pdfstringdefDisableCommands{\let\(\fake@math}
+\newcommand\fake@math{}% just for safety
+\def\fake@math#1\){\detokenize{#1}}
+\makeatother
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\order}{o}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\z}{Z}
+\DeclareMathOperator{\C}{C}
+
+\newcommand{\nrmsgp}{\unlhd}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Zn}[1]{\Z/#1\Z}
+\newcommand{\units}[1]{(\Zn{#1})^\times}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+
