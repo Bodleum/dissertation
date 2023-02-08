@@ -1,5 +1,5 @@
 % ====   Groups of order p^2   ====
-\section{Generalisation to Groups of Order \(p^2\)}
+\section{Groups of Order \(p^2\)}
 Let \(G\) be a group of order \(p^2\).
 First, we will prove a useful lemma:
 
@@ -8,18 +8,19 @@ First, we will prove a useful lemma:
 \end{lemma}
 
 \begin{proof}
-    Let \(H\) be a subgroup of G, with index \(p\), and let \(\Omega\) be the set of all cosets of \(H\).
+    Let \(H\) be a subgroup of \(G\), with index \(p\).
+    We know kernels are normal subgroups, so we will show that \(H\) is the kernel of some homomorphism. % TODO: Add this as a fact
+    Let \(\Omega\) be the set of all cosets of \(H\).
     So by definition, \(|\Omega| = p\).
     By Lemma~\ref{lem:actionhom}, there is a homomorphism:
     \[\rho:G \to S_p\]
+    Let's investigate the kernel of \(\rho\).
     If we have \(x \in \ker{\rho}\), then:
     \[(H1)x = H1 = H\]
     which means \(x \in H\).
-    So the kernel of \(\rho\) is just \(H\), which means the quotient \(\frac{G}{\ker{\rho}}\) is of order \(p\).
-    By Theorem~\ref{thm:iso1}, this means the image of \(\rho\) is a subgroup of \(S_p\) with order \(p\).
-    Because kernels are normal subgroups, \(H \nrmsgp G\).  % TODO: Add this as a fact
+    So the kernel of \(\rho\) is \(H\).
+    Hence, \(H \nrmsgp G\).
 \end{proof}
-
 
 By Lagrange's Theorem, the elements of \(G\) have order 1, \(p\) or \(p^2\).
 
@@ -34,9 +35,9 @@ If \(y^j = x^i\) for some \(i\) and \(j\), then:
 \[{(y^j)}^{1-j} = {(x^i)}^{1-j} = y^{j-j+1} = y = x^{i(1-j)} = x^k \quad \text{for some} \ k\text{,} \ \text{a
 contradiction.}\]
 So no power of \(y\) is equal to any power of \(x\).
-Because \(y\) has order \(p\), it generates a subgroup of order \(p\), \(\bar{P}\) with \(P \cap \bar{P} = \bm{1}\).
+Because \(y\) has order \(p\), it generates a subgroup of order \(p\), \(\bar{P}\), with \(P \cap \bar{P} = \bm{1}\).
 The lemma tells us that both \(P\) and \(\bar{P}\) are normal, and by Lemma~\ref{lem:setprodorder}, \(|P\bar{P}| = p^2 =
-|G|\) so:
+|G|\), so:
 \[G = P \times \bar{P} \cong C_p \times C_p\]
 
 If \(G\) has no elements of order \(p\) or \(p^2\), then it only has elements of order 1, which is the trivial group.
@@ -44,5 +45,3 @@ If \(G\) has no elements of order \(p\) or \(p^2\), then it only has elements of
 Hence any group of order \(p^2\) is isomorphic to one of:
 \[C_{p^2} \quad \text{or} \quad C_p \times C_p\]
 
-
-% TODO: Tidy above proof
