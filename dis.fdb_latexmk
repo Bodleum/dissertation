@@ -1,8 +1,8 @@
 # Fdb version 3
-["lualatex"] 1675718740 "/home/bodleum/archive/Uni/Courses/Year 4/MT4599/dis/dis.tex" "dis.pdf" "dis" 1675718740
+["lualatex"] 1675857094 "/home/bodleum/archive/Uni/Courses/Year 4/MT4599/dis/dis.tex" "dis.pdf" "dis" 1675857094
   "/home/bodleum/.cache/texlive/texmf-var/luatex-cache/generic/fonts/otl/lmroman12-regular.luc" 1670453478 127631 287ab9e4525229c0e9d55529c34ca704 ""
   "/home/bodleum/.cache/texlive/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz" 1670453478 280067 1c72a41d0c1786500de7507d8a42a86c ""
-  "/home/bodleum/archive/Uni/Courses/Year 4/MT4599/dis/dis.tex" 1675718740 34992 cc25fd4e550d248d5574a0778b3e054e ""
+  "/home/bodleum/archive/Uni/Courses/Year 4/MT4599/dis/dis.tex" 1675857093 36518 314953d65236856416d73e0c29b37ca2 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1650183167 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1650183167 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1650183167 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
@@ -62,7 +62,6 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1650183167 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1650183167 36741 fa121aac0049305630cf160b86157ee4 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1650183167 35469 70d41d2b9ea31d5d813066df7c99281c ""
-  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1650183167 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1650183167 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1650183167 32362 179c33bbf43f19adbb3825bb4e36e57a ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1650183167 32734 69e00a6b65cedb993666e42eedb3d48f ""
@@ -188,10 +187,10 @@
   "/usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload.lua" 1650183167 13565 30cc2d8cecf79afb1abb4d5c12eb919a ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1673348110 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1673348086 4561209 5b348ac830c7b0f5d9a785774e6bbdc7 ""
-  "dis.aux" 1675718737 4208 a5f9a10f914261bcc5764216bcdf02ad "lualatex"
-  "dis.out" 1675718737 3777 ec986c038fbc9b867d4891d85a2b5d56 "lualatex"
-  "dis.tex" 1675718740 34992 cc25fd4e550d248d5574a0778b3e054e ""
-  "dis.toc" 1675718737 1971 707928c41dd91d61d65601889dfabe8d "lualatex"
+  "dis.aux" 1675857057 4069 73fa0f8406144450326cda40794c693b "lualatex"
+  "dis.out" 1675857057 3487 08f0fcc62e6cf7b22d31c4d785412847 "lualatex"
+  "dis.tex" 1675857093 36518 314953d65236856416d73e0c29b37ca2 ""
+  "dis.toc" 1675857057 1873 a007839c723f660de67b67854de73568 "lualatex"
   (generated)
   "dis.aux"
   "dis.log"
