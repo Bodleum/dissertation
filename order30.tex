@@ -14,6 +14,7 @@ So \(T \nrmsgp G\) or \(F \nrmsgp G\) or both.
 Let \(H = TF\) and by Lagrange's Theorem, \(T \cap F = \bm{1}\), hence \(|H| = 15\) by Lemma~\ref{lem:setprodorder}.
 We know from our classification of groups of order \(pq\) that \(H \cong C_{15}\).
 Notice that a Sylow 2-subgroup \(K \leqslant G\) has order 2, so \(K \cong C_2\).
+Let \(\langle t \rangle = K\) and \(\langle v \rangle = H\).
 By the same argument as above, \(H \cap K = \bm{1}\) and \(|HK| = 30\).
 Hence \(G = HK\).
 
@@ -29,19 +30,38 @@ A homomorphism, \(\psi:C_2 \to C_2 \times C_4\) preserves element order, and the
 \times C_4\): \((x, 1)\), \((1, y^2)\) and \((x, y^2)\).
 We know \(\psi\) is determined by it's effect on a generator, so if \(\langle z \rangle = K\) then \(z\psi\) has four
 possibilities:
+\[z\psi = (1,\,1),\ (x,\,1),\ (1,\,y^2) \quad \text{or} \quad (x,\,x^2)\]
+So we know there are 4 groups of order 30 up to isomorphism, but which 4?
 
-\begin{enumerate}[\bfseries{Case} 1:]
-    \item \(z\psi = (1, 1)\).
+If \(z\psi = (1,\,1)\) then the action of \(K\) on \(H\) is trivial, so we obtain the direct product:
+\[G \cong C_{15} \times C_2 \cong C_{30}\]
+All other possibilities for \(z\psi\) have order 2, and we have seen before that the only possible action of order 2 is
+inversion.
 
-        When \(z\psi = (1, 1)\), then \(\psi\) is the trivial homomorphism, and
-        so we obtain:
-        \[G \cong C_2 \times C_{15} \cong C_{30}\]
+Notice that \((x,\,y^2)\) has both non-trivial elements of order 2, thus \(K\) acts on all of \(H\):
+\[G \cong \langle\, v, t \mid v^{15} = t^2 = 1,\ t^{-1}vt = v^{-1}\,\rangle\]
+which we recognise as \(D_{15}\).
 
-    \item \(z\psi = (x, 1)\).
-    \item \(z\psi = (1, y^2)\).
-    \item \(z\psi = (x, y^2)\).
-\end{enumerate}
+For the final two cases, it is helpful to consider \(H\) as a direct product.
+Without loss of generality, take \(H \cong C_5 \times C_3\).
 
-% TODO: Either classify these as given, or provide the groups and prove they
-% are pairwise non-isom.
+If \(z\psi = (1,\,y^2)\), then it acts trivially on \(C_5\), and with inversion on \(C_3\).
+So we can write:
+\[G \cong C_5 \times (C_3 \rtimes C_2)\]
+We have seen already that this semidirect product \(C_3 \rtimes C_2\), is isomorphic to \(D_6\), so we can conclude:
+\[G \cong C_5 \times D_6\]
+
+If \(z\psi = (x,\,1)\), then it acts with inversion on \(C_5\), and trivially on \(C_3\).
+Hence:
+\[G \cong C_3 \times (C_5 \rtimes C_2)\]
+Once again, this semidirect product is isomorphic to \(D_{10}\), so we have:
+\[G \cong C_3 \times D_{10}\]
+
+Hence any group of order 30 is isomorphic to one of:
+\[
+    C_{30}, \quad%
+    D_{15}, \quad%
+    C_5 \times D_6, \quad \text{or} \quad%
+    C_3 \times D_{10}
+\]
 

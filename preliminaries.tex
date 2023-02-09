@@ -25,8 +25,6 @@ and prove some new results!
     It is easy to show \(\Sym{X}\) is a group.
 \end{definition}
 
-
-
 \begin{definition}
     If \(G\) is a group, and \(H \subseteq G\), then \(H\) is a \emph{subgroup} of \(G\) if it is a group in its own right with
     the multiplication from \(G\).
@@ -50,7 +48,6 @@ and prove some new results!
     G\) is:
     \[Hg = \{\,hg \mid h \in H\,\}\]
 \end{definition}
-
 
 \begin{definition}
     The \emph{order} of a group, \(G\), is the number of elements in \(G\), denoted \(|G|\).
@@ -121,14 +118,18 @@ and prove some new results!
     So \(\theta:\Aut{C_n} \to \units{n}\) is an isomorphism.
 \end{proof}
 
-\begin{theorem}[Lagrange's Theorem]
 
+This collection of theorems is extremely useful for describing group structures.
+Hopefully these ring some bells.
+We will use them without proof.
+
+\begin{theorem}[Lagrange's Theorem for Finite Groups]
+    Let \(G\) be a finite group with subgroup \(H\).
+    Then \(|H|\) divides \(|G|\).
+    In particular, the order of an element of \(G\) must divide \(|G|\).
 \end{theorem}
 
-\subsection{Sylow Theorems}
-This collection of theorems is extremely useful for describing subgroup structure.
-Hopefully these ring some bells.
-Let \(G\) be a group of order \(p^n m\) where \(p\) is a prime and \(p\nmid m\).
+For the Sylow Theorems, let \(G\) be a group of order \(p^n m\) where \(p\) is a prime and \(p\nmid m\).
 \begin{theorem}[\nth{1} Sylow Theorem]\label{thm:sylow1}
     \(G\) has a Sylow \(p\)-subgroup, i.e.\ a subgroup of order \(p^n\).
 \end{theorem}
@@ -145,15 +146,28 @@ Let \(G\) be a group of order \(p^n m\) where \(p\) is a prime and \(p\nmid m\).
     \end{enumerate}
 \end{theorem}
 
-% TODO: Write out isom theorems
-\subsection{Isomorphism Theorems}
-\begin{theorem}\label{thm:iso1}
+\begin{theorem}[\nth{1} Isomorphism Theorem]\label{thm:iso1}
+    For groups \(G\) and \(H\), and a homomorphism \(\psi:G \to H\):
+    \[G / \ker{\psi} \cong \im{\psi}\]
 \end{theorem}
 
-\begin{theorem}\label{thm:iso2}
+\begin{theorem}[\nth{2} Isomorphism Theorem]\label{thm:iso2}
+    Let \(G\) be a group, with subgroup \(H\) and normal subgroup \(N\).
+    Then:
+    \begin{enumerate}[(i)]
+        \item \(H \cap N\) is a normal subgroup of \(G\)
+        \item \(HN\) is a subgroup of \(G\) 
+        \item \(H / (H \cap N) \cong (HN) / N\)
+    \end{enumerate}
 \end{theorem}
 
-\begin{theorem}\label{thm:iso3}
+\begin{theorem}[\nth{3} Isomorphism Theorem]\label{thm:iso3}
+    Let \(G\) be a group, with normal subgroups \(H\) and \(N\), such that \(H \leqslant N \leqslant G\).
+    Then:
+    \begin{enumerate}[(i)]
+        \item \((N / H)\) is a normal subgroup of \(G / H\)
+        \item \((G / H) / (N / H) \cong (G / H)\)
+    \end{enumerate}
 \end{theorem}
 
 \subsection{Semidirect Product}

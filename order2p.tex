@@ -1,52 +1,16 @@
 % ====   Order 2p   ====
-\section{Groups of Order \(2p\)}
-Now that we have seen groups of order 6, let's try and work towards a more general case: groups of
-order 2 times a prime number.
-So let \(G\) be a group of order \(2p\) where \(p\) is a prime number, and \(n_p\) denote the number
-of Sylow p-subgroups of \(G\).
-Then by Theorem~\ref{thm:sylow3}:
-\[n_p \equiv 1 \ \text{(mod \(p\))} \quad \text{and} \quad n_p \mid 2 \implies n_p = 1\]
-So \(G\) has one Sylow \(p\)-subgroup, say \(N\), and it is isomorphic to \(C_p\).
-Let \(N = \langle x \rangle\).
-A Sylow 2-subgroup, \(H \leqslant G\) will have order 2 so \(H \cong C_2\).
-Let \(H = \langle y \rangle\).
-Lagrange's Theorem tells us that \(N\) has elements of orders 1 and \(p\), and \(H\) has elements of
-order 1 and 2 hence:
-\[N \cap H = \bm{1}\]
+\subsection{Groups of Order \(2p\)}
+To illustrate an example of groups of order \(pq\), let's take \(q = 2\).
+Because every prime greater than 2 is odd, \(p - 2\) is an even number, and so \(2 \mid p - 1\).
 
-By Lemma~\ref{lem:setprodorder}:
-\[|NH| = |N| \cdot |H| = 2p\]
-So \(G = N \rtimes H\) as before.
-
-We know by Lemma~\ref{lem:aut} that \(\Aut{N} \cong \units{p}\), so let's look for the elements of
-order 2.
-An element \(x \in \units{p}\) of order 2 satisfies \(x^2 = 1\), hence \(x = 1\) or \(-1\).
-But 1 has order 1, so \(x\) can only be \(-1\).
-From the proof of Lemma~\ref{lem:aut}, this corresponds to the inverse map \(\beta:x \mapsto
+An element \(\alpha \in \units{p}\) of order 2 satisfies \(\alpha^2 = 1\), hence \(\alpha = 1\) or \(-1\).
+But 1 has order 1, so \(\alpha\) can only be \(-1\).
+Side-note: from the proof of Lemma~\ref{lem:aut}, this corresponds to the inverse map \(\beta:x \mapsto
 x^{-1}\).
 
-Now we want a homomorphism \(\psi: H \to \Aut{N}\).
-By the same argument as for groups of order 6, we have two possibilities for \(G\):
-
-\begin{enumerate}[\bfseries{Case} 1:]
-    \item
-        \begin{equation*}
-        \begin{aligned}
-            G &= \langle\, x, y \mid x^p = y^2 = 1,\ y^{-1}xy = x \,\rangle \\
-            &= C_p \times C_2 \cong C_{2p}
-        \end{aligned}
-        \end{equation*}
-    \item
-        \begin{equation*}
-        \begin{aligned}
-            G &= \langle\, x, y \mid x^p = y^2 = 1,\ y^{-1}xy = x^{-1}
-            \,\rangle \\
-            &\cong D_{2p}
-        \end{aligned}
-        \end{equation*}
-\end{enumerate}
-
-Again, these are clearly not isomorphic, because \(C_{2p}\) is abelian, and \(D_{2p}\) is not.
+So, in addition to \(C_{2p}\), we have:
+\[G \cong \langle\, x, y \mid x^p = y^2 = 1,\ y^{-1}xy = x^{-1}\,\rangle\]
+Which is the presentation for the dihedral group of order \(2p\), \(D_{2p}\).
 
 Hence a group of order \(2p\) is isomorphic to one of:
 \[C_{2p} \quad \text{or} \quad D_{2p}\]

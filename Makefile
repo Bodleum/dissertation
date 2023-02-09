@@ -4,9 +4,9 @@
 #     \InputIfFileExists{#1}{}{\typeout{No file #1.}}%
 # }
 
-MAIN = dis.tex # MAIN LaTeX FILE HERE
+MAIN = main.tex # MAIN LaTeX FILE HERE
 TARGET_FT = pdf # TARGET FILE TYPE HERE (pdf, dvi, etc.)
-BUILD_ARGS = -pdflua -verbose -file-line-error -Werror -interaction=nonstopmode -synctex=1 -use-make
+BUILD_ARGS = -pdflua -verbose -file-line-error -Werror -interaction=nonstopmode -halt-on-error -synctex=1 -use-make
 
 TARGET = $(patsubst %.tex,%.$(TARGET_FT),$(MAIN))
 .PHONY: $(TARGET) all clean full_clean

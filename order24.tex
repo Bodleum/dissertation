@@ -1,0 +1,107 @@
+% ====   Order 24   ====
+\section{Groups of Order 24}
+Let \(G\) be a group of order 24, and let \(H\) be a Sylow 3-subgroup of \(G\), so \(H \cong C_3\).
+Let \(T\) by a Sylow 2-subgroup of \(G\), so \(T\) has order 8.
+By Lagrange's Theorem, \(H \cap T = \bm{1}\) and then applying Lemma~\ref{lem:setprodorder}, \(|HT| = 24\).
+Now let \(n_3\) denote the number of Sylow 3-subgroups, and by Theorem~\ref{thm:sylow3}:
+\[n_3 \equiv 1\ \text{mod 3} \quad \text{and} \quad n_3 \mid 8\]
+Hence \(n_3\) is either 1 or 4.
+
+If \(n_3 = 1\), then \(H\) is normal in \(G\).
+Thus \(G = H \rtimes T\).
+We'll want a homomorphism \(\psi: \Aut{T} \to H\)
+From our classification of groups of order 8, we have 5 possibilities:
+
+\begin{enumerate}[\bfseries{Case} 1:]
+    \item \(T \cong C_8\) i.e. \(G \cong C_3 \rtimes C_8\)
+        
+        1 group
+    \item \(T \cong (C_4 \times C_2)\) i.e. \(G \cong C_3 \rtimes (C_4 \times C_2)\)
+    
+        2 groups
+    \item \(T \cong (C_2 \times C_2 \times C_2)\) i.e. \(G \cong C_3 \rtimes (C_2 \times C_2 \times C_2)\)
+
+        1 group
+    \item \(T \cong D_8\) i.e. \(G \cong C_3 \rtimes D_8\)
+        
+        2 groups
+    \item \(T \cong Q_8\) i.e. \(G \cong C_3 \rtimes Q_8\)
+
+        1 group --- binary dihedral
+\end{enumerate}
+
+If \(n_3 = 4\) then \(H\) is not normal.
+Now let \(G\) act by conjugation on the set of its Sylow 3-subgroups, \(\Omega = \{\,H \mid H\ \text{is a Sylow
+3-subgroup of}\ G\,\}\):
+\[H^x = x^{-1}Hx = \{\,x^{-1}hx \mid h \in H\,\} \quad \text{for}\ x \in G\]
+This is indeed a group action because for \(x,\,y \in G\):
+\[{(H^x)}^y = {(x^{-1}Hx)}^y = (y^{-1}x^{-1})H(xy) = {(xy)}^{-1}H(xy) = H^{(xy)}\]
+and:
+\[H^1 = 1^{-1}H1 = H\]
+Hence we obtain a homomorphism \(\rho:G \to S_4\).
+% TODO: Check this
+The kernel of \(\rho\) must have order dividing \(\frac{|G|}{|\Omega|} = 6\) so can be either 1, 2, 3 or 6.
+{CHECK!\itshape\/}
+
+The kernel cannot be of order 3, because \(G\) has no normal subgroup of order 3 (because kernels of homomorphism are
+normal in the domain group).
+Likewise the kernel cannot be of order 6 because every group of order 6 has a normal subgroup of order 3, which would be
+normal in \(G\) as well.
+Hence the kernel must have order 1 or 2.
+
+If the kernel is of order 1, then \(\rho\) is actually an isomorphism, so \(G \cong S_4\).
+
+If the kernel is of order 2, then the image must be of order 12, and no normal subgroup of order 3.
+Looking at our classification of groups of order 12, this must be isomorphic to \(A_4\).
+We know that \(A_4\) has a normal subgroup of order 4, and so by the Correspondence~Theorem, \(G\) must contain a normal
+subgroup of order 8, say \(T\).
+By Lagrange's~Theorem and Lemma~\ref{lem:setprodorder}, we can conclude that \(G = T \rtimes H\).
+Again, we have 5 cases, but this time we'll exclude the trivial homomorphism, because that will just give us the direct
+product which we have already seen:
+
+
+\begin{enumerate}[\bfseries{Case} 1:]
+    \item \(T \cong C_8\) i.e. \(G \cong C_8 \rtimes C_3\)
+
+        An automorphism of \(T\), \(\varphi\), maps generators to generators, so say \(\langle x \rangle = T\).
+        Then \(x\varphi\) could be \(x\), \(x^3\), \(x^5\) or \(x^7\).
+        Notice that each of these, apart from \(\varphi:x \mapsto x\), has order 2.
+        Hence, and Lagrange's~Theorem tells us that there are no non-trivial homomorphisms \(\psi:H \to \Aut{T}\).
+        As a bonus: \(\Aut{C_8} \cong V_4\).
+
+    \item \(T \cong (C_4 \times C_2)\) i.e. \(G \cong (C_4 \times C_2) \rtimes C_3\)
+        
+        An automorphism of \(T\), \(\psi\) preserves element order, so if \(\langle\,x,\,y \mid x^4 = y^2 = 1,\ xy =
+        yx\,\rangle = T\), then \(x\psi\) must be of order 4, and \(y\psi\) must be of order 2.
+        Moreover, \(y\psi\) cannot be in \(\langle\,x\psi\,\rangle\) because \(\psi\) is injective.
+
+        So we are reduced to 2 possible choices for \(y\psi\), and 4 possible choices for \(x\psi\).
+        Because an automorphism is determined by it's effect on generators, this gives us 8 possible automorphisms.
+        Hence \(|\Aut{T}| = 8\).
+        Lagrange's~Theorem tells us that there are no non-trivial homomorphisms \(\psi:H \to \Aut{T}\).
+
+    \item \(T \cong (C_2 \times C_2 \times C_2)\) i.e. \(G \cong (C_2 \times C_2 \times C_2) \rtimes C_3\)
+
+        1 group --- \(A_4 \times C_2\)
+    \item \(T \cong D_8\) i.e. \(G \cong D_8 \rtimes C_3\)
+        
+        If we say \(\langle\,s,\,r \mid s^2 = r^4 = 1,\ s^{-1}rs = r^{-1}\,\rangle = T\), then consider two
+        automorphisms, \(\varphi_s,\,\varphi_r \in
+        \Aut{T}\), given by:
+        \[x\varphi_s = xs \quad \text{and} \quad x\varphi_r = xr \quad \text{for}\ x \in T\]
+        We see that \(\varphi_s\) has order 2, and \(\varphi_r\) has order 4.
+        Additionally:
+        \[{\varphi_s}^{-1} = \varphi_{s^{-1}} \quad \text{and} \quad {\varphi_r}^{-1} = \varphi_{r^{-1}}\]
+        Now consider:
+        \[x{\varphi_s}^{-1}{\varphi_r}{\varphi_s} = xs^{-1}rs = xr^{-1} = x{\varphi_r}^{-1}\]
+        Hence:
+        \[\Aut{T} = \langle\, \varphi_s,\,\varphi_r \mid {\varphi_s}^2 = {\varphi_r}^4 = \iota,\
+        {\varphi_s}^{-1}{\varphi_r}{\varphi_s} = {\varphi_r}^{-1}\,\rangle \cong D_8\]
+        Lagrange's~Theorem tells us that there are no non-trivial homomorphisms \(\psi:H \to \Aut{T}\).
+
+    \item \(T \cong Q_8\) i.e. \(G \cong Q_8 \rtimes C_3\)
+
+        1 group --- binary tetrahedral
+\end{enumerate}
+
+
