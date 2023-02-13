@@ -51,7 +51,7 @@ Hence the kernel must have order 1 or 2.
 
 If the kernel is of order 1, then \(\rho\) is actually an isomorphism, so \(G \cong S_4\).
 
-If the kernel is of order 2, then the image must be of order 12, and no normal subgroup of order 3.
+If the kernel is of order 2, then the image must be a subgroup of order 12, with no normal subgroup of order 3.
 Looking at our classification of groups of order 12, this must be isomorphic to \(A_4\).
 We know that \(A_4\) has a normal subgroup of order 4, and so by the Correspondence~Theorem, \(G\) must contain a normal
 subgroup of order 8, say \(T\).
@@ -70,7 +70,7 @@ product which we have already seen:
         As a bonus: \(\Aut{C_8} \cong V_4\).
 
     \item \(T \cong (C_4 \times C_2)\) i.e. \(G \cong (C_4 \times C_2) \rtimes C_3\)
-        
+
         An automorphism of \(T\), \(\psi\) preserves element order, so if \(\langle\,x,\,y \mid x^4 = y^2 = 1,\ xy =
         yx\,\rangle = T\), then \(x\psi\) must be of order 4, and \(y\psi\) must be of order 2.
         Moreover, \(y\psi\) cannot be in \(\langle\,x\psi\,\rangle\) because \(\psi\) is injective.
@@ -82,9 +82,16 @@ product which we have already seen:
 
     \item \(T \cong (C_2 \times C_2 \times C_2)\) i.e. \(G \cong (C_2 \times C_2 \times C_2) \rtimes C_3\)
 
+        Somehow show \(\Aut{T} \cong \GL_3(2)\).
+        We can determine that \(|\GL_3(2)| = 168 = 2^3 \cdot 3 \cdot 7\), so \(\Aut T\) has a Sylow 3-subgroup of order
+        3, isomorphic to \(C_3\).
+
+        Theorem~\ref{thm:sylow2} tells us that all subgroups of order 3 are conjugate, so there is only one unique
+        action (up to isomorphism) of \(H\) on \(T\).
+
         1 group --- \(A_4 \times C_2\)
     \item \(T \cong D_8\) i.e. \(G \cong D_8 \rtimes C_3\)
-        
+
         If we say \(\langle\,s,\,r \mid s^2 = r^4 = 1,\ s^{-1}rs = r^{-1}\,\rangle = T\), then consider two
         automorphisms, \(\varphi_s,\,\varphi_r \in
         \Aut{T}\), given by:
