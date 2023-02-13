@@ -95,6 +95,15 @@ If we instead consider \(G\) where \(K \nrmsgp G\), i.e. \(G = K \rtimes H\), th
 
         If \(H\psi = \langle \beta \rangle\) then we have:
         \[G = \langle\, x, y \mid x^3 = y^4 = 1,\ y^{-1}xy = x^{-1}\,\rangle\]
+        Now let \(a = xy^2\).
+        And remember, \(y^{-1}xy = x^{-1}\) means \(x\) commutes with \(y^2\).
+        So now:
+        \[a^3 = xy^2xy^2xy^2 = x^3y^6 = y^2\]
+        and
+        \[b^{-1}ab = y^{-1}xy^2y = (y^{-1}xy)y^2 = x^{-1}y^2 = y^2x^{-1} = a^{-1}\]
+        So:
+        \[G = \langle\, a,\,b \mid a^6 = 1,\ a^3 = b^2,\ b^{-1}ab = a{-1}\,\rangle\]
+        This is known as the \emph{binary dihedral} or \emph{dicyclic} group, denoted \(\Dic_{12}\).
 
     \item \(H \cong V_4\) i.e. \(G \cong C_3 \rtimes (C_2 \times C_2)\).
 
@@ -125,6 +134,6 @@ So a group \(G\) of order 12 is isomorphic to one of:
     C_2 \times C_6, \quad%
     A_4, \quad%
     D_{12}, \quad \text{or} \quad%
-    \langle\, x, y \mid x^3 = y^4 = 1,\ y^{-1}xy = x^{-1}\,\rangle
+    \Dic_{12}
 \]
 
