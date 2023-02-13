@@ -25,37 +25,39 @@ Moreover, \(G = H \rtimes K\).
 By Lemma~\ref{lem:aut}:
 \[\Aut{C_{15}} = \units{15} \cong {(\Zn{3} \times \Zn{5})}^\times \cong \units{3} \times \units{5} \cong C_2 \times C_4\]
 
-Let \(\langle x, y \rangle = C_2 \times C_4\).
-A homomorphism, \(\psi:C_2 \to C_2 \times C_4\) preserves element order, and there are 3 elements of order 2 in \(C_2
-\times C_4\): \((x, 1)\), \((1, y^2)\) and \((x, y^2)\).
-We know \(\psi\) is determined by it's effect on a generator, so if \(\langle z \rangle = K\) then \(z\psi\) has four
+A homomorphism, \(\psi:C_2 \to C_2 \times C_4\) preserves element order and we know \(\psi\) is determined by it's effect on a generator.
+So then \(t\psi\) has four possibilities: either the identity, or one of the three elements
+of order 2.
+
+Additionally, \(\psi\) preserves the Sylow subgroups of \(H\).
+So write \(H = \langle v^3 \rangle \times \langle v^5 \rangle\), the direct product of its Sylow subgroups.
+
+So the action of \(K\) on \(H\) is either trivial or by inversion on each of the Sylow subgroups of \(H\), giving us 4
 possibilities:
-\[z\psi = (1,\,1),\ (x,\,1),\ (1,\,y^2) \quad \text{or} \quad (x,\,x^2)\]
-So we know there are 4 groups of order 30 up to isomorphism, but which 4?
 
-If \(z\psi = (1,\,1)\) then the action of \(K\) on \(H\) is trivial, so we obtain the direct product:
-\[G \cong C_{15} \times C_2 \cong C_{30}\]
-All other possibilities for \(z\psi\) have order 2, and we have seen before that the only possible action of order 2 is
-inversion.
+\begin{enumerate}[\bfseries{Case} 1:]
+    \item Trivial action on both Sylow subgroups.
 
-Notice that \((x,\,y^2)\) has both non-trivial elements of order 2, thus \(K\) acts on all of \(H\):
-\[G \cong \langle\, v, t \mid v^{15} = t^2 = 1,\ t^{-1}vt = v^{-1}\,\rangle\]
-which we recognise as \(D_{15}\).
+        In this case, because the action is trivial on all of \(H\), we recover the direct product, \(G = H \times K
+        \cong C_{30}\).
 
-For the final two cases, it is helpful to consider \(H\) as a direct product.
-Without loss of generality, take \(H \cong C_5 \times C_3\).
+    \item Inversion on both Sylow subgroups.
 
-If \(z\psi = (1,\,y^2)\), then it acts trivially on \(C_5\), and with inversion on \(C_3\).
-So we can write:
-\[G \cong C_5 \times (C_3 \rtimes C_2)\]
-We have seen already that this semidirect product \(C_3 \rtimes C_2\), is isomorphic to \(D_6\), so we can conclude:
-\[G \cong C_5 \times D_6\]
+        Here, \(K\) acts on all of \(H\), so we obtain:
+        \[G = \langle\, v,\,t \mid v^{15} = t^2 = 1,\ t^{-1}vt = v^{-1}\,\rangle\]
+        which we recognise as \(D_{30}\).
 
-If \(z\psi = (x,\,1)\), then it acts with inversion on \(C_5\), and trivially on \(C_3\).
-Hence:
-\[G \cong C_3 \times (C_5 \rtimes C_2)\]
-Once again, this semidirect product is isomorphic to \(D_{10}\), so we have:
-\[G \cong C_3 \times D_{10}\]
+    \item Inversion on \(\langle v^5 \rangle\).
+
+        We know already, from our classification of groups of order \(2p\), that \(C_3 \rtimes C_2 \cong D_6\).
+        \[G = \langle v^3 \rangle \times (\langle v^5 \rangle \rtimes K) \cong C_5 \times D_6\]
+        So then because the action on \(\langle v^3 \rangle\) is trivial:
+
+    \item Inversion on \(\langle v^3 \rangle\).
+
+        Similar to above, we obtain:
+        \[G = \langle v^5 \rangle \times (\langle v^3 \rangle \rtimes K) \cong C_3 \times D_{10}\]
+\end{enumerate}
 
 Hence any group of order 30 is isomorphic to one of:
 \[
