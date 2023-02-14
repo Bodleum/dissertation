@@ -316,3 +316,27 @@ A group acting on the set its cosets will be very useful:
 \begin{proof}
     % TODO
 \end{proof}
+
+\begin{lemma}\label{lem:char}
+    Let \(G\) be a group with normal subgroup \(H\).
+    And let \(K\) be the unique subgroup of its order in \(H\) (we call \(K\) \emph{characteristic} in \(H\)).
+    Then \(K\) is a normal subgroup of \(G\).
+\end{lemma}
+
+\begin{proof}
+    Consider the map \(\varphi_g:G \to G\) defined by \(\varphi_g:x \mapsto g^{-1}xg\) for elements \(x,\,g \in G\).
+    We will show that this is an automorphism of \(G\).
+    For \(x,\,y \in G\):
+    \[x\varphi_g y\varphi_g = (g^{-1}xg)(g^{-1}yg) = g^{-1}(xy)g = (xy)\varphi_g\]
+    Hence \(\varphi_g\) is a homomorphism.
+    Moreover, \(\varphi_g\) is invertible with inverse \(\varphi_{g^{-1}}\).
+    So \(\varphi_g\) is indeed an automorphism of G.
+
+    Because \(H\) is normal, \(H\varphi_g = H\).
+    So \(\varphi_g\) is an automorphism of \(H\) too.
+    And so \(\varphi_g\) maps \(K\) to itself, because it is the unique subgroup of its order.
+    Hence the set
+    \[\{\,g^{-1}kg \mid k \in K\,\} = K\]
+    So \(K\) is normal in \(G\).
+\end{proof}
+

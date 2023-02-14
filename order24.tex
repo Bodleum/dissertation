@@ -39,20 +39,21 @@ This is indeed a group action because for \(x,\,y \in G\):
 and:
 \[H^1 = 1^{-1}H1 = H\]
 Hence we obtain a homomorphism \(\rho:G \to S_4\).
-% TODO: Check this
-The kernel of \(\rho\) must have order dividing \(\frac{|G|}{|\Omega|} = 6\) so can be either 1, 2, 3 or 6.
-{CHECK!\itshape\/}
+The group \(G\) is acting on a set of 4 elements, so the kernel must have order dividing 6.
+SOMETHING TO DO WITH NORMALISERS.
 
 The kernel cannot be of order 3, because \(G\) has no normal subgroup of order 3 (because kernels of homomorphism are
 normal in the domain group).
-Likewise the kernel cannot be of order 6 because every group of order 6 has a normal subgroup of order 3, which would be
-normal in \(G\) as well.
+Likewise the kernel cannot be of order 6 because every group of order 6 has a unique Sylow 3-subgroup, which would be
+normal in \(G\) as well, by Lemma~\ref{lem:char}.
 Hence the kernel must have order 1 or 2.
 
 If the kernel is of order 1, then \(\rho\) is actually an isomorphism, so \(G \cong S_4\).
 
-If the kernel is of order 2, then the image must be a subgroup of order 12, with no normal subgroup of order 3.
-Looking at our classification of groups of order 12, this must be isomorphic to \(A_4\).
+If the kernel is of order 2, then we know that \(G/\ker{\rho} \cong \im{\rho}\), so then \(\im{\rho}\) must have order
+12.
+It also cannot have a normal Sylow 3-subgroup, so looking at our classification of groups of order 12, this must be
+isomorphic to \(A_4\).
 We know that \(A_4\) has a normal subgroup of order 4, and so by the Correspondence~Theorem, \(G\) must contain a normal
 subgroup of order 8, say \(T\).
 By Lagrange's~Theorem and Lemma~\ref{lem:setprodorder}, we can conclude that \(G = T \rtimes H\).
