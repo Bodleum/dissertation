@@ -5,26 +5,71 @@ We will see later, that we need groups of order 12 in order to classify groups o
 Let \(G\) be a group of order \(12 = 2^2 \cdot 3\), and \(n_3\) and \(n_2\) denote the number of Sylow 3-subgroups and
 Sylow 2-subgroups of G respectively.
 By Sylow's~Theorems:
-\[n_2 \equiv 1 \text{ (mod 2) and } n_2 \mid 3 \implies n_2 = 1\]
+\[n_2 \equiv 1 \text{ (mod 2) and } n_2 \mid 3 \implies n_2 = 1 \ \text{or} \ 3\]
 \[n_3 \equiv 1 \text{ (mod 3) and } n_3 \mid 4 \implies n_3 = 1 \ \text{or} \ 4\]
-
-So \(G\) has a unique Sylow 2-subgroup of order 4, say \(H \nrmsgp G\), and we have already classified groups of order 4,
-so \(H\) is isomorphic to either \(V_4\) (the Klein 4 group) or \(C_4\).
-A Sylow 3-subgroup, \(K \leqslant G\) will have order 3, so \(K \cong C_3\).
-Say \(K = \langle x \rangle\).
+Let \(H\) be a Sylow 2-subgroup and \(K\) be a Sylow 3-subgroup of \(G\).
 
 Lagrange's Theorem tells us \(H\) has elements of order 1, 2, and 4, and \(K\) has elements of order 1 and 3.
 Hence \(H \cap K = \bm{1}\).
 Lemma~\ref{lem:setprodorder} tells us:
 \[|HK| = |H| \cdot |K| = 12\]
 Hence \(G = HK\), \(H \nrmsgp G\), and \(H \cap K = \bm{1}\).
-If we consider groups with 4 Sylow 3-subgroups then we can conclude that they are some semidirect product, \(G = H
-\rtimes K\).
 
 Since an automorphism, \(\varphi\), must map generators to generators, \(\Aut{C_4} \cong C_2\) because \(C_4\) has two
 generators.
 An automorphism of \(V_4\) corresponds to a permutation of the three
 non-identity elements, hence \(\Aut{V_4} \cong S_3\).
+
+If we consider \(G\) where \(K \nrmsgp G\), i.e. \(G = K \rtimes H\), then we have two cases:
+
+\begin{enumerate}[\bfseries{Case} 1:]
+    \item \(H \cong C_4\) i.e. \(G \cong C_3 \rtimes C_4\).
+
+        Let \(H = \langle y \rangle\).
+
+        We know \(\Aut{C_3} \cong C_2\) so a homomorphism \(\psi\) maps \(H\) to the trivial group or to \(\langle
+        \beta:x \mapsto x^{-1} \rangle\).
+
+        If \(H\psi = \bm{1}\) then \(G = K \times H \cong C_4 \times C_3\), which we have already seen.
+
+        If \(H\psi = \langle \beta \rangle\) then we have:
+        \[G = \langle\, x, y \mid x^3 = y^4 = 1,\ y^{-1}xy = x^{-1}\,\rangle\]
+        Now let \(a = xy^2\).
+        And remember, \(y^{-1}xy = x^{-1}\) means \(x\) commutes with \(y^2\).
+        So now:
+        \[a^3 = xy^2xy^2xy^2 = x^3y^6 = y^2\]
+        and
+        \[y^{-1}ay = y^{-1}xy^2y = (y^{-1}xy)y^2 = x^{-1}y^2 = y^2x^{-1} = a^{-1}\]
+        So:
+        \[G = \langle\, a,\,y \mid a^6 = 1,\ a^3 = y^2,\ y^{-1}ay = a{-1}\,\rangle\]
+        This is known as the \emph{binary dihedral} or \emph{dicyclic} group, denoted \(\Dic_{12}\).
+        This group is also sometimes denoted by \(T\).
+
+    \item \(H \cong V_4\) i.e. \(G \cong C_3 \rtimes (C_2 \times C_2)\).
+
+        Let \(H = \langle y, z \rangle\).
+
+        If \(\psi:H \to \Aut{K}\) is trivial then we obtain the direct product again.
+
+        The image of a non-trivial homomorphism \(\psi:H \to \Aut{K}\) is isomorphic to \(C_2\), so by the first
+        Isomorphism Theorem, \(\ker{\psi} \cong C_2\).
+
+        We can choose \(\psi\) such that \(y\psi = \beta:x \mapsto x^{-1}\) and \(z\psi = \iota:x \mapsto x\).
+        Then:
+        \[G = \langle\, x, y, z \mid x^3 = y^2 = z^2 = 1,\ yz = zy,\ y^{-1}xy = x^{-1},\ z^{-1}xz = x\,\rangle\]
+        Let \(a = xz\).
+        The order of \(a = \lcm{(\order{(x)}, \order{(z)})} = \lcm{(2, 3)} = 6\) because \(x\) and \(z\) commute.
+        So:
+        \[a^3 = x^3z^3 = z\]
+        and
+        \[ y^{-1}ay = y^{-1}xzy = y^{-1}xyz = x^{-1}z = x^2z = a^2a^3 = a^{-1}\]
+        Hence:
+        \[G = \langle\, y, a \mid a^6 = y^2 = 1,\ a^{-1}ay = a^{-1}\,\rangle
+        \cong D_{12}\]
+\end{enumerate}
+
+Instead, if \(G\) has 4 Sylow 3-subgroups, then there are 8 elements of order 3 in \(G\).
+So the remaining 4 must form the Sylow 2-subgroup, hence it is normal.
 
 \begin{enumerate}[\bfseries{Case} 1:]
     \item \(H \cong C_4\) i.e. \(G \cong C_4 \rtimes C_3\).
@@ -79,53 +124,6 @@ non-identity elements, hence \(\Aut{V_4} \cong S_3\).
         Hence we can conclude that \(G \cong A_4\).
 \end{enumerate}
 
-If we instead consider \(G\) where \(K \nrmsgp G\), i.e. \(G = K \rtimes H\), then we again have two cases:
-
-\begin{enumerate}[\bfseries{Case} 1:]
-    \item \(H \cong C_4\) i.e. \(G \cong C_3 \rtimes C_4\).
-
-        Let \(H = \langle y \rangle\).
-
-        We know \(\Aut{C_3} \cong C_2\) so a homomorphism \(\psi\) maps \(H\) to the trivial group or to \(\langle
-        \beta:x \mapsto x^{-1} \rangle\).
-
-        If \(H\psi = \bm{1}\) then \(G = K \times H \cong C_4 \times C_3\), which we have already seen.
-
-        If \(H\psi = \langle \beta \rangle\) then we have:
-        \[G = \langle\, x, y \mid x^3 = y^4 = 1,\ y^{-1}xy = x^{-1}\,\rangle\]
-        Now let \(a = xy^2\).
-        And remember, \(y^{-1}xy = x^{-1}\) means \(x\) commutes with \(y^2\).
-        So now:
-        \[a^3 = xy^2xy^2xy^2 = x^3y^6 = y^2\]
-        and
-        \[y^{-1}ay = y^{-1}xy^2y = (y^{-1}xy)y^2 = x^{-1}y^2 = y^2x^{-1} = a^{-1}\]
-        So:
-        \[G = \langle\, a,\,y \mid a^6 = 1,\ a^3 = y^2,\ y^{-1}ay = a{-1}\,\rangle\]
-        This is known as the \emph{binary dihedral} or \emph{dicyclic} group, denoted \(\Dic_{12}\).
-        This group is also sometimes denoted by \(T\).
-
-    \item \(H \cong V_4\) i.e. \(G \cong C_3 \rtimes (C_2 \times C_2)\).
-
-        Let \(H = \langle y, z \rangle\).
-
-        If \(\psi:H \to \Aut{K}\) is trivial then we obtain the direct product again.
-
-        The image of a non-trivial homomorphism \(\psi:H \to \Aut{K}\) is isomorphic to \(C_2\), so by the first
-        Isomorphism Theorem, \(\ker{\psi} \cong C_2\).
-
-        We can choose \(\psi\) such that \(y\psi = \beta:x \mapsto x^{-1}\) and \(z\psi = \iota:x \mapsto x\).
-        Then:
-        \[G = \langle\, x, y, z \mid x^3 = y^2 = z^2 = 1,\ yz = zy,\ y^{-1}xy = x^{-1},\ z^{-1}xz = x\,\rangle\]
-        Let \(a = xz\).
-        The order of \(a = \lcm{(\order{(x)}, \order{(z)})} = \lcm{(2, 3)} = 6\) because \(x\) and \(z\) commute.
-        So:
-        \[a^3 = x^3z^3 = z\]
-        and
-        \[ y^{-1}ay = y^{-1}xzy = y^{-1}xyz = x^{-1}z = x^2z = a^2a^3 = a^{-1}\]
-        Hence:
-        \[G = \langle\, y, a \mid a^6 = y^2 = 1,\ a^{-1}ay = a^{-1}\,\rangle
-        \cong D_{12}\]
-\end{enumerate}
 
 So a group \(G\) of order 12 is isomorphic to one of:
 \[
