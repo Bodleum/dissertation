@@ -1,11 +1,10 @@
 % ====   Order 12   ====
 \section{Groups of order 12}
-We will see later, that we need groups of order 12 as a special case for groups of order \(p^2q\) for prime numbers
-\(p\) and \(q\).
+We will see later, that we need groups of order 12 in order to classify groups of other orders.
 
 Let \(G\) be a group of order \(12 = 2^2 \cdot 3\), and \(n_3\) and \(n_2\) denote the number of Sylow 3-subgroups and
 Sylow 2-subgroups of G respectively.
-By Theorem~\ref{thm:sylow3}:
+By Sylow's~Theorems:
 \[n_2 \equiv 1 \text{ (mod 2) and } n_2 \mid 3 \implies n_2 = 1\]
 \[n_3 \equiv 1 \text{ (mod 3) and } n_3 \mid 4 \implies n_3 = 1 \ \text{or} \ 4\]
 
@@ -44,8 +43,8 @@ non-identity elements, hence \(\Aut{V_4} \cong S_3\).
         A trivial homomorphism \(K\psi = \bm{1}\) yields the direct product.
         What non-trivial homomorphisms are there?
         The automorphism group, \(\Aut{H} \cong S_3\) is of order 6, and so has a unique subgroup of order 3, by
-        Theorem~\ref{thm:sylow3}.
-        We know already that a homomorphism \(\psi: K \to \Aut{H}\) is determined by where it sends the generator
+        Sylow's~Theorems.
+        We know that a homomorphism \(\psi: K \to \Aut{H}\) is determined by where it sends the generator
         \(x\), so for \(\psi\) to be non-trivial, it must send \(x\) to an element of order 3 in \(\Aut{H}\).
 
         There are 2 such elements.
@@ -54,9 +53,8 @@ non-identity elements, hence \(\Aut{V_4} \cong S_3\).
         Notice that \(b = a^{-1}\), so we have homomorphisms:
         \[\psi_1:x \mapsto a \quad \text{and} \quad \psi_2:x \mapsto a^{-1}\]
         It appears we have 2 choices, but this is not the case.
-        If we define \(\theta:K \to K\) by \(x\theta = x^{-1}\) then \(\theta\psi_1 = \psi_2\).
-        And notice that \(\theta\) is an automorphism of \(K\), so the semidirect products with \(\psi_1\) and \(\psi_2\)
-        are isomorphic.
+        The inverse map, \(\beta:x \mapsto x^{-1}\), is an automorphism of K, and so by Lemma~\ref{lem:semiisom}, the
+        corresponding semidirect products of \(\psi_1\) and \(\psi_2\) are isomorphic.
         Hence (up to isomorphism) there is one non-trivial homomorphism \(\psi:K \to \Aut{H}\).
         So \(x \in K\) acts by permuting the 3 non-identity elements of \(H\).
 
@@ -71,7 +69,7 @@ non-identity elements, hence \(\Aut{V_4} \cong S_3\).
         \(\bar{H}\bar{K} = A_4\).
         So we can conclude that \(A_4 = \bar{H} \rtimes \bar{K}\).
 
-        Let's investigate haw
+        Let's investigate how conjugation behaves.
         If we let \(\alpha = (1\ 2)(3\ 4)\), \(\beta = (1\ 4)(2\ 3)\) and \(\gamma = (1\ 2\ 3)\), then we can write an
         element of \(A_4\) as \(\alpha^i\beta^j\gamma^k\) for some \(i\), \(j\) and \(k\).
         Define \(\phi:A_4 \to G\) by \(\phi:\alpha^i\beta^j\gamma^k \mapsto x^{i}y^{j}z^{k}\).
@@ -100,10 +98,11 @@ If we instead consider \(G\) where \(K \nrmsgp G\), i.e. \(G = K \rtimes H\), th
         So now:
         \[a^3 = xy^2xy^2xy^2 = x^3y^6 = y^2\]
         and
-        \[b^{-1}ab = y^{-1}xy^2y = (y^{-1}xy)y^2 = x^{-1}y^2 = y^2x^{-1} = a^{-1}\]
+        \[y^{-1}ay = y^{-1}xy^2y = (y^{-1}xy)y^2 = x^{-1}y^2 = y^2x^{-1} = a^{-1}\]
         So:
-        \[G = \langle\, a,\,b \mid a^6 = 1,\ a^3 = b^2,\ b^{-1}ab = a{-1}\,\rangle\]
+        \[G = \langle\, a,\,y \mid a^6 = 1,\ a^3 = y^2,\ y^{-1}ay = a{-1}\,\rangle\]
         This is known as the \emph{binary dihedral} or \emph{dicyclic} group, denoted \(\Dic_{12}\).
+        This group is also sometimes denoted by \(T\).
 
     \item \(H \cong V_4\) i.e. \(G \cong C_3 \rtimes (C_2 \times C_2)\).
 
@@ -111,8 +110,8 @@ If we instead consider \(G\) where \(K \nrmsgp G\), i.e. \(G = K \rtimes H\), th
 
         If \(\psi:H \to \Aut{K}\) is trivial then we obtain the direct product again.
 
-        The image of a non-trivial homomorphism \(\psi:H \to \Aut{K}\) is isomorphic to \(C_2\), so by
-        Theorem~\ref{thm:iso1}: \(\ker{\psi} \cong C_2\).
+        The image of a non-trivial homomorphism \(\psi:H \to \Aut{K}\) is isomorphic to \(C_2\), so by the first
+        Isomorphism Theorem, \(\ker{\psi} \cong C_2\).
 
         We can choose \(\psi\) such that \(y\psi = \beta:x \mapsto x^{-1}\) and \(z\psi = \iota:x \mapsto x\).
         Then:

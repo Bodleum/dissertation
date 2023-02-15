@@ -2,7 +2,7 @@
 \section{Groups of Order 30}
 Let \(G\) be a group of order \(30 = 2 \cdot 3 \cdot 5\), and let \(n_3\) and \(n_5\) denote the number of Sylow
 3-subgroups and Sylow 5-subgroups of \(G\) respectively.
-Then by Theorem~\ref{thm:sylow3}:
+Then by Sylow's~Theorems:
 \[n_3 = 1 \ \text{or} \ 10 \quad \text{and} \quad n_5 = 1 \ \text{or} \ 6\]
 If \(n_3 = 10\), then there are 20 elements of order 3, and if \(n_5 = 6\) then
 there are 24 elements of order 5 in \(G\).
@@ -14,7 +14,7 @@ So \(T \nrmsgp G\) or \(F \nrmsgp G\) or both.
 Let \(H = TF\) and by Lagrange's Theorem, \(T \cap F = \bm{1}\), hence \(|H| = 15\) by Lemma~\ref{lem:setprodorder}.
 We know from our classification of groups of order \(pq\) that \(H \cong C_{15}\).
 Notice that a Sylow 2-subgroup \(K \leqslant G\) has order 2, so \(K \cong C_2\).
-Let \(\langle t \rangle = K\) and \(\langle v \rangle = H\).
+Let \(\langle k \rangle = K\) and \(\langle h \rangle = H\).
 By the same argument as above, \(H \cap K = \bm{1}\) and \(|HK| = 30\).
 Hence \(G = HK\).
 
@@ -26,11 +26,11 @@ By Lemma~\ref{lem:aut}:
 \[\Aut{C_{15}} = \units{15} \cong {(\Zn{3} \times \Zn{5})}^\times \cong \units{3} \times \units{5} \cong C_2 \times C_4\]
 
 A homomorphism, \(\psi:C_2 \to C_2 \times C_4\) preserves element order and we know \(\psi\) is determined by it's effect on a generator.
-So then \(t\psi\) has four possibilities: either the identity, or one of the three elements
+So then \(k\psi\) has four possibilities: either the identity, or one of the three elements
 of order 2.
 
 Additionally, \(\psi\) preserves the Sylow subgroups of \(H\).
-So write \(H = \langle v^3 \rangle \times \langle v^5 \rangle\), the direct product of its Sylow subgroups.
+So write \(H = \langle h^3 \rangle \times \langle h^5 \rangle\), the direct product of its Sylow subgroups.
 
 So the action of \(K\) on \(H\) is either trivial or by inversion on each of the Sylow subgroups of \(H\), giving us 4
 possibilities:
@@ -44,19 +44,19 @@ possibilities:
     \item Inversion on both Sylow subgroups.
 
         Here, \(K\) acts on all of \(H\), so we obtain:
-        \[G = \langle\, v,\,t \mid v^{15} = t^2 = 1,\ t^{-1}vt = v^{-1}\,\rangle\]
+        \[G = \langle\, h,\,k \mid h^{15} = k^2 = 1,\ k^{-1}hk = h^{-1}\,\rangle\]
         which we recognise as \(D_{30}\).
 
-    \item Inversion on \(\langle v^5 \rangle\).
+    \item Inversion on \(\langle h^5 \rangle\).
 
         We know already, from our classification of groups of order \(2p\), that \(C_3 \rtimes C_2 \cong D_6\).
-        \[G = \langle v^3 \rangle \times (\langle v^5 \rangle \rtimes K) \cong C_5 \times D_6\]
-        So then because the action on \(\langle v^3 \rangle\) is trivial:
+        So then because the action on \(\langle h^3 \rangle\) is trivial:
+        \[G = \langle h^3 \rangle \times (\langle h^5 \rangle \rtimes K) \cong C_5 \times D_6\]
 
-    \item Inversion on \(\langle v^3 \rangle\).
+    \item Inversion on \(\langle h^3 \rangle\).
 
         Similar to above, we obtain:
-        \[G = \langle v^5 \rangle \times (\langle v^3 \rangle \rtimes K) \cong C_3 \times D_{10}\]
+        \[G = \langle h^5 \rangle \times (\langle h^3 \rangle \rtimes K) \cong C_3 \times D_{10}\]
 \end{enumerate}
 
 Hence any group of order 30 is isomorphic to one of:
