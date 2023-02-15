@@ -1,25 +1,15 @@
 % ====   Order 30   ====
 \section{Groups of Order 30}
-Let \(G\) be a group of order \(30 = 2 \cdot 3 \cdot 5\), and let \(n_3\) and \(n_5\) denote the number of Sylow
-3-subgroups and Sylow 5-subgroups of \(G\) respectively.
-Then by Sylow's~Theorems:
-\[n_3 = 1 \ \text{or} \ 10 \quad \text{and} \quad n_5 = 1 \ \text{or} \ 6\]
-If \(n_3 = 10\), then there are 20 elements of order 3, and if \(n_5 = 6\) then
-there are 24 elements of order 5 in \(G\).
-\(G\) only has 30 elements, so then either:
-\[n_3 = 1 \ \text{and} \ n_5 = 6, \quad n_3 = 10 \ \text{and} \ n_5 = 1 \quad \text{or} \quad n_3 = n_5 = 1\]
-So if \(T\) is a Sylow 3-subgroup of \(G\) and \(F\) is a Sylow 5-subgroup, then at least one must be normal in \(G\).
-So \(T \nrmsgp G\) or \(F \nrmsgp G\) or both.
-
+Let \(G\) be a group of order \(30 = 2 \cdot 3 \cdot 5\).
+So then \(G\) has a Sylow 3-subgroup, \(T\), and a Sylow 5-subgroup, \(F\).
 Let \(H = TF\) and by Lagrange's Theorem, \(T \cap F = \bm{1}\), hence \(|H| = 15\) by Lemma~\ref{lem:setprodorder}.
 We know from our classification of groups of order \(pq\) that \(H \cong C_{15}\).
+Because \(|H| = 15 = \frac{30}{2}\), the index of \(H\) in \(G\) is 2, and we know a subgroup of index 2 is normal, so \(H \nrmsgp G\).
+
 Notice that a Sylow 2-subgroup \(K \leqslant G\) has order 2, so \(K \cong C_2\).
 Let \(\langle k \rangle = K\) and \(\langle h \rangle = H\).
 By the same argument as above, \(H \cap K = \bm{1}\) and \(|HK| = 30\).
 Hence \(G = HK\).
-
-Because \(|H| = 15 = \frac{30}{2}\), the index of \(H\) in \(G\) is 2, and we know a subgroup of index 2 is normal, so
-\(H \nrmsgp G\).
 Moreover, \(G = H \rtimes K\).
 
 By Lemma~\ref{lem:aut}:
