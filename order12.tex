@@ -47,17 +47,16 @@ If we consider \(G\) where \(K \nrmsgp G\), i.e. \(G = K \rtimes H\), then we ha
 
     \item \(H \cong V_4\) i.e. \(G \cong C_3 \rtimes (C_2 \times C_2)\).
 
-        Let \(H = \langle y, z \rangle\).
-
         If \(\psi:H \to \Aut{K}\) is trivial then we obtain the direct product again.
         We saw in our classification of groups of order \(2p\), that \(\Aut{K}\) only has a single element of order 2,
         corresponding to the inverse map.
         So we have 3 choices of elements in \(H\) to send to it, but they are all equivalent up to isomorphism, by
         Lemma~\ref{lem:semiisom}.
 
-        We can choose \(\psi\) such that \(y\psi = \beta:x \mapsto x^{-1}\) and \(z\psi = \iota:x \mapsto x\).
+        We know that \(H / \im{\psi} \cong \ker{\psi}\), so \(\ker{\psi}\) must be isomorphic to \(C_2\).
+        Pick \(z\) so that it generates the kernel, and so the remaining generator, \(y\) is not in the kernel.
         Then:
-        \[G = \langle\, x, y, z \mid x^3 = y^2 = z^2 = 1,\ yz = zy,\ y^{-1}xy = x^{-1},\ z^{-1}xz = x\,\rangle\]
+        \[G = \langle\, x, y, z \mid x^3 = y^2 = z^2 = 1,\ yz = zy,\ xz = zx,\ y^{-1}xy = x\,\rangle\]
         Let \(a = xz\).
         The order of \(a = \lcm{(\order{(x)}, \order{(z)})} = \lcm{(2, 3)} = 6\) because \(x\) and \(z\) commute.
         So:
