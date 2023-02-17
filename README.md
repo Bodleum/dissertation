@@ -2,7 +2,7 @@
 
 <div align="center">
 <a href="https://github.com/Bodleum/dissertation">
-      <img alt="Last commit" src="https://img.shields.io/github/last-commit/Bodleum/dissertation?style=for-the-badge&logo=git&color=000F10&logoColor=dark orange&labelColor=302D41"/>
+      <img alt="Last commit" src="https://img.shields.io/github/last-commit/Bodleum/dissertation?style=for-the-badge&logo=git&color=blue&logoColor=dark orange&labelColor=302D41"/>
     </a>
 </div>
 
