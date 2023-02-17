@@ -8,6 +8,10 @@
 
 A short report on the classification of finite groups, up to and including order 31.
 
+#### [Preview](main.pdf)
+
+#### [Download](https://github.com/Bodleum/dissertation/raw/master/main.pdf)
+
 ## Summary
 
 | Order | Classified by                  |
