@@ -83,9 +83,14 @@ and prove some new results!
     So \(\theta:\Aut{C_n} \to \units{n}\) is an isomorphism.
 \end{proof}
 
+\begin{definition}
+    A subgroup \(H\) of a group \(G\) is called \emph{characteristic} if it is fixed by all automorphisms of \(G\).
+
+    i.e.\ for an automorphism \(\phi\) of \(G\), \(H\phi = H\).
+\end{definition}
+
 \begin{lemma}\label{lem:char}
-    Let \(G\) be a group with normal subgroup \(H\).
-    And let \(K\) be the unique subgroup of its order in \(H\) (we call \(K\) \emph{characteristic} in \(H\)).
+    Let \(G\) be a group with normal subgroup \(H\), and let \(K\) be characteristic in \(H\).
     Then \(K\) is a normal subgroup of \(G\).
 \end{lemma}
 
@@ -100,8 +105,8 @@ and prove some new results!
 
     Because \(H\) is normal, \(H\varphi_g = H\).
     So \(\varphi_g\) is an automorphism of \(H\) too.
-    And so \(\varphi_g\) maps \(K\) to itself, because it is the unique subgroup of its order.
-    Hence the set
+    And so \(\varphi_g\) maps \(K\) to itself, because it is characteristic.
+    Hence:
     \[\{\,g^{-1}kg \mid k \in K\,\} = K\]
     So \(K\) is normal in \(G\).
 \end{proof}

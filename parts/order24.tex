@@ -38,7 +38,7 @@ We can classify the possible actions by considering the kernel.
         Let's pick a homomorphism, \(\psi\), which will let us easily classify the resulting semidirect product.
 
         Write \(T = A \times B\) where \(A \cong C_2\) and \(B \cong C_2 \times C_2\).
-        Now let \(\psi\) map \(B\) to the kernel, and let \(A\) act on \(C_3\).
+        Now let \(\psi\) map \(B\) to the kernel, and let \(A\) act on \(H\).
         If the action is trivial, we obtain:
         \[G \cong C_3 \times C_2 \times C_2 \times C_2 \cong C_6 \times V_4\]
         If \(A\) acts by inversion, then:
@@ -66,11 +66,12 @@ SOMETHING TO DO WITH NORMALISERS\@.
 
 The kernel cannot be of order 3, because \(G\) has no normal subgroup of order 3 (because kernels of homomorphism are
 normal in the domain group).
-Likewise the kernel cannot be of order 6 because every group of order 6 has a unique Sylow 3-subgroup, which would be
-normal in \(G\) as well, by Lemma~\ref{lem:char}.
+Likewise the kernel cannot be of order 6 because every group of order 6 has a unique Sylow 3-subgroup, which is
+characteristic.
+So by Lemma~\ref{lem:char}, it would be normal in \(G\).
 Hence the kernel must have order 1 or 2.
 
-If the kernel is of order 1, then \(\rho\) is actually an isomorphism, so \(G \cong S_4\).
+If the kernel is of order 1, then \(\rho\) is an isomorphism, so \(G \cong S_4\).
 
 If the kernel is of order 2, then we know that \(G/\ker{\rho} \cong \im{\rho}\), so then \(\im{\rho}\) must have order
 12.
@@ -100,8 +101,8 @@ product which we have already seen:
 
         So we are reduced to 2 possible choices for \(y\psi\), and 4 possible choices for \(x\psi\).
         Because an automorphism is determined by it's effect on generators, this gives us 8 possible automorphisms.
-        Hence \(|\Aut{T}| = 8\).
-        Lagrange's~Theorem tells us that there are no non-trivial homomorphisms \(\psi:H \to \Aut{T}\).
+        Hence \(|\Aut{T}| = 8\), and Lagrange's~Theorem tells us that there are no non-trivial homomorphisms \(\psi:H
+        \to \Aut{T}\).
 
     \item \(T \cong (C_2 \times C_2 \times C_2)\) i.e. \(G \cong (C_2 \times C_2 \times C_2) \rtimes C_3\)
 
@@ -122,7 +123,7 @@ product which we have already seen:
         non-identity elements of \(B\) in a 3-cycle.
         This automorphism has order 3 by construction, so we can write:
         \[G \cong C_2 \times (V_4 \rtimes C_3)\]
-        We know already that \(V_4 \rtimes C_3 \cong A_4\) so \(G \cong C_2 \times A_4\).
+        We know already that \(V_4 \rtimes C_3 \cong A_4\), so \(G \cong C_2 \times A_4\).
 
     \item \(T \cong D_8\) i.e. \(G \cong D_8 \rtimes C_3\)
 
