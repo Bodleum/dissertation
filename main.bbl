@@ -1,0 +1,190 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{cms/global//global/global}
+    \entry{order24}{online}{}
+      \name{author}{1}{}{%
+        {{hash=170333ab612b350dc2a45508774b8f59}{%
+           family={Borcherds},
+           familyi={B\bibinitperiod},
+           given={Richard\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{170333ab612b350dc2a45508774b8f59}
+      \strng{fullhash}{170333ab612b350dc2a45508774b8f59}
+      \strng{bibnamehash}{170333ab612b350dc2a45508774b8f59}
+      \strng{authorbibnamehash}{170333ab612b350dc2a45508774b8f59}
+      \strng{authornamehash}{170333ab612b350dc2a45508774b8f59}
+      \strng{authorfullhash}{170333ab612b350dc2a45508774b8f59}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{30}
+      \field{month}{6}
+      \field{title}{Group theory 21: Groups of order 24}
+      \field{urlday}{9}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.youtube.com/watch?v=6TWuo2NO8vg
+      \endverb
+      \verb{url}
+      \verb https://www.youtube.com/watch?v=6TWuo2NO8vg
+      \endverb
+    \endentry
+    \entry{pcubed}{online}{}
+      \name{author}{1}{}{%
+        {{hash=3b14a81272af18cb5a05973bde112455}{%
+           family={Groupprops},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{3b14a81272af18cb5a05973bde112455}
+      \strng{fullhash}{3b14a81272af18cb5a05973bde112455}
+      \strng{bibnamehash}{3b14a81272af18cb5a05973bde112455}
+      \strng{authorbibnamehash}{3b14a81272af18cb5a05973bde112455}
+      \strng{authornamehash}{3b14a81272af18cb5a05973bde112455}
+      \strng{authorfullhash}{3b14a81272af18cb5a05973bde112455}
+      \field{extraname}{1}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{24}
+      \field{month}{2}
+      \field{title}{Classification of groups of prime-cube order}
+      \field{urlday}{23}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://groupprops.subwiki.org/wiki/Classification_of_groups_of_prime-cube_order
+      \endverb
+      \verb{url}
+      \verb https://groupprops.subwiki.org/wiki/Classification_of_groups_of_prime-cube_order
+      \endverb
+    \endentry
+    \entry{dicyclic}{online}{}
+      \name{author}{1}{}{%
+        {{hash=3b14a81272af18cb5a05973bde112455}{%
+           family={Groupprops},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{3b14a81272af18cb5a05973bde112455}
+      \strng{fullhash}{3b14a81272af18cb5a05973bde112455}
+      \strng{bibnamehash}{3b14a81272af18cb5a05973bde112455}
+      \strng{authorbibnamehash}{3b14a81272af18cb5a05973bde112455}
+      \strng{authornamehash}{3b14a81272af18cb5a05973bde112455}
+      \strng{authorfullhash}{3b14a81272af18cb5a05973bde112455}
+      \field{extraname}{2}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{21}
+      \field{month}{10}
+      \field{title}{Dicyclic Groups}
+      \field{urlday}{19}
+      \field{urlmonth}{1}
+      \field{urlyear}{2023}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://groupprops.subwiki.org/wiki/Dicyclic_group
+      \endverb
+      \verb{url}
+      \verb https://groupprops.subwiki.org/wiki/Dicyclic_group
+      \endverb
+    \endentry
+    \entry{unitriangular}{online}{}
+      \name{author}{1}{}{%
+        {{hash=3b14a81272af18cb5a05973bde112455}{%
+           family={Groupprops},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{3b14a81272af18cb5a05973bde112455}
+      \strng{fullhash}{3b14a81272af18cb5a05973bde112455}
+      \strng{bibnamehash}{3b14a81272af18cb5a05973bde112455}
+      \strng{authorbibnamehash}{3b14a81272af18cb5a05973bde112455}
+      \strng{authornamehash}{3b14a81272af18cb5a05973bde112455}
+      \strng{authorfullhash}{3b14a81272af18cb5a05973bde112455}
+      \field{extraname}{3}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{22}
+      \field{month}{8}
+      \field{title}{Unitriangular matrix group:UT(3,p)}
+      \field{urlday}{23}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://groupprops.subwiki.org/wiki/Unitriangular_matrix_group:UT(3, p)
+      \endverb
+      \verb{url}
+      \verb https://groupprops.subwiki.org/wiki/Unitriangular_matrix_group:UT(3,%20p)
+      \endverb
+    \endentry
+    \entry{order30}{online}{}
+      \name{author}{1}{}{%
+        {{hash=1d748744db2f47a3a636865e6cfdca95}{%
+           family={{Stack Exchange (user azimut)}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{1d748744db2f47a3a636865e6cfdca95}
+      \strng{fullhash}{1d748744db2f47a3a636865e6cfdca95}
+      \strng{bibnamehash}{1d748744db2f47a3a636865e6cfdca95}
+      \strng{authorbibnamehash}{1d748744db2f47a3a636865e6cfdca95}
+      \strng{authornamehash}{1d748744db2f47a3a636865e6cfdca95}
+      \strng{authorfullhash}{1d748744db2f47a3a636865e6cfdca95}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{10}
+      \field{month}{12}
+      \field{title}{Classification of groups of order 30 (duplicate)}
+      \field{urlday}{24}
+      \field{urlmonth}{1}
+      \field{urlyear}{2023}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://math.stackexchange.com/questions/569226/classification-of-groups-of-order-30
+      \endverb
+      \verb{url}
+      \verb https://math.stackexchange.com/questions/569226/classification-of-groups-of-order-30
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
