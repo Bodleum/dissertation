@@ -1,0 +1,87 @@
+% ====   Order p^3   ====
+\section{Groups of Order \(p^3\)}
+Let \(G\) be a group of order \(p^3\), where \(p\) is a prime number.
+We will first gain a handle on \(G\) by describing its centre, and quotient by it.
+If \(G\) is abelian, we know by the Fundamental Theorem of Finite Abelian Groups that it is isomorphic to one of:
+\[ C_{p^3}, \quad C_{p^2} \times C_p \quad \text{or} \quad C_p \times C_p \times C_p\]
+So from now on, we will focus on the non-abelian groups.
+
+Denote the centre of \(G\) by \(Z\) and consider its order.
+Lagrange's~Theorem tells us \(Z\) must have order dividing \(p^3\).
+It cannot be \(p^3\) because \(G\) is non-abelian, and Lemma~\ref{lem:z_non_trivial} tells us that it cannot be 1.
+If \(|Z| = p^2\), then \(|G/Z| = p\), so \(G/Z \cong C_p\).
+However Lemma~\ref{lem:cyclic_over_centre} says that then \(G\) must be abelian, so then \(|Z|\) must be \(p\).
+Then by our previous classification, \(G/Z\) is isomorphic to either \(C_{p^2}\) or \(C_p \times C_p\).
+Lemma~\ref{lem:cyclic_over_centre} tells us that it must by the latter.
+
+This gives us a handle to start investigating the structure of \(G\).
+Another useful tool will be \emph{commutators}, which we will denote by \(\com{a}{b} = \comex{a}{b}\).
+The \emph{derived subgroup} of \(G\), \(G' = \gen{\com{x}{y} \mid x,\,y \in G}\), is the smallest normal
+subgroup such that \(G/G'\) is abelian.
+We saw that \(G/Z\) is abelian, so \(G' \leqslant Z\), but because \(G'\) is non-trivial, we must have equality.
+Now we will prove a useful lemma which holds in \(G\).
+
+\begin{lemma}
+    Suppose \(G\) is a group such that \(G' \leqslant \z(G)\).
+    Then for elements \(a,\,b,\,c \in G\):
+    \[\com{a}{bc} = \com{a}{b}\com{a}{c}\]
+\end{lemma}
+
+\begin{proof}
+    First we note that:
+    \[abc = bca\com{a}{bc}\]
+    Then moving one term at a time:
+    \[abc = ba\com{a}{b}c = bac\com{a}{b}^c = bca\com{a}{c}\com{a}{b}^c\]
+    Hence:
+    \[bca\com{a}{bc} = bca\com{a}{c}\com{a}{b}^c\]
+    Now by multiplying on the left by \(a^{-1}c^{-1}b^{-1}\) gives:
+    \[\com{a}{bc} = \com{a}{c}\com{a}{b}^c\]
+    Because \(G' \leqslant \z(G)\), conjugation by \(c\) has no effect.
+    Additionally, the two commutators commute, giving:
+    \[\com{a}{bc} = \com{a}{b}\com{a}{c}\]
+    as required.
+\end{proof}
+
+So far, we know \(G/Z \cong C_p \times C_p\), and that \(G' = Z\), as well as a useful lemma.
+Now pick two elements, \(a\) and \(b\) so that \(aZ\) and \(bZ\) generate \(G/Z\).
+So then \(G = \gen{Z,\,a,\,b}\).
+
+Let \(z = \com{a}{b}\).
+If \(z = 1\) then that means \(a\) and \(b\) commute.
+And by definition, \(a\) commutes with \(Z\), so \(a \in Z\), which contradicts our choice of \(a\) as a generator of
+\(G/Z\).
+Hence \(z \neq 1\), and in particular, \(a\) and \(b\) do not commute.
+Now we know \(G' = Z\) which has order \(p\), so \(Z \cong C_p\).
+Moreover, \(z \in Z\), and \(z \neq 1\) so we can conclude that \(\gen{z} = Z\).
+We can see that although \(a\) and \(b\) are not in \(Z\), \(a^p\) and \(b^p\) are, because \(aZ\) and \(bZ\) have order
+\(p\) in \(G/Z\).
+Considering the orders of \(a\) and \(b\) we have 3 cases:
+
+\begin{enumerate}[\bfseries{Case} 1:]
+    \item Both \(a\) and \(b\) have order \(p\).
+
+        The above descriptions give the presentation:
+        \[G = \gen{z,\,a,\,b \mid z^p = a^p = b^p = 1,\ az = za,\ bz = zb,\ \com{a}{b} = z}\]
+        We can write an arbitrary \(g \in G\) as \(a^i b^j z^k\) for integers \(i\), \(j\) and \(k\) taken mod \(p\).
+        Hence this presentation has order at most \(p^3\).
+
+        Now consider the set:
+        \[\left\{\,\unimat{\alpha}{\beta}{\gamma} \mid \alpha,\,\beta,\,\gamma \in \F_p\,\right\}\]
+        It can be shown that this is a group under the usual matrix multiplication, and is known as the
+        \emph{unitriangular group}, denoted \(\UT_3(p)\).
+        Taking:
+        \[z = \unimat{0}{1}{0}, \quad a = \unimat{1}{0}{0} \quad \text{and} \quad b = \unimat{0}{0}{1}\]
+        we can see that \(\UT_3(p)\) satisfies this presentation for \(p > 2\).
+        (Indeed, the above presentation is the standard presentation definition for \(\UT_3(p)\)).
+        Thus there is a single isomorphism class for this case.
+
+        The group behaves differently when \(p = 2\) because we know that a group whose elements all have order either 1
+        or 2 is abelian.
+        So the elements cannot have order only 1 or 2.
+        In particular:
+        \[\unimat{1}{0}{1} \quad \text{and} \quad \unimat{1}{1}{1}\]
+        have order 4.
+        We can check that all other non-identity elements have order 2.
+        Thus \(\UT_2(2) \cong D_8\).
+\end{enumerate}
+

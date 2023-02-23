@@ -1,29 +1,7 @@
 % ====   Groups of order p^2   ====
 \section{Groups of Order \(p^2\)}
 Let \(G\) be a group of order \(p^2\).
-First, we will prove a useful lemma:
-
-\begin{lemma}
-    If \(G\) is a \(p\)-group (i.e.\ a group of prime power order), then every subgroup of index \(p\) is normal.
-\end{lemma}
-
-\begin{proof}
-    Let \(H\) be a subgroup of \(G\), with index \(p\).
-    We know kernels are normal subgroups, so we will show that \(H\) is the kernel of some homomorphism. % TODO: Add this as a fact
-    Let \(\Omega\) be the set of all cosets of \(H\).
-    So by definition, \(|\Omega| = p\).
-    By Lemma~\ref{lem:actionhom}, there is a homomorphism:
-    \[\rho:G \to S_p\]
-    Let's investigate the kernel of \(\rho\).
-    If we have \(x \in \ker{\rho}\), then:
-    \[(H1)x = H1 = H\]
-    which means \(x \in H\).
-    So the kernel of \(\rho\) is \(H\).
-    Hence, \(H \nrmsgp G\).
-\end{proof}
-
 By Lagrange's Theorem, the elements of \(G\) have order 1, \(p\) or \(p^2\).
-
 If \(x \in G\) has order \(p^2\), then \(x\) generates \(G\) so \(G \cong C_{p^2}\).
 
 If \(G\) does not have an element of order \(p^2\) then all elements, except the identity, have order \(p\).
@@ -36,8 +14,8 @@ If \(y^j = x^i\) for some \(i\) and \(j\), then:
 contradiction.}\]
 So no power of \(y\) is equal to any power of \(x\).
 Because \(y\) has order \(p\), it generates a subgroup of order \(p\), \(\bar{P}\), with \(P \cap \bar{P} = \bm{1}\).
-The lemma tells us that both \(P\) and \(\bar{P}\) are normal, and by Lemma~\ref{lem:setprodorder}, \(|P\bar{P}| = p^2 =
-|G|\), so:
+Lemma~\ref{lem:index_p_normal} tells us that both \(P\) and \(\bar{P}\) are normal, and by Lemma~\ref{lem:setprodorder},
+\(|P\bar{P}| = p^2 = |G|\), so:
 \[G = P \times \bar{P} \cong C_p \times C_p\]
 
 If \(G\) has no elements of order \(p\) or \(p^2\), then it only has elements of order 1, which is the trivial group.

@@ -22,13 +22,74 @@
 \inputfile{./parts/preliminaries.tex}
 
 
-\part{Prime Power Order}
+\part{Prime Power Orders}
+First, we will prove a few useful lemmas:
+
+\begin{lemma}\label{lem:index_p_normal}
+    If \(G\) is a \(p\)-group (i.e.\ a group of prime power order), then every subgroup of index \(p\) is normal.
+\end{lemma}
+
+\begin{proof}
+    Let \(H\) be a subgroup of \(G\), with index \(p\).
+    We know kernels are normal subgroups, so we will show that \(H\) is the kernel of some homomorphism. % TODO: Add this as a fact
+    Let \(\Omega\) be the set of all cosets of \(H\).
+    So by definition, \(|\Omega| = p\).
+    By Lemma~\ref{lem:actionhom}, there is a homomorphism:
+    \[\rho:G \to S_p\]
+    Let's investigate the kernel of \(\rho\).
+    If we have \(x \in \ker{\rho}\), then:
+    \[(H1)x = H1 = H\]
+    which means \(x \in H\).
+    So the kernel of \(\rho\) is \(H\).
+    Hence, \(H \nrmsgp G\).
+\end{proof}
+
+\begin{lemma}\label{lem:z_non_trivial}
+    If \(G\) is a group of prime power order, the centre of \(G\) is non-trivial.
+\end{lemma}
+
+\begin{proof}
+    Let \(Z\) denote the centre of \(G\), and consider the action of \(G\) on itself by conjugation.
+    The orbit of an element, \(g \in G\) is:
+    \[g^G = \{\,x^{-1}gx \mid x \in G\,\}\]
+    which is the conjugacy class of \(g\).
+    So the size of each orbit divides some power of \(p\).
+    In particular, the size of each orbit is divisible by \(p\).
+    So then the sum of the sizes of all of the conjugacy classes is also divisible by \(p\).
+    Looking at the class equation:
+    \[|G| = |Z| + \sum_{i=1}^k |g_i^G|\]
+    Then reducing mod \(p\) gives:
+    \[|G| \equiv |Z| \mod{p}\]
+    Because \(G\) is non-trivial, it follows that \(|Z| \neq 1\).
+    
+    % If \(|g^G| = 1\) for some element \(g\), then \(x^{-1}gx = g\) and so \(g\) is in the centre.
+    % The centre is a subgroup of \(G\) and so by Lagrange's~Theorem, it must have order divisible by \(p\).
+    % We know the centre is always non-empty: the identity element is certainly inside it.
+\end{proof}
+
+\begin{lemma}\label{lem:cyclic_over_centre}
+    For a group \(G\) with centre \(\z(G)\).
+    Then if \(G/\z(G)\) is cyclic, \(G\) is abelian.
+\end{lemma}
+
+\begin{proof}
+    Let \(x \in G\) be the element such that \(x\z(G)\) generates \(G/\z(G)\).
+    Then \(\gen{x,\,\z(G)}\) contains \(\z(G)\).
+    Because \(G\) is the union of cosets of \(\z(G)\), then indeed \(\gen{x,\,\z(G)} = G\).
+    The centraliser of \(x\) certainly contains \(x\), and every element of \(\z(G)\) also commutes with \(x\).
+    Hence the centre of \(G\) is a subgroup of the centraliser of \(x\).
+    The result follows by concluding:
+    \[G = \gen{x,\,\z(G)} = \gen{\z(G)} = \z(G)\]
+\end{proof}
+
+Now onto the classification!
 \inputfile{./parts/primes.tex}
 % \inputfile{./parts/order4.tex}
 \inputfile{./parts/orderpsq.tex}
+\inputfile{./parts/orderpcb.tex}
 
 
-\part{Composite Order}
+\part{Composite Orders}
 % \inputfile{./parts/order6.tex}
 \inputfile{./parts/orderpq.tex}
 \inputfile{./parts/order2p.tex}
@@ -42,12 +103,6 @@
 
 
 \part{To Do}
-
-\section{Groups of Order \(p^3\)}
-\subsection{Groups of Order 8}
-\subsection{Groups of Order 27}
-\subsection{General Case?}
-
 \section{Groups of Order 16}
 
 \end{document}
