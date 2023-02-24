@@ -22,7 +22,7 @@ subgroup such that \(G/G'\) is abelian.
 We saw that \(G/Z\) is abelian, so \(G' \leqslant Z\), but because \(G'\) is non-trivial, we must have equality.
 Now we will prove a useful lemma which holds in \(G\).
 
-\begin{lemma}
+\begin{lemma}\label{lem:comm}
     Suppose \(G\) is a group such that \(G' \leqslant \z(G)\).
     Then for elements \(a,\,b,\,c \in G\):
     \[\com{a}{bc} = \com{a}{b}\com{a}{c}\]
@@ -84,5 +84,38 @@ Considering the orders of \(a\) and \(b\) we have 3 cases:
         have order 4.
         We can check that all other non-identity elements have order 2.
         Thus \(\UT_2(2) \cong D_8\).
+
+    \item One element of each order \(p\) and \(p^2\).
+
+        The roles of \(a\) and \(b\) are interchangeable, so we can take \(a\) to have order \(p^2\) and \(b\) to have
+        order \(p\) without loss of generality.
+        So \(\gen{a} \cong C_{p^2}\), and has index \(p\), so by Lemma~\ref{lem:index_p_normal} is normal.
+        We noted that \(a^p \neq 1\) is in \(Z\), and so \(a^p\) is some power of \(z\), say \(a^p = z^r\), mod \(p\).
+        Consider the element \(c = b^r\).
+        Note that \(c\) is not the identity, because \(0 < r < p\), hence \(\gen{c} \cong C_p\).
+        Now we will show that \(\gen{a} \cap \gen{c} = \bm{1}\).
+        If \(\gen{a} \cap \gen{c} \neq \bm{1}\), then for some \(i\), \(j\):
+        \[a^i = c^j = {(b^r)}^j = b^{rj} \mod{p}\]
+        which is a contradiction, because \(G = \gen{z,\,a,\,b}\).
+        The order of \(c\) is \(p\), because \(\gcd(r,\,p) = 1\).
+        So we can conclude that \(G = \gen{a} \rtimes \gen{c}\).
+        How does \(c\) conjugate \(a\)?
+        Consider:
+        \[\comex{a}{c} = \com{a}{c} = \com{a}{b^r}\]
+        By Lemma~\ref{lem:comm}:
+        \[\com{a}{b^r} = \com{a}{b}^r = z^r = a^p\]
+        So:
+        \[c^{-1}ac = a^{p + 1}\]
+        Thus:
+        \[G \cong C_{p^2} \rtimes C_p\]
+        With presentation:
+        \[\gen{a,\,c \mid a^{p^2} = c^p = 1,\ c^{-1}ac = a^{p + 1}}\]
+
+        When \(p = 2\), this reduces to the dihedral group, \(D_8\).
+        We can see that for \(p > 2\), this is not isomorphic to the previous case, because \(\UT_3(p)\) has no element
+        of order \(p^2\).
+
+    \item Both \(a\) and \(b\) have order \(p^2\).
+
 \end{enumerate}
 
