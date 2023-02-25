@@ -20,30 +20,8 @@ Another useful tool will be \emph{commutators}, which we will denote by \(\com{a
 The \emph{derived subgroup} of \(G\), \(G' = \gen{\com{x}{y} \mid x,\,y \in G}\), is the smallest normal
 subgroup such that \(G/G'\) is abelian.
 We saw that \(G/Z\) is abelian, so \(G' \leqslant Z\), but because \(G'\) is non-trivial, we must have equality.
-Now we will prove a useful lemma which holds in \(G\).
 
-\begin{lemma}\label{lem:comm}
-    Suppose \(G\) is a group such that \(G' \leqslant \z(G)\).
-    Then for elements \(a,\,b,\,c \in G\):
-    \[\com{a}{bc} = \com{a}{b}\com{a}{c}\]
-\end{lemma}
-
-\begin{proof}
-    First we note that:
-    \[abc = bca\com{a}{bc}\]
-    Then moving one term at a time:
-    \[abc = ba\com{a}{b}c = bac\com{a}{b}^c = bca\com{a}{c}\com{a}{b}^c\]
-    Hence:
-    \[bca\com{a}{bc} = bca\com{a}{c}\com{a}{b}^c\]
-    Now by multiplying on the left by \(a^{-1}c^{-1}b^{-1}\) gives:
-    \[\com{a}{bc} = \com{a}{c}\com{a}{b}^c\]
-    Because \(G' \leqslant \z(G)\), conjugation by \(c\) has no effect.
-    Additionally, the two commutators commute, giving:
-    \[\com{a}{bc} = \com{a}{b}\com{a}{c}\]
-    as required.
-\end{proof}
-
-So far, we know \(G/Z \cong C_p \times C_p\), and that \(G' = Z\), as well as a useful lemma.
+So far, we know \(G/Z \cong C_p \times C_p\), and that \(G' = Z\).
 Now pick two elements, \(a\) and \(b\) so that \(aZ\) and \(bZ\) generate \(G/Z\).
 So then \(G = \gen{Z,\,a,\,b}\).
 
@@ -90,32 +68,80 @@ Considering the orders of \(a\) and \(b\) we have 3 cases:
         The roles of \(a\) and \(b\) are interchangeable, so we can take \(a\) to have order \(p^2\) and \(b\) to have
         order \(p\) without loss of generality.
         So \(\gen{a} \cong C_{p^2}\), and has index \(p\), so by Lemma~\ref{lem:index_p_normal} is normal.
-        We noted that \(a^p \neq 1\) is in \(Z\), and so \(a^p\) is some power of \(z\), say \(a^p = z^r\), mod \(p\).
-        Consider the element \(c = b^r\).
-        Note that \(c\) is not the identity, because \(0 < r < p\), hence \(\gen{c} \cong C_p\).
-        Now we will show that \(\gen{a} \cap \gen{c} = \bm{1}\).
-        If \(\gen{a} \cap \gen{c} \neq \bm{1}\), then for some \(i\), \(j\):
-        \[a^i = c^j = {(b^r)}^j = b^{rj} \mod{p}\]
-        which is a contradiction, because \(G = \gen{z,\,a,\,b}\).
-        The order of \(c\) is \(p\), because \(\gcd(r,\,p) = 1\).
-        So we can conclude that \(G = \gen{a} \rtimes \gen{c}\).
-        How does \(c\) conjugate \(a\)?
+        We noted that \(a^p \neq 1\) is in \(Z\), and so \(a^p\) is some power of \(z\), say \(a^p = z^r\), with \(r\)
+        taken mod \(p\).
+
+        We know that \(0 < r < p\) and I claim that we can take \(r = 1\) without loss of generality.
+        This is because \(z^r\) is not 1, so must be some element of order \(p\) in \(Z\).
+        Hence \(z^r\) generates \(Z\).
+        So then there exists some integer \(s\), with \(0 < s < p\) such that \(sr \equiv 1 \pmod{p}\).
+        Then say \(\bar{a} = a^s\) so:
+        \[\bar{a}^p = {(a^s)}^p = {(a^p)}^s = {(z^r)}^s = z \pmod{p}\]
+        Indeed we can take \(\bar{a}^p\) to be any power of \(z\) we want using a similar substitution.
+        This is actually a sneaky application of Lemma~\ref{lem:semiisom}, because it will turn out that \(G\) can be
+        written as a semidirect product.
+
+        Take \(a^p = z\).
+        Now because \(G = \gen{z,\,a,\,b}\), \(\gen{a} \cap \gen{b} = \bm{1}\).
+        So we can conclude that \(G = \gen{a} \rtimes \gen{b}\).
+        How does \(b\) conjugate \(a\)?
         Consider:
-        \[\comex{a}{c} = \com{a}{c} = \com{a}{b^r}\]
-        By Lemma~\ref{lem:comm}:
-        \[\com{a}{b^r} = \com{a}{b}^r = z^r = a^p\]
+        \[\comex{a}{b} = \com{a}{b} = z = a^p\]
         So:
-        \[c^{-1}ac = a^{p + 1}\]
+        \[b^{-1}ab = a^{p + 1}\]
         Thus:
         \[G \cong C_{p^2} \rtimes C_p\]
         With presentation:
-        \[\gen{a,\,c \mid a^{p^2} = c^p = 1,\ c^{-1}ac = a^{p + 1}}\]
+        \[\gen{a,\,b \mid a^{p^2} = b^p = 1,\ b^{-1}ab = a^{p + 1}}\]
 
         When \(p = 2\), this reduces to the dihedral group, \(D_8\).
-        We can see that for \(p > 2\), this is not isomorphic to the previous case, because \(\UT_3(p)\) has no element
-        of order \(p^2\).
+        However, we can see that for \(p > 2\), this is not isomorphic to the previous case, because \(\UT_3(p)\) has no
+        element of order \(p^2\).
 
     \item Both \(a\) and \(b\) have order \(p^2\).
 
+        We will show that by substitutions, this is equivalent to the above case when \(p > 2\).
+        In the previous case, we saw that we can take \(a^p\) and \(b^p\) to be arbitrary powers of \(z\) using
+        substitutions (which is Lemma~\ref{lem:semiisom} behind the scenes).
+        So take \(a^p = z\) and \(b^p = z^{-1}\).
+        Let \(d = ab\), and consider:
+        \[ d^p = {(ab)}^p = abab\ldots ab\]
+        We will collect together the \(a\)'s and \(b\)'s, maintaining equality with the commutator, \(\com{a}{b} = z\):
+        \begin{align*}
+            d^p &= ababab\ldots ab \\
+            &= z aabbab\ldots ab \\
+            &= z^2 aababb\ldots ab \\
+            &= z^3 aaabbb\ldots ab \\
+            &\ \,\vdots \\  % Weird spacing
+            &= z^{\frac{p(p-1)}{2}} a^p b^p \tag{\(\dagger\)} \label{eqn:p_cubed_dagger}
+        \end{align*}
+        However, \(z^p = 1\) so:
+        \[d^p = a^p b^p = zz^{-1} = 1\]
+        So \(d\) has order \(p\), and we are back in the previous case.
+
+        If \(p = 2\), (\ref{eqn:p_cubed_dagger}) does not hold, and the exponent of \(z\) is 1 in that case.
+        So we have the relations:
+        \[a^4 = b^4 = z^2 = 1, \quad a^2 = z, \quad b^2 = z^{-1} \quad \text{and} \quad \com{a}{b} = z\]
+        Therefore:
+        \[b^{-1}ab = az = a^3 = a^{-1}\]
+        So we obtain the presenation:
+        \[G = \gen{a,\,b \mid a^4 = b^4 = 1,\ a^2 = b^2,\ b^{-1}ab = a^{-1}}\]
+        Which we recognise as the quaternion group, \(Q_8\).
+
 \end{enumerate}
+
+Hence any group of order \(p^3\) is isomorphic to one of:
+\[%
+    C_{p^3}, \quad%
+    C_{p^2} \times C_p, \quad%
+    C_p \times C_p \times C_p
+\]
+\[
+    D_8, \quad \text{or} \quad%
+    Q_8 \tag{when \(p = 2\)}
+\]
+\[
+    \UT_3(p), \quad \text{or} \quad%
+    C_{p^2} \rtimes C_p \tag{when \(p \geqslant 3\)}
+\]
 
