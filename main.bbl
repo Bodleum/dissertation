@@ -184,6 +184,46 @@
       \verb https://math.stackexchange.com/questions/569226/classification-of-groups-of-order-30
       \endverb
     \endentry
+    \entry{order16}{article}{}
+      \name{author}{1}{}{%
+        {{hash=b037a49f074be3353b9d4524e69b306f}{%
+           family={Wild},
+           familyi={W\bibinitperiod},
+           given={Marcel},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Mathematical Association of America}%
+      }
+      \strng{namehash}{b037a49f074be3353b9d4524e69b306f}
+      \strng{fullhash}{b037a49f074be3353b9d4524e69b306f}
+      \strng{bibnamehash}{b037a49f074be3353b9d4524e69b306f}
+      \strng{authorbibnamehash}{b037a49f074be3353b9d4524e69b306f}
+      \strng{authornamehash}{b037a49f074be3353b9d4524e69b306f}
+      \strng{authorfullhash}{b037a49f074be3353b9d4524e69b306f}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{00029890, 19300972}
+      \field{journaltitle}{The American Mathematical Monthly}
+      \field{number}{1}
+      \field{title}{The Groups of Order Sixteen Made Easy}
+      \field{urlday}{27}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{volume}{112}
+      \field{year}{2005}
+      \field{urldateera}{ce}
+      \field{pages}{20\bibrangedash 31}
+      \range{pages}{12}
+      \verb{urlraw}
+      \verb http://www.jstor.org/stable/30037381
+      \endverb
+      \verb{url}
+      \verb http://www.jstor.org/stable/30037381
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

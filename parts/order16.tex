@@ -1,0 +1,36 @@
+% ====   Order 16   ====
+\section{Groups of Order 16}
+The following classification is based of the one by Wild\footcite{order16}.
+We begin by proving a lemma:
+
+\begin{lemma}
+    For a group, \(G\), with order 16, not isomorphic to \(C_2 \times C_2 \times C_2 \times C_2\), then \(G\) has a
+    normal subgroup isomorphic to either \(C_8\) or \(C_4 \times C_2\).
+\end{lemma}
+
+\begin{proof}
+    Firstly, we know that a subgroup with index 2 is normal, so any subgroup of order 8 in \(G\) is normal.
+    So it remains to show \(G\) possesses such subgroups.
+    If some \(x \in G\) has order 8, then \(\gen{x} \cong C_8\) and we are done.
+    So assume \(G\) has no element of order 8.
+
+    Because \(G \ncong {(C_2)}^4\), there is at least one element of order 4 in \(G\), say \(y\).
+    By Lemma~\ref{lem:z_non_trivial}, there is some element \(z \in \z(G)\) which has order 2.
+    Let \(H = \gen{z}\).
+    Moreover, \(H \nrmsgp G\) because \(z\) is in the centre.
+
+    If \(y^2 \neq z\), then \(\gen{y} \cap H = \bm{1}\), so \(\gen{y,\,z} \cong C_4 \times C_2\).
+
+    If then all elements of order 4 in \(G\) have \(y^2 = z\), all elements in \(G/H\) have order 2.
+    Thus \(G/H \cong {(C_2)}^3\), and in particular, is abelian.
+    So the conjugacy class of \(y\), \(y^G\) is a subgroup of \(yH\).
+    Hence the centraliser of \(y\), \(\C_G(y)\), has order 8.
+
+    Let \(g \in \C_G(y) \setminus \gen{y}\).
+    If \(g\) has order 2, then \(\gen{y,\,g} \cong C_4 \times C_2\).
+    If \(g\) has order 4, then:
+    \[g^2 = z \quad \text{and} \quad {(yg)}^2 = y^2 g^2 = z^2 = 1\]
+    We can see that \(yg \notin \gen{y}\) because then, \(yg = y^2\) which gives the contradiction \(y = g\).
+    So \(\gen{y,\,yg} \cong C_4 \times C_2\).
+\end{proof}
+
