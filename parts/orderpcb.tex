@@ -74,7 +74,8 @@ Considering the orders of \(a\) and \(b\) we have 3 cases:
         We know that \(0 < r < p\) and I claim that we can take \(r = 1\) without loss of generality.
         This is because \(z^r\) is not 1, so must be some element of order \(p\) in \(Z\).
         Hence \(z^r\) generates \(Z\).
-        So then there exists some integer \(s\), with \(0 < s < p\) such that \(sr \equiv 1 \pmod{p}\).
+        Because \(p\) is prime, \(Z \cong C_p\) is a finite field.
+        Hence there exists some integer \(s\), with \(0 < s < p\) such that \(sr \equiv 1 \pmod{p}\).
         Then say \(\bar{a} = a^s\) so:
         \[\bar{a}^p = {(a^s)}^p = {(a^p)}^s = {(z^r)}^s = z \pmod{p}\]
         Indeed we can take \(\bar{a}^p\) to be any power of \(z\) we want using a similar substitution.
