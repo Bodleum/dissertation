@@ -154,9 +154,27 @@ Begin with \(\gen{x} = N \cong C_8\).
 Now let's move on to consider when \(\gen{x,\,y} = N \cong C_4 \times C_2\).
 In particular, all elements of \(G\) have order less than 8.
 
-[Insert something about disregarding order 4 automorphisms.]
-The automorphisms \(\psi_5\) and \(\psi_7\) are conjugate, as are \(\psi_6\) and \(\psi_8\).
+I claim we can disregard automorphisms of order 4, namely \(\psi_2\) and \(\psi_4\), because they lead to contradictions.
+Consider an element \(g \in N\).
+We can write \(g = x^i y^j\) for some \(0 \leq i \leq 3\) and \(0 \leq j \leq 1\).
+Then on the one hand:
+\[a^{-2}ga^2 = g\]
+Because \(N\) is abelian.
+On the other:
+\begin{align*}
+    a^{-2}ga^2 &= a^{-1}(a^{-1}x^i\,y^j a)a \\
+    &= a^{-1}(x^i\psi_2\ y^j\psi_2)a \\
+    &= a^{-1}(x^{-i}y^i\ x^{2j}y^j)a \\
+    &= a^{-1}(x^{2j-i}\ y^{i+j})a \\
+    &= x^{i-2j}y^{2j-i}\ x^{2i+2j}y^{i+j} \\
+    &= x^{3i}y^{3j} \\
+    &= y^j x^{-i}
+\end{align*}
+Which is \(g^{-1}\).
+Hence we have \(g = g^{-1}\) which is a contradiction, because \(x \in N\) has order 4.
+A similar contradiction can be shown for \(\psi_4\).
 
+The automorphisms \(\psi_5\) and \(\psi_7\) are conjugate, as are \(\psi_6\) and \(\psi_8\).
 
 \begin{enumerate}[\bfseries{Case} 1:]
     \item Order 2.
