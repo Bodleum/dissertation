@@ -24,7 +24,7 @@ We begin by proving a lemma:
 
     If then all elements of order 4 in \(G\) have \(y^2 = z\), all elements in \(G/H\) have order 2.
     Thus \(G/H \cong {(C_2)}^3\), and in particular, is abelian.
-    So the conjugacy class of \(y\), \(y^G\) is a subgroup of \(yH\).
+    So the conjugacy class of \(y\) is a subgroup of \(yH\).
     Hence the centraliser of \(y\), \(\C_G(y)\), has order 8.
 
     Let \(g \in \C_G(y) \setminus \gen{y}\).
@@ -84,8 +84,8 @@ Begin with \(\gen{x} = N \cong C_8\).
     \item Order 2.
 
         If \(a\) has order 2, then \(a^2\) must be 1.
-        So then \(N \cap \gen{a} = \bm{1}\), so \(G = N \rtimes \gen{a}\).
-        We have 4 possible semidirect products, because each of the automorphisms of \(N\) have order 2 (excluding the
+        So then \(N \cap \gen{a} = \bm{1}\), and \(G = N \rtimes \gen{a}\).
+        We have 4 possible semidirect products, because each of the automorphisms of \(N\) has order 2 (excluding the
         identity map).
         Hence we obtain the following 4 groups:
         \begin{equation*}
@@ -129,7 +129,7 @@ Begin with \(\gen{x} = N \cong C_8\).
     \item Order 8.
 
         It turns out, we obtain no new groups in this case.
-        We have two choices for \(a\): \(a^2 = x^2\) or \(a^2 = x^6\).
+        We have two choices for \(a\): either \(a^2 = x^2\) or \(a^2 = x^6\).
         Because \(x^2\) and \(x^6\) are automorphic, we only need to consider one case, say \(a^2 = x^2\), and apply
         Lemma~\ref{lem:semiisom}.
         If conjugation by \(a\) is either \(\phi_2:x\mapsto x^3\) or \(\phi_4:x\mapsto x^7\) then we obtain a

@@ -25,7 +25,7 @@ and prove some new results!
 
     We know already that the composition of two isomorphisms is an isomorphism, so \(A\) is closed under composition.
 
-    The identity map, \(\iota:g \mapsto g\), is certainly an automorphism of \(G\) and so \(A \neq \varnothing\).
+    The identity map, \(\iota:g \mapsto g\), is certainly an automorphism of \(G\) and so \(A\) is non-empty.
 
     Indeed, \(\iota:g \mapsto g\) is the identity of \(A\), since:
     \[g\phi\iota = (g\phi)\iota = g\phi \quad \text{and} \quad g\iota\phi = (g\iota)\phi = g\phi\]
@@ -43,28 +43,28 @@ and prove some new results!
 
 \begin{proof}
     Let \(C_n = \langle x \rangle\).
-    Any automorphism, \(\varphi\) of \(C_n\) has the property:
-    \[(x^i)\varphi = {(x\varphi)}^i\]
-    Hence \(\varphi\) is determined by it's effect on a generator, \(x\), and preserves element
+    Any automorphism, \(\phi\) of \(C_n\) has the property:
+    \[(x^i)\phi = {(x\phi)}^i\]
+    Hence \(\phi\) is determined by it's effect on a generator, \(x\), and preserves element
     order.
-    In particular, \(\varphi\) sends generators to generators.
-    So for \(\varphi\) to be an automorphism, it must send \(x\) to another generator, say \(x^k\).
+    In particular, \(\phi\) sends generators to generators.
+    So for \(\phi\) to be an automorphism, it must send \(x\) to another generator, say \(x^k\).
     An element \(x^k\) generates \(C_n\) if \(x^k\) has order \(n\), i.e.\ when \(k\) and \(n\) are co-prime.
-    Denote the automorphism sending \(x\) to \(x^k\) by \(\varphi_k\).
+    Denote the automorphism sending \(x\) to \(x^k\) by \(\phi_k\).
 
     Let's now investigate how these automorphisms behave.
-    Let \(\varphi_k, \varphi_l \in \Aut{C_n}\), and consider:
-    \[x\varphi_k\varphi_l = (x^k)\varphi_l = {(x^k)}^l = x^{(kl)} = x\varphi_{kl} \quad \mod{n}\]
+    Let \(\phi_k, \phi_l \in \Aut{C_n}\), and consider:
+    \[x\phi_k\phi_l = (x^k)\phi_l = {(x^k)}^l = x^{(kl)} = x\phi_{kl} \pmod{n}\]
     Because multiplication modulo \(n\) is commutative, \(x^{kl} = x^{lk}\), so \(\Aut{C_n}\) is abelian.
 
-    Now consider \(\theta:\Aut{C_n} \to \units{n}\) defined by \(\varphi_k\theta = k\).
+    Now consider \(\theta:\Aut{C_n} \to \units{n}\) defined by \(\phi_k\theta = k\).
     We will show \(\theta\) is an isomorphism.
-    Every \(k \in \units{n}\) is co-prime to \(n\) and so \(x^k\) is a generator of \(C_n\), hence there is some \(\varphi_k
-    \in \Aut{C_n}\) such that \(\varphi_k\theta = k\).
+    Every \(k \in \units{n}\) is co-prime to \(n\) and so \(x^k\) is a generator of \(C_n\), hence there is some \(\phi_k
+    \in \Aut{C_n}\) such that \(\phi_k\theta = k\).
     So \(\theta\) is surjective.
-    If \(\varphi_k\theta = \varphi_l\theta\) then \(k = l\), so \(\theta\) is also injective.
+    If \(\phi_k\theta = \phi_l\theta\) then \(k = l\), so \(\theta\) is also injective.
     Finally, \(\theta\) is a homomorphism because:
-    \[(\varphi_k\varphi_l)\theta = \varphi_{kl}\theta = kl = (\varphi_k\theta)(\varphi_l\theta)\]
+    \[(\phi_k\phi_l)\theta = \phi_{kl}\theta = kl = (\phi_k\theta)(\phi_l\theta)\]
     So \(\theta:\Aut{C_n} \to \units{n}\) is an isomorphism.
 \end{proof}
 
@@ -80,17 +80,17 @@ and prove some new results!
 \end{lemma}
 
 \begin{proof}
-    Consider the map \(\varphi_g:G \to G\) defined by \(\varphi_g:x \mapsto g^{-1}xg\) for elements \(x,\,g \in G\).
+    Consider the map \(\phi_g:G \to G\) defined by \(\phi_g:x \mapsto g^{-1}xg\) for elements \(x,\,g \in G\).
     We will show that this is an automorphism of \(G\).
     For \(x,\,y \in G\):
-    \[x\varphi_g y\varphi_g = (g^{-1}xg)(g^{-1}yg) = g^{-1}(xy)g = (xy)\varphi_g\]
-    Hence \(\varphi_g\) is a homomorphism.
-    Moreover, \(\varphi_g\) is invertible with inverse \(\varphi_{g^{-1}}\).
-    So \(\varphi_g\) is indeed an automorphism of G.
+    \[x\phi_g y\phi_g = (g^{-1}xg)(g^{-1}yg) = g^{-1}(xy)g = (xy)\phi_g\]
+    Hence \(\phi_g\) is a homomorphism.
+    Moreover, \(\phi_g\) is invertible with inverse \(\phi_{g^{-1}}\).
+    So \(\phi_g\) is indeed an automorphism of G.
 
-    Because \(H\) is normal, \(H\varphi_g = H\).
-    So \(\varphi_g\) is an automorphism of \(H\) too.
-    And so \(\varphi_g\) maps \(K\) to itself, because it is characteristic.
+    Because \(H\) is normal, \(H\phi_g = H\).
+    So \(\phi_g\) is an automorphism of \(H\) too.
+    And so \(\phi_g\) maps \(K\) to itself, because it is characteristic.
     Hence:
     \[\{\,g^{-1}kg \mid k \in K\,\} = K\]
     So \(K\) is normal in \(G\).
@@ -150,7 +150,7 @@ We know that \(\phi\) is injective, so then:
 \[(n_1,\,h_1)(n_2,\,h_2) = (n_1 n_3,\,h_1 h_2)\]
 This tells us the multiplication that will make \(NH\) a group.
 Because \(N \nrmsgp G\), the map
-\[\varphi_{h_1}:n_2 \mapsto h_1 n_2 h_1^{-1} = n_3\]
+\[n_2 \mapsto h_1 n_2 h_1^{-1} = n_3\]
 is an automorphism of \(N\).
 This gives rise to the definition:
 
@@ -172,7 +172,8 @@ This gives rise to the definition:
         denoted:
         \[N \rtimes_{\psi} H\]
 
-        We use the notation \(n_2^{h_1\psi}\) both because it indicates conjugation, and is clearer.
+        We use the notation \(n_2^{h_1\psi}\) to mean the image of \(n_2\) under the automorphism \(h_1\psi\), both
+        because it indicates conjugation, and is clearer.
 
 \end{enumerate}
 \end{definition}
@@ -210,7 +211,7 @@ This gives rise to the definition:
 
     We also have that:
     \[h\beta\psi = \alpha^{-1}h\phi\alpha\]
-    implies:
+    which implies:
     \[\alpha h\beta\psi = h\phi\alpha\]
     Now for two elements, \((n_1,\,h_1),\ (n_2,\,h_2) \in G\), consider:
     \begin{equation*}
@@ -268,7 +269,12 @@ Indeed we have a result:
     Thus \(\rho\) is a homomorphism.
 \end{proof}
 
-A group acting on the set its cosets will be very useful:
+\begin{definition}
+    The \emph{orbit} of an element \(\omega \in \Omega\), is the set:
+    \[\omega^G = \{\,\omega^x \mid x \in G\,\}\]
+\end{definition}
+
+A group acting on the set its cosets will be useful:
 
 \begin{definition}
     For a group \(G\) with \(H \leqslant G\), let \(\Omega = \{\,Hg \mid g \in G\,\}\), i.e.\ the set of cosets of \(H\)
@@ -282,7 +288,7 @@ A group acting on the set its cosets will be very useful:
 \end{lemma}
 
 \begin{proof}
-    % TODO
+    Omitted.
 \end{proof}
 
 

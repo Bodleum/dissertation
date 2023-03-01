@@ -3,8 +3,7 @@
 Let \(G\) be a group of order \(pq\) where \(p\), \(q\) are prime numbers with \(p > q\), and let \(n_p\) and \(n_q\)
 denote the number of Sylow p-subgroups and Sylow q-subgroups of \(G\) respectively.
 Then by Sylow's~Theorems:
-\[n_p \equiv 1 \ \mod{p} \quad \text{and} \quad n_p \mid q \implies n_p = 1\]
-\[n_q \equiv 1 \ \mod{q} \implies n_q = 1,\ q+1,\ 2q+1,\ \dots \quad \text{and} \quad n_q \mid p\]
+\[n_p \equiv 1 \ \pmod{p} \quad \text{and} \quad n_p \mid q\]
 
 So \(G\) has a unique Sylow \(p\)-subgroup, say \(P \nrmsgp G\), and a Sylow \(q\)-subgroup, \(Q \leqslant G\).
 Because \(p\) and \(q\) are prime numbers, \(P \cong C_p\) and \(Q \cong C_q\).
@@ -36,11 +35,6 @@ We have 2 possibilities for \(n_q\): \(p-1\) is a multiple of \(q\) or 1.
         isomorphisms is an isomorphism.
 \end{enumerate}
 
-So any group of order \(pq\) is isomorphic to either:
-\begin{equation*}
-\begin{aligned}
-    C_{pq} \quad \text{or} \quad \langle \, x, y \mid x^p = y^q = 1,\ y^{-1}xy
-    = x^a \, \rangle \qquad &\text{if} \ q \mid p-1 \\
-    C_{pq} \qquad &\text{if} \ q \nmid p-1
-\end{aligned}
-\end{equation*}
+So any group of order \(pq\) is isomorphic to:
+\[C_{pq}\]
+\[\gen{x, y \mid x^p = y^q = 1,\ y^{-1}xy = x^a} \tag{additionally, if \(q \mid p-1\)}\]

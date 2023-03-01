@@ -12,7 +12,7 @@ Lagrange's~Theorem tells us \(Z\) must have order dividing \(p^3\).
 It cannot be \(p^3\) because \(G\) is non-abelian, and Lemma~\ref{lem:z_non_trivial} tells us that it cannot be 1.
 If \(|Z| = p^2\), then \(|G/Z| = p\), so \(G/Z \cong C_p\).
 However Lemma~\ref{lem:cyclic_over_centre} says that then \(G\) must be abelian, so then \(|Z|\) must be \(p\).
-Then by our previous classification, \(G/Z\) is isomorphic to either \(C_{p^2}\) or \(C_p \times C_p\).
+By our previous classification, \(G/Z\) is isomorphic to either \(C_{p^2}\) or \(C_p \times C_p\).
 Lemma~\ref{lem:cyclic_over_centre} tells us that it must by the latter.
 
 This gives us a handle to start investigating the structure of \(G\).
@@ -51,7 +51,7 @@ Considering the orders of \(a\) and \(b\) we have 3 cases:
         Taking:
         \[z = \unimat{0}{1}{0}, \quad a = \unimat{1}{0}{0} \quad \text{and} \quad b = \unimat{0}{0}{1}\]
         we can see that \(\UT_3(p)\) satisfies this presentation for \(p > 2\).
-        (Indeed, the above presentation is the standard presentation definition for \(\UT_3(p)\)).
+        (Indeed, the above presentation is the standard one defining \(\UT_3(p)\)).
         Thus there is a single isomorphism class for this case.
 
         The group behaves differently when \(p = 2\) because we know that a group whose elements all have order either 1
@@ -72,10 +72,10 @@ Considering the orders of \(a\) and \(b\) we have 3 cases:
         taken mod \(p\).
 
         We know that \(0 < r < p\) and I claim that we can take \(r = 1\) without loss of generality.
-        This is because \(z^r\) is not 1, so must be some element of order \(p\) in \(Z\).
+        Because \(z^r \neq 1\), it has order \(p\).
         Hence \(z^r\) generates \(Z\).
         Because \(p\) is prime, \(Z \cong C_p\) is a finite field.
-        Hence there exists some integer \(s\), with \(0 < s < p\) such that \(sr \equiv 1 \pmod{p}\).
+        Therefore, there exists some integer \(s\), with \(0 < s < p\) such that \(sr \equiv 1 \pmod{p}\).
         Then say \(\bar{a} = a^s\) so:
         \[\bar{a}^p = {(a^s)}^p = {(a^p)}^s = {(z^r)}^s = z \pmod{p}\]
         Indeed we can take \(\bar{a}^p\) to be any power of \(z\) we want using a similar substitution.
