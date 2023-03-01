@@ -1,5 +1,5 @@
 % ====   Preamble   ====
-\usepackage[left=2cm, right=2cm, top=2cm, bottom=2.5cm]{geometry}
+\usepackage[margin=2.5cm]{geometry}
 \usepackage{amsmath, amssymb, amsthm}
 \usepackage{bm} % Bold maths
 \usepackage[T1]{fontenc}
@@ -7,17 +7,18 @@
 \usepackage{multicol}
 \usepackage{tabularx}
 \usepackage{booktabs}
-\usepackage{subfig}
 \usepackage[super]{nth}
 \usepackage{enumerate}
-\usepackage{lipsum}
-\usepackage{stmaryrd}   % for \lightning
+\usepackage{fancyhdr}
+\usepackage{epigraph}
 \usepackage[backend=biber]{biblatex-chicago}    % Bibliography
 \addbibresource{./bib.bib}      % Bibliography file
+\pagestyle{fancy}
 
 \newcommand{\maxorder}{31}
-
 \renewcommand{\emph}{\underline}
+\renewcommand{\thechapter}{\Roman{chapter}}
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
 
 % Maths in section headings
 \makeatletter
