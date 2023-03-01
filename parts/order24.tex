@@ -227,9 +227,20 @@ product which we have already seen:
         Thus there are 4 choices for the image of \(j\), giving us 24 possible automorphisms altogether.
 
         So \(\Aut{T}\) will have a Sylow subgroup of order 3.
+        Lemma~\ref{lem:semiisom} tells us that if a homomorphism maps \(H\) to a given subgroup in \(\Aut{T}\), then
+        mapping \(H\) to a conjugate subgroup produces an isomorphic semidirect product.
+        Further, we can map \(H\) into the subgroup any way we want, because we can apply the automorphism \(\beta\).
+        Hence, \(Q_8 \rtimes C_3\) defines a single isomorphism class.
 
-
-        Somehow show this is \(\SL_2(\F_3)\).
+        We will show that \(\SL_2(3)\) is in that isomorphism class.
+        Consider elements:
+        \[a = \twomat{0}{1}{2}{0}, \quad b = \twomat{2}{2}{2}{1} \quad \text{and} \quad c = \twomat{1}{1}{0}{1}\]
+        So then:
+        \[N = \gen{a,\,b} = \{\,1,\, a,\, a^2,\, a^{-1},\, b,\, b^{-1},\, ab,\, {(ab)}^{-1}\,\} \cong Q_8\]
+        And:
+        \[H = \gen{c} = \{\,1,\, c,\, c^{-1}\,\} \cong C_3\]
+        By inspection, \(N \cap H = \bm{1}\), and \(NH = \SL_2(3)\).
+        So it remains to show that \(N\) is normal.
 \end{enumerate}
 
 
