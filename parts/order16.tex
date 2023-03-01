@@ -222,8 +222,27 @@ The automorphisms \(\psi_5\) and \(\psi_7\) are conjugate, as are \(\psi_6\) and
                     G_{12a} &= \gen{x,\,y,\,a \mid x^4 = y^2 = a^4 = 1,\ xy = yx,\ a^{-1}xa = xy,\ a^{-1}ya = y} \\
                     G_{12b} &= \gen{x,\,y,\,a \mid x^4 = y^2 = a^4 = 1,\ xy = yx,\ a^{-1}xa = x^{-1}y,\ a^{-1}ya = y}
                 \end{align*}
+                Concentrating on the latter two groups, we will show they are both isomorphic to \(C_4 \rtimes C_4\),
+                with the inversion action.
+                First, \(G_{12a}\).
+                Consider the element \(ax\), and so \(\gen{ax} = \{\,1,\,ax,\,y,\,axy\,\}\).
+                By inspection, \(\gen{x} \cap \gen{ax} = \bm{1}\).
+                So then:
+                \[x^{-1}(ax)x = x^{-1}xaxy = axy = {(ax)}^{-1}\]
+                Hence, \(G_{12a} = \gen{x} \rtimes \gen{ax} \cong C_4 \rtimes C_4\).
 
-                [Need to show \(G_{12a} \cong G_{12b} \cong C_4 \rtimes C_4\)]
+                Likewise for \(G_{12b}\), \(\gen{ax} = \{\,1,\,ax,\,a^2 y,\,x^{-1}a^{-1}\,\}\), and again \(\gen{x} \cap
+                \gen{ax} = \bm{1}\).
+                Additionally:
+                \[x^{-1}(ax)x = ax^3 y = ax^{-1}y = xa\]
+                Multiplying by \(x^4 = 1\) gives:
+                \[x^4 xa = x^{-1}x^2 a = x^{-1}a^2 a = x^{-1}a^{-1}\]
+                Hence \(G_{12b}\) is isomorphic to the same semidirect product, \(C_4 \rtimes C_4\).
+
+                We can check that it is indeed valid to write \(C_4 \rtimes C_4\).
+                We know \(\Aut{C_4} \cong C_2\) and so a homomorphism \(\varphi:C_4 \to \Aut{C_4}\) can map the
+                generator to either the identity map or the inverse map.
+                Hence we have only one non-trivial semidirect product.
 
             \item \(a^2 = y\).
 
