@@ -153,7 +153,7 @@
       \verb https://groupprops.subwiki.org/wiki/Dicyclic_group
       \endverb
     \endentry
-    \entry{semidihedral}{online}{}
+    \entry{gendihedral}{online}{}
       \name{author}{1}{}{%
         {{hash=3b14a81272af18cb5a05973bde112455}{%
            family={Groupprops},
@@ -166,6 +166,39 @@
       \strng{authornamehash}{3b14a81272af18cb5a05973bde112455}
       \strng{authorfullhash}{3b14a81272af18cb5a05973bde112455}
       \field{extraname}{3}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{17}
+      \field{month}{1}
+      \field{title}{Generalized dihedral group}
+      \field{urlday}{15}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{year}{2011}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://groupprops.subwiki.org/wiki/Generalized_dihedral_group
+      \endverb
+      \verb{url}
+      \verb https://groupprops.subwiki.org/wiki/Generalized_dihedral_group
+      \endverb
+    \endentry
+    \entry{semidihedral}{online}{}
+      \name{author}{1}{}{%
+        {{hash=3b14a81272af18cb5a05973bde112455}{%
+           family={Groupprops},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{3b14a81272af18cb5a05973bde112455}
+      \strng{fullhash}{3b14a81272af18cb5a05973bde112455}
+      \strng{bibnamehash}{3b14a81272af18cb5a05973bde112455}
+      \strng{authorbibnamehash}{3b14a81272af18cb5a05973bde112455}
+      \strng{authornamehash}{3b14a81272af18cb5a05973bde112455}
+      \strng{authorfullhash}{3b14a81272af18cb5a05973bde112455}
+      \field{extraname}{4}
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{labelnamesource}{author}
@@ -198,7 +231,7 @@
       \strng{authorbibnamehash}{3b14a81272af18cb5a05973bde112455}
       \strng{authornamehash}{3b14a81272af18cb5a05973bde112455}
       \strng{authorfullhash}{3b14a81272af18cb5a05973bde112455}
-      \field{extraname}{4}
+      \field{extraname}{5}
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{labelnamesource}{author}
