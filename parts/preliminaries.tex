@@ -193,8 +193,8 @@ This gives rise to the definition:
 \begin{lemma}\label{lem:semiisom}
     Let \(N\) and \(H\) be groups, and \(\alpha \in \Aut{H}\).
     Then the semidirect products via the homomorphism \(\phi\), \(N \rtimes_\phi H\), and via the homomorphism
-    \(\psi\), \(N \rtimes_\psi H\), are isomorphic if \(h\beta\psi = \alpha^{-1}h\phi\alpha\) for all \(h \in H\),
-    \(\alpha \in \Aut{N}\) and \(\beta \in \Aut{H}\).
+    \(\psi\), \(N \rtimes_\psi H\), are isomorphic if for \(\alpha \in \Aut{N}\) and \(\beta \in \Aut{H}\), we have:
+    \[h^\beta\psi = \alpha^{-1}h\phi\alpha \tag{for all \(h \in H\)}\]
 
     That is, we can apply any automorphism to \(H\) and conjugate \(N\), and the resulting semidirect product remains in
     the same isomorphism class.
@@ -202,35 +202,30 @@ This gives rise to the definition:
 
 \begin{proof}
     Let \(G = N \rtimes_\phi H\) and \(\bar{G} = N \rtimes_\psi H\), and define:
-    \[\vartheta:G \to \bar{G} \quad \text{by} \quad \vartheta:(n,\,h) \mapsto (n\alpha,\,h\beta)\]
-    We will show that \(\vartheta\) is an isomorphism.
+    \[\theta:G \to \bar{G} \quad \text{by} \quad \theta:(n,\,h) \mapsto (n^\alpha,\,h^\beta)\]
+    We will show that \(\theta\) is an isomorphism.
 
-    First, \(\vartheta^{-1}\) exists because both \(\alpha^{-1}\) and \(\beta^{-1}\) exist, and is given by:
-    \[\vartheta^{-1}:(n,\,h) \mapsto (n\alpha^{-1},\,h\beta^{-1})\]
-    Hence \(\vartheta\) is a bijection.
-
+    First, \(\theta^{-1}\) exists because both \(\alpha^{-1}\) and \(\beta^{-1}\) exist, and is given by:
+    \[\theta^{-1}:(n,\,h) \mapsto (n^{\alpha^{-1}},\,h^{\beta^{-1}})\]
+    Hence \(\theta\) is a bijection.
     We also have that:
-    \[h\beta\psi = \alpha^{-1}h\phi\alpha\]
+    \[h^\beta\psi = \alpha^{-1}h\phi\alpha\]
     which implies:
-    \[\alpha h\beta\psi = h\phi\alpha\]
+    \[\alpha h^\beta\psi = h\phi\alpha \tag{\ast}\label{eqn:semidirect_homo}\]
     Now for two elements, \((n_1,\,h_1),\ (n_2,\,h_2) \in G\), consider:
-    \begin{equation*}
-    \begin{aligned}
-        (n_1,\,h_1)\vartheta\ (n_2,\,h_2)\vartheta &= (n_1\alpha,\,h_1\beta)(n_2\alpha,\,h_2\beta) \\
-        &= (n_1\alpha\,n_2\alpha^{(h_1\beta)\psi},\,h_1\beta\,h_2\beta) \\
-        &= (n_1\alpha\,n_2^{(\alpha h_1\beta\psi)},\,h_1\beta\,h_2\beta) \\
-        &= (n_1\alpha\,n_2^{(h_1\beta\phi\alpha)},\, h_1\beta\,h_2\beta) \\
-        &= (n_1\alpha\,{(n_2^{(h_1\beta\phi)})}^\alpha,\, h_1\beta\,h_2\beta) \\
-        &= ((n_1n_2^{(h_1\beta\phi)})\alpha,\, (h_1h_2)\beta) \\
-        &= (n_1n_2^{(h_1\beta\phi)},\, h_1h_2)\vartheta \\
-        &= ((n_1,\,h_1)(n_2,\,h_2))\vartheta
-    \end{aligned}
-    \end{equation*}
-    So \(\vartheta\) is an isomorphism.
+    \begin{align*}
+        (n_1,\, h_1)\theta\ (n_2,\, h_2)\theta &= (n_1^\alpha,\, h_1^\beta)(n_2^\alpha,\, h_2^\beta) \\
+        &= (n_1^\alpha {(n_2^\alpha)}^{h_1^\beta\psi},\, h_1^\beta h_2^\beta) \\
+        &= (n_1^\alpha {(n_2^{h_1\phi})}^\alpha,\, h_1^\beta h_2^\beta) \tag{by~\ref{eqn:semidirect_homo}} \\
+        &= ({(n_1 {(n_2)}^{h_1\phi})}^\alpha,\, {(h_1 h_2)}^\beta) \\
+        &= (n_1 {(n_2)}^{h_1\phi},\, h_1 h_2)\theta \\
+        &= (n_1,\, h_1)(n_2,\, h_2)\theta
+    \end{align*}
+    So \(\theta\) is an isomorphism.
 \end{proof}
 
 \section{Group Actions}
-Some snazzy introduction.
+Another useful piece of group theory technology will be group actions.
 
 \begin{definition}
     Let \(G\) be a group, and \(\Omega\) be a set, with elements \(g \in G\) and \(\omega \in \Omega\).
@@ -268,6 +263,8 @@ Indeed we have a result:
     \[\omega(g\rho)(h\rho) = \omega\rho_g\rho_h = {(\omega^g)}^h = \omega^{(gh)} = \omega\rho_{gh} = \omega(gh)\rho\]
     Thus \(\rho\) is a homomorphism.
 \end{proof}
+
+By this we see that in a semidirect product, \(N \rtimes H\), the group \(H\) acts on \(N\)!
 
 \begin{definition}
     The \emph{orbit} of an element \(\omega \in \Omega\), is the set:
