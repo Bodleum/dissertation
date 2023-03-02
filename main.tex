@@ -14,8 +14,17 @@
 % ====   Document   ====
 \begin{document}
 \inputfile{./parts/titlepage.tex}
-% {\maketitle}
+\begingroup
+\let\cleardoublepage\relax
+\let\clearpage\relax
+\begin{quote}
+\itshape%
+I certify that this project report has been written by me, is a record of work carried
+out by me, and is essentially different from work undertaken for any other purpose
+or assessment.
+\end{quote}
 {\tableofcontents}
+\endgroup
 
 \chapter{Introduction}
 \inputfile{./parts/intro.tex}

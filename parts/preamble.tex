@@ -1,6 +1,10 @@
 % ====   Preamble   ====
 \usepackage[margin=2.5cm]{geometry}
-\usepackage{amsmath, amssymb, amsthm}
+\usepackage{amsmath}
+\usepackage{flexisym} % dependency for next
+\usepackage{breqn} % Allow line breaks in maths mode
+\usepackage{amssymb}
+\usepackage{amsthm}
 \usepackage{bm} % Bold maths
 \usepackage[T1]{fontenc}
 \usepackage{hyperref}
@@ -10,24 +14,23 @@
 \usepackage[super]{nth}
 \usepackage{enumerate}
 \usepackage{fancyhdr}
-\usepackage{epigraph}
+\usepackage{lmodern}
 \usepackage[backend=biber]{biblatex-chicago}    % Bibliography
 \addbibresource{./bib.bib}      % Bibliography file
 \pagestyle{fancy}
 
-\newcommand{\maxorder}{31}
 \renewcommand{\emph}{\underline}
 \renewcommand{\thechapter}{\Roman{chapter}}
 \renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
-\renewcommand{\thetable}{\arabic{table}}
+\counterwithout{table}{chapter}
 
-% Maths in section headings
+% Enter expert LaTeX mode
 \makeatletter
+% Maths in section headings
 \pdfstringdefDisableCommands{\let\(\fake@math}
 \newcommand\fake@math{}% just for safety
 \def\fake@math#1\){\detokenize{#1}}
 \makeatother
-
 
 \newtheorem{lemma}{Lemma}
 \theoremstyle{definition}
