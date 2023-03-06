@@ -5,6 +5,7 @@ and prove some new results!
 
 
 \begin{definition}
+    \raggedright
     If \(G\) and \(H\) are groups with elements \(g_1,\, g_2 \in G\), then a map:
     \[\phi:G \to H\]
     is a \emph{homomorphism} if:
@@ -15,6 +16,7 @@ and prove some new results!
 \end{definition}
 
 \begin{lemma}
+    \raggedright
     The set of all automorphisms of a group \(G\) form a group under composition.
     Indeed, this is called the \emph{automorphism group} of \(G\), denoted \(\Aut{G}\).
 \end{lemma}
@@ -35,6 +37,7 @@ and prove some new results!
 \end{proof}
 
 \begin{lemma}\label{lem:aut}
+    \raggedright
     The automorphism group of \(C_n\) is isomorphic to the multiplicative group
     of integers mod \(n\).
 
@@ -69,12 +72,14 @@ and prove some new results!
 \end{proof}
 
 \begin{definition}
+    \raggedright
     A subgroup \(H\) of a group \(G\) is called \emph{characteristic} if it is fixed by all automorphisms of \(G\).
 
     i.e.\ for an automorphism \(\phi\) of \(G\), \(H\phi = H\).
 \end{definition}
 
 \begin{lemma}\label{lem:char}
+    \raggedright
     Let \(G\) be a group with normal subgroup \(H\), and let \(K\) be characteristic in \(H\).
     Then \(K\) is a normal subgroup of \(G\).
 \end{lemma}
@@ -101,6 +106,7 @@ and prove some new results!
 We already know about the direct product:
 
 \begin{definition}[Direct Product]
+    \raggedright
     For groups \(N\) and \(H\), the \emph{direct product}, \(G = N\times H\) is a group of ordered pairs of elements
     \((n, h)\) where \(n \in N\) and \(h \in H\) with the operation:
     \[(n_1, h_1)(n_2, h_2) = (n_1n_2, h_1h_2)\]
@@ -155,6 +161,7 @@ is an automorphism of \(N\).
 This gives rise to the definition:
 
 \begin{definition}[Semidirect Product]
+\raggedright
 \mbox{}
 \begin{enumerate}[(i)]
     \item
@@ -179,6 +186,7 @@ This gives rise to the definition:
 \end{definition}
 
 \begin{lemma}\label{lem:setprodorder}
+    \raggedright
     For a group \(G\) with \(N \leqslant G\) and \(H \leqslant G\), with \(N \cap H = \bm{1}\) then:
     \[|NH| = |\{nh \mid n \in N, h \in H\}| = |N| \cdot |H|\]
 \end{lemma}
@@ -191,6 +199,7 @@ This gives rise to the definition:
 \end{proof}
 
 \begin{lemma}\label{lem:semiisom}
+    \raggedright
     Let \(N\) and \(H\) be groups, and \(\alpha \in \Aut{H}\).
     Then the semidirect products via the homomorphism \(\phi\), \(N \rtimes_\phi H\), and via the homomorphism
     \(\psi\), \(N \rtimes_\psi H\), are isomorphic if for \(\alpha \in \Aut{N}\) and \(\beta \in \Aut{H}\), we have:
@@ -228,6 +237,7 @@ This gives rise to the definition:
 Another useful piece of group theory technology will be group actions.
 
 \begin{definition}
+    \raggedright
     Let \(G\) be a group, and \(\Omega\) be a set, with elements \(g \in G\) and \(\omega \in \Omega\).
     Consider a map \(\mu:\Omega \times G \to \Omega\), and write \(\omega^g\) for the image of \((\omega,\,g)\) under
     \(\mu\).
@@ -245,6 +255,7 @@ This might remind you of a homomorphism.
 Indeed we have a result:
 
 \begin{lemma}\label{lem:actionhom}
+    \raggedright
     A group action induces a homomorphism.
     Specifically, let \(G\) be a group which acts on a set \(\Omega\), with \(g \in G\) and \(\omega \in \Omega\), and
     define:
@@ -267,6 +278,7 @@ Indeed we have a result:
 By this we see that in a semidirect product, \(N \rtimes H\), the group \(H\) acts on \(N\)!
 
 \begin{definition}
+    \raggedright
     The \emph{orbit} of an element \(\omega \in \Omega\), is the set:
     \[\omega^G = \{\,\omega^x \mid x \in G\,\}\]
 \end{definition}
@@ -274,6 +286,7 @@ By this we see that in a semidirect product, \(N \rtimes H\), the group \(H\) ac
 A group acting on the set its cosets will be useful:
 
 \begin{definition}
+    \raggedright
     For a group \(G\) with \(H \leqslant G\), let \(\Omega = \{\,Hg \mid g \in G\,\}\), i.e.\ the set of cosets of \(H\)
     in \(G\).
     If \(x \in G\), define a group action:
@@ -281,6 +294,7 @@ A group acting on the set its cosets will be useful:
 \end{definition}
 
 \begin{lemma}
+    \raggedright
     The action above is \emph{well defined}, meaning the action is independent of our choice of representative \(g\).
 \end{lemma}
 

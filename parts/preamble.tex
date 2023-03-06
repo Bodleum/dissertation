@@ -1,4 +1,5 @@
 % ====   Preamble   ====
+\usepackage{lmodern}    % font
 \usepackage[margin=2.5cm]{geometry}
 \usepackage{amsmath}
 \usepackage{flexisym} % dependency for next
@@ -14,7 +15,8 @@
 \usepackage[super]{nth}
 \usepackage{enumerate}
 \usepackage{fancyhdr}
-\usepackage{lmodern}
+\usepackage[]{mdframed}
+\mdfsetup{skipabove=1em, skipbelow=1em}
 \usepackage[backend=biber]{biblatex-chicago}    % Bibliography
 \addbibresource{./bib.bib}      % Bibliography file
 \pagestyle{fancy}
@@ -32,9 +34,9 @@
 \def\fake@math#1\){\detokenize{#1}}
 \makeatother
 
-\newtheorem{lemma}{Lemma}
+\newmdtheoremenv[nobreak=true]{lemma}{Lemma}
 \theoremstyle{definition}
-\newtheorem{definition}{Definition}
+\newmdtheoremenv[nobreak=true]{definition}{Definition}
 
 \DeclareMathOperator{\Aut}{Aut}
 \DeclareMathOperator{\Dic}{Dic}
