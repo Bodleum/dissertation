@@ -4,7 +4,7 @@ This classification is based on the one found on the Groupprops subwiki\footcite
 Let \(G\) be a group of order \(p^3\), where \(p\) is a prime number.
 We will first gain a handle on \(G\) by describing its centre, and quotient by it.
 If \(G\) is abelian, we know by the Fundamental Theorem of Finite Abelian Groups that it is isomorphic to one of:
-\[ C_{p^3}, \quad C_{p^2} \times C_p \quad \text{or} \quad C_p \times C_p \times C_p\]
+\[C_{p^3}, \quad C_{p^2} \times C_p \quad \text{or} \quad C_p \times C_p \times C_p\]
 So from now on, we will focus on the non-abelian groups.
 
 Denote the centre of \(G\) by \(Z\) and consider its order.
@@ -62,7 +62,6 @@ Considering the orders of \(a\) and \(b\) we have 3 cases:
         have order 4.
         We can check that all other non-identity elements have order 2.
         Thus \(\UT_2(2) \cong D_8\).
-
     \item One element of each order \(p\) and \(p^2\).
 
         The roles of \(a\) and \(b\) are interchangeable, so we can take \(a\) to have order \(p^2\) and \(b\) to have
@@ -94,11 +93,9 @@ Considering the orders of \(a\) and \(b\) we have 3 cases:
         \[G \cong C_{p^2} \rtimes C_p\]
         With presentation:
         \[\gen{a,\,b \mid a^{p^2} = b^p = 1,\ b^{-1}ab = a^{p + 1}}\]
-
         When \(p = 2\), this reduces to the dihedral group, \(D_8\).
         However, we can see that for \(p > 2\), this is not isomorphic to the previous case, because \(\UT_3(p)\) has no
         element of order \(p^2\).
-
     \item Both \(a\) and \(b\) have order \(p^2\).
 
         We will show that by substitutions, this is equivalent to the above case when \(p > 2\).
@@ -128,21 +125,23 @@ Considering the orders of \(a\) and \(b\) we have 3 cases:
         So we obtain the presenation:
         \[G = \gen{a,\,b \mid a^4 = b^4 = 1,\ a^2 = b^2,\ b^{-1}ab = a^{-1}}\]
         Which we recognise as the quaternion group, \(Q_8\).
-
 \end{enumerate}
 
-Hence any group of order \(p^3\) is isomorphic to one of:
-\[%
-    C_{p^3}, \quad%
-    C_{p^2} \times C_p, \quad%
-    C_p \times C_p \times C_p
-\]
-\[
-    D_8, \quad \text{or} \quad%
-    Q_8 \tag{when \(p = 2\)}
-\]
-\[
-    \UT_3(p), \quad \text{or} \quad%
-    C_{p^2} \rtimes C_p \tag{when \(p \geqslant 3\)}
-\]
-
+\begin{mdframed}[align=center,nobreak=true]
+    \begin{center}
+        Any group of order \(p^3\) is isomorphic to one of:
+        \[%
+            C_{p^3}, \quad%
+            C_{p^2} \times C_p, \quad%
+            C_p \times C_p \times C_p
+        \]
+        \[
+            D_8 \quad \text{or} \quad%
+            Q_8 \tag{when \(p = 2\)}
+        \]
+        \[
+            \UT_3(p) \quad \text{or} \quad%
+            C_{p^2} \rtimes C_p \tag{when \(p \geqslant 3\)}
+        \]
+    \end{center}
+\end{mdframed}

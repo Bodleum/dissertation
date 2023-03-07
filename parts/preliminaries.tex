@@ -3,7 +3,6 @@
 Let's move on to review some facts and theorems which will be valuable later on, as well as introduce some new concepts
 and prove some new results!
 
-
 \begin{definition}
     \raggedright
     If \(G\) and \(H\) are groups with elements \(g_1,\, g_2 \in G\), then a map:
@@ -31,7 +30,6 @@ and prove some new results!
 
     Indeed, \(\iota:g \mapsto g\) is the identity of \(A\), since:
     \[g\phi\iota = (g\phi)\iota = g\phi \quad \text{and} \quad g\iota\phi = (g\iota)\phi = g\phi\]
-
     And inverses clearly exists, because automorphisms are bijections, and bijections are invertible.
     Hence \(A = \Aut{G}\) is a group.
 \end{proof}
@@ -136,7 +134,6 @@ On the left we have an element of \(N\) and on the right, an element of \(H\), s
 But \(N \cap H = \bm{1}\) so then \(n_2^{-1} n_1 = h_2 h_1^{-1} = 1\).
 Hence:
 \[n_1 = n_2 \quad \text{and} \quad h_1 = h_2\]
-
 To show \(\phi\) is surjective, consider the image, \(\im{\phi} = \{\,nh \mid n \in N,\ h \in H\,\}\).
 This is by definition \(NH = G\), so \(\phi\) is surjective, and hence a bijection.
 
@@ -168,7 +165,6 @@ This gives rise to the definition:
 
         For a group \(G\) with normal subgroup \(N\) and subgroup \(H\) with \(NH = G\) and \(N \cap H = \bm{1}\),
         \(G\) is the \emph{internal semidirect product} of \(N\) by \(H\), written \(G = N \rtimes H\).
-
     \item
 
         For groups \(N\) and \(H\), and a homomorphism \(\psi:H \to \Aut{N}\), the \emph{external semidirect product} of
@@ -178,10 +174,8 @@ This gives rise to the definition:
         \[(n_1,\,h_1)(n_2,\,h_2) = (n_1(n_2^{h_1\psi}),\,h_1 h_2)\]
         denoted:
         \[N \rtimes_{\psi} H\]
-
         We use the notation \(n_2^{h_1\psi}\) to mean the image of \(n_2\) under the automorphism \(h_1\psi\), both
         because it indicates conjugation, and is clearer.
-
 \end{enumerate}
 \end{definition}
 
@@ -204,7 +198,6 @@ This gives rise to the definition:
     Then the semidirect products via the homomorphism \(\phi\), \(N \rtimes_\phi H\), and via the homomorphism
     \(\psi\), \(N \rtimes_\psi H\), are isomorphic if for \(\alpha \in \Aut{N}\) and \(\beta \in \Aut{H}\), we have:
     \[h^\beta\psi = \alpha^{-1}h\phi\alpha \tag{for all \(h \in H\)}\]
-
     That is, we can apply any automorphism to \(H\) and conjugate \(\Aut{N}\), and the resulting semidirect product remains in
     the same isomorphism class.
 \end{lemma}
@@ -301,7 +294,4 @@ A group acting on the set its cosets will be useful:
 \begin{proof}
     Omitted.
 \end{proof}
-
-
-
 

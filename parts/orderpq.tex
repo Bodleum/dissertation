@@ -4,7 +4,6 @@ Let \(G\) be a group of order \(pq\) where \(p\), \(q\) are prime numbers with \
 denote the number of Sylow p-subgroups and Sylow q-subgroups of \(G\) respectively.
 Then by Sylow's~Theorems:
 \[n_p \equiv 1 \ \pmod{p} \quad \text{and} \quad n_p \mid q\]
-
 So \(G\) has a unique Sylow \(p\)-subgroup, say \(P \nrmsgp G\), and a Sylow \(q\)-subgroup, \(Q \leqslant G\).
 Because \(p\) and \(q\) are prime numbers, \(P \cong C_p\) and \(Q \cong C_q\).
 Pick generators for each, say \(\langle x \rangle  = P\) and \(\langle y \rangle = Q\).
@@ -15,7 +14,6 @@ We have 2 possibilities for \(n_q\): \(p-1\) is a multiple of \(q\) or 1.
 
         If \(p-1\) \emph{is not} a multiple of \(q\) then \(n_q = 1\) and \(Q \nrmsgp G\), hence:
         \[G = P \times Q \cong C_{pq}\]
-
     \item \( q \mid p - 1\).
 
         If \(p-1\) \emph{is} a multiple of \(q\) then \(n_q = p\) and so \(Q\) is \emph{not} normal in \(G\).
@@ -26,16 +24,17 @@ We have 2 possibilities for \(n_q\): \(p-1\) is a multiple of \(q\) or 1.
         So if \(\nu \in \units{p}\), then \(x \mapsto x^\nu\) is an automorphism.
         We know also that \(C_{p-1}\) has a unique subgroup of order \(q\),
         hence \(G\) has the presentation:
-
         \[G = \langle \, x, y, \mid x^p = y^q = 1,\ y^{-1}xy = x^a \, \rangle\]
-        where \(a\) is a generator for the subgroup of order \(q\) in
-        \(\units{p}\).
+        where \(a\) is a generator for the subgroup of order \(q\) in \(\units{p}\).
 
         Notice that picking different generators are equivalent up to isomorphism because the composition of two
         isomorphisms is an isomorphism.
 \end{enumerate}
 
-So any group of order \(pq\) is isomorphic to one of:
-\[C_{pq}\]
-\[\gen{x, y \mid x^p = y^q = 1,\ y^{-1}xy = x^a} \tag{additionally, if \(q \mid p-1\)}\]
-
+\begin{mdframed}[align=center,nobreak=true]
+    \begin{center}
+        Any group of order \(pq\) is isomorphic to one of:
+        \[C_{pq}\]
+        \[\gen{x, y \mid x^p = y^q = 1,\ y^{-1}xy = x^a} \tag{additionally, if \(q \mid p-1\)}\]
+    \end{center}
+\end{mdframed}
