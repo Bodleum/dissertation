@@ -5,7 +5,7 @@ This classification is often not included; \textit{MT4003} classifies groups up 
 So to cap of this report, let's tackle one of the hardest cases!
 
 The following classification is based of the one by Wild\footcite{order16}.
-For brevity, denote \(C_2 \times C_2 \times C_2 \times C_2\) by \({(C_2)}^4\).
+For brevity, denote \(C_2 {\times} C_2 {\times} C_2 {\times} C_2\) by \({(C_2)}^4\).
 We begin by proving a lemma:
 
 \begin{lemma}\label{lem:order_16_subgp}
@@ -31,7 +31,6 @@ We begin by proving a lemma:
     Thus \(G/H \cong {(C_2)}^3\), and in particular, is abelian.
     So the conjugacy class of \(y\) is a subgroup of \(yH\).
     Hence the centraliser of \(y\), \(\C_G(y)\), has order 8.
-
     Let \(g \in \C_G(y) \setminus \gen{y}\).
     If \(g\) has order 2, then \(\gen{y,\,g} \cong C_4 \times C_2\).
     If \(g\) has order 4, then:
@@ -46,42 +45,11 @@ If \(N\) is the subgroup of \(G\) specified by Lemma~\ref{lem:order_16_subgp}, w
 \(N\) in different ways.
 Pick some element \(a \in G \setminus N\).
 Then the order of \(aN\) is two, (it must be either 1 or 2, and cannot be 1 because that contradicts our choice of
-\(a\)) and \(a^2\) is in \(N\).
+\(a\)) and \(a^2 {\in} N\).
+
 We know already what the possible automorphisms of \(C_8\) and \(C_4 \times C_2\) are from our classification of groups
 of order 24.
-They are summarised in Tables~\ref{tab:aut_C8}~and~\ref{tab:aut_C4xC2}.
-
-\begin{table}
-    \begin{minipage}{0.5\linewidth}
-        \caption{Automorphisms of \(C_8\)}\label{tab:aut_C8}
-        \centering
-        \begin{tabular}{c|c}
-            \(\Aut{C_8}\) & \(x \mapsto\) \\
-            \midrule
-            \(\phi_1\) & \(x\) \\
-            \(\phi_2\) & \(x^3\) \\
-            \(\phi_3\) & \(x^5\) \\
-            \(\phi_4\) & \(x^{-1}\)
-        \end{tabular}
-    \end{minipage}
-    \begin{minipage}{0.5\linewidth}
-        \caption{Automorphisms of \(C_4 \times C_2\)}\label{tab:aut_C4xC2}
-        \centering
-        \begin{tabular}{c|c|c|c}
-            \(\Aut{C_8}\) & \(x \mapsto\) & \(y \mapsto\) & Order \\
-            \midrule
-            \(\psi_1\) & \(x\) & \(y\) & 1\\
-            \(\psi_2\) & \(x^3 y\) & \(x^2 y\) & 4 \\
-            \(\psi_3\) & \(x^3\) & \(y\) & 2 \\
-            \(\psi_4\) & \(xy\) & \(x^2 y\) & 4 \\
-            \(\psi_5\) & \(xy\) & \(y\) & 2 \\
-            \(\psi_6\) & \(x^3\) & \(x^2 y\) & 2\\
-            \(\psi_7\) & \(x^3 y\) & \(y\) & 2 \\
-            \(\psi_8\) & \(x\) & \(x^2 y\) & 2 \\
-        \end{tabular}
-    \end{minipage}
-\end{table}
-
+They are summarised in Tables~\ref{tab:aut_C8}~and~\ref{tab:aut_C4xC2} in the appendix.
 So now by considering choices for the order of \(a\) and automorphisms of \(N\), we will classify \(G\).
 Begin with \(\gen{x} = N \cong C_8\).
 
@@ -90,22 +58,25 @@ Begin with \(\gen{x} = N \cong C_8\).
 
         If \(a\) has order 2, then \(a^2\) must be 1.
         So then \(N \cap \gen{a} = \bm{1}\), and \(G = N \rtimes \gen{a}\).
-        We have 4 possible semidirect products, because each of the automorphisms of \(N\) has order 2 (excluding the
+        We have 4 possible semidirect products, because each automorphism of \(N\) has order 2 (excluding the
         identity map).
         Hence we obtain the following 4 groups:
         \begin{equation*}
         \begin{aligned}
-            G_1 &= \gen{x,\,a \mid x^8 = a^2 = 1,\ a^{-1}xa = x} \\
+            G_1 &= \gen{x,\,a \mid x^8 = a^2 = 1,\ a^{-1}xa \overset{\phi_1}{=} x} \\
                 &= \gen{x} \times \gen{a} \\
                 &\cong C_8 \times C_2 \\
-            G_2 &= \gen{x,\,a \mid x^8 = a^2 = 1,\ a^{-1}xa = x^{3}} \\
+                & \\
+            G_2 &= \gen{x,\,a \mid x^8 = a^2 = 1,\ a^{-1}xa \overset{\phi_2}{=} x^{3}} \\
                 &= \gen{x} \rtimes_3 \gen{a} \\
                 &\cong \SD_{16}\\
-            G_3 &= \gen{x,\,a \mid x^8 = a^2 = 1,\ a^{-1}xa = x^{5}} \\
+                & \\
+            G_3 &= \gen{x,\,a \mid x^8 = a^2 = 1,\ a^{-1}xa \overset{\phi_3}{=} x^{5}} \\
                 &= \gen{x} \rtimes_5 \gen{a} \\
                 &\cong \M_{16}\\
-            G_4 &= \gen{x,\,a \mid x^8 = a^2 = 1,\ a^{-1}xa = x^{-1}} \\
-                &= \gen{x} \rtimes_{-1} \gen{a} \\
+                & \\
+            G_4 &= \gen{x,\,a \mid x^8 = a^2 = 1,\ a^{-1}xa \overset{\phi_4}{=} x^7 = x^{-1}} \\
+                &= \gen{x} \rtimes_7 \gen{a} \\
                 &\cong D_{16}
         \end{aligned}
         \end{equation*}
@@ -119,14 +90,15 @@ Begin with \(\gen{x} = N \cong C_8\).
         In particular, what is \(a^{-1}ga\) for an element \(g \in G\)?
         I claim the only possibility is the automorphism \(\phi_4:x\mapsto x^{-1}\).
         It cannot be \(\phi_2:x\mapsto x^3\) because then:
-        \[(xa)(xa) = x(axa^{-1})a^2 = x(x^3) a^2 = x^4 a^2 = 1\]
+        \[(xa)(xa) = x(axa^{-1})a^2 \overset{\phi_2}{=} x(x^3) a^2 = x^4 a^2 = 1\]
         Likewise, it cannot be \(\phi_1:x\mapsto x\) or \(\phi_3:x\mapsto x^5\) because then \(x^2 a\) will have order 2:
-        \[{(x^2 a)}^2 = x^2 (ax^2 a^{-1})a^2 = x^2 {(x^2)}^5 a^2 = x^4 a^2 = 1\]
+        \[{(x^2 a)}^2 = x^2 (ax^2 a^{-1})a^2 \overset{\phi_1}{=} x^4 a^2 = 1\]
+        \[{(x^2 a)}^2 = x^2 (ax^2 a^{-1})a^2 \overset{\phi_3}{=} x^2 {(x^2)}^5 a^2 = x^4 a^2 = 1\]
         All of which contradict our assumption.
         Hence the only posibility for the effect of conjugation by \(a\) is the map \(\phi_4:x\mapsto x^7 = x^{-1}\).
         So we obtain the presentation:
         \begin{align*}
-            G_5 &= \gen{x,\,a \mid x^8 = a^4 = 1,\ a^2 = x^4,\ a^{-1}xa = x^{-1}}
+            G_5 &= \gen{x,\,a \mid x^8 = a^4 = 1,\ a^2 = x^4,\ a^{-1}xa \overset{\phi_4}{=} x^{-1}}
         \end{align*}
         Which we recognise as the dicyclic group, \(\Dic_{24}\).
     \item Order 8.
@@ -137,15 +109,15 @@ Begin with \(\gen{x} = N \cong C_8\).
         Lemma~\ref{lem:semiisom}.
         If conjugation by \(a\) is either \(\phi_2:x\mapsto x^3\) or \(\phi_4:x\mapsto x^7\) then we obtain a
         contradiction:
-        \[a^2 = a^{-1}a^2 a = a^{-1}x^2 a = x^6\]
-        \[a^2 = a^{-1}a^2 a = a^{-1}x^2 a = x^{14} = x^6\]
+        \[a^2 = a^{-1}a^2 a = a^{-1}x^2 a \overset{\phi_2}{=} x^6\]
+        \[a^2 = a^{-1}a^2 a = a^{-1}x^2 a \overset{\phi_4}{=} x^{14} = x^6\]
         Hence the only possibilities for conjugation by \(a\) are the maps \(\phi_1:x\mapsto x\) and \(\phi_3:x \mapsto
         x^5\).
         For the first:
-        \[(x^3 a)(x^3 a) = x^3(ax^3 a^{-1})a^2 = x^3 x^3 a^2 = x^8 = 1\]
+        \[(x^3 a)(x^3 a) = x^3(ax^3 a^{-1})a^2 \overset{\phi_1}{=} x^3 x^3 a^2 = x^8 = 1\]
         a contradiction.
         And the second:
-        \[(xa)(xa) = x(axa^{-1})a^2 = x(x^5)a^2 = x^8 = 1\]
+        \[(xa)(xa) = x(axa^{-1})a^2 \overset{\phi_3}{=} x(x^5)a^2 = x^8 = 1\]
         another contradiction.
         Hence we obtain no new groups.
     \item Order 16.
@@ -158,7 +130,7 @@ In particular, all elements of \(G\) have order less than 8.
 
 I claim we can disregard automorphisms of order 4, namely \(\psi_2\) and \(\psi_4\), because they lead to contradictions.
 Consider an element \(g \in N\).
-We can write \(g = x^i y^j\) for some \(0 \leq i \leq 3\) and \(0 \leq j \leq 1\).
+We can write \(g = x^i y^j\) for some \(0 \leqslant i \leqslant 3\) and \(0 \leqslant j \leqslant 1\).
 Then on the one hand:
 \[a^{-2}ga^2 = g\]
 Because \(N\) is abelian.
@@ -184,19 +156,23 @@ A similar contradiction can be shown for \(\psi_4\).
         So we can apply Lemma~\ref{lem:semiisom}, and only consider one representative from each conjugacy class.
         We have the following presentations:
         \begin{align*}
-            G_7 &= \gen{x,\,y,\,a \mid x^4 = y^2 = a^2 = 1,\ xy = yx,\ a^{-1}xa = x,\ a^{-1}ya = y} \\
+            G_7 &= \gen{x,\,y,\,a \mid x^4 = y^2 = a^2 = 1,\ xy = yx,\ a^{-1}xa \overset{\psi_1}{=} x,\ a^{-1}ya \overset{\psi_1}{=} y} \\
                 &= \gen{x} \times \gen{y} \times \gen{a} \\
                 &\cong C_4 \times C_2 \times C_2 \\
-            G_8 &= \gen{x,\,y,\,a \mid x^4 = y^2 = a^2 = 1,\ xy = yx,\ a^{-1}xa = x^{-1},\ a^{-1}ya = y} \\
+                & \\
+            G_8 &= \gen{x,\,y,\,a \mid x^4 = y^2 = a^2 = 1,\ xy = yx,\ a^{-1}xa \overset{\psi_3}{=} x^{-1},\ a^{-1}ya \overset{\psi_3}{=} y} \\
                 &= (\gen{x} \rtimes \gen{a}) \times \gen{y} \\
                 &\cong D_8 \times C_2 \\
-            G_9 &= \gen{x,\,y,\,a \mid x^4 = y^2 = a^2 = 1,\ xy = yx,\ a^{-1}xa = xy,\ a^{-1}ya = y} \\
+                & \\
+            G_9 &= \gen{x,\,y,\,a \mid x^4 = y^2 = a^2 = 1,\ xy = yx,\ a^{-1}xa \overset{\psi_5}{=} xy,\ a^{-1}ya \overset{\psi_5}{=} y} \\
                 &= (\gen{x} \times \gen{y}) \rtimes \gen{a} \\
                 &\cong (C_4 \times C_2) \rtimes C_2 \tag{nameless} \\
-            G_{10} &= \gen{x,\,y,\,a \mid x^4 = y^2 = a^2 = 1,\ xy = yx,\ a^{-1}xa = x^{-1},\ a^{-1}ya = x^2 y}\\
+                & \\
+            G_{10} &= \gen{x,\,y,\,a \mid x^4 = y^2 = a^2 = 1,\ xy = yx,\ a^{-1}xa \overset{\psi_8}{=} x,\ a^{-1}ya \overset{\psi_8}{=} x^2 y}\\
         \end{align*}
         The final group, \(G_{10}\), is sometimes called the \emph{Pauli group}\footcite{order16names}, because it
         consists of the Pauli Matrices from quantum mechanics, and their products with powers of \(i\).
+
         The group \(G_9\) doesn't appear to have any significant name.
     \item Order 4.
 
@@ -206,20 +182,21 @@ A similar contradiction can be shown for \(\psi_4\).
             \item \(a^2 = x^2\).
 
                 Firstly, let's show what conjugation by \(a\) cannot be.
-                If it's \(\phi_1\):
-                \[(xa)(xa) = xa^2(a^{-1}xa) = xa^2 x = 1\]
-                If it's \(\phi_6\):
-                \[(xya)(xya) = xya^2(a^{-1}xya) = xya^2(x^{-1}x^2y) = x^4 y^2 = 1\]
-                If it's \(\phi_8\):
-                \[(x^2 ya)(x^2 ya) = x^2 ya^2 (a^{-1}x^2 ya) = x^2 ya^2(x^2 x^2 y) = x^8 y^2 = 1\]
+                If it's \(\psi_1\):
+                \[(xa)(xa) = xa^2(a^{-1}xa) \overset{\psi_1}{=} xa^2 x = 1\]
+                If it's \(\psi_6\):
+                \[(xya)(xya) = xya^2(a^{-1}xya) \overset{\psi_6}{=} xya^2(x^{-1}x^2y) = x^4 y^2 = 1\]
+                If it's \(\psi_8\):
+                \[(x^2 ya)(x^2 ya) = x^2 ya^2 (a^{-1}x^2 ya) \overset{\psi_8}{=} x^2 ya^2(x^2 x^2 y) = x^8 y^2 = 1\]
                 All of which are contradictions to our assumption.
                 So the remaining possibilities are:
                 \begin{align*}
-                    G_{11} &= \gen{x,\,y,\,a \mid x^4 = y^2 = a^4 = 1,\ xy = yx,\ a^{-1}xa = x^{-1},\ a^{-1}ya = y} \\
+                    G_{11} &= \gen{x,\,y,\,a \mid x^4 = y^2 = a^4 = 1,\ xy = yx,\ a^{-1}xa \overset{\psi_3}{=} x^{-1},\ a^{-1}ya \overset{\psi_3}{=} y} \\
                         &= \gen{x,\,a} \times \gen{y} \\
                         &\cong Q_8 \times C_2 \\
-                    G_{12a} &= \gen{x,\,y,\,a \mid x^4 = y^2 = a^4 = 1,\ xy = yx,\ a^{-1}xa = xy,\ a^{-1}ya = y} \\
-                    G_{12b} &= \gen{x,\,y,\,a \mid x^4 = y^2 = a^4 = 1,\ xy = yx,\ a^{-1}xa = x^{-1}y,\ a^{-1}ya = y}
+                        & \\
+                    G_{12a} &= \gen{x,\,y,\,a \mid x^4 = y^2 = a^4 = 1,\ xy = yx,\ a^{-1}xa \overset{\psi_5}{=} xy,\ a^{-1}ya \overset{\psi_5}{=} y} \\
+                    G_{12b} &= \gen{x,\,y,\,a \mid x^4 = y^2 = a^4 = 1,\ xy = yx,\ a^{-1}xa \overset{\psi_7}{=} x^{-1}y,\ a^{-1}ya \overset{\psi_7}{=} y}
                 \end{align*}
                 Concentrating on the latter two groups, we will show they are both isomorphic to \(C_4 \rtimes C_4\),
                 with the inversion action.
@@ -245,17 +222,17 @@ A similar contradiction can be shown for \(\psi_4\).
             \item \(a^2 = y\).
 
                 Conjugation by \(a\) cannot be \(\psi_6\) or \(\psi_8\) because then:
-                \[a^2 = a^{-1}a^2 a = a^{-1}ya = x^2 y\]
+                \[a^2 = a^{-1}a^2 a = a^{-1}ya \overset{\psi_{6,8}}{=} x^2 y\]
                 a contradiction.
                 If it's \(\psi_5\) then let \(\bar{a} = xa\) and so:
-                \[(xa)(xa) = x(axa^{-1})a^2 = x(x\psi_5)a^2 = x^2 y^2 = x^2\]
+                \[(xa)(xa) = x(axa^{-1})a^2 \overset{\psi_5}{=} x^2 y^2 = x^2\]
                 and we are in the previous case.
                 Likewise if conjugation by \(a\) is \(\psi_3\) then:
-                \[(x^2 a)(x^2 a) = x^2(ax^2 a^{-1})a^2 = x^2(x^2\psi_3)a^2 = x^2 y^2 = x^2\]
+                \[(x^2 a)(x^2 a) = x^2(ax^2 a^{-1})a^2 \overset{\psi_3}{=} x^2 y^2 = x^2\]
                 Finally, \(\psi_7\) gives:
-                \[(xa)(xa) = xa^2(a^{-1}xa) = xa^2 x^3 y = x^4 y^2 = 1\]
+                \[(xa)(xa) = xa^2(a^{-1}xa) \overset{\psi_7}{=} xa^2 x^3 y = x^4 y^2 = 1\]
                 a contradiction, leaving only \(\psi_1\) as the final standing possibility, giving:
-                \[G_{13} = \gen{x,\,y,\,a \mid x^4 = y^2 = a^4 = 1,\ xy = yx,\ ax = xa,\ ay = ya}\]
+                \[G_{13} = \gen{x,\,y,\,a \mid x^4 = y^2 = a^4 = 1,\ xy = yx,\ ax \overset{\psi_1}{=} xa,\ ay \overset{\psi_1}{=} ya}\]
                 Letting \(b = xy\):
                 \[G_{13} = \gen{b,\,a \mid b^4 = a^4 = 1,\ ab = ba} \cong C_4 \times C_4\]
             \item \(a^2 = x^2 y\).

@@ -1,5 +1,37 @@
 % ====   Appendix   ====
 
+\begin{table}[ht]
+    \begin{minipage}{0.5\linewidth}
+        \caption{Automorphisms of \(C_8\)}\label{tab:aut_C8}
+        \centering
+        \begin{tabular}{c|c}
+            \(\Aut{C_8}\) & \(x \mapsto\) \\
+            \midrule
+            \(\phi_1\) & \(x\) \\
+            \(\phi_2\) & \(x^3\) \\
+            \(\phi_3\) & \(x^5\) \\
+            \(\phi_4\) & \(x^{-1}\)
+        \end{tabular}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \caption{Automorphisms of \(C_4 \times C_2\)}\label{tab:aut_C4xC2}
+        \centering
+        \begin{tabular}{c|c|c|c}
+            \(\Aut{C_8}\) & \(x \mapsto\) & \(y \mapsto\) & Order \\
+            \midrule
+            \(\psi_1\) & \(x\) & \(y\) & 1\\
+            \(\psi_2\) & \(x^3 y\) & \(x^2 y\) & 4 \\
+            \(\psi_3\) & \(x^3\) & \(y\) & 2 \\
+            \(\psi_4\) & \(xy\) & \(x^2 y\) & 4 \\
+            \(\psi_5\) & \(xy\) & \(y\) & 2 \\
+            \(\psi_6\) & \(x^3\) & \(x^2 y\) & 2\\
+            \(\psi_7\) & \(x^3 y\) & \(y\) & 2 \\
+            \(\psi_8\) & \(x\) & \(x^2 y\) & 2 \\
+        \end{tabular}
+    \end{minipage}
+\end{table}
+
+\section*{Full Classification of Groups up to Order 31}
 \begin{displaymath}
 \begin{array}{c|c|l}
 \toprule
@@ -32,6 +64,16 @@
 \midrule
 10 & D_{10} & \gen{x,\,y \mid x^5 = y^2 = 1,\, y^{-1}xy = x^{-1}} \\
    & C_{10} & \gen{x \mid x^{10} = 1} \\
+\bottomrule
+\end{array}
+\end{displaymath}
+\vfill
+\pagebreak
+
+\begin{displaymath}
+\begin{array}{c|c|l}
+\toprule
+\text{Order} & \text{Classification} & \text{Presentation} \\
 \midrule
 11 & C_{11} & \gen{x \mid x^{11} = 1} \\
 \midrule
@@ -47,30 +89,20 @@
    & C_{14} & \gen{x \mid x^{14} = 1} \\
 \midrule
 15 & C_{15} & \gen{x \mid x^{15} = 1} \\
-\bottomrule
-\end{array}
-\end{displaymath}
-\vfill
-\pagebreak
-
-\begin{displaymath}
-\begin{array}{c|c|l}
-\toprule
-\text{Order} & \text{Classification} & \text{Presentation} \\
 \midrule
 16 & C_{16} & \gen{x \mid x^{16} = 1} \\
    & C_4 \times C_4 & \gen{x,\,y \mid x^4 = y^4,\, xy = yx} \\
-   & (C_4 \times C_2) \rtimes C_2 & \gen{x,\,y,\,z \mid x^4 = y^2 = z^2 = 1,\ xy = yx,\ z^{-1}xz = xy,\ z^{-1}yz = y} \\
+   & (C_4 \times C_2) \rtimes C_2 & \gen{x,\,y,\,z \mid x^4 = y^2 = z^2 = 1,\, xy = yx,\, yz = yz,\, z^{-1}xz = xy} \\
    & C_4 \rtimes C_4 & \gen{x,\,y \mid x^4 = y^4 = 1,\, x^{-1}yx = y^{-1}} \\
    & C_8 \times C_2 & \gen{x,\,y \mid x^8 = y^2 = 1,\, xy = yx} \\
-   & \M_{16} & \gen{x,\,y \mid x^8 = y^2 = 1,\ y^{-1}xy = x^{5}} \\
+   & \M_{16} & \gen{x,\,y \mid x^8 = y^2 = 1,\, y^{-1}xy = x^{5}} \\
    & D_{16} & \gen{x,\,y \mid x^8 = y^2 = 1,\, y^{-1}xy = x^{-1}} \\
    & \SD_{16} & \gen{x,\,y \mid x^8 = y^2 = 1,\, y^{-1}xy = x^3} \\
    & \Dic_{16} & \gen{x,\,y \mid x^8 = 1,\, x^4 = y^2,\, y^{-1}xy = x^{-1}} \\
    & C_4 \times C_2 \times C_2 & \gen{x,\,y,\,z \mid x^4 = y^2 = z^2 = 1,\, xy = yx,\, xz = zx,\, yz = zy} \\
    & D_8 \times C_2 & \gen{x,\,y,\,z \mid x^4 = y^2 = z^2 = 1,\, xy = yx,\, yz = zy,\, z^{-1}xz = x^{-1}} \\
    & Q_8 \times C_2 & \gen{x,\,y,\,z \mid x^4 = y^4 = z^2 = 1,\, xz = zx,\, yz = zy,\, y^{-1}xy = x^{-1}} \\
-   & \text{Pauli Group} & \gen{x,\,y,\,z \mid x^4 = y^2 = z^2 = 1,\, xy = yx,\, z^{-1}xz = x^{-1},\, z^{-1}yz = x^2 y}\\
+   & \text{Pauli Group} & \gen{x,\,y,\,z \mid x^4 = y^2 = z^2 = 1,\, xy = yx,\, xz = zx,\, z^{-1}yz = x^2 y}\\
    & {(C_2)}^4 & {\omitpres} \\
 \midrule
 17 & C_{17} & \gen{x \mid x^{17} = 1} \\
@@ -88,14 +120,6 @@
    & \text{---} & \gen{x,\,y \mid x^5 = y^4 = 1,\, y^{-1}xy = x^2} \\
    & D_{20} & \gen{x,\,y \mid x^{10} = y^2 = 1,\, y^{-1}xy = x^{-1}} \\
    & C_{10} \times C_{2} & \gen{x,\,y \mid x^{10} = y^2 = 1,\, xy = yx} \\
-\midrule
-21 & C_{7} \rtimes C_3 & \gen{x,\,y \mid x^7 = y^3 = 1,\, y^{-1}xy = x^4} \\
-   & C_{21} & \gen{x \mid x^{21} = 1} \\
-\midrule
-22 & D_{20} & \gen{x,\,y \mid x^{11} = y^2 = 1,\, y^{-1}xy = x^{-1}} \\
-   & C_{22} & \gen{x \mid x^{22} = 1} \\
-\midrule
-23 & C_{23} & \gen{x \mid x^{23} = 1} \\
 \bottomrule
 \end{array}
 \end{displaymath}
@@ -106,6 +130,14 @@
 \begin{array}{c|c|l}
 \toprule
 \text{Order} & \text{Classification} & \text{Presentation} \\
+\midrule
+21 & C_{7} \rtimes C_3 & \gen{x,\,y \mid x^7 = y^3 = 1,\, y^{-1}xy = x^4} \\
+   & C_{21} & \gen{x \mid x^{21} = 1} \\
+\midrule
+22 & D_{20} & \gen{x,\,y \mid x^{11} = y^2 = 1,\, y^{-1}xy = x^{-1}} \\
+   & C_{22} & \gen{x \mid x^{22} = 1} \\
+\midrule
+23 & C_{23} & \gen{x \mid x^{23} = 1} \\
 \midrule
 24 & C_3 \rtimes C_8 & \gen{x,\,y \mid x^3 = y^8 = 1,\, x^{-1}yx = y^{-1}} \\
    & C_{24} & {\omitpres} \\
