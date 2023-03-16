@@ -53,6 +53,31 @@
       \verb https://www.youtube.com/watch?v=6TWuo2NO8vg
       \endverb
     \endentry
+    \entry{burnside1911}{book}{}
+      \name{author}{1}{}{%
+        {{hash=095a2955bec60d24051ad4669803e1df}{%
+           family={Burnside},
+           familyi={B\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{095a2955bec60d24051ad4669803e1df}
+      \strng{fullhash}{095a2955bec60d24051ad4669803e1df}
+      \strng{bibnamehash}{095a2955bec60d24051ad4669803e1df}
+      \strng{authorbibnamehash}{095a2955bec60d24051ad4669803e1df}
+      \strng{authornamehash}{095a2955bec60d24051ad4669803e1df}
+      \strng{authorfullhash}{095a2955bec60d24051ad4669803e1df}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Second Editon}
+      \field{title}{Theory of Groups of Finite Order}
+      \field{year}{1911}
+    \endentry
     \entry{order16names}{unpublished}{}
       \name{author}{1}{}{%
         {{hash=cba6f2cb254b3236a6cb96b6dbf07ecd}{%
@@ -251,6 +276,33 @@
       \verb{url}
       \verb https://groupprops.subwiki.org/wiki/Unitriangular_matrix_group:UT(3,%20p)
       \endverb
+    \endentry
+    \entry{ledermann1961}{book}{}
+      \name{author}{1}{}{%
+        {{hash=38e19b864800812067e1296852e937a5}{%
+           family={Ledermann},
+           familyi={L\bibinitperiod},
+           given={Walter},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{publisher}{3}{%
+        {Oliver}%
+        {Boyd Edinburgh}%
+        {London}%
+      }
+      \strng{namehash}{38e19b864800812067e1296852e937a5}
+      \strng{fullhash}{38e19b864800812067e1296852e937a5}
+      \strng{bibnamehash}{38e19b864800812067e1296852e937a5}
+      \strng{authorbibnamehash}{38e19b864800812067e1296852e937a5}
+      \strng{authornamehash}{38e19b864800812067e1296852e937a5}
+      \strng{authorfullhash}{38e19b864800812067e1296852e937a5}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Fourth Edition}
+      \field{title}{Introduction to the Theory of Finite Groups}
+      \field{year}{1961}
     \endentry
     \entry{order30}{online}{}
       \name{author}{1}{}{%

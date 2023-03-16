@@ -11,7 +11,7 @@ BUILD_ARGS = -pdflua -verbose -file-line-error -Werror -interaction=nonstopmode 
 TARGET = $(foreach v,$(MAIN),$(patsubst %.tex,%.$(TARGET_FT),$(v)))
 .PHONY: all clean clean_ints
 
-all: $(TARGET) clean_ints
+all: clean $(TARGET) clean_ints
 
 # Custom build rules
 %.tex: %.raw

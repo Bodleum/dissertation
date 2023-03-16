@@ -1,9 +1,8 @@
 % ====   Preliminaries   ====
 \section{Automorphisms}
-Much of the content of \textit{MT4003} will be assumed knowledge.
-Let's move on to review some facts and theorems which will be valuable later on, as well as introduce some new concepts
-and prove some new results!
-
+Much of the content of this section can be found in group theory textbooks, including Chapter 6 of Burnside's \textit{Theory of
+Groups}\footcite[Ch. 6]{burnside1911} and Chapter 4 of Ledermann's \textit{Introduction to the Theory of Finite
+Groups}\footcite[Ch. 4]{ledermann1961}.
 \begin{definition}
     \raggedright
     If \(G\) and \(H\) are groups with elements \(g_1,\, g_2 \in G\), then a map:
@@ -12,7 +11,8 @@ and prove some new results!
     \[(g_1 g_2)\phi = (g_1\phi)(g_2\phi)\]
     If \(\phi\) is bijective, then we call it an \emph{isomorphism}, with \(G \cong H\) denoting that \(G\) is
     isomorphic to \(H\).
-    And if \(\phi\) is an isomorphism from \(G\) to itself, then we call it an \emph{automorphism} of \(G\).
+    And if \(\phi\) is an isomorphism from \(G\) to itself, then we call it an \emph{automorphism} of
+    \(G\).
 \end{definition}
 
 \begin{lemma}
@@ -72,7 +72,8 @@ and prove some new results!
 
 \begin{definition}
     \raggedright
-    A subgroup \(H\) of a group \(G\) is called \emph{characteristic} if it is fixed by all automorphisms of \(G\).
+    A subgroup \(H\) of a group \(G\) is called \emph{characteristic} if it is fixed by all automorphisms of
+    \(G\).
 
     i.e.\ for an automorphism \(\phi\) of \(G\), \(H\phi = H\).
 \end{definition}
@@ -102,21 +103,25 @@ and prove some new results!
 
 % ====   Semidirect Product   ====
 \section{Semidirect Product}
+A way to combine, or describe combinations of groups will we among the most used tools in this report!
+The learning from this section is mostly from \textit{MT5864, Advanced Group Theory}.
 We already know about the direct product:
-
 \begin{definition}[Direct Product]
     \raggedright
     For groups \(N\) and \(H\), the \emph{direct product}, \(G = N\times H\) is a group of ordered pairs of elements
     \((n, h)\) where \(n \in N\) and \(h \in H\) with the operation:
     \[(n_1, h_1)(n_2, h_2) = (n_1n_2, h_1h_2)\]
+\end{definition}
 
-    Moreover, if \(\bar{N} = N \times \bm{1}\) and \(\bar{H} = \bm{1} \times H\), then:
+Moreover, we recall its properties:
+\begin{lemma}
+    If \(\bar{N} = N \times \bm{1}\) and \(\bar{H} = \bm{1} \times H\), then:
     \begin{enumerate}[(i)]
         \item \(\bar{N} \nrmsgp G\) and \(\bar{H} \nrmsgp G\)
         \item \(\bar{N} \cap \bar{H} = \bm{1}\)
         \item \(\bar{N}\bar{H} = \{\,nh \mid n \in N,\ h \in H\,\} = G\)
     \end{enumerate}
-\end{definition}
+\end{lemma}
 
 Now let's seek a slightly more general way to combine groups, by relaxing that \(H\) must be normal.
 So we have:
@@ -229,6 +234,7 @@ This gives rise to the definition:
 
 \section{Group Actions}
 Another useful piece of group theory technology will be group actions.
+As above, much of this section is based on \textit{MT5864}.
 
 \begin{definition}
     \raggedright
