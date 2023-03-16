@@ -4,15 +4,14 @@
 #     \InputIfFileExists{#1}{}{\typeout{No file #1.}}%
 # }
 
-MAIN = main.tex # MAIN LaTeX FILE HERE
+MAIN = main.tex presentation.tex # MAIN LaTeX FILE HERE
 TARGET_FT = pdf # TARGET FILE TYPE HERE (pdf, dvi, etc.)
 BUILD_ARGS = -pdflua -verbose -file-line-error -Werror -interaction=nonstopmode -halt-on-error -synctex=1 -use-make
 
-TARGET = $(patsubst %.tex,%.$(TARGET_FT),$(MAIN))
-.PHONY: $(TARGET) all clean full_clean
+TARGET = $(foreach v,$(MAIN),$(patsubst %.tex,%.$(TARGET_FT),$(v)))
+.PHONY: all clean clean_ints
 
-
-all: full_clean $(TARGET) clean
+all: $(TARGET) clean_ints
 
 # Custom build rules
 %.tex: %.raw
@@ -23,10 +22,10 @@ all: full_clean $(TARGET) clean
 
 
 clean:
-	latexmk -c
-
-full_clean:
 	latexmk -C
 
-$(TARGET): $(MAIN)
+clean_ints:
+	latexmk -c
+
+$(TARGET): %.$(TARGET_FT): %.tex
 	latexmk $(BUILD_ARGS) $<
