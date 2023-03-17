@@ -30,17 +30,17 @@
 
 \begin{frame}
 \frametitle{Setup}
-Let \(G\) be a group of order \(pq\) where \(p\) and \(q\) are distinct prime numbers. \pause
+Let \(G\) be a group of order \(pq\) where \(p\) and \(q\) are distinct prime numbers.
 
 Without loss of generality, take \(p > q\).
 \end{frame}
 
 \begin{frame}
 \frametitle{Sylow Subgroups}
-Let \(n_p\) and \(n_q\) denote the number of Sylow p-subgroups and Sylow q-subgroups of \(G\) respectively. \pause
-\[n_p \equiv 1 \ \pmod{p} \quad \text{and} \quad n_p \mid q\] \pause
+Let \(n_p\) and \(n_q\) denote the number of Sylow p-subgroups and Sylow q-subgroups of \(G\) respectively.
+\[n_p \equiv 1 \ \pmod{p} \quad \text{and} \quad n_p \mid q\]
 So \(G\) has a unique Sylow \(p\)-subgroup, say \(P \nrmsgp G\), and at least one Sylow \(q\)-subgroup, \(Q \leqslant
-    G\). \pause
+    G\).
 \[ P \cong C_{p}, \qquad Q \cong C_{q} \]
 Pick generators: \(\gen{x} = P\) and \(\gen{y} = Q\).
 \end{frame}
@@ -48,7 +48,7 @@ Pick generators: \(\gen{x} = P\) and \(\gen{y} = Q\).
 \begin{frame}
 \frametitle{Sylow \(q\)-subgroup}
 Because \(n_{q} \equiv 1 \pmod{q}\), we have:
-\[ n_{q} = 1,\ p + 1,\ 2p + 1,\ \ldots \] \pause
+\[ n_{q} = 1,\ p + 1,\ 2p + 1,\ \ldots \]
 So we have two cases:
 \[ q \nmid p-1 \qquad \text{or} \qquad q \mid p-1 \]
 \end{frame}
@@ -57,7 +57,7 @@ So we have two cases:
 
 \begin{frame}
 \frametitle{\(q \nmid p-1\)}
-Here, \(n_{q} = 1\) and so \(Q \nrmsgp G\). \pause
+Here, \(n_{q} = 1\) and so \(Q \nrmsgp G\).
 
 So:
 \[ G = P \times Q \cong C_{pq} \]
@@ -67,15 +67,15 @@ So:
 \begin{frame}
 \frametitle{\(q \mid p-1\)}
 That was the easy one!
-Still have \(n_q = 1\), but now also the other posibilites! \pause
+Still have \(n_q = 1\), but now also the other posibilites!
 
-By Lagrange's~Theorem: \(P \cap Q = \bm{1}\). \pause
+By Lagrange's~Theorem: \(P \cap Q = \bm{1}\).
 
 By Lemma~4: \(|PQ| = pq\).
 
-So \(G = PQ\). \pause
+So \(G = PQ\).
 Hence:
-\[ G = P \rtimes Q \] \pause
+\[ G = P \rtimes Q \]
 
 This is unique!
 \end{frame}
