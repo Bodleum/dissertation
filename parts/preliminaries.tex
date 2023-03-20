@@ -105,7 +105,7 @@ Groups}\footcite[Ch. 4]{ledermann1961}.
 \section{Semidirect Product}
 A way to combine, or describe combinations of groups will we among the most used tools in this report!
 The learning from this section is mostly from \textit{MT5864, Advanced Group Theory}.
-We already know about the direct product:
+The \emph{direct product} is used commonly throughout group theory:
 \begin{definition}[Direct Product]
     \raggedright
     For groups \(N\) and \(H\), the \emph{direct product}, \(G = N\times H\) is a group of ordered pairs of elements
@@ -124,13 +124,14 @@ Moreover, we recall its properties:
 \end{lemma}
 
 Now let's seek a slightly more general way to combine groups, by relaxing that \(H\) must be normal.
-So we have:
+So if we have a group \(G\) with the following:
 \[N \nrmsgp G,\ H \leqslant G,\ NH = G, \quad \text{and} \quad N \cap H = \bm{1}\]
-Consider the \emph{set}, (not the direct product):
+consider the \emph{set}, (not the direct product):
 \[N \times H = \{\,(n,\,h) \mid n \in N,\ h \in H\,\}\]
-and a map
+We want to give this set a group structure, such that it is isomorphic to \(G\).
+In other words, we want to construct an isomorphism:
 \[\phi:N \times H \to G \quad \text{defined by} \quad (n,\, h) \mapsto nh\]
-We want \(\phi\) to be an isomorphism.
+and in doing so, find a suitable group structure for \(N {\times} H\).
 
 To show \(\phi\) is injective, take \(n_1,\, n_2 \in N\) and \(h_1,\, h_2 \in H\), and assume \(n_1 h_1 = n_2 h_2\).
 Then multiplying on the left by \(n_2^{-1}\) and on the right by \(h_1^{-1}\) gives:
@@ -156,12 +157,13 @@ But \(N\) is normal in \(G\) so \(h_1 n_2 h_1^{-1}\) is just another element in 
 So:
 \[\relax[(n_1,\,h_1)(n_2,\,h_2)]\phi = (n_1 n_3)(h_1 h_2) = (n_1 n_3,\,h_1 h_2)\phi\]
 We know that \(\phi\) is injective, so then:
-\[(n_1,\,h_1)(n_2,\,h_2) = (n_1 n_3,\,h_1 h_2)\]
+\[(n_1,\,h_1)(n_2,\,h_2) = (n_1 n_3,\,h_1 h_2) \tag{\(\dagger\)}\]
 This tells us the multiplication that will make \(NH\) a group.
 Because \(N \nrmsgp G\), the map
 \[n_2 \mapsto h_1 n_2 h_1^{-1} = n_3\]
 is an automorphism of \(N\).
-This gives rise to the definition:
+
+This gives rise to the formal definition:
 
 \begin{definition}[Semidirect Product]
 \raggedright
@@ -185,6 +187,29 @@ This gives rise to the definition:
 \end{enumerate}
 \end{definition}
 
+We can verify that \(N {\times} H\) with this multiplication is indeed a group.
+We have already seen that \(N {\times} H\) is closed under (\(\dagger\)).
+The identity element is \((1,\ 1)\):
+\[ (n,\, h)(1,\, 1) =  (n 1^{h\psi},\, h 1) = (n,\, h)\]
+\[ (1,\, 1)(n,\, h) =  (1 n^{1\psi},\, 1 h) = (n,\, h)\]
+And finally, inverses exist, with \({(n,\, h)}^{-1} = \left({(n^{-1})}^{{(h\psi)}^{-1}},\, h^{-1}\right)\):
+\begin{align*}
+    (n,\, h)\left({(n^{-1})}^{{(h\psi)}^{-1}},\, h^{-1}\right)
+    &= \left(n {\left({(n^{-1})}^{{(h\psi)}^{-1}}\right)}^{h\psi},\, hh^{-1} \right) \\
+    &= (n n^{-1},\, h h^{-1}) \\
+    &= (1,\, 1)
+\end{align*}
+\begin{align*}
+    \left({(n^{-1})}^{{(h\psi)}^{-1}},\, h^{-1}\right)(n,\, h)
+    &= \left({(n^{-1})}^{{(h\psi)}^{-1}} n^{(h^{-1})\psi},\, h^{-1} h \right) \\
+    &= \left({(n^{-1})}^{{(h\psi)}^{-1}} n^{{(h\psi)}^{-1}},\, h^{-1} h \right) \\
+    &= \left({(n^{-1} n)}^{{(h\psi)}^{-1}},\, h^{-1} h \right)  \\
+    &= \left(1^{{(h\psi)}^{-1}},\, 1 \right) \\
+    &= (1,\, 1)
+\end{align*}
+
+So we have a group.
+
 \begin{lemma}\label{lem:setprodorder}
     \raggedright
     For a group \(G\) with \(N \leqslant G\) and \(H \leqslant G\), with \(N \cap H = \bm{1}\) then:
@@ -192,9 +217,11 @@ This gives rise to the definition:
 \end{lemma}
 
 \begin{proof}
-    We just saw above that for elements \(n \in N\) and \(h \in H\), the map:
+    We just saw above that if \(N \nrmsgp G\), for elements \(n \in N\) and \(h \in H\), the map:
     \[\phi:N \times H \to NH \quad \text{defined by} \quad (n,\,h) \mapsto nh\]
     is a bijection.
+    We only used the normality of \(N\) for the homomorphism property of \(\phi\), which we don't need here, hence
+    \(\phi\) is a bijection if \(N \leqslant G\).
     The result follows immediately from this.
 \end{proof}
 

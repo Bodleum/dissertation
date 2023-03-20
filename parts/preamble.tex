@@ -36,9 +36,12 @@
 \def\fake@math#1\){\detokenize{#1}}
 \makeatother
 
-\newmdtheoremenv[nobreak=true]{lemma}{Lemma}
+% Numbering
+\newmdtheoremenv[nobreak=true]{lemma}{Lemma}[chapter]
 \theoremstyle{definition}
-\newmdtheoremenv[nobreak=true]{definition}{Definition}
+\newmdtheoremenv[nobreak=true]{definition}[lemma]{Definition}
+% Don't use Roman numerals in lemma numberings
+\renewcommand{\thelemma}{\arabic{chapter}.\arabic{lemma}}
 
 \DeclareMathOperator{\Aut}{Aut}
 \DeclareMathOperator{\Dic}{Dic}
