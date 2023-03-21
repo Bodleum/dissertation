@@ -7,7 +7,7 @@ First, we will prove a few useful lemmas:
 
 \begin{proof}
     Let \(H\) be a subgroup of \(G\), with index \(p\).
-    We know kernels are normal subgroups, so we will show that \(H\) is the kernel of some homomorphism. % TODO: Add this as a fact
+    We know kernels are normal subgroups, so we will show that \(H\) is the kernel of some homomorphism.
     Let \(\Omega\) be the set of all cosets of \(H\).
     So by definition, \(|\Omega| = p\).
     By Lemma~\ref{lem:actionhom}, there is a homomorphism:
@@ -15,8 +15,12 @@ First, we will prove a few useful lemmas:
     Let's investigate the kernel of \(\rho\).
     If we have \(x \in \ker{\rho}\), then:
     \[(H1)x = H1 = H\]
-    which means \(x \in H\).
-    So the kernel of \(\rho\) is \(H\).
+    So \(x \in H\) and \(\ker{\rho} \leqslant H\).
+
+    Because \(G\) is a \(p\)-group, every non-trivial subgroup has order a multiple of \(p\).
+    Similarly, order of \(S_{p}\) is \(p!\), and so could have elements of order \(p\).
+    The kernel is a non trivial subgroup, and therefore must have order \(p\).
+    So \(\ker\rho = H\).
     Hence, \(H \nrmsgp G\).
 \end{proof}
 
