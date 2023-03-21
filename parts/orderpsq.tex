@@ -7,13 +7,10 @@ If \(x \in G\) has order \(p^2\), then \(x\) generates \(G\) so \(G \cong C_{p^2
 If \(G\) does not have an element of order \(p^2\) then all elements, except the identity, have order \(p\).
 We know that \(G\) must have a subgroup of order \(p\), \(P\), and because \(p\) is prime, \(P \cong C_p\).
 Pick a generator for \(P\), say \(x\) and an element \(y \in G\) such that \(y \notin P\).
-Then \(y \neq x^i\) for any \(i\).
 
-If \(y^j = x^i\) for some \(i\) and \(j\), then:
-\[{(y^j)}^{1-j} = {(x^i)}^{1-j} = y^{j-j+1} = y = x^{i(1-j)} = x^k \quad \text{for some} \ k\text{,} \ \text{a
-contradiction.}\]
-So no power of \(y\) is equal to any power of \(x\).
-Because \(y\) has order \(p\), it generates a subgroup of order \(p\), \(\bar{P}\), with \(P \cap \bar{P} = \bm{1}\).
+The intersection is a subgroup of both \(P\) and \(\bar{P}\).
+It must be a proper subgroup because we chose \(y \notin P\).
+Hence Lagrange's~Theorem tells us it must be trivial.
 Lemma~\ref{lem:index_p_normal} tells us that both \(P\) and \(\bar{P}\) are normal, and by Lemma~\ref{lem:setprodorder},
 \(|P\bar{P}| = p^2 = |G|\), so:
 \[G = P \times \bar{P} \cong C_p \times C_p\]
