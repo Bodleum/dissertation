@@ -295,8 +295,10 @@ Indeed we have a result:
 
 \begin{proof}
     Firstly, \(\rho_g\) is indeed a permutation of \(\Omega\) because it is invertible (and therefore a bijection),
-    with:
-    \[{(\rho_g)}^{-1} = \rho_{g^{-1}}\]
+    with \({(\rho_g)}^{-1} = \rho_{g^{-1}}\).
+    For \(\omega \in \Omega\):
+    \[ \omega \rho_g \rho_{g^{-1}} = {(\omega^g)}^{g^{-1}} = \omega^{gg^{-1}} = \omega \]
+    \[ \omega \rho_{g^{-1}} \rho_g = {(\omega^{g^{-1}})}^g = \omega^{g^{-1}g} = \omega \]
     Consider \(g,\,h \in G\) and their corresponding maps, \(\rho_{g},\,\rho_{h} \in \Sym{\Omega}\).
     Then:
     \[\omega(g\rho)(h\rho) = \omega\rho_g\rho_h = {(\omega^g)}^h = \omega^{(gh)} = \omega\rho_{gh} = \omega(gh)\rho\]
