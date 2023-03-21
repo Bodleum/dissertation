@@ -304,6 +304,31 @@
       \field{title}{Introduction to the Theory of Finite Groups}
       \field{year}{1961}
     \endentry
+    \entry{robinson1982}{book}{}
+      \name{author}{1}{}{%
+        {{hash=a78248f931291e30c008f090645429b1}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={Derek\bibnamedelimb J.\bibnamedelimi S.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag New York Heidelberg Berlin}%
+      }
+      \strng{namehash}{a78248f931291e30c008f090645429b1}
+      \strng{fullhash}{a78248f931291e30c008f090645429b1}
+      \strng{bibnamehash}{a78248f931291e30c008f090645429b1}
+      \strng{authorbibnamehash}{a78248f931291e30c008f090645429b1}
+      \strng{authornamehash}{a78248f931291e30c008f090645429b1}
+      \strng{authorfullhash}{a78248f931291e30c008f090645429b1}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0-387-90600-2}
+      \field{title}{A Course in the Theory of Groups}
+      \field{year}{1982}
+    \endentry
     \entry{order30}{online}{}
       \name{author}{1}{}{%
         {{hash=1d748744db2f47a3a636865e6cfdca95}{%
