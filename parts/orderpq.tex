@@ -1,5 +1,13 @@
 % ====   Order pq   ====
 \section{Groups of Order \(pq\)}
+\begin{theorem}\label{thm:pq}
+    For distinct primes \(p\) and \(q\), any group of order \(pq\) is isomorphic to one of:
+    \[C_{pq}\]
+    \[C_{p} \rtimes C_{q} = \gen{x, y \mid x^p = y^q = 1,\ y^{-1}xy = x^a} \tag{additionally, if \(q \mid p-1\)}\]
+    where \(a\) is a generator for the subgroup of order \(q\) in \(\units{p}\).
+\end{theorem}
+
+We will devote the rest of the section to the proof of this Theorem.
 Let \(G\) be a group of order \(pq\) where \(p\), \(q\) are prime numbers with \(p > q\), and let \(n_p\) and \(n_q\)
 denote the number of Sylow p-subgroups and Sylow q-subgroups of \(G\) respectively.
 Then by Sylow's~Theorems:
@@ -9,32 +17,38 @@ Because \(p\) and \(q\) are prime numbers, \(P \cong C_p\) and \(Q \cong C_q\).
 Pick generators for each, say \(\langle x \rangle  = P\) and \(\langle y \rangle = Q\).
 We have 2 possibilities for \(n_q\): \(p-1\) is a multiple of \(q\) or 1.
 
-\begin{enumerate}[\bfseries{Case} 1:]
-    \item \(q \nmid p - 1\).
+\begin{lemma}
+    For distinct primes \(p\) and \(q\), with \(q \nmid p-1\), any group of order \(pq\) is isomorphic to \(C_{pq}\).
+\end{lemma}
 
-        If \(p-1\) \emph{is not} a multiple of \(q\) then \(n_q = 1\) and \(Q \nrmsgp G\), hence:
-        \[G = P \times Q \cong C_{pq}\]
-    \item \( q \mid p - 1\).
+\begin{proof}
+    If \(p-1\) is not a multiple of \(q\), then \(n_q = 1\) and \(Q \nrmsgp G\), hence:
+    \[G = P \times Q \cong C_{pq}\]
+\end{proof}
 
-        If \(p-1\) \emph{is} a multiple of \(q\) then \(n_q = p\) and so \(Q\) is \emph{not} normal in \(G\).
-        By Lagrange's Theorem, \(P \cap Q = \bm{1}\) and by Lemma~\ref{lem:setprodorder}, \(|PQ| = pq\).
-        Hence, as well as the direct product, we have \(G = P \rtimes Q\), some non-trivial semidirect product.
+\begin{lemma}
+    For distinct primes \(p\) and \(q\), with \(q \mid p-1\), any group of order \(pq\) is isomorphic to one of:
+    \[C_{pq}\]
+    \[C_{p} \rtimes C_{q} = \gen{x, y \mid x^p = y^q = 1,\ y^{-1}xy = x^a}\]
+    where \(a\) is a generator for the subgroup of order \(q\) in \(\units{p}\).
+\end{lemma}
 
-        By Lemma~\ref{lem:aut}, \(\Aut{C_p} \cong \units{p} \cong C_{p-1}\).
-        So if \(\nu \in \units{p}\), then \(x \mapsto x^\nu\) is an automorphism.
-        We know also that \(C_{p-1}\) has a unique subgroup of order \(q\),
-        hence \(G\) has the presentation:
-        \[G = \langle \, x, y, \mid x^p = y^q = 1,\ y^{-1}xy = x^a \, \rangle\]
-        where \(a\) is a generator for the subgroup of order \(q\) in \(\units{p}\).
+\begin{proof}
+    If \(p-1\) is a multiple of \(q\), then \(n_q\) could be \(p\) as well as 1.
+    So \(Q\) is not necessarily normal in \(G\).
+    Therefore we have another group as well as the direct product.
+    Concentrating on this group, Lagrange's Theorem tell us \(P \cap Q = \bm{1}\) and by Lemma~\ref{lem:setprodorder}, \(|PQ| = pq\).
+    Hence we have \(G = P \rtimes Q\), some non-trivial semidirect product.
 
-        Notice that picking different generators are equivalent up to isomorphism because the composition of two
-        isomorphisms is an isomorphism.
-\end{enumerate}
+    By Lemma~\ref{lem:aut}, \(\Aut{C_p} \cong \units{p} \cong C_{p-1}\).
+    So if \(\nu \in \units{p}\), then \(x \mapsto x^\nu\) is an automorphism.
+    We know also that \(C_{p-1}\) has a unique subgroup of order \(q\),
+    hence \(G\) has the presentation:
+    \[G = \langle \, x, y, \mid x^p = y^q = 1,\ y^{-1}xy = x^a \, \rangle\]
+    where \(a\) is a generator for the subgroup of order \(q\) in \(\units{p}\).
 
-\begin{mdframed}[align=center,nobreak=true]
-    \begin{center}
-        Any group of order \(pq\) is isomorphic to one of:
-        \[C_{pq}\]
-        \[\gen{x, y \mid x^p = y^q = 1,\ y^{-1}xy = x^a} \tag{additionally, if \(q \mid p-1\)}\]
-    \end{center}
-\end{mdframed}
+    Notice that picking different generators are equivalent up to isomorphism because the composition of two
+    isomorphisms is an isomorphism.
+\end{proof}
+
+Thus Theorem~\ref{thm:pq} is proved.

@@ -4,14 +4,28 @@ And finally, all that remains is to classify groups of order 16.
 This classification is often not included; \textit{MT4003} classifies groups up to order 15 for example, however it
 appears in Burnside's \textit{Theory of Groups}\footcite[p145]{burnside1911} on page 145.
 So to cap of this report, let's tackle one of the hardest cases!
-
-The following classification is based of the one by Wild\footcite{order16}.
 For brevity, denote \(C_2 {\times} C_2 {\times} C_2 {\times} C_2\) by \({(C_2)}^4\).
+
+
+\begin{theorem}
+    Any group of order 16 is isomorphic to one of:
+    \begin{displaymath}
+    \begin{array}{c@{\hskip 3em}c@{\hskip 3em}c}
+        {(C_2)}^4 & C_8 {\times} C_2 & \SD_{16} \\
+        \M_{16} & D_{16} & \Dic_{16} \\
+        C_{16} & C_4 {\times} C_2 {\times} C_2 & D_8 {\times} C_2 \\
+        (C_4 {\times} C_2) {\rtimes} C_2 & \text{Pauli Group} & Q_8 {\times} C_2 \\
+        C_4 {\rtimes} C_4 & C_4 {\times} C_4 & \\
+    \end{array}
+    \end{displaymath}
+\end{theorem}
+
+The rest of this section is the proof of this classification, and is based of the one by Wild\footcite{order16}.
 We begin by proving a lemma:
 
 \begin{lemma}\label{lem:order_16_subgp}
     \raggedright
-    For a group, \(G\), with order 16, not isomorphic to \({(C_2)}^4\), then \(G\) has a
+    Let \(G\) be a group of order 16, not isomorphic to \({(C_2)}^4\), then \(G\) has a
     normal subgroup isomorphic to either \(C_8\) or \(C_4 \times C_2\).
 \end{lemma}
 
@@ -52,211 +66,270 @@ We know already what the possible automorphisms of \(C_8\) and \(C_4 \times C_2\
 of order 24.
 They are summarised in Tables~\ref{tab:aut_C8}~and~\ref{tab:aut_C4xC2} in the appendix.
 So now by considering choices for the order of \(a\) and automorphisms of \(N\), we will classify \(G\).
-Begin with \(\gen{x} = N \cong C_8\).
 
-\begin{enumerate}[\bfseries{Case} 1:]
-    \item Order 2.
+\begin{lemma}
+    Let \(G\) be a group of order 16, not isomorphic to \({(C_{2})}^4\).
+    Suppose \(G\) has a normal subgroup \(N \cong C_8\), and element \(a \in G\setminus N\) of order 2.
+    Then \(G\) is isomorphic to one of:
+    \[
+        C_8 \times C_2, \quad%
+        \SD_{16}, \quad%
+        \M_{16} \quad \text{or} \quad%
+        D_{16}
+    \]
+\end{lemma}
 
-        If \(a\) has order 2, then \(a^2\) must be 1.
-        So then \(N \cap \gen{a} = \bm{1}\), and \(G = N \rtimes \gen{a}\).
-        We have 4 possible semidirect products, because each automorphism of \(N\) has order 2 (excluding the
-        identity map).
-        Hence we obtain the following 4 groups:
-        \begin{equation*}
-        \begin{aligned}
-            G_1 &= \gen{x,\,a \mid x^8 = a^2 = 1,\ a^{-1}xa \overset{\phi_1}{=} x} \\
-                &= \gen{x} \times \gen{a} \\
-                &\cong C_8 \times C_2 \\
-                & \\
-            G_2 &= \gen{x,\,a \mid x^8 = a^2 = 1,\ a^{-1}xa \overset{\phi_2}{=} x^{3}} \\
-                &= \gen{x} \rtimes_3 \gen{a} \\
-                &\cong \SD_{16}\\
-                & \\
-            G_3 &= \gen{x,\,a \mid x^8 = a^2 = 1,\ a^{-1}xa \overset{\phi_3}{=} x^{5}} \\
-                &= \gen{x} \rtimes_5 \gen{a} \\
-                &\cong \M_{16}\\
-                & \\
-            G_4 &= \gen{x,\,a \mid x^8 = a^2 = 1,\ a^{-1}xa \overset{\phi_4}{=} x^7 = x^{-1}} \\
-                &= \gen{x} \rtimes_7 \gen{a} \\
-                &\cong D_{16}
-        \end{aligned}
-        \end{equation*}
-        We are subscripting \(\rtimes\) with the power of \(x\) it gets sent to upon conjugation with \(a\).
-        The group \(\SD_{16}\) is known as the \emph{semidihedral group}\footcite{semidihedral}, of order 16, and
-        \(\M_{16}\) is called the \emph{modular group}\footcite{order16names} of order 16.
-    \item Order 4.
+\begin{proof}
+    If \(a\) has order 2, then \(a^2\) must be 1.
+    So then \(N \cap \gen{a} = \bm{1}\), and \(G = N \rtimes \gen{a}\).
+    We have 4 possible semidirect products, because each automorphism of \(N\) has order 2 (excluding the
+    identity map).
+    Hence we obtain the following 4 groups:
+    \begin{equation*}
+    \begin{aligned}
+        G_1 &= \gen{x,\,a \mid x^8 = a^2 = 1,\ a^{-1}xa \overset{\phi_1}{=} x} \\
+            &= \gen{x} \times \gen{a} \\
+            &\cong C_8 \times C_2 \\
+            & \\
+        G_2 &= \gen{x,\,a \mid x^8 = a^2 = 1,\ a^{-1}xa \overset{\phi_2}{=} x^{3}} \\
+            &= \gen{x} \rtimes_3 \gen{a} \\
+            &\cong \SD_{16}\\
+            & \\
+        G_3 &= \gen{x,\,a \mid x^8 = a^2 = 1,\ a^{-1}xa \overset{\phi_3}{=} x^{5}} \\
+            &= \gen{x} \rtimes_5 \gen{a} \\
+            &\cong \M_{16}\\
+            & \\
+        G_4 &= \gen{x,\,a \mid x^8 = a^2 = 1,\ a^{-1}xa \overset{\phi_4}{=} x^7 = x^{-1}} \\
+            &= \gen{x} \rtimes_7 \gen{a} \\
+            &\cong D_{16}
+    \end{aligned}
+    \end{equation*}
+    We are subscripting \(\rtimes\) with the power of \(x\) it gets sent to upon conjugation with \(a\).
+    The group \(\SD_{16}\) is known as the \emph{semidihedral group}\footcite{semidihedral}, of order 16, and
+    \(\M_{16}\) is called the \emph{modular group}\footcite{order16names} of order 16.
+\end{proof}
 
-        Assume all elements in \(G\setminus N\) have order at least 4, otherwise we are back in the first case.
-        How does conjugation behave?
-        In particular, what is \(a^{-1}ga\) for an element \(g \in G\)?
-        I claim the only possibility is the automorphism \(\phi_4:x\mapsto x^{-1}\).
-        It cannot be \(\phi_2:x\mapsto x^3\) because then:
-        \[(xa)(xa) = x(axa^{-1})a^2 \overset{\phi_2}{=} x(x^3) a^2 = x^4 a^2 = 1\]
-        Likewise, it cannot be \(\phi_1:x\mapsto x\) or \(\phi_3:x\mapsto x^5\) because then \(x^2 a\) will have order 2:
-        \[{(x^2 a)}^2 = x^2 (ax^2 a^{-1})a^2 \overset{\phi_1}{=} x^4 a^2 = 1\]
-        \[{(x^2 a)}^2 = x^2 (ax^2 a^{-1})a^2 \overset{\phi_3}{=} x^2 {(x^2)}^5 a^2 = x^4 a^2 = 1\]
-        All of which contradict our assumption.
-        Hence the only posibility for the effect of conjugation by \(a\) is the map \(\phi_4:x\mapsto x^7 = x^{-1}\).
-        So we obtain the presentation:
-        \begin{align*}
-            G_5 &= \gen{x,\,a \mid x^8 = a^4 = 1,\ a^2 = x^4,\ a^{-1}xa \overset{\phi_4}{=} x^{-1}}
-        \end{align*}
-        Which we recognise as the dicyclic group, \(\Dic_{24}\).
-    \item Order 8.
+\begin{lemma}
+    Let \(G\) be a group of order 16, not isomorphic to \({(C_{2})}^4\).
+    Suppose \(G\) has a normal subgroup \(N \cong C_8\), and element \(a \in G\setminus N\) of order 4.
+    Then \(G\) is isomorphic to \(\Dic_{16}\).
+\end{lemma}
 
-        It turns out, we obtain no new groups in this case.
-        We have two choices for \(a\): either \(a^2 = x^2\) or \(a^2 = x^6\).
-        Because \(x^2\) and \(x^6\) are automorphic, we only need to consider one case, say \(a^2 = x^2\), and apply
-        Lemma~\ref{lem:semiisom}.
-        If conjugation by \(a\) is either \(\phi_2:x\mapsto x^3\) or \(\phi_4:x\mapsto x^7\) then we obtain a
-        contradiction:
-        \[a^2 = a^{-1}a^2 a = a^{-1}x^2 a \overset{\phi_2}{=} x^6\]
-        \[a^2 = a^{-1}a^2 a = a^{-1}x^2 a \overset{\phi_4}{=} x^{14} = x^6\]
-        Hence the only possibilities for conjugation by \(a\) are the maps \(\phi_1:x\mapsto x\) and \(\phi_3:x \mapsto
-        x^5\).
-        For the first:
-        \[(x^3 a)(x^3 a) = x^3(ax^3 a^{-1})a^2 \overset{\phi_1}{=} x^3 x^3 a^2 = x^8 = 1\]
-        a contradiction.
-        And the second:
-        \[(xa)(xa) = x(axa^{-1})a^2 \overset{\phi_3}{=} x(x^5)a^2 = x^8 = 1\]
-        another contradiction.
-        Hence we obtain no new groups.
-    \item Order 16.
+\begin{proof}
+    Assume all elements in \(G\setminus N\) have order at least 4, otherwise we are back in the previous lemma.
+    How does conjugation behave?
+    In particular, what is \(a^{-1}ga\) for an element \(g \in G\)?
+    I claim the only possibility is the automorphism \(\phi_4:x\mapsto x^{-1}\).
+    It cannot be \(\phi_2:x\mapsto x^3\) because then:
+    \[(xa)(xa) = x(axa^{-1})a^2 \overset{\phi_2}{=} x(x^3) a^2 = x^4 a^2 = 1\]
+    Likewise, it cannot be \(\phi_1:x\mapsto x\) or \(\phi_3:x\mapsto x^5\) because then \(x^2 a\) will have order 2:
+    \[{(x^2 a)}^2 = x^2 (ax^2 a^{-1})a^2 \overset{\phi_1}{=} x^4 a^2 = 1\]
+    \[{(x^2 a)}^2 = x^2 (ax^2 a^{-1})a^2 \overset{\phi_3}{=} x^2 {(x^2)}^5 a^2 = x^4 a^2 = 1\]
+    All of which contradict our assumption.
+    Hence the only posibility for the effect of conjugation by \(a\) is the map \(\phi_4:x\mapsto x^7 = x^{-1}\).
+    So we obtain the presentation:
+    \begin{align*}
+        G_5 &= \gen{x,\,a \mid x^8 = a^4 = 1,\ a^2 = x^4,\ a^{-1}xa \overset{\phi_4}{=} x^{-1}}
+    \end{align*}
+    Which we recognise as the dicyclic group, \(\Dic_{16}\).
+\end{proof}
 
-        The only possibility here is \(G_6 \cong C_{16}\), generated by \(a\).
-\end{enumerate}
+\begin{lemma}
+    Let \(G\) be a group of order 16, not isomorphic to \({(C_{2})}^4\).
+    There are no groups \(G\) which have a normal subgroup \(N \cong C_8\), and element \(a \in G\setminus N\) of order 8.
+\end{lemma}
+
+\begin{proof}
+    We have two choices for \(a\): either \(a^2 = x^2\) or \(a^2 = x^6\).
+    Because \(x^2\) and \(x^6\) are automorphic, we only need to consider one case, say \(a^2 = x^2\), and apply
+    Lemma~\ref{lem:semiisom}.
+    If conjugation by \(a\) is either \(\phi_2:x\mapsto x^3\) or \(\phi_4:x\mapsto x^7\) then we obtain a
+    contradiction:
+    \[a^2 = a^{-1}a^2 a = a^{-1}x^2 a \overset{\phi_2}{=} x^6\]
+    \[a^2 = a^{-1}a^2 a = a^{-1}x^2 a \overset{\phi_4}{=} x^{14} = x^6\]
+    Hence the only possibilities for conjugation by \(a\) are the maps \(\phi_1:x\mapsto x\) and \(\phi_3:x \mapsto
+    x^5\).
+    For the first:
+    \[(x^3 a)(x^3 a) = x^3(ax^3 a^{-1})a^2 \overset{\phi_1}{=} x^3 x^3 a^2 = x^8 = 1\]
+    a contradiction.
+    And the second:
+    \[(xa)(xa) = x(axa^{-1})a^2 \overset{\phi_3}{=} x(x^5)a^2 = x^8 = 1\]
+    another contradiction.
+    Hence we obtain no new groups.
+\end{proof}
+
+\begin{lemma}
+    Let \(G\) be a group of order 16, not isomorphic to \({(C_{2})}^4\).
+    Suppose \(G\) has a normal subgroup \(N \cong C_8\), and element \(a \in G\setminus N\) of order 16.
+    Then \(G\) is isomorphic to \(C_{16}\).
+\end{lemma}
+
+\begin{proof}
+    The only possibility here is \(G_6 \cong C_{16}\), generated by \(a\).
+\end{proof}
+
 
 Now let's move on to consider when \(\gen{x,\,y} = N \cong C_4 \times C_2\).
 In particular, all elements of \(G\) have order less than 8.
 
-I claim we can disregard automorphisms of order 4, namely \(\psi_2\) and \(\psi_4\), because they lead to contradictions.
-Consider an element \(g \in N\).
-We can write \(g = x^i y^j\) for some \(0 \leqslant i \leqslant 3\) and \(0 \leqslant j \leqslant 1\).
-Then on the one hand:
-\[a^{-2}ga^2 = g\]
-Because \(N\) is abelian.
-On the other:
-\begin{align*}
-    a^{-2}ga^2 &= a^{-1}(a^{-1}x^i\,y^j a)a \\
-    &= a^{-1}(x^i\psi_2\ y^j\psi_2)a \\
-    &= a^{-1}(x^{-i}y^i\ x^{2j}y^j)a \\
-    &= a^{-1}(x^{2j-i}\ y^{i+j})a \\
-    &= x^{i-2j}y^{2j-i}\ x^{2i+2j}y^{i+j} \\
-    &= x^{3i}y^{3j} \\
-    &= y^j x^{-i}
-\end{align*}
-Which is \(g^{-1}\).
-Hence we have \(g = g^{-1}\) which is a contradiction, because \(x \in N\) has order 4.
-A similar contradiction can be shown for \(\psi_4\).
+\begin{lemma}
+    Let \(G\) be a group of order 16, not isomorphic to \({(C_{2})}^4\).
+    Suppose \(G\) has a normal subgroup \(N \cong C_4 \times C_2\), and element \(a \in G\setminus N\).
+    There are no groups \(G\) such that conjugation by \(a\) is of order 4.
+\end{lemma}
 
-\begin{enumerate}[\bfseries{Case} 1:]
-    \item Order 2.
+\begin{proof}
+    The automorphisms of order 4 are \(\psi_2\) and \(\psi_4\).
+    Consider an element \(g \in N\).
+    We can write \(g = x^i y^j\) for some \(0 \leqslant i \leqslant 3\) and \(0 \leqslant j \leqslant 1\).
+    Then on the one hand:
+    \[a^{-2}ga^2 = g\]
+    Because \(N\) is abelian.
+    On the other:
+    \begin{align*}
+        a^{-2}ga^2 &= a^{-1}(a^{-1}x^i\,y^j a)a \\
+        &= a^{-1}(x^i\psi_2\ y^j\psi_2)a \\
+        &= a^{-1}(x^{-i}y^i\ x^{2j}y^j)a \\
+        &= a^{-1}(x^{2j-i}\ y^{i+j})a \\
+        &= x^{i-2j}y^{2j-i}\ x^{2i+2j}y^{i+j} \\
+        &= x^{3i}y^{3j} \\
+        &= y^j x^{-i}
+    \end{align*}
+    Which is \(g^{-1}\).
+    Hence we have \(g = g^{-1}\) which is a contradiction, because \(x \in N\) has order 4.
+    A similar contradiction can be shown for \(\psi_4\).
+\end{proof}
 
-        If \(a\) has order 2, then \(a^2 = 1\), so \(\gen{a} \cap N = \bm{1}\).
-        Hence \(G = N \rtimes \gen{a}\).
-        So we can apply Lemma~\ref{lem:semiisom}, and only consider one representative from each conjugacy class.
-        We have the following presentations:
-        \begin{align*}
-            G_7 &= \gen{x,\,y,\,a \mid x^4 = y^2 = a^2 = 1,\ xy = yx,\ a^{-1}xa \overset{\psi_1}{=} x,\ a^{-1}ya \overset{\psi_1}{=} y} \\
-                &= \gen{x} \times \gen{y} \times \gen{a} \\
-                &\cong C_4 \times C_2 \times C_2 \\
-                & \\
-            G_8 &= \gen{x,\,y,\,a \mid x^4 = y^2 = a^2 = 1,\ xy = yx,\ a^{-1}xa \overset{\psi_3}{=} x^{-1},\ a^{-1}ya \overset{\psi_3}{=} y} \\
-                &= (\gen{x} \rtimes \gen{a}) \times \gen{y} \\
-                &\cong D_8 \times C_2 \\
-                & \\
-            G_9 &= \gen{x,\,y,\,a \mid x^4 = y^2 = a^2 = 1,\ xy = yx,\ a^{-1}xa \overset{\psi_5}{=} xy,\ a^{-1}ya \overset{\psi_5}{=} y} \\
-                &= (\gen{x} \times \gen{y}) \rtimes \gen{a} \\
-                &\cong (C_4 \times C_2) \rtimes C_2 \tag{nameless} \\
-                & \\
-            G_{10} &= \gen{x,\,y,\,a \mid x^4 = y^2 = a^2 = 1,\ xy = yx,\ a^{-1}xa \overset{\psi_8}{=} x,\ a^{-1}ya \overset{\psi_8}{=} x^2 y}\\
-        \end{align*}
-        The final group, \(G_{10}\), is sometimes called the \emph{Pauli group}\footcite{order16names}, because it
-        consists of the Pauli Matrices from quantum mechanics, and their products with powers of \(i\).
+\begin{lemma}
+    Let \(G\) be a group of order 16, not isomorphic to \({(C_{2})}^4\).
+    Suppose \(G\) has a normal subgroup \(N \cong C_4 \times C_2\), and element \(a \in G\setminus N\) of order 2.
+    Then \(G\) is isomorphic to one of:
+    \[
+        C_4 \times C_2 \times C_2, \quad%
+        D_8 \times C_2, \quad%
+        (C_4 \times C_2) \rtimes C_2 \quad \text{or} \quad%
+        \text{the Pauli Group}
+    \]
+    The Pauli Group has presentition:
+    \[
+        \gen{x,\,y,\,a \mid x^4 = y^2 = a^2 = 1,\ xy = yx,\ xa = ax,\ a^{-1}ya = x^2 y}
+    \]
+\end{lemma}
 
-        The group \(G_9\) doesn't appear to have any significant name.
-    \item Order 4.
+\begin{proof}
+    If \(a\) has order 2, then \(a^2 = 1\), so \(\gen{a} \cap N = \bm{1}\).
+    Hence \(G = N \rtimes \gen{a}\).
+    So we can apply Lemma~\ref{lem:semiisom}, and only consider one representative from each conjugacy class.
+    We have the following presentations:
+    \begin{align*}
+        G_7 &= \gen{x,\,y,\,a \mid x^4 = y^2 = a^2 = 1,\ xy = yx,\ a^{-1}xa \overset{\psi_1}{=} x,\ a^{-1}ya \overset{\psi_1}{=} y} \\
+            &= \gen{x} \times \gen{y} \times \gen{a} \\
+            &\cong C_4 \times C_2 \times C_2 \\
+            & \\
+        G_8 &= \gen{x,\,y,\,a \mid x^4 = y^2 = a^2 = 1,\ xy = yx,\ a^{-1}xa \overset{\psi_3}{=} x^{-1},\ a^{-1}ya \overset{\psi_3}{=} y} \\
+            &= (\gen{x} \rtimes \gen{a}) \times \gen{y} \\
+            &\cong D_8 \times C_2 \\
+            & \\
+        G_9 &= \gen{x,\,y,\,a \mid x^4 = y^2 = a^2 = 1,\ xy = yx,\ a^{-1}xa \overset{\psi_5}{=} xy,\ a^{-1}ya \overset{\psi_5}{=} y} \\
+            &= (\gen{x} \times \gen{y}) \rtimes \gen{a} \\
+            &\cong (C_4 \times C_2) \rtimes C_2 \tag{nameless} \\
+            & \\
+        G_{10} &= \gen{x,\,y,\,a \mid x^4 = y^2 = a^2 = 1,\ xy = yx,\ a^{-1}xa \overset{\psi_8}{=} x,\ a^{-1}ya \overset{\psi_8}{=} x^2 y}\\
+    \end{align*}
+    The final group, \(G_{10}\), is sometimes called the \emph{Pauli Group}\footcite{order16names}, because it
+    consists of the Pauli Matrices from quantum mechanics, and their products with powers of \(i\).
 
-        As before, assume all elements in \(G\setminus N\) have order at least 4.
-        We have 3 choices for \(a\) here, and will break them into subcases:
-        \begin{enumerate}[\bfseries A:]
-            \item \(a^2 = x^2\).
+    The group \(G_9\) doesn't appear to have any significant name.
+\end{proof}
 
-                Firstly, let's show what conjugation by \(a\) cannot be.
-                If it's \(\psi_1\):
-                \[(xa)(xa) = xa^2(a^{-1}xa) \overset{\psi_1}{=} xa^2 x = 1\]
-                If it's \(\psi_6\):
-                \[(xya)(xya) = xya^2(a^{-1}xya) \overset{\psi_6}{=} xya^2(x^{-1}x^2y) = x^4 y^2 = 1\]
-                If it's \(\psi_8\):
-                \[(x^2 ya)(x^2 ya) = x^2 ya^2 (a^{-1}x^2 ya) \overset{\psi_8}{=} x^2 ya^2(x^2 x^2 y) = x^8 y^2 = 1\]
-                All of which are contradictions to our assumption.
-                So the remaining possibilities are:
-                \begin{align*}
-                    G_{11} &= \gen{x,\,y,\,a \mid x^4 = y^2 = a^4 = 1,\ xy = yx,\ a^{-1}xa \overset{\psi_3}{=} x^{-1},\ a^{-1}ya \overset{\psi_3}{=} y} \\
-                        &= \gen{x,\,a} \times \gen{y} \\
-                        &\cong Q_8 \times C_2 \\
-                        & \\
-                    G_{12a} &= \gen{x,\,y,\,a \mid x^4 = y^2 = a^4 = 1,\ xy = yx,\ a^{-1}xa \overset{\psi_5}{=} xy,\ a^{-1}ya \overset{\psi_5}{=} y} \\
-                    G_{12b} &= \gen{x,\,y,\,a \mid x^4 = y^2 = a^4 = 1,\ xy = yx,\ a^{-1}xa \overset{\psi_7}{=} x^{-1}y,\ a^{-1}ya \overset{\psi_7}{=} y}
-                \end{align*}
-                Concentrating on the latter two groups, we will show they are both isomorphic to \(C_4 \rtimes C_4\),
-                with the inversion action.
-                First, \(G_{12a}\).
-                Consider the element \(ax\), and so \(\gen{ax} = \{\,1,\,ax,\,y,\,axy\,\}\).
-                By inspection, \(\gen{x} \cap \gen{ax} = \bm{1}\).
-                So then:
-                \[x^{-1}(ax)x = x^{-1}xaxy = axy = {(ax)}^{-1}\]
-                Hence, \(G_{12a} = \gen{x} \rtimes \gen{ax} \cong C_4 \rtimes C_4\).
+\begin{lemma}
+    Let \(G\) be a group of order 16, not isomorphic to \({(C_{2})}^4\).
+    Suppose \(G\) has a normal subgroup \(N \cong C_4 \times C_2\), generated by \(x\) of order 4, and \(y\) of order 2.
+    Further suppose that \(a \in G\setminus N\) has order 4 with \(a^2 = x^2\).
+    Then \(G\) is isomorphic to one of:
+    \[
+        Q_8 \times C_2 \quad \text{or} \quad%
+        C_4 \rtimes C_{4}
+    \]
+\end{lemma}
 
-                Likewise for \(G_{12b}\), \(\gen{ax} = \{\,1,\,ax,\,a^2 y,\,x^{-1}a^{-1}\,\}\), and again \(\gen{x} \cap
-                \gen{ax} = \bm{1}\).
-                Additionally:
-                \[x^{-1}(ax)x = ax^3 y = ax^{-1}y = xa\]
-                Multiplying by \(x^4 = 1\) gives:
-                \[x^4 xa = x^{-1}x^2 a = x^{-1}a^2 a = x^{-1}a^{-1}\]
-                Hence \(G_{12b}\) is isomorphic to the same semidirect product, \(C_4 \rtimes C_4\).
+\begin{proof}
+    Firstly, let's show what conjugation by \(a\) cannot be.
+    If it's \(\psi_1\):
+    \[(xa)(xa) = xa^2(a^{-1}xa) \overset{\psi_1}{=} xa^2 x = 1\]
+    If it's \(\psi_6\):
+    \[(xya)(xya) = xya^2(a^{-1}xya) \overset{\psi_6}{=} xya^2(x^{-1}x^2y) = x^4 y^2 = 1\]
+    If it's \(\psi_8\):
+    \[(x^2 ya)(x^2 ya) = x^2 ya^2 (a^{-1}x^2 ya) \overset{\psi_8}{=} x^2 ya^2(x^2 x^2 y) = x^8 y^2 = 1\]
+    All of which are contradictions to our assumption.
+    So the remaining possibilities are:
+    \begin{align*}
+        G_{11} &= \gen{x,\,y,\,a \mid x^4 = y^2 = a^4 = 1,\ xy = yx,\ a^{-1}xa \overset{\psi_3}{=} x^{-1},\ a^{-1}ya \overset{\psi_3}{=} y} \\
+            &= \gen{x,\,a} \times \gen{y} \\
+            &\cong Q_8 \times C_2 \\
+            & \\
+        G_{12a} &= \gen{x,\,y,\,a \mid x^4 = y^2 = a^4 = 1,\ xy = yx,\ a^{-1}xa \overset{\psi_5}{=} xy,\ a^{-1}ya \overset{\psi_5}{=} y} \\
+        G_{12b} &= \gen{x,\,y,\,a \mid x^4 = y^2 = a^4 = 1,\ xy = yx,\ a^{-1}xa \overset{\psi_7}{=} x^{-1}y,\ a^{-1}ya \overset{\psi_7}{=} y}
+    \end{align*}
+    Concentrating on the latter two groups, we will show they are both isomorphic to \(C_4 \rtimes C_4\),
+    with the inversion action.
+    First, \(G_{12a}\).
+    Consider the element \(ax\), and so \(\gen{ax} = \{\,1,\,ax,\,y,\,axy\,\}\).
+    By inspection, \(\gen{x} \cap \gen{ax} = \bm{1}\).
+    So then:
+    \[x^{-1}(ax)x = x^{-1}xaxy = axy = {(ax)}^{-1}\]
+    Hence, \(G_{12a} = \gen{x} \rtimes \gen{ax} \cong C_4 \rtimes C_4\).
 
-                We can check that it is indeed valid to write \(C_4 \rtimes C_4\).
-                We know \(\Aut{C_4} \cong C_2\) and so a homomorphism \(\varphi:C_4 \to \Aut{C_4}\) can map the
-                generator to either the identity map or the inverse map.
-                Hence we have only one non-trivial semidirect product.
-            \item \(a^2 = y\).
+    Likewise for \(G_{12b}\), \(\gen{ax} = \{\,1,\,ax,\,a^2 y,\,x^{-1}a^{-1}\,\}\), and again \(\gen{x} \cap
+    \gen{ax} = \bm{1}\).
+    Additionally:
+    \[x^{-1}(ax)x = ax^3 y = ax^{-1}y = xa\]
+    Multiplying by \(x^4 = 1\) gives:
+    \[x^4 xa = x^{-1}x^2 a = x^{-1}a^2 a = x^{-1}a^{-1}\]
+    Hence \(G_{12b}\) is isomorphic to the same semidirect product, \(C_4 \rtimes C_4\).
 
-                Conjugation by \(a\) cannot be \(\psi_6\) or \(\psi_8\) because then:
-                \[a^2 = a^{-1}a^2 a = a^{-1}ya \overset{\psi_{6,8}}{=} x^2 y\]
-                a contradiction.
-                If it's \(\psi_5\) then let \(\bar{a} = xa\) and so:
-                \[(xa)(xa) = x(axa^{-1})a^2 \overset{\psi_5}{=} x^2 y^2 = x^2\]
-                and we are in the previous case.
-                Likewise if conjugation by \(a\) is \(\psi_3\) then:
-                \[(x^2 a)(x^2 a) = x^2(ax^2 a^{-1})a^2 \overset{\psi_3}{=} x^2 y^2 = x^2\]
-                Finally, \(\psi_7\) gives:
-                \[(xa)(xa) = xa^2(a^{-1}xa) \overset{\psi_7}{=} xa^2 x^3 y = x^4 y^2 = 1\]
-                a contradiction, leaving only \(\psi_1\) as the final standing possibility, giving:
-                \[G_{13} = \gen{x,\,y,\,a \mid x^4 = y^2 = a^4 = 1,\ xy = yx,\ ax \overset{\psi_1}{=} xa,\ ay \overset{\psi_1}{=} ya}\]
-                Letting \(b = xy\):
-                \[G_{13} = \gen{b,\,a \mid b^4 = a^4 = 1,\ ab = ba} \cong C_4 \times C_4\]
-            \item \(a^2 = x^2 y\).
+    We can check that it is indeed valid to write \(C_4 \rtimes C_4\).
+    We know \(\Aut{C_4} \cong C_2\) and so a homomorphism \(\varphi:C_4 \to \Aut{C_4}\) can map the
+    generator to either the identity map or the inverse map.
+    Hence we have only one non-trivial semidirect product.
+\end{proof}
 
-                For any group in this case, if we apply the automorphism \(\psi_8\), then we have:
-                \[a^2\psi_8 = (x^2 y)\psi_8 = x^2 x^2 y = y\]
-                So it will be isomorphic to a group from the previous subcase.
-        \end{enumerate}
-\end{enumerate}
+\begin{lemma}
+    Let \(G\) be a group of order 16, not isomorphic to \({(C_{2})}^4\).
+    Suppose \(G\) has a normal subgroup \(N \cong C_4 \times C_2\), generated by \(x\) of order 4, and \(y\) of order 2.
+    Further suppose that \(a \in G\setminus N\) has order 4 with \(a^2 = y\).
+    Then \(G\) is isomorphic to \(C_4 \times C_4\).
+\end{lemma}
 
-\begin{mdframed}[align=center,nobreak=true]
-    \begin{center}
-        Any group of order 16 is isomorphic to one of:
-        \begin{displaymath}
-        \begin{array}{c@{\hskip 3em}c@{\hskip 3em}c}
-            {(C_2)}^4 & C_8 {\times} C_2 & \SD_{16} \\
-            \M_{16} & D_{16} & \Dic_{24} \\
-            C_{16} & C_4 {\times} C_2 {\times} C_2 & D_8 {\times} C_2 \\
-            (C_4 {\times} C_2) {\rtimes} C_2 & \text{Pauli Group} & Q_8 {\times} C_2 \\
-            C_4 {\rtimes} C_4 & C_4 {\times} C_4 & \\
-        \end{array}
-        \end{displaymath}
-    \end{center}
-\end{mdframed}
+\begin{proof}
+    Conjugation by \(a\) cannot be \(\psi_6\) or \(\psi_8\) because then:
+    \[a^2 = a^{-1}a^2 a = a^{-1}ya \overset{\psi_{6,8}}{=} x^2 y\]
+    a contradiction.
+    If it's \(\psi_5\) then let \(\bar{a} = xa\) and so:
+    \[(xa)(xa) = x(axa^{-1})a^2 \overset{\psi_5}{=} x^2 y^2 = x^2\]
+    and we are in the previous case.
+    Likewise if conjugation by \(a\) is \(\psi_3\) then:
+    \[(x^2 a)(x^2 a) = x^2(ax^2 a^{-1})a^2 \overset{\psi_3}{=} x^2 y^2 = x^2\]
+    Finally, \(\psi_7\) gives:
+    \[(xa)(xa) = xa^2(a^{-1}xa) \overset{\psi_7}{=} xa^2 x^3 y = x^4 y^2 = 1\]
+    a contradiction, leaving only \(\psi_1\) as the final standing possibility, giving:
+    \[G_{13} = \gen{x,\,y,\,a \mid x^4 = y^2 = a^4 = 1,\ xy = yx,\ ax \overset{\psi_1}{=} xa,\ ay \overset{\psi_1}{=} ya}\]
+    Letting \(b = xy\):
+    \[G_{13} = \gen{b,\,a \mid b^4 = a^4 = 1,\ ab = ba} \cong C_4 \times C_4\]
+\end{proof}
 
+\begin{lemma}
+    Let \(G\) be a group of order 16, not isomorphic to \({(C_{2})}^4\).
+    Suppose \(G\) has a normal subgroup \(N \cong C_4 \times C_2\), generated by \(x\) of order 4, and \(y\) of order 2.
+    Further suppose that \(a \in G\setminus N\) has order 4 with \(a^2 = x^2 y\).
+    Then \(G\) will be isomorphic to \(C_4 \times C_4\), as in the previous lemma.
+\end{lemma}
+
+\begin{proof}
+    For any group in this case, if we apply the automorphism \(\psi_8\), then we have:
+    \[a^2\psi_8 = (x^2 y)\psi_8 = x^2 x^2 y = y\]
+    So it will be isomorphic to a group from the previous subcase.
+\end{proof}
+
+So we prove our classification with these lemmas.
 Thus we finish not only the classification of groups of order 16, but this report as a whole.

@@ -1,6 +1,12 @@
 % ====   Order 2p   ====
-\subsection{Groups of Order \(2p\)}
+\section{Groups of Order \(2p\)}
 To illustrate an example of groups of order \(pq\), let's take \(q = 2\).
+\begin{theorem}
+    Any group of order \(2p\) is isomorphic to one of:
+    \[C_{2p} \quad \text{or} \quad D_{2p}\]
+\end{theorem}
+
+\begin{proof}
 Because every prime greater than 2 is odd, \(p - 1\) is an even number, and so \(2 \mid p - 1\).
 
 An element \(\alpha \in \units{p}\) of order 2 satisfies \(\alpha^2 = 1\), hence \(\alpha = 1\) or \(-1\).
@@ -10,10 +16,4 @@ Side-note: from the proof of Lemma~\ref{lem:aut}, this corresponds to the invers
 So, in addition to \(C_{2p}\), we have:
 \[G \cong \langle\, x, y \mid x^p = y^2 = 1,\ y^{-1}xy = x^{-1}\,\rangle\]
 Which is the presentation for the dihedral group of order \(2p\), \(D_{2p}\).
-
-\begin{mdframed}[align=center,nobreak=true]
-    \begin{center}
-        Any group of order \(2p\) is isomorphic to one of:
-        \[C_{2p} \quad \text{or} \quad D_{2p}\]
-    \end{center}
-\end{mdframed}
+\end{proof}

@@ -1,10 +1,39 @@
 % ====   Order p^3   ====
 \section{Groups of Order \(p^3\)}
-This classification is based on the one found on the Groupprops subwiki\footcite{pcubed}.
+Finally, we come to our last general argument for \(p\)-groups: order \(p^3\).
+
+\begin{theorem}\label{thm:p_cubed}
+    For a prime \(p\), any group of order \(p^3\) is isomorphic to one of:
+    \[%
+        C_{p^3}, \quad%
+        C_{p^2} \times C_p, \quad%
+        C_p \times C_p \times C_p
+    \]
+    \[
+        D_8 \quad \text{or} \quad%
+        Q_8 \tag{when \(p = 2\)}
+    \]
+    \[
+        \UT_3(p) \quad \text{or} \quad%
+        C_{p^2} \rtimes C_p \tag{when \(p \geqslant 3\)}
+    \]
+\end{theorem}
+
+Before we begin the proof, it will be beneficial to briefly recall a couple of definitions.
+\begin{definition}
+    The \emph{commutator} of \(a\) and \(b\) is \(\comex{a}{b}\), which is denoted by \(\com{a}{b}\).
+
+    The \emph{derived subgroup} of \(G\), \(G' = \gen{\com{x}{y} \mid x,\,y \in G}\), is the smallest normal
+    subgroup such that \(G/G'\) is abelian.
+\end{definition}
+
+The remainder of the section will be the proof of Theorem~\ref{thm:p_cubed}.
+The proof is based on the one found on the Groupprops subwiki\footcite{pcubed}.
 Let \(G\) be a group of order \(p^3\), where \(p\) is a prime number.
 We will first gain a handle on \(G\) by describing its centre, and quotient by it.
 If \(G\) is abelian, we know by the Fundamental Theorem of Finite Abelian Groups that it is isomorphic to one of:
-\[C_{p^3}, \quad C_{p^2} \times C_p \quad \text{or} \quad C_p \times C_p \times C_p\]
+    \[C_{p^3}, \quad C_{p^2} \times C_p \quad \text{or} \quad C_p \times C_p \times C_p
+    \tag{\star}\label{eqn:p_cubed_abelian}\]
 So from now on, we will focus on the non-abelian groups.
 
 Denote the centre of \(G\) by \(Z\) and consider its order.
@@ -16,9 +45,6 @@ By our previous classification, \(G/Z\) is isomorphic to either \(C_{p^2}\) or \
 Lemma~\ref{lem:cyclic_over_centre} tells us that it must by the latter.
 
 This gives us a handle to start investigating the structure of \(G\).
-Another useful tool will be \emph{commutators}, which we will denote by \(\com{a}{b} = \comex{a}{b}\).
-The \emph{derived subgroup} of \(G\), \(G' = \gen{\com{x}{y} \mid x,\,y \in G}\), is the smallest normal
-subgroup such that \(G/G'\) is abelian.
 We saw that \(G/Z\) is abelian, so \(G' \leqslant Z\), but because \(G'\) is non-trivial, we must have equality.
 
 So far, we know \(G/Z \cong C_p \times C_p\), and that \(G' = Z\).
@@ -34,15 +60,31 @@ Now we know \(G' = Z\) which has order \(p\), so \(Z \cong C_p\).
 Moreover, \(z \in Z\), and \(z \neq 1\) so we can conclude that \(\gen{z} = Z\).
 We can see that although \(a\) and \(b\) are not in \(Z\), \(a^p\) and \(b^p\) are, because \(aZ\) and \(bZ\) have order
 \(p\) in \(G/Z\).
-Considering the orders of \(a\) and \(b\) we have 3 cases:
+Considering the orders of \(a\) and \(b\) we have 3 cases: both have order \(p\), one of order \(p\) and the other
+    \(p^2\), and both of order \(p^2\).
 
-\begin{enumerate}[\bfseries{Case} 1:]
+Because when \(p\) is odd or even have different behaviours, we will break the remainder of the proof into two
+    sub-lemmas.
+
+\begin{lemma}
+    For an odd prime \(p\), the non-abelian groups of order \(p^3\) are:
+    \[%
+        \UT_3(p) \quad \text{and} \quad%
+        C_{p^2} \rtimes C_p
+    \]
+\end{lemma}
+
+\begin{proof}
+Continuing from above, we have the following relations:
+\[ \com{a}{b} = z \neq 1, \quad \gen{z} = \z, \quad a,\,b \notin \z, \quad \text{and} \quad a^p,\,b^p \in \z \]
+
+\begin{case}
     \item Both \(a\) and \(b\) have order \(p\).
 
-        The above descriptions give the presentation:
-        \[G = \gen{z,\,a,\,b \mid z^p = a^p = b^p = 1,\ az = za,\ bz = zb,\ \com{a}{b} = z}\]
+        Writing a presentation from the above relations:
+        \[G = \gen{z,\,a,\,b \mid z^p = a^p = b^p = 1,\ az = za,\ bz = zb,\ \com{a}{b} = z} \tag{\dag}\label{eqn:p_cubed_dag}\]
         We can write an arbitrary \(g \in G\) as \(a^i b^j z^k\) for integers \(i\), \(j\) and \(k\) taken mod \(p\).
-        Hence this presentation has order at most \(p^3\).
+        Hence the group definied by (\ref{eqn:p_cubed_dag}) has order at most \(p^3\), but not necessarily realised by a group of order \(p^3\).
 
         Now consider the set:
         \[\left\{\,\unimat{\alpha}{\beta}{\gamma} \mid \alpha,\,\beta,\,\gamma \in \F_p\,\right\}\]
@@ -50,18 +92,10 @@ Considering the orders of \(a\) and \(b\) we have 3 cases:
         \emph{unitriangular group}\footcite{unitriangular}, denoted \(\UT_3(p)\).
         Taking:
         \[z = \unimat{0}{1}{0}, \quad a = \unimat{1}{0}{0} \quad \text{and} \quad b = \unimat{0}{0}{1}\]
-        we can see that \(\UT_3(p)\) satisfies this presentation for \(p > 2\).
-        (Indeed, the above presentation is the standard one defining \(\UT_3(p)\)).
-        Thus there is a single isomorphism class for this case.
+        we can check that \(\UT_3(p)\) satisfies (\ref{eqn:p_cubed_dag}).
+        (Indeed, it is the standard one defining \(\UT_3(p)\)).
+        Thus (\ref{eqn:p_cubed_dag}) is realised by a group of order \(p^3\), so there is a single isomorphism class for this case.
 
-        The group behaves differently when \(p = 2\) because we know that a group whose elements all have order either 1
-        or 2 is abelian.
-        So the elements cannot have order only 1 or 2.
-        In particular:
-        \[\unimat{1}{0}{1} \quad \text{and} \quad \unimat{1}{1}{1}\]
-        have order 4.
-        We can check that all other non-identity elements have order 2.
-        Thus \(\UT_2(2) \cong D_8\).
     \item One element of each order \(p\) and \(p^2\).
 
         The roles of \(a\) and \(b\) are interchangeable, so we can take \(a\) to have order \(p^2\) and \(b\) to have
@@ -93,9 +127,8 @@ Considering the orders of \(a\) and \(b\) we have 3 cases:
         \[G \cong C_{p^2} \rtimes C_p\]
         With presentation:
         \[\gen{a,\,b \mid a^{p^2} = b^p = 1,\ b^{-1}ab = a^{p + 1}}\]
-        When \(p = 2\), this reduces to the dihedral group, \(D_8\).
-        However, we can see that for \(p > 2\), this is not isomorphic to the previous case, because \(\UT_3(p)\) has no
-        element of order \(p^2\).
+        We can see that this is not isomorphic to the previous case, because \(\UT_3(p)\) has no element of order \(p^2\).
+
     \item Both \(a\) and \(b\) have order \(p^2\).
 
         We will show that by substitutions, this is equivalent to the above case when \(p > 2\).
@@ -111,13 +144,45 @@ Considering the orders of \(a\) and \(b\) we have 3 cases:
             &= z^2 aababb\ldots ab \\
             &= z^3 aaabbb\ldots ab \\
             &\ \,\vdots \\  % Weird spacing
-            &= z^{\frac{p(p-1)}{2}} a^p b^p \tag{\(\dagger\)} \label{eqn:p_cubed_dagger}
+            &= z^{\frac{p(p-1)}{2}} a^p b^p \tag{\ddag} \label{eqn:p_cubed_ddag}
         \end{align*}
         However, \(z^p = 1\) so:
         \[d^p = a^p b^p = zz^{-1} = 1\]
         So \(d\) has order \(p\), and we are back in the previous case.
+\end{case}
+\end{proof}
 
-        If \(p = 2\), (\ref{eqn:p_cubed_dagger}) does not hold, and the exponent of \(z\) is 1 in that case.
+Now we will consider the case when \(p = 2\).
+\begin{lemma}
+    The non-abelian groups of order 8 are:
+    \[%
+        D_8 \quad \text{and} \quad%
+        Q_8
+    \]
+\end{lemma}
+
+\begin{proof}
+Leveraging the work we've already done, let's consider how the 3 cases behave when \(p=2\):
+
+\begin{case}
+    \item \(G \cong \UT_3(2)\).
+
+        The group behaves differently when \(p = 2\) because we know that a group whose elements all have order either 1
+        or 2 is abelian.
+        So the elements cannot have order only 1 or 2.
+        In particular:
+        \[\unimat{1}{0}{1} \quad \text{and} \quad \unimat{1}{1}{1}\]
+        have order 4.
+        We can check that all other non-identity elements have order 2.
+        Thus \(\UT_2(2) \cong D_8\).
+
+    \item \(G = \gen{a,\,b \mid a^{p^2} = b^p = 1,\ b^{-1}ab = a^{p + 1}}\)
+
+        When \(p = 2\), this reduces to the dihedral group, \(D_8\).
+
+    \item Both \(a\) and \(b\) have order 4.
+
+        If \(p = 2\), (\ref{eqn:p_cubed_ddag}) does not hold, and the exponent of \(z\) is 1 in that case.
         So we have the relations:
         \[a^4 = b^4 = z^2 = 1, \quad a^2 = z, \quad b^2 = z^{-1} \quad \text{and} \quad \com{a}{b} = z\]
         Therefore:
@@ -125,23 +190,8 @@ Considering the orders of \(a\) and \(b\) we have 3 cases:
         So we obtain the presentation:
         \[G = \gen{a,\,b \mid a^4 = b^4 = 1,\ a^2 = b^2,\ b^{-1}ab = a^{-1}}\]
         Which we recognise as the quaternion group, \(Q_8\).
-\end{enumerate}
+\end{case}
+\end{proof}
 
-\begin{mdframed}[align=center,nobreak=true]
-    \begin{center}
-        Any group of order \(p^3\) is isomorphic to one of:
-        \[%
-            C_{p^3}, \quad%
-            C_{p^2} \times C_p, \quad%
-            C_p \times C_p \times C_p
-        \]
-        \[
-            D_8 \quad \text{or} \quad%
-            Q_8 \tag{when \(p = 2\)}
-        \]
-        \[
-            \UT_3(p) \quad \text{or} \quad%
-            C_{p^2} \rtimes C_p \tag{when \(p \geqslant 3\)}
-        \]
-    \end{center}
-\end{mdframed}
+So (\ref{eqn:p_cubed_abelian}), together with the two lemmas, prove Theorem~\ref{thm:p_cubed}.
+

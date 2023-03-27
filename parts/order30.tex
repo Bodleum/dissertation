@@ -1,58 +1,85 @@
 % ====   Order 30   ====
 \section{Groups of Order 30}
+\begin{theorem}\label{thm:30}
+    Any group of order 30 is isomorphic to one of:
+    \[
+        C_{30}, \quad%
+        D_{15}, \quad%
+        C_5 \times D_6 \quad \text{or} \quad%
+        C_3 \times D_{10}
+    \]
+\end{theorem}
+
+We will devote the rest of this section to the proof.
 This classification is based on the one given in the cited Stack Exchange post\footcite{order30}.
 Let \(G\) be a group of order \(30 = 2 \cdot 3 \cdot 5\).
-So then \(G\) has a Sylow 3-subgroup, \(T\), and a Sylow 5-subgroup, \(F\).
-Let \(H = TF\) and by Lagrange's Theorem, \(T \cap F = \bm{1}\), hence \(|H| = 15\) by Lemma~\ref{lem:setprodorder}.
-We know from our classification of groups of order \(pq\) that \(H \cong C_{15}\).
-Because \(|H| = 15 = \frac{30}{2}\), the index of \(H\) in \(G\) is 2, and we know a subgroup of index 2 is normal, so \(H \nrmsgp G\).
+We will first show that \(G\) can be written as one of 4 semidirect products, then we will identify what those products
+are isomorphic to.
 
-A Sylow 2-subgroup \(K \leqslant G\) has order 2, so \(K \cong C_2\).
-Let \(\langle k \rangle = K\) and \(\langle h \rangle = H\).
-By the same argument as above, \(H \cap K = \bm{1}\) and \(|HK| = 30\).
-Hence \(G = HK\).
-Moreover, \(G = H \rtimes K\).
+\begin{lemma}\label{lem:order_30_actions}
+    Any group of order 30 can be expressed as a semidirect product of the subgroup of order 15 with a Sylow 2-subgroup.
+    Moreover, there are precisely 4 possible actions for such semidirect products.
+\end{lemma}
 
-By Lemma~\ref{lem:aut}:
-\[\Aut{C_{15}} = \units{15} \cong {(\Zn{3} \times \Zn{5})}^\times \cong \units{3} \times \units{5} \cong C_2 \times C_4\]
-A homomorphism, \(\psi:C_2 \to C_2 \times C_4\) preserves element order and we know \(\psi\) is determined by its effect on a generator.
-So then \(k\psi\) has four possibilities: either the identity, or one of the three elements
-of order 2.
+\begin{proof}
+    Sylow's Theorems tell us \(G\) has a Sylow 3-subgroup, \(T\), and a Sylow 5-subgroup, \(F\).
+    Let \(H = TF\) and by Lagrange's Theorem, \(T \cap F = \bm{1}\), hence \(|H| = 15\) by Lemma~\ref{lem:setprodorder}.
+    We know from our classification of groups of order \(pq\) that \(H \cong C_{15}\).
+    Because \(|H| = 15 = \frac{30}{2}\), the index of \(H\) in \(G\) is 2, and we know a subgroup of index 2 is normal,
+    so \(H \nrmsgp G\).
 
-Additionally, \(\psi\) preserves the Sylow subgroups of \(H\).
-So write \(H = \langle h^3 \rangle \times \langle h^5 \rangle\), the direct product of its Sylow subgroups.
-So the action of \(K\) on \(H\) is either trivial or by inversion on each of the Sylow subgroups of \(H\), giving us 4
-possibilities:
+    A Sylow 2-subgroup \(K \leqslant G\) has order 2, so \(K \cong C_2\).
+    Let \(\langle k \rangle = K\) and \(\langle h \rangle = H\).
+    By the same argument as above, \(H \cap K = \bm{1}\) and \(|HK| = 30\).
+    Hence \(G = HK\).
+    Moreover, \(G = H \rtimes K\).
 
-\begin{enumerate}[\bfseries{Case} 1:]
-    \item Trivial action on both Sylow subgroups.
+    By Lemma~\ref{lem:aut}:
+    \[\Aut{C_{15}} = \units{15} \cong {(\Zn{3} \times \Zn{5})}^\times \cong \units{3} \times \units{5} \cong C_2 \times C_4\]
+    A homomorphism, \(\psi:C_2 \to C_2 \times C_4\) preserves element order and we know \(\psi\) is determined by its
+    effect on a generator.
+    So then \(k\psi\) has four possibilities: either the identity, or one of the three elements
+    of order 2.
 
-        In this case, because the action is trivial on all of \(H\), we recover the direct product, \(G = H \times K
-        \cong C_{30}\).
-    \item Inversion on both Sylow subgroups.
+    Additionally, \(\psi\) preserves the Sylow subgroups of \(H\).
+    So write \(H = \langle h^3 \rangle \times \langle h^5 \rangle\), the direct product of its Sylow subgroups.
+    So the action of \(K\) on \(H\) is either trivial or by inversion on each of the Sylow subgroups of \(H\), giving us 4
+    possibilities.
+\end{proof}
 
-        Here, \(K\) acts on all of \(H\), so we obtain:
-        \[G = \langle\, h,\,k \mid h^{15} = k^2 = 1,\ k^{-1}hk = h^{-1}\,\rangle\]
-        which we recognise as \(D_{30}\).
-    \item Inversion on \(\langle h^5 \rangle\).
+\begin{lemma}
+    The semidirect products specified by Lemma~\ref{lem:order_30_actions} are isomorphic to:
+    \[
+        C_{30}, \quad%
+        D_{15}, \quad%
+        C_5 \times D_6 \quad \text{or} \quad%
+        C_3 \times D_{10}
+    \]
+\end{lemma}
 
-        We know already, from our classification of groups of order \(2p\), that \(C_3 \rtimes C_2 \cong D_6\).
-        So then because the action on \(\langle h^3 \rangle\) is trivial:
-        \[G = \langle h^3 \rangle \times (\langle h^5 \rangle \rtimes K) \cong C_5 \times D_6\]
-    \item Inversion on \(\langle h^3 \rangle\).
+\begin{proof}
+    \mbox{}
+    \begin{enumerate}[\bfseries{Case} 1:]
+        \item Trivial action on both Sylow subgroups.
 
-        Similar to above, we obtain:
-        \[G = \langle h^5 \rangle \times (\langle h^3 \rangle \rtimes K) \cong C_3 \times D_{10}\]
-\end{enumerate}
+            In this case, because the action is trivial on all of \(H\), we recover the direct product, \(G = H \times K
+            \cong C_{30}\).
+        \item Inversion on both Sylow subgroups.
 
-\begin{mdframed}[align=center,nobreak=true]
-    \begin{center}
-        Any group of order 30 is isomorphic to one of:
-        \[
-            C_{30}, \quad%
-            D_{15}, \quad%
-            C_5 \times D_6 \quad \text{or} \quad%
-            C_3 \times D_{10}
-        \]
-    \end{center}
-\end{mdframed}
+            Here, \(K\) acts on all of \(H\), so we obtain:
+            \[G = \langle\, h,\,k \mid h^{15} = k^2 = 1,\ k^{-1}hk = h^{-1}\,\rangle\]
+            which we recognise as \(D_{30}\).
+        \item Inversion on \(\langle h^5 \rangle\).
+
+            We know already, from our classification of groups of order \(2p\), that \(C_3 \rtimes C_2 \cong D_6\).
+            So then because the action on \(\langle h^3 \rangle\) is trivial:
+            \[G = \langle h^3 \rangle \times (\langle h^5 \rangle \rtimes K) \cong C_5 \times D_6\]
+        \item Inversion on \(\langle h^3 \rangle\).
+
+            Similar to above, we obtain:
+            \[G = \langle h^5 \rangle \times (\langle h^3 \rangle \rtimes K) \cong C_3 \times D_{10}\]
+    \end{enumerate}
+\end{proof}
+
+These two lemmas prove Theorem~\ref{thm:30}.
+

@@ -6,6 +6,7 @@
 \usepackage[super]{nth}
 \usepackage[T1]{fontenc}
 \usepackage[]{bm}
+\usepackage[]{mdframed}
 
 % Enter expert LaTeX mode
 \makeatletter
@@ -48,7 +49,9 @@ Pick generators: \(\gen{x} = P\) and \(\gen{y} = Q\).
 \begin{frame}
 \frametitle{Sylow \(q\)-subgroup}
 Because \(n_{q} \equiv 1 \pmod{q}\), we have:
-\[ n_{q} = 1,\ p + 1,\ 2p + 1,\ \ldots \]
+\[ n_{q} = 1,\ q + 1,\ 2q + 1,\ \ldots \]
+And:
+\[ n_q \mid p\]
 So we have two cases:
 \[ q \nmid p-1 \qquad \text{or} \qquad q \mid p-1 \]
 \end{frame}
@@ -67,11 +70,11 @@ So:
 \begin{frame}
 \frametitle{\(q \mid p-1\)}
 That was the easy one!
-Still have \(n_q = 1\), but now also the other posibilites!
+Still have \(n_q = 1\), but now also the other possibilities!
 
 By Lagrange's~Theorem: \(P \cap Q = \bm{1}\).
 
-By Lemma~4: \(|PQ| = pq\).
+By Lemma in project: \(|PQ| = pq\).
 
 So \(G = PQ\).
 Hence:
@@ -86,6 +89,14 @@ Describe \(P \rtimes Q\) by a \emph{presentation}.
 \[ G = \gen{x,\ y \mid x^p = y^q = 1,\ y^{-1}xy = x^a} \]
 where \(a\) is a generator for the subgroup of order \(q\) in \({(\mathbb{Z}/p\mathbb{Z})}^\times\).
 \end{frame}
+
+\begin{frame}
+\frametitle{Classification}
+For distinct primes \(p\) and \(q\), any group of order \(pq\) is isomorphic to one of:
+\[C_{pq}\]
+\[\gen{x, y \mid x^p = y^q = 1,\ y^{-1}xy = x^a} \tag*{additionally, if \(q \mid p-1\)}\]
+\end{frame}
+
 
 \section{Examples}
 

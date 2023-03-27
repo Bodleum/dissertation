@@ -15,9 +15,11 @@
 \usepackage[super]{nth}
 \usepackage{enumerate}
 \usepackage{fancyhdr}
-\usepackage[]{mdframed}
+\usepackage[]{tikz}
+\usepackage[framemethod=tikz]{mdframed} % Load after amsthm
 \usepackage[]{appendix}
 \usepackage[]{parskip}
+\usepackage[]{marvosym}  % For Jesus
 \mdfsetup{skipabove=1em, skipbelow=1em}
 \usepackage[backend=biber]{biblatex-chicago}    % Bibliography
 \addbibresource{./bib.bib}      % Bibliography file
@@ -37,11 +39,12 @@
 \makeatother
 
 % Numbering
-\newmdtheoremenv[nobreak=true]{lemma}{Lemma}[chapter]
+\newmdtheoremenv[align=center,nobreak=true,innerlinecolor=black,middlelinecolor=white,outerlinecolor=black,innerlinewidth=0.5pt,middlelinewidth=2.5pt,outerlinewidth=0.5pt]{theorem}{Theorem}[chapter]
+\newmdtheoremenv[nobreak=true]{lemma}[theorem]{Lemma}
 \theoremstyle{definition}
-\newmdtheoremenv[nobreak=true]{definition}[lemma]{Definition}
+\newmdtheoremenv[nobreak=true]{definition}[theorem]{Definition}
 % Don't use Roman numerals in lemma numberings
-\renewcommand{\thelemma}{\arabic{chapter}.\arabic{lemma}}
+\renewcommand{\thetheorem}{\arabic{chapter}.\arabic{theorem}}
 
 \DeclareMathOperator{\Aut}{Aut}
 \DeclareMathOperator{\Dic}{Dic}
@@ -84,4 +87,13 @@
 \end{pmatrix}
 }
 \newcommand{\omitpres}{\text{------}}
+
+\newenvironment{case}%
+{%
+    \begin{enumerate}[\bfseries{Case} 1:]%
+}%
+{%
+    \end{enumerate}%
+}
+
 
