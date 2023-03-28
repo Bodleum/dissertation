@@ -32,7 +32,7 @@ the Theory of Finite Groups}\footcite[Ch. 4]{ledermann1961}.
 
     Indeed, \(\iota:g \mapsto g\) is the identity of \(A\), since:
     \[g\phi\iota = (g\phi)\iota = g\phi \quad \text{and} \quad g\iota\phi = (g\iota)\phi = g\phi\]
-    And inverses clearly exists, because automorphisms are bijections, and bijections are invertible.
+    And inverses clearly exist, because automorphisms are bijections, and bijections are invertible.
     Hence \(A = \Aut{G}\) is a group.
 \end{proof}
 
@@ -91,7 +91,7 @@ the Theory of Finite Groups}\footcite[Ch. 4]{ledermann1961}.
     For \(x,\,y \in G\):
     \[x\phi_g y\phi_g = (g^{-1}xg)(g^{-1}yg) = g^{-1}(xy)g = (xy)\phi_g\]
     Hence \(\phi_g\) is a homomorphism.
-    Moreover, \(\phi_g\) is invertible with inverse \(\phi_{g^{-1}}\).
+    Moreover, we can check that \(\phi_g\) is invertible with inverse \(\phi_{g^{-1}}\).
     So \(\phi_g\) is indeed an automorphism of G.
 
     Because \(H\) is normal, \(H\phi_g = H\).
@@ -104,18 +104,18 @@ the Theory of Finite Groups}\footcite[Ch. 4]{ledermann1961}.
 
 % ====   Semidirect Product   ====
 \section{Semidirect Product}
-A way to combine, or describe combinations of groups will we among the most used tools in this report!
+A way to combine, or describe combinations of groups will be among the most used tools in this report!
 The learning from this section is mostly from \textit{MT5864, Advanced Group Theory}, and can be found in
 Robinson.\footcite{robinson1982}
-The \emph{direct product} is used commonly throughout group theory:
-\begin{definition}[Direct Product]
+The direct product is used commonly throughout group theory:
+\begin{definition}
     \raggedright
     For groups \(N\) and \(H\), the \emph{direct product}, \(G = N\times H\) is a group of ordered pairs of elements
     \((n, h)\) where \(n \in N\) and \(h \in H\) with the operation:
     \[(n_1, h_1)(n_2, h_2) = (n_1n_2, h_1h_2)\]
 \end{definition}
 
-Moreover, we recall its properties:
+Furthermore, we recall its properties:
 \begin{lemma}
     If \(\bar{N} = N \times \bm{1}\) and \(\bar{H} = \bm{1} \times H\), then:
     \begin{enumerate}[(i)]
@@ -138,8 +138,8 @@ and in doing so, find a suitable group structure for \(N {\times} H\).
 To show \(\phi\) is injective, take \(n_1,\, n_2 \in N\) and \(h_1,\, h_2 \in H\), and assume \(n_1 h_1 = n_2 h_2\).
 Then multiplying on the left by \(n_2^{-1}\) and on the right by \(h_1^{-1}\) gives:
 \[n_2^{-1} n_1 = h_2 h_1^{-1}\]
-On the left we have an element of \(N\) and on the right, an element of \(H\), so \(n_2^{-1} n_1 = h_2 h_1^{-1} \in N
-\cap H\).
+On the left we have an element of \(N\) and on the right, an element of \(H\), so:
+\[n_2^{-1} n_1 = h_2 h_1^{-1} \in N \cap H\]
 But \(N \cap H = \bm{1}\) so then \(n_2^{-1} n_1 = h_2 h_1^{-1} = 1\).
 Hence:
 \[n_1 = n_2 \quad \text{and} \quad h_1 = h_2\]
@@ -151,7 +151,7 @@ For \(\phi\) to be a homomorphism, we need:
 \begin{aligned}
     \relax[(n_1,\,h_1)(n_2,\,h_2)]\phi &= (n_1,\,h_1)\phi\,(n_2,\,h_2)\phi \\
     &= n_1 h_1 n_2 h_2 \\
-    &= n_1 h_1 n_2 h_1^{-1} h_1 h_2 \\
+    &= n_1 h_1 n_2 (h_1^{-1} h_1) h_2 \\
     &= (n_1 h_1 n_2 h_1^{-1})(h_1 h_2)
 \end{aligned}
 \end{equation*}
@@ -223,7 +223,7 @@ So we have a group.
     \[\phi:N \times H \to NH \quad \text{defined by} \quad (n,\,h) \mapsto nh\]
     is a bijection.
     We only used the normality of \(N\) for the homomorphism property of \(\phi\), which we don't need here, hence
-    \(\phi\) is a bijection if \(N \leqslant G\).
+    \(\phi\) is still a bijection if \(N \leqslant G\).
     The result follows immediately from this.
 \end{proof}
 
@@ -242,7 +242,8 @@ So we have a group.
     \[\theta:G \to \bar{G} \quad \text{by} \quad \theta:(n,\,h) \mapsto (n^\alpha,\,h^\beta)\]
     We will show that \(\theta\) is an isomorphism.
 
-    First, \(\theta^{-1}\) exists because both \(\alpha^{-1}\) and \(\beta^{-1}\) exist, and is given by:
+    First, \(\theta^{-1}\) exists because both \(\alpha^{-1}\) and \(\beta^{-1}\) exist.
+    We can check that the inverse is given by:
     \[\theta^{-1}:(n,\,h) \mapsto (n^{\alpha^{-1}},\,h^{\beta^{-1}})\]
     Hence \(\theta\) is a bijection.
     We also have that:
