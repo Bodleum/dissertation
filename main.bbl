@@ -21,11 +21,12 @@
   \datalist[entry]{cms/global//global/global}
     \entry{order24}{online}{}
       \name{author}{1}{}{%
-        {{hash=170333ab612b350dc2a45508774b8f59}{%
+        {{un=0,uniquepart=base,hash=170333ab612b350dc2a45508774b8f59}{%
            family={Borcherds},
            familyi={B\bibinitperiod},
            given={Richard\bibnamedelima E.},
-           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
       }
       \strng{namehash}{170333ab612b350dc2a45508774b8f59}
       \strng{fullhash}{170333ab612b350dc2a45508774b8f59}
@@ -55,11 +56,12 @@
     \endentry
     \entry{burnside1911}{book}{}
       \name{author}{1}{}{%
-        {{hash=095a2955bec60d24051ad4669803e1df}{%
+        {{un=0,uniquepart=base,hash=095a2955bec60d24051ad4669803e1df}{%
            family={Burnside},
            familyi={B\bibinitperiod},
            given={W.},
-           giveni={W\bibinitperiod}}}%
+           giveni={W\bibinitperiod},
+           givenun=0}}%
       }
       \list{publisher}{1}{%
         {Cambridge University Press}%
@@ -80,11 +82,12 @@
     \endentry
     \entry{order16names}{unpublished}{}
       \name{author}{1}{}{%
-        {{hash=cba6f2cb254b3236a6cb96b6dbf07ecd}{%
+        {{un=0,uniquepart=base,hash=cba6f2cb254b3236a6cb96b6dbf07ecd}{%
            family={Clausen},
            familyi={C\bibinitperiod},
            given={David},
-           giveni={D\bibinitperiod}}}%
+           giveni={D\bibinitperiod},
+           givenun=0}}%
       }
       \list{institution}{1}{%
         {University of Puget Sound}%
@@ -114,7 +117,7 @@
     \endentry
     \entry{pcubed}{online}{}
       \name{author}{1}{}{%
-        {{hash=3b14a81272af18cb5a05973bde112455}{%
+        {{un=0,uniquepart=base,hash=3b14a81272af18cb5a05973bde112455}{%
            family={Groupprops},
            familyi={G\bibinitperiod}}}%
       }
@@ -147,7 +150,7 @@
     \endentry
     \entry{dicyclic}{online}{}
       \name{author}{1}{}{%
-        {{hash=3b14a81272af18cb5a05973bde112455}{%
+        {{un=0,uniquepart=base,hash=3b14a81272af18cb5a05973bde112455}{%
            family={Groupprops},
            familyi={G\bibinitperiod}}}%
       }
@@ -180,7 +183,7 @@
     \endentry
     \entry{gendihedral}{online}{}
       \name{author}{1}{}{%
-        {{hash=3b14a81272af18cb5a05973bde112455}{%
+        {{un=0,uniquepart=base,hash=3b14a81272af18cb5a05973bde112455}{%
            family={Groupprops},
            familyi={G\bibinitperiod}}}%
       }
@@ -213,7 +216,7 @@
     \endentry
     \entry{semidihedral}{online}{}
       \name{author}{1}{}{%
-        {{hash=3b14a81272af18cb5a05973bde112455}{%
+        {{un=0,uniquepart=base,hash=3b14a81272af18cb5a05973bde112455}{%
            family={Groupprops},
            familyi={G\bibinitperiod}}}%
       }
@@ -246,7 +249,7 @@
     \endentry
     \entry{unitriangular}{online}{}
       \name{author}{1}{}{%
-        {{hash=3b14a81272af18cb5a05973bde112455}{%
+        {{un=0,uniquepart=base,hash=3b14a81272af18cb5a05973bde112455}{%
            family={Groupprops},
            familyi={G\bibinitperiod}}}%
       }
@@ -279,11 +282,12 @@
     \endentry
     \entry{ledermann1961}{book}{}
       \name{author}{1}{}{%
-        {{hash=38e19b864800812067e1296852e937a5}{%
+        {{un=0,uniquepart=base,hash=38e19b864800812067e1296852e937a5}{%
            family={Ledermann},
            familyi={L\bibinitperiod},
            given={Walter},
-           giveni={W\bibinitperiod}}}%
+           giveni={W\bibinitperiod},
+           givenun=0}}%
       }
       \list{publisher}{3}{%
         {Oliver}%
@@ -306,11 +310,12 @@
     \endentry
     \entry{robinson1982}{book}{}
       \name{author}{1}{}{%
-        {{hash=a78248f931291e30c008f090645429b1}{%
+        {{un=0,uniquepart=base,hash=a78248f931291e30c008f090645429b1}{%
            family={Robinson},
            familyi={R\bibinitperiod},
            given={Derek\bibnamedelimb J.\bibnamedelimi S.},
-           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
       }
       \list{publisher}{1}{%
         {Springer-Verlag New York Heidelberg Berlin}%
@@ -331,7 +336,7 @@
     \endentry
     \entry{order30}{online}{}
       \name{author}{1}{}{%
-        {{hash=1d748744db2f47a3a636865e6cfdca95}{%
+        {{un=0,uniquepart=base,hash=1d748744db2f47a3a636865e6cfdca95}{%
            family={{Stack Exchange (user azimut)}},
            familyi={S\bibinitperiod}}}%
       }
@@ -363,11 +368,12 @@
     \endentry
     \entry{order16}{article}{}
       \name{author}{1}{}{%
-        {{hash=b037a49f074be3353b9d4524e69b306f}{%
+        {{un=0,uniquepart=base,hash=b037a49f074be3353b9d4524e69b306f}{%
            family={Wild},
            familyi={W\bibinitperiod},
            given={Marcel},
-           giveni={M\bibinitperiod}}}%
+           giveni={M\bibinitperiod},
+           givenun=0}}%
       }
       \list{publisher}{1}{%
         {Mathematical Association of America}%

@@ -147,7 +147,7 @@ So now by considering choices for the order of \(a\) and automorphisms of \(N\),
     contradiction:
     \[a^2 = a^{-1}a^2 a = a^{-1}x^2 a \overset{\phi_2}{=} x^6\]
     \[a^2 = a^{-1}a^2 a = a^{-1}x^2 a \overset{\phi_4}{=} x^{14} = x^6\]
-    Hence the only possibilities for conjugation by \(a\) are the maps \(\phi_1:x\mapsto x\) and \(\phi_3:x \mapsto
+    The remaining possibilities for conjugation by \(a\) are the maps \(\phi_1:x\mapsto x\) and \(\phi_3:x \mapsto
     x^5\).
     For the first:
     \[(x^3 a)(x^3 a) = x^3(ax^3 a^{-1})a^2 \overset{\phi_1}{=} x^3 x^3 a^2 = x^8 = 1\]
@@ -196,7 +196,8 @@ In particular, all elements of \(G\) have order less than 8.
         &= y^j x^{-i}
     \end{align*}
     Which is \(g^{-1}\).
-    Hence we have \(g = g^{-1}\) which is a contradiction, because \(x \in N\) has order 4.
+    Hence we have \(g = g^{-1}\), meaning all elements in \(N\) have order 2.
+    This is a contradiction, because \(x \in N\) has order 4.
     A similar contradiction can be shown for \(\psi_4\).
 \end{proof}
 
@@ -271,9 +272,9 @@ In particular, all elements of \(G\) have order less than 8.
         G_{12a} &= \gen{x,\,y,\,a \mid x^4 = y^2 = a^4 = 1,\ xy = yx,\ a^{-1}xa \overset{\psi_5}{=} xy,\ a^{-1}ya \overset{\psi_5}{=} y} \\
         G_{12b} &= \gen{x,\,y,\,a \mid x^4 = y^2 = a^4 = 1,\ xy = yx,\ a^{-1}xa \overset{\psi_7}{=} x^{-1}y,\ a^{-1}ya \overset{\psi_7}{=} y}
     \end{align*}
-    Concentrating on the latter two groups, we will show they are both isomorphic to \(C_4 \rtimes C_4\),
+    Focusing on the last two groups, we will show they are both isomorphic to \(C_4 \rtimes C_4\),
     with the inversion action.
-    First, \(G_{12a}\).
+    First \(G_{12a}\).
     Consider the element \(ax\), and so \(\gen{ax} = \{\,1,\,ax,\,y,\,axy\,\}\).
     By inspection, \(\gen{x} \cap \gen{ax} = \bm{1}\).
     So then:
