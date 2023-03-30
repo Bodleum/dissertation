@@ -15,8 +15,7 @@ need this classification in order to classify groups of order 24.
 \end{theorem}
 
 This section will be devoted to the proof of Theorem~\ref{thm:12}.
-Let \(G\) be a group of order \(12 = 2^2 \cdot 3\), and \(n_3\) and \(n_2\) denote the number of Sylow 3-subgroups and
-Sylow 2-subgroups of G respectively.
+Let \(G\) be a group of order \(12 = 2^2 \cdot 3\), and \(n_3\) denote the number of Sylow 3-subgroups.
 By Sylow's~Theorems:
 \[n_3 \equiv 1 \pmod{3} \quad \text{and} \quad n_3 \mid 4\]
 Hence:
@@ -50,8 +49,8 @@ non-identity elements, hence \(\Aut{V_4} \cong S_3\).
 \end{lemma}
 
 \begin{proof}
-    Let \(H = \gen{y}\).
-    We know \(\Aut{C_3} \cong C_2\) so a homomorphism \(\psi\) maps \(H\) to the trivial group or to \(\gen{\beta:x
+    We have \(G = K \rtimes H\) for Sylow 3-subgroup \(K = \gen{x}\) and Sylow 2-subgroup \(H = \gen{y}\).
+    We know \(\Aut{C_3} \cong C_2\) so a homomorphism \(\psi:H \to \Aut{K}\) maps \(H\) to the trivial group or to \(\gen{\beta:x
     \mapsto x^{-1}}\).
 
     If \(H\psi = \bm{1}\) then \(G = K \times H \cong C_3 \times C_4 \cong C_{12}\).
@@ -72,15 +71,22 @@ non-identity elements, hence \(\Aut{V_4} \cong S_3\).
 
 \begin{lemma}
     Let \(G\) be a group of order 12, with Sylow 2-subgroup isomorphic to \(V_4\) and normal Sylow 3-subgroup.
-    Then \(G\) is isomorphic to \(D_{12}\).
+    Then \(G\) is isomorphic to one of:
+    \[
+        C_2 \times C_6 \quad \text{or} \quad%
+        D_{12}
+    \]
+
 \end{lemma}
 
 \begin{proof}
-    If \(\psi:H \to \Aut{K}\) is trivial then we obtain the direct product again.
+    We have \(G = K \rtimes H\) for Sylow 3-subgroup \(K = \gen{x}\) and Sylow 2-subgroup \(H = \gen{y, z}\).
+    If \(\psi:H \to \Aut{K}\) is trivial then we obtain the direct product \(C_2 \times C_6\).
+
     We know \(\Aut{K} \cong C_2\), so there are 3 choices of elements in \(H\) to send to it, but they are all
     equivalent up to isomorphism, by Lemma~\ref{lem:semiisom}, taking \(\alpha\) to be the identity map.
 
-    We know that \(H / \im{\psi} \cong \ker{\psi}\), so \(\ker{\psi}\) must be isomorphic to \(C_2\).
+    Furthermore, we know that \(H / \im{\psi} \cong \ker{\psi}\), so \(\ker{\psi}\) must be isomorphic to \(C_2\).
     Pick \(z\) so that it generates the kernel, and so the remaining generator, \(y\) is not in the kernel.
     Then:
     \[G = \gen{x,\,y,\,z \mid x^3 = y^2 = z^2 = 1,\ yz = zy,\ xz = zx,\ y^{-1}xy = x}\]
@@ -108,19 +114,16 @@ non-identity elements, hence \(\Aut{V_4} \cong S_3\).
     the only possibility for \(\psi\) is trivial, i.e. \(K\psi = \bm{1}\).
 \end{proof}
 
-\begin{lemma}
+\begin{lemma}\label{lem:uses_c3_automorphism}
     Let \(G\) be a group of order 12, with Sylow 2-subgroup isomorphic to \(v_4\) and 4 Sylow 3-subgroups.
-    Then \(G\) is isomorphic to one of:
-    \[
-        C_{2} \times C_6 \quad \text{or} \quad%
-        A_{4}
-    \]
+    Then \(G\) is isomorphic to \(A_4\).
 \end{lemma}
 
 \begin{proof}
     As before, we know the Sylow 2-subgroup is normal, and \(G = H \rtimes K\).
     Let \(H = \gen{y,\,z}\).
-    A trivial homomorphism \(K\psi = \bm{1}\) yields the direct product, \(C_2 \times C_6\).
+    A trivial homomorphism \(K\psi = \bm{1}\) yields the direct product, \(C_2 \times C_6\), but this has a normal (and
+    hence unique) Sylow 3-subgroup.
     What non-trivial homomorphisms are there?
 
     The automorphism group, \(\Aut{H} \cong S_3\) is of order 6, and so has a unique subgroup of order 3, by
