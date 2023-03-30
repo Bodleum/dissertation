@@ -94,7 +94,15 @@ Continuing from above, we have the following relations:
         \[z = \unimat{0}{1}{0}, \quad a = \unimat{1}{0}{0} \quad \text{and} \quad b = \unimat{0}{0}{1}\]
         we can check that \(\UT_3(p)\) satisfies (\ref{eqn:p_cubed_dag}).
         (Indeed, it is the standard presentation defining \(\UT_3(p)\)).
-        Thus (\ref{eqn:p_cubed_dag}) is realised by a group of order \(p^3\), so there is a single isomorphism class for this case.
+        Thus (\ref{eqn:p_cubed_dag}) is realised by a group of order \(p^3\), so there is a single isomorphism class for
+        this case.
+
+        We will quickly show that \(\UT_3(p)\) has elements of order at most \(p\).
+        Any element can be written as \(a^i b^j z^k\).
+        Moreover, \(a\) and \(b\) commute with \(z\), and we can swap \(a\) and \(b\) at the price of introducing a
+        \(z\).
+        So an element has order dividing \(\lcm(\order(a),\, \order(b),\, \order(z)) = p\).
+        Hence an element of \(\UT_3(p)\) has order 1 or \(p\).
 
     \item One element of each order \(p\) and \(p^2\).
 
