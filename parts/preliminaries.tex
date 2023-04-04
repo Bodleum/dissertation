@@ -262,6 +262,54 @@ So we have a group.
     So \(\theta\) is an isomorphism.
 \end{proof}
 
+
+% ====   Presentations   ====
+\section{Presentations}
+To encode groups succinctly, we will use \emph{group presentations}.
+Their notation is like a combination of subgroup generators and set builder notation.
+Presentations are formally defined in terms of subgroup of free groups, which is tangential to this report.
+Moreover, presentations in general are a bit difficult to work with --- it turns out to be algorithmically impossible to
+determine whether two group presentations are the same!
+For our purposes, a loose definition will be enough.
+
+\begin{definition}[Informal]
+    In this report, a \emph{group presentation} has 3 main parts:
+    \begin{enumerate}[(i)]
+        \item A list of generators.
+        \item How the generators themselves behave.
+        \item How the generators interact.
+    \end{enumerate}
+\end{definition}
+
+Let's illustrate this with a couple of examples.
+First, let's look at a simple presentation, and understand how it works.
+\[
+    C_4 = \gen{x \mid x^4 = 1}
+\]
+We see that to the left of the mid-line, we have a generator \(x\), and to the right, \(x^4 = 1\) tells us that \(x\)
+has order 4.
+There is only a single generator, so there are no other generators to specify how they interact.
+
+For the second example, let's build a presentation for \(D_8\).
+We know that the dihedral group has 2 generators, a rotation \(r\), and a flip \(s\).
+So we start writing:
+\[
+    \langle\, r,\,s
+\]
+The first generator, \(r\), has order 4, and \(s\) has order 2.
+Let's record that:
+\[
+    \langle\, r,\,s \mid r^4 = s^2 = 1
+\]
+Finally, we know how the relate, namely \(s^{-1} rs = r^{-1}\).
+So we finish the presentation:
+\[
+    D_8 = \gen{r,\,s \mid r^4 = s^2 = 1,\ s^{-1}rs = r^{-1}}
+\]
+Presentations will be especially useful for encoding semidirect products, because we can write the generators for the
+subgroups in the product, specifying their order and how they interact, and then the effect of conjugation.
+
+% ====   Group Actions   ====
 \section{Group Actions}
 Another useful piece of group theory technology will be group actions.
 As above, much of this section is based on \textit{MT5864}, and can be found in Chapter 1 of Robinson.\footcite{robinson1982}
@@ -322,15 +370,26 @@ A group acting on the set its cosets will be useful:
     For a group \(G\) with \(H \leqslant G\), let \(\Omega = \{\,Hg \mid g \in G\,\}\), i.e.\ the set of cosets of \(H\)
     in \(G\).
     If \(x \in G\), define a group action:
-    \[\Omega \times G \to \Omega \quad \text{by} \quad (Hg, x) \mapsto Hgx\]
+    \[\mu:\Omega \times G \to \Omega \quad \text{by} \quad (Hg, x) \mapsto Hgx\]
 \end{definition}
 
 \begin{lemma}
     \raggedright
-    The action above is \emph{well defined}, meaning the action is independent of our choice of representative \(g\).
+    A group's action on it's cosets is \emph{well defined}, meaning the action is independent of our choice of
+    representative.
 \end{lemma}
 
 \begin{proof}
-    Omitted.
+    We will show the lemma is true for right cosets.
+    A similar argument shows the same for left cosets.
+
+    Suppose \(G\) is a group with non-trivial subgroup \(H\), and let \(\Omega\) be the set of right cosets of \(H\).
+    Let \(k,l \in G\) be representatives from the same coset, and we will show that \((Hk)\mu = (Hl)\mu\).
+    Because \(k\) and \(l\) are in the same coset:
+    \[ Hk = Hl \]
+    And so \(H = H(lk^{-1})\) implies that \(lk^{-1} \in H\).
+    Then:
+    \[ (Hl)\mu = H(lx) = H(lk^{-1}kx) = H(kx) = (Hk)\mu \]
+    Hence \(\mu\) is well defined.
 \end{proof}
 
