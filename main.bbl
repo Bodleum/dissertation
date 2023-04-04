@@ -334,6 +334,32 @@
       \field{title}{A Course in the Theory of Groups}
       \field{year}{1982}
     \endentry
+    \entry{sims1994}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=480f3d8d6e7e230fc6d258a0969117ba}{%
+           family={Sims},
+           familyi={S\bibinitperiod},
+           given={Charles\bibnamedelima C.},
+           giveni={C\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{480f3d8d6e7e230fc6d258a0969117ba}
+      \strng{fullhash}{480f3d8d6e7e230fc6d258a0969117ba}
+      \strng{bibnamehash}{480f3d8d6e7e230fc6d258a0969117ba}
+      \strng{authorbibnamehash}{480f3d8d6e7e230fc6d258a0969117ba}
+      \strng{authornamehash}{480f3d8d6e7e230fc6d258a0969117ba}
+      \strng{authorfullhash}{480f3d8d6e7e230fc6d258a0969117ba}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0-521-4323-8}
+      \field{title}{Computation with finitely presented groups}
+      \field{year}{1994}
+    \endentry
     \entry{order30}{online}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=1d748744db2f47a3a636865e6cfdca95}{%
