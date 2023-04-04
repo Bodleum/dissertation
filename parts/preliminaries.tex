@@ -366,12 +366,6 @@ Indeed we have a result:
 
 By this we see that in a semidirect product, \(N \rtimes H\), the group \(H\) acts on \(N\)!
 
-\begin{definition}
-    \raggedright
-    The \emph{orbit} of an element \(\omega \in \Omega\), is the set:
-    \[\omega^G = \{\,\omega^x \mid x \in G\,\}\]
-\end{definition}
-
 A group acting on the set its cosets will be useful:
 
 \begin{definition}
@@ -401,4 +395,46 @@ A group acting on the set its cosets will be useful:
     \[ (Hl)\mu = H(lx) = H(lk^{-1}kx) = H(kx) = (Hk)\mu \]
     Hence \(\mu\) is well defined.
 \end{proof}
+
+\begin{definition}
+    \raggedright
+    The \emph{orbit} of an element \(\omega \in \Omega\), is the set:
+    \[\omega^G = \{\,\omega^x \mid x \in G\,\}\]
+
+    The \emph{stabiliser} of \(\omega\) is the set:
+    \[
+        G_\omega = \{\, x \in G \mid \omega^x = \omega\,\}
+    \]
+\end{definition}
+
+Finally, there is the orbit-stabiliser theorem:
+\begin{theorem}
+    Let \(G\) be a group which acts on a set \(\Omega\).
+    Then for \(\omega \in \Omega\):
+    \[
+        |\omega^G| = |G:G_\omega|
+    \]
+\end{theorem}
+
+\begin{proof}
+    Define a mapping:
+    \[ \phi:\{\,G_\omega x \mid x \in G\;\} \to \omega^G \quad \text{by} \quad \phi:G_\omega x \mapsto \omega^x\]
+    We will show that \(\phi\) is a well-defined bijection.
+    First, well-defined:
+
+    If \(x\) and \(y\) are representatives of the same coset, we will show that \((G_\omega x)\phi = (G_\omega y)\phi\).
+    So if we have \(G_\omega x = G_\omega y\).
+    Then as before:
+    \[ xy^{-1} \in G_\omega \quad \text{so} \quad \omega^{xy^{-1}} = \omega\]
+    Hence:
+    \[ (G_\omega x)\phi = \omega^x = \omega^{xy^{-1} y} = \omega^y = (G_\omega y)\phi \]
+    So \(\phi\) is well-defined.
+
+    If \(\omega^g = \omega^h\) for \(g,\,h \in G\) then:
+    \[ \omega^{gh^{-1}} = \omega{hh^{-1}} = \omega \]
+    So \(gh^{-1} \in G_\omega\) and \(G_\omega g = G_\omega h\) and \(\phi\) is injective.
+    Finally, \(\phi\) is surjective by definition, and so is a bijection.
+    Hence we have proven the result.
+\end{proof}
+
 
