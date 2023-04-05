@@ -8,7 +8,6 @@
 \usepackage{amsthm}
 \usepackage{bm} % Bold maths
 \usepackage[T1]{fontenc}
-\usepackage[hidelinks]{hyperref}
 \usepackage{multicol}
 \usepackage{tabularx}
 \usepackage{booktabs}
@@ -23,7 +22,14 @@
 \mdfsetup{skipabove=1em, skipbelow=1em}
 \usepackage[backend=biber]{biblatex-chicago}    % Bibliography
 \addbibresource{./bib.bib}      % Bibliography file
+\usepackage[hidelinks]{hyperref}
+
+% Header and footer
 \pagestyle{fancy}
+\fancyhead[EHL]{\rightmark}
+\fancyhead[EHR]{}
+\fancyhead[OHL]{}
+\fancyhead[OHR]{\rightmark}
 
 \renewcommand{\emph}{\underline}
 \renewcommand{\thechapter}{\Roman{chapter}}
